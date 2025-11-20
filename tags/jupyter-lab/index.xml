@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jupyter Lab on Today I Learned | KitHub</title>
-    <link>http://localhost:1313/tags/jupyter-lab/</link>
+    <link>https://shiroimon.kithub.f5.si/tags/jupyter-lab/</link>
     <description>Recent content in Jupyter Lab on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 02 Oct 2025 00:30:36 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/jupyter-lab/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://shiroimon.kithub.f5.si/tags/jupyter-lab/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Data Analytics] This and That</title>
-      <link>http://localhost:1313/post/data_analytics_this_and_that/</link>
+      <link>https://shiroimon.kithub.f5.si/post/data_analytics_this_and_that/</link>
       <pubDate>Tue, 18 Mar 2025 02:15:17 +0900</pubDate>
-      <guid>http://localhost:1313/post/data_analytics_this_and_that/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/data_analytics_this_and_that/</guid>
       <description>📊 An article summarizing various statistical data that can be viewed and used for free.</description>
     </item>
   </channel>

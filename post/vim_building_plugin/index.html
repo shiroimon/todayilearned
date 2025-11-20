@@ -436,6 +436,15 @@ Vimプラグインの作成は、最初はシンプルな機能から始めて�
 
 
   
+  
+  
+  
+  
+  
+    
+      
+    
+  
 <div id="gitalk-container" class="gitalk-container"></div>
 <link rel="stylesheet" href='https://shiroimon.kithub.f5.si/css/gitalk.css'>
 <script src='https://shiroimon.kithub.f5.si/js/gitalk.min.js'></script>
@@ -445,14 +454,18 @@ Vimプラグインの作成は、最初はシンプルな機能から始めて�
     clientSecret: '08c9365618f3a7434fe608970e757bba3d2369bc',
     repo: 'todayilearned',
     owner: 'shiroimon',
-    admin: ['shiroimon'],
-    id: eval( null ), 
-    distractionFreeMode: false 
+    admin: ["shiroimon"],
+    labels: ["gitalk"],
+    perPage:  10 ,
+    pagerDirection: 'last',
+    createIssueManually:  false ,
+    distractionFreeMode:  false ,
+    id: '4a83289f9abf84b8d3352411bf99c0aa'
   });
-  (function() {
-    gitalk.render('gitalk-container');
-  })();
+  gitalk.render('gitalk-container');
 </script>
+
+
 
 </div>
 

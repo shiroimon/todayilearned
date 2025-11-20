@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>API on Today I Learned | KitHub</title>
-    <link>http://localhost:1313/tags/api/</link>
+    <link>https://shiroimon.kithub.f5.si/tags/api/</link>
     <description>Recent content in API on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 10 Oct 2025 17:42:51 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://shiroimon.kithub.f5.si/tags/api/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Development] About API / MCP</title>
-      <link>http://localhost:1313/post/development_about_api_mcp/</link>
+      <link>https://shiroimon.kithub.f5.si/post/development_about_api_mcp/</link>
       <pubDate>Tue, 15 Jul 2025 14:15:38 +0900</pubDate>
-      <guid>http://localhost:1313/post/development_about_api_mcp/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/development_about_api_mcp/</guid>
       <description>💻 単にデータの触媒ではない</description>
     </item>
   </channel>

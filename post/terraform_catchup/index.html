@@ -465,6 +465,13 @@ cf. <a href="https://developer.hashicorp.com/terraform/tutorials/docker-get-star
 
 
   
+  
+  
+  
+  
+  
+    
+  
 <div id="gitalk-container" class="gitalk-container"></div>
 <link rel="stylesheet" href='https://shiroimon.kithub.f5.si/css/gitalk.css'>
 <script src='https://shiroimon.kithub.f5.si/js/gitalk.min.js'></script>
@@ -474,14 +481,18 @@ cf. <a href="https://developer.hashicorp.com/terraform/tutorials/docker-get-star
     clientSecret: '08c9365618f3a7434fe608970e757bba3d2369bc',
     repo: 'todayilearned',
     owner: 'shiroimon',
-    admin: ['shiroimon'],
-    id: eval( null ), 
-    distractionFreeMode: false 
+    admin: ["shiroimon"],
+    labels: ["gitalk"],
+    perPage:  10 ,
+    pagerDirection: 'last',
+    createIssueManually:  false ,
+    distractionFreeMode:  false ,
+    id: 'ff6a59ac8524972c73b0e5122b6534d8'
   });
-  (function() {
-    gitalk.render('gitalk-container');
-  })();
+  gitalk.render('gitalk-container');
 </script>
+
+
 
 </div>
 

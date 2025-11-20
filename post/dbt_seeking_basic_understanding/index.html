@@ -929,6 +929,15 @@ cf. <a href="https://docs.getdbt.com/docs/build/project-variables">Project varia
 
 
   
+  
+  
+  
+  
+  
+    
+      
+    
+  
 <div id="gitalk-container" class="gitalk-container"></div>
 <link rel="stylesheet" href='https://shiroimon.kithub.f5.si/css/gitalk.css'>
 <script src='https://shiroimon.kithub.f5.si/js/gitalk.min.js'></script>
@@ -938,14 +947,18 @@ cf. <a href="https://docs.getdbt.com/docs/build/project-variables">Project varia
     clientSecret: '08c9365618f3a7434fe608970e757bba3d2369bc',
     repo: 'todayilearned',
     owner: 'shiroimon',
-    admin: ['shiroimon'],
-    id: eval( null ), 
-    distractionFreeMode: false 
+    admin: ["shiroimon"],
+    labels: ["gitalk"],
+    perPage:  10 ,
+    pagerDirection: 'last',
+    createIssueManually:  false ,
+    distractionFreeMode:  false ,
+    id: '1b14aa07a76c6985a71a0c3f86e49b4d'
   });
-  (function() {
-    gitalk.render('gitalk-container');
-  })();
+  gitalk.render('gitalk-container');
 </script>
+
+
 
 </div>
 

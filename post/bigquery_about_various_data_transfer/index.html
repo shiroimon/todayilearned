@@ -962,6 +962,13 @@ JSON part</p>
 
 
   
+  
+  
+  
+  
+  
+    
+  
 <div id="gitalk-container" class="gitalk-container"></div>
 <link rel="stylesheet" href='https://shiroimon.kithub.f5.si/css/gitalk.css'>
 <script src='https://shiroimon.kithub.f5.si/js/gitalk.min.js'></script>
@@ -971,14 +978,18 @@ JSON part</p>
     clientSecret: '08c9365618f3a7434fe608970e757bba3d2369bc',
     repo: 'todayilearned',
     owner: 'shiroimon',
-    admin: ['shiroimon'],
-    id: eval( null ), 
-    distractionFreeMode: false 
+    admin: ["shiroimon"],
+    labels: ["gitalk"],
+    perPage:  10 ,
+    pagerDirection: 'last',
+    createIssueManually:  false ,
+    distractionFreeMode:  false ,
+    id: 'ddf27d5312319cb89455ff0d3ebab4e7'
   });
-  (function() {
-    gitalk.render('gitalk-container');
-  })();
+  gitalk.render('gitalk-container');
 </script>
+
+
 
 </div>
 

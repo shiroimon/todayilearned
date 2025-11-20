@@ -550,6 +550,13 @@ development/
 
 
   
+  
+  
+  
+  
+  
+    
+  
 <div id="gitalk-container" class="gitalk-container"></div>
 <link rel="stylesheet" href='https://shiroimon.kithub.f5.si/css/gitalk.css'>
 <script src='https://shiroimon.kithub.f5.si/js/gitalk.min.js'></script>
@@ -559,14 +566,18 @@ development/
     clientSecret: '08c9365618f3a7434fe608970e757bba3d2369bc',
     repo: 'todayilearned',
     owner: 'shiroimon',
-    admin: ['shiroimon'],
-    id: eval( null ), 
-    distractionFreeMode: false 
+    admin: ["shiroimon"],
+    labels: ["gitalk"],
+    perPage:  10 ,
+    pagerDirection: 'last',
+    createIssueManually:  false ,
+    distractionFreeMode:  false ,
+    id: '9bc51096a109c50c712d5a86a7c2d486'
   });
-  (function() {
-    gitalk.render('gitalk-container');
-  })();
+  gitalk.render('gitalk-container');
 </script>
+
+
 
 </div>
 

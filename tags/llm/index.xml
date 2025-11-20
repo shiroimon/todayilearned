@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>LLM on Today I Learned | KitHub</title>
-    <link>http://localhost:1313/tags/llm/</link>
+    <link>https://shiroimon.kithub.f5.si/tags/llm/</link>
     <description>Recent content in LLM on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 02 Oct 2025 00:30:36 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/llm/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://shiroimon.kithub.f5.si/tags/llm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[AI] AI-agent code build used too CLI</title>
-      <link>http://localhost:1313/post/ai_agent_code_build/</link>
+      <link>https://shiroimon.kithub.f5.si/post/ai_agent_code_build/</link>
       <pubDate>Thu, 31 Oct 2024 17:52:59 +0900</pubDate>
-      <guid>http://localhost:1313/post/ai_agent_code_build/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/ai_agent_code_build/</guid>
       <description>🐚 AI code generative editor tool.</description>
     </item>
   </channel>
