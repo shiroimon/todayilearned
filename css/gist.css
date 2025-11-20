@@ -1,0 +1,72 @@
+/* Gistのカスタムスタイリング */
+/* 背景を透明にし、テーブルの外枠と内枠を全て透過させる */
+
+/* Gistコンテナの背景を透明にする */
+.gist {
+    background-color: transparent !important;
+}
+
+/* Gistファイルの背景を透明にする */
+.gist-file {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.gist-file .gist-data {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.gist-file table {
+    background-color: transparent !important;
+    border-collapse: collapse !important;
+    /* テーブルの外枠を非表示 */
+    border: none !important;
+}
+
+.gist-file tbody {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.gist-file tr {
+    background-color: transparent !important;
+    border: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
+.gist-file td {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+/* テーブルの内側のボーダー（敷居線）を全て透過させる */
+.gist-file table td,
+.gist-file table th {
+    border: none !important;
+}
+
+/* すべての行の上下ボーダーを非表示 */
+.gist-file table tr {
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
+/* 最初の行の上側ボーダーも透過 */
+.gist-file table tr:first-child td,
+.gist-file table tr:first-child th {
+    border-top: none !important;
+}
+
+/* 最後の行の下側ボーダーも透過 */
+.gist-file table tr:last-child td,
+.gist-file table tr:last-child th {
+    border-bottom: none !important;
+}
+
+/* gist-metaを非表示にする */
+.gist-meta {
+    display: none !important;
+}
+
