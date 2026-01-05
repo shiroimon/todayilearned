@@ -154,7 +154,7 @@
                 Created <relative-time datetime="Mon, 09 Sep 2024 12:40:59 &#43;0900" class="no-wrap">Mon, 09 Sep 2024 12:40:59 &#43;0900</relative-time>
                 
                 <span class="path-divider">|</span>
-                Modified <relative-time datetime="Thu, 02 Oct 2025 00:30:36 &#43;0900" class="no-wrap">Thu, 02 Oct 2025 00:30:36 &#43;0900</relative-time>
+                Modified <relative-time datetime="Mon, 05 Jan 2026 23:44:03 &#43;0900" class="no-wrap">Mon, 05 Jan 2026 23:44:03 &#43;0900</relative-time>
                 
             </div>
         </div>
@@ -295,7 +295,8 @@
 ジョブやアプリケーションをデプロイし、実行するためのKubernetes-ネイティブツールのセットを提供。
 継続的デリバリー、累進的デリバリーなどの GitOps パラダイムによって、KubernetesでMLOps つまり機械学習のDevOps基盤を推進。</p>
 <p>Tekton Pipeline や Trigger のタスクの１ステップに、アルゴを組み込むことができるので、
-Tektonのトリガーで受けた git push の イベントから、Argo CDにつないでアプリケーションの状態管理など連携運用も可能。</p></blockquote>
+Tektonのトリガーで受けた git push の イベントから、Argo CDにつないでアプリケーションの状態管理など連携運用も可能。</p>
+</blockquote>
 <p>この活動は複数あるが、主要な4つのグループをまとめると以下</p>
 <ul>
 <li>
@@ -340,10 +341,10 @@ Tektonのトリガーで受けた git push の イベントから、Argo CDに�
 </li>
 <li>ワークフロー構造（サンプル）<a href="https://speakerdeck.com/makocchi/how-to-use-argo-workflows?slide=42">ref</a>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml:workflow.yaml" data-lang="yaml:workflow.yaml"><span class="line"><span class="cl"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">argoproj.io/v1alpha1</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Workflow</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Workflow</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">metadata</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">generateName</span><span class="p">:</span><span class="w"> </span><span class="l">hello-world-</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">spec</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">entrypoint</span><span class="p">:</span><span class="w"> </span><span class="l">main</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">templates</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">main</span><span class="w">
@@ -516,8 +517,8 @@ Tektonのトリガーで受けた git push の イベントから、Argo CDに�
 </span></span><span class="line"><span class="cl">ARG VERSION
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">RUN mkdir -p /root/.embulk/bin <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>    <span class="o">&amp;&amp;</span> wget -q https://dl.embulk.org/embulk-<span class="si">${</span><span class="nv">VERSION</span><span class="si">}</span>.jar -O /root/.embulk/bin/embulk <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>    <span class="o">&amp;&amp;</span> chmod +x /root/.embulk/bin/embulk
+</span></span></span><span class="line"><span class="cl">    <span class="o">&amp;&amp;</span> wget -q https://dl.embulk.org/embulk-<span class="si">${</span><span class="nv">VERSION</span><span class="si">}</span>.jar -O /root/.embulk/bin/embulk <span class="se">\
+</span></span></span><span class="line"><span class="cl">    <span class="o">&amp;&amp;</span> chmod +x /root/.embulk/bin/embulk
 </span></span><span class="line"><span class="cl">ENV <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/root/.embulk/bin
 </span></span><span class="line"><span class="cl">RUN apk add --no-cache libc6-compat <span class="o">&amp;&amp;</span> embulk gem install embulk-filter-column
 </span></span></code></pre></div><ul>
@@ -525,10 +526,10 @@ Tektonのトリガーで受けた git push の イベントから、Argo CDに�
 <li>(※ Argo Workflows はこのように処理をテンプレ化させておいて、各所で再利用することが可能らしい。)</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml:workflow_template.yaml" data-lang="yaml:workflow_template.yaml"><span class="line"><span class="cl"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">argoproj.io/v1alpha1</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">WorkflowTemplate</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">WorkflowTemplate</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">metadata</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">embulk-template</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">spec</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">entrypoint</span><span class="p">:</span><span class="w"> </span><span class="l">embulk</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">templates</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">embulk</span><span class="w">
@@ -551,10 +552,10 @@ Tektonのトリガーで受けた git push の イベントから、Argo CDに�
 <li>embulkを実行する本体の処理は以下。embulkのconfigはとりあえずartifactsとして渡す。</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml:workflow.yaml" data-lang="yaml:workflow.yaml"><span class="line"><span class="cl"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">argoproj.io/v1alpha1</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Workflow</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Workflow</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">metadata</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">csv-to-stdout-sample</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">spec</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">entrypoint</span><span class="p">:</span><span class="w"> </span><span class="l">embulk</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">arguments</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">artifacts</span><span class="p">:</span><span class="w">

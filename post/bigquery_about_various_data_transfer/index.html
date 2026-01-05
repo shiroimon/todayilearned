@@ -154,7 +154,7 @@
                 Created <relative-time datetime="Thu, 03 Apr 2025 11:11:44 &#43;0900" class="no-wrap">Thu, 03 Apr 2025 11:11:44 &#43;0900</relative-time>
                 
                 <span class="path-divider">|</span>
-                Modified <relative-time datetime="Thu, 02 Oct 2025 00:30:36 &#43;0900" class="no-wrap">Thu, 02 Oct 2025 00:30:36 &#43;0900</relative-time>
+                Modified <relative-time datetime="Mon, 05 Jan 2026 23:44:03 &#43;0900" class="no-wrap">Mon, 05 Jan 2026 23:44:03 &#43;0900</relative-time>
                 
             </div>
         </div>
@@ -437,7 +437,8 @@
 <li>-&gt; 実行ログやタスクの状態は Cloud Logging / Monitoring と連携 され、可視化やアラート設定が容易</li>
 </ul>
 </li>
-</ul></blockquote>
+</ul>
+</blockquote>
 <p>Cloud Composer (Airflow) でのCloud Runオペレーター使用例</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-py:dag_sample.py" data-lang="py:dag_sample.py"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">airflow</span> <span class="kn">import</span> <span class="n">models</span>
 </span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">airflow.providers.google.cloud.operators.cloud_run</span> <span class="kn">import</span> <span class="n">CloudRunExecuteJobOperator</span>
@@ -533,7 +534,8 @@
 </details>
 
 </li>
-</ul></blockquote>
+</ul>
+</blockquote>
 </li>
 <li>
 <p><a href="https://cloud.google.com/dataform/docs/dataform-core?hl=ja">Dataform コアの概要</a>
@@ -646,7 +648,8 @@ JSON part</p>
 </table>
 <ul>
 <li>cf. <a href="https://cloud.google.com/dataform/docs/reference/dataform-core-reference#itableconfig">ITableConfig</a> Google Cloud</li>
-</ul></blockquote>
+</ul>
+</blockquote>
 
   <p></p>
 </details>
@@ -677,7 +680,7 @@ JSON part</p>
 <li>間接方法：タグ/カスタムロジック利用
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="err">コンフィグ内のタグを上手く利用</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">-- config { tags: [&#34;phase1&#34;] } (Master)
+</span></span></span><span class="line"><span class="cl"><span class="c1">-- config { tags: [&#34;phase1&#34;] } (Master)
 </span></span></span><span class="line"><span class="cl"><span class="c1">-- config { tags: [&#34;phase2&#34;], dependencies: [&#34;phase1&#34;] } (A)
 </span></span></span><span class="line"><span class="cl"><span class="c1">-- config { tags: [&#34;phase3&#34;], dependencies: [&#34;phase2&#34;] } (C)
 </span></span></span><span class="line"><span class="cl"><span class="c1">-- config { tags: [&#34;phase4&#34;], dependencies: [&#34;phase3&#34;] } (B)

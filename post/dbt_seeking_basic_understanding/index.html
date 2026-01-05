@@ -154,7 +154,7 @@
                 Created <relative-time datetime="Tue, 30 Jul 2024 02:30:55 &#43;0900" class="no-wrap">Tue, 30 Jul 2024 02:30:55 &#43;0900</relative-time>
                 
                 <span class="path-divider">|</span>
-                Modified <relative-time datetime="Thu, 02 Oct 2025 00:30:36 &#43;0900" class="no-wrap">Thu, 02 Oct 2025 00:30:36 &#43;0900</relative-time>
+                Modified <relative-time datetime="Mon, 05 Jan 2026 23:44:03 &#43;0900" class="no-wrap">Mon, 05 Jan 2026 23:44:03 &#43;0900</relative-time>
                 
             </div>
         </div>
@@ -276,7 +276,8 @@
 <blockquote>
 <p>dbtとは <code>data build tool</code> の略で、データ統合を行う際のプロセスであるELT(抽出, 変換, 格納)のうち <code>Transform(変換)</code> の役割を担うツールです。
 Transformのプロセスでは一般的にデータウェアハウスなどに抽出したデータを下流の分析ツールやデータベースで利用できる形式に変換・加工する処理を行います。
-dbtはこの工程で役に立つ様々な機能を提供してくれます。 <a href="https://www.isoroot.jp/blog/6054/">ref</a></p></blockquote>
+dbtはこの工程で役に立つ様々な機能を提供してくれます。 <a href="https://www.isoroot.jp/blog/6054/">ref</a></p>
+</blockquote>
 <ul>
 <li>Official
 <ul>
@@ -342,29 +343,29 @@ dbtプロダクトへの貢献を目的に活動をしています。
 </span></span><span class="line"><span class="cl"><span class="o">(</span>venv<span class="o">)</span>$ dbt --version               <span class="c1"># dbt環境が手元にあるか確認</span>
 </span></span><span class="line"><span class="cl"><span class="o">(</span>venv<span class="o">)</span>$ mkdir <span class="se">\ </span>                    <span class="c1"># 必要なディレクトリを準備</span>
 </span></span><span class="line"><span class="cl">        models <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>        analysis <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>        tests <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>        seeds <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>        macros <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>        snapshots <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>        target　
+</span></span></span><span class="line"><span class="cl">        analysis <span class="se">\
+</span></span></span><span class="line"><span class="cl">        tests <span class="se">\
+</span></span></span><span class="line"><span class="cl">        seeds <span class="se">\
+</span></span></span><span class="line"><span class="cl">        macros <span class="se">\
+</span></span></span><span class="line"><span class="cl">        snapshots <span class="se">\
+</span></span></span><span class="line"><span class="cl">        target　
 </span></span><span class="line"><span class="cl"><span class="o">(</span>venv<span class="o">)</span>$ touch dbt_project.yml　     <span class="c1"># dbt設定ファイルを作成（＊１: 後述のYAMLファイル）</span>
 </span></span></code></pre></div><ul>
 <li><code>*1</code>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml:dbt_project.yml" data-lang="yaml:dbt_project.yml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;dbt_training&#39;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">config-version</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;1.0.0&#39;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;dbt_training_dw&#39;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">model-paths</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;models&#34;</span><span class="p">]</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">analysis-paths</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;analysis&#34;</span><span class="p">]</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">test-paths</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;tests&#34;</span><span class="p">]</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">seed-paths</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;seeds&#34;</span><span class="p">]</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">macro-paths</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;macros&#34;</span><span class="p">]</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">snapshot-paths</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;snapshots&#34;</span><span class="p">]</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">target-path</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;target&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">clean-targets</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">target, dbt_packages]</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">models</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;dbt_training&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">config-version</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;1.0.0&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;dbt_training_dw&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">model-paths</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;models&#34;</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">analysis-paths</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;analysis&#34;</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">test-paths</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;tests&#34;</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">seed-paths</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;seeds&#34;</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">macro-paths</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;macros&#34;</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">snapshot-paths</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;snapshots&#34;</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">target-path</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;target&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">clean-targets</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">target, dbt_packages]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">models</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">dbt_training</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">         </span><span class="nt">example</span><span class="p">:</span><span class="w">
 </span></span></span></code></pre></div><ul>
@@ -378,7 +379,7 @@ dbtプロダクトへの貢献を目的に活動をしています。
 </span></span></code></pre></div><ul>
 <li><code>*2</code>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml:~/.dbt/profiles.yml" data-lang="yaml:~/.dbt/profiles.yml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">dbt_training_dw</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">dbt_training_dw</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l">dev</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">outputs</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">dev</span><span class="p">:</span><span class="w">
@@ -409,8 +410,8 @@ dbtプロダクトへの貢献を目的に活動をしています。
 </span></span></code></pre></div><ul>
 <li>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml:docker-compose.yml" data-lang="yaml:docker-compose.yml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">postgres</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">postgres:latest</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">always</span><span class="w">
@@ -512,7 +513,7 @@ dbtプロダクトへの貢献を目的に活動をしています。
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql:employee_names.sql" data-lang="sql:employee_names.sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;employee_id&#34;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="nf">concat</span><span class="p">(</span><span class="s2">&#34;first_name&#34;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;last_name&#34;</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">full_name</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">from</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">from</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;dbt_training&#34;</span><span class="p">.</span><span class="s2">&#34;raw&#34;</span><span class="p">.</span><span class="s2">&#34;employees&#34;</span><span class="w">
 </span></span></span></code></pre></div><ul>
 <li>cf. <a href="https://docs.getdbt.com/docs/build/sql-models">SQL models</a> dbt</li>
@@ -607,18 +608,18 @@ dbtプロダクトへの貢献を目的に活動をしています。
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nf">config</span><span class="p">(</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">materialized</span><span class="o">=</span><span class="s1">&#39;incremental&#39;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">}}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">select</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;employee_id&#34;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="nf">concat</span><span class="p">(</span><span class="s2">&#34;first_name&#34;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;last_name&#34;</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">full_name</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">from</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">from</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;dbt_training&#34;</span><span class="p">.</span><span class="s2">&#34;raw&#34;</span><span class="p">.</span><span class="s2">&#34;employees&#34;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">{</span><span class="o">%</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nf">is_incremental</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="err">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">where</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">{</span><span class="o">%</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nf">is_incremental</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="err">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">where</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;employee_id&#34;</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="s2">&#34;employee_id&#34;</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="err">{{</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="err">}}</span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">{</span><span class="o">%</span><span class="w"> </span><span class="n">endif</span><span class="w"> </span><span class="o">%</span><span class="err">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">{</span><span class="o">%</span><span class="w"> </span><span class="n">endif</span><span class="w"> </span><span class="o">%</span><span class="err">}</span><span class="w">
 </span></span></span></code></pre></div><ul>
 <li>cf. <a href="https://docs.getdbt.com/docs/build/incremental-models">Incremental models</a> dbt</li>
 </ul>
@@ -648,7 +649,7 @@ dbtプロダクトへの貢献を目的に活動をしています。
 <p>エイリアス機能
 cf. <a href="https://docs.getdbt.com/docs/build/custom-aliases">Custom aliases</a></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">-- hogehoge.sql
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">{{</span><span class="w"> </span><span class="n">config</span><span class="p">(</span><span class="k">alias</span><span class="o">=</span><span class="s1">&#39;fugafuga&#39;</span><span class="p">)</span><span class="w"> </span><span class="err">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">{{</span><span class="w"> </span><span class="n">config</span><span class="p">(</span><span class="k">alias</span><span class="o">=</span><span class="s1">&#39;fugafuga&#39;</span><span class="p">)</span><span class="w"> </span><span class="err">}}</span><span class="w">
 </span></span></span></code></pre></div><ul>
 <li>モデル名(ビュー名)は<code>hogehoge</code>. 一方DBに作成されるテーブル名は<code>fugafuga</code>.</li>
 </ul>
@@ -657,15 +658,15 @@ cf. <a href="https://docs.getdbt.com/docs/build/custom-schemas">Custom schemas</
 <ol>
 <li>利用シーン
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">-- hogehoge.sql
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">{{</span><span class="w"> </span><span class="n">config</span><span class="p">(</span><span class="k">schema</span><span class="o">=</span><span class="s1">&#39;piyopiyo&#39;</span><span class="p">)</span><span class="w"> </span><span class="err">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">{{</span><span class="w"> </span><span class="n">config</span><span class="p">(</span><span class="k">schema</span><span class="o">=</span><span class="s1">&#39;piyopiyo&#39;</span><span class="p">)</span><span class="w"> </span><span class="err">}}</span><span class="w">
 </span></span></span></code></pre></div>このように作られる=&gt; <code>public_piyopiyo</code></li>
 <li>利用シーン
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">-- hogehoge.sql
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">{{</span><span class="w"> </span><span class="n">config</span><span class="p">(</span><span class="k">alias</span><span class="o">=</span><span class="s1">&#39;fugafuga&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">schema</span><span class="o">=</span><span class="s1">&#39;piyopiyo&#39;</span><span class="p">)</span><span class="w"> </span><span class="err">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">{{</span><span class="w"> </span><span class="n">config</span><span class="p">(</span><span class="k">alias</span><span class="o">=</span><span class="s1">&#39;fugafuga&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">schema</span><span class="o">=</span><span class="s1">&#39;piyopiyo&#39;</span><span class="p">)</span><span class="w"> </span><span class="err">}}</span><span class="w">
 </span></span></span></code></pre></div>このように作られる=&gt; <code>public_piyopiyo.fugafuga</code></li>
 <li>利用シーン
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">models</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">models</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">hoge_project</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">piyo</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">+schema</span><span class="p">:</span><span class="w"> </span><span class="l">piyopiyo</span><span class="w">
@@ -678,9 +679,9 @@ cf. <a href="https://docs.getdbt.com/docs/build/project-variables">Project varia
 <h4 id="テスト">テスト<a class="anchor" aria-hidden="true" href="#テスト"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
 <p>eg.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ dbt <span class="nb">test</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --profiles-dir ./profiles <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --vars <span class="s1">&#39;$(cat ./config/local/vars.yml)&#39;</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --select company_hoge_jp__bigquery_resource__jobs_url_daily_extract_of_connectedsheet
+</span></span></span><span class="line"><span class="cl">    --profiles-dir ./profiles <span class="se">\
+</span></span></span><span class="line"><span class="cl">    --vars <span class="s1">&#39;$(cat ./config/local/vars.yml)&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">    --select company_hoge_jp__bigquery_resource__jobs_url_daily_extract_of_connectedsheet
 </span></span></code></pre></div><p>実務では、上記のよに単に <code>test</code> を実施するのではなく、Optionsを付して慎重に行っていた。</p>
 <p><strong>テスト手法</strong></p>
 <ol>
@@ -689,13 +690,13 @@ cf. <a href="https://docs.getdbt.com/docs/build/project-variables">Project varia
 </ol>
 <p>[手法1] Singular data tests（単一テスト）</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql:tests/always_fail_test.sql" data-lang="sql:tests/always_fail_test.sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="n">id</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">from</span><span class="w"> </span><span class="n">hoge</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">where</span><span class="w"> </span><span class="no">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">from</span><span class="w"> </span><span class="n">hoge</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">where</span><span class="w"> </span><span class="no">true</span><span class="w">
 </span></span></span></code></pre></div><p>[手法2] Generic data tests（汎用テスト）</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml:models/schema.yml" data-lang="yaml:models/schema.yml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">models</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">models</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">model_name_hoge</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">columns</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">fuga</span><span class="w">
@@ -755,7 +756,7 @@ cf. <a href="https://docs.getdbt.com/docs/build/project-variables">Project varia
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">from</span><span class="w"> </span><span class="err">{{</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="err">}}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">where</span><span class="w"> </span><span class="err">{{</span><span class="w"> </span><span class="n">column_name</span><span class="w"> </span><span class="err">}}</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="no">null</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">{</span><span class="o">%</span><span class="w"> </span><span class="n">endtest</span><span class="w"> </span><span class="o">%</span><span class="err">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">{</span><span class="o">%</span><span class="w"> </span><span class="n">endtest</span><span class="w"> </span><span class="o">%</span><span class="err">}</span><span class="w">
 </span></span></span></code></pre></div></li>
 <li>
 <p><code>$ dbt test</code></p>

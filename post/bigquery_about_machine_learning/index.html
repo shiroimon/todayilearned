@@ -154,7 +154,7 @@
                 Created <relative-time datetime="Fri, 14 Mar 2025 17:31:44 &#43;0900" class="no-wrap">Fri, 14 Mar 2025 17:31:44 &#43;0900</relative-time>
                 
                 <span class="path-divider">|</span>
-                Modified <relative-time datetime="Thu, 02 Oct 2025 00:30:36 &#43;0900" class="no-wrap">Thu, 02 Oct 2025 00:30:36 &#43;0900</relative-time>
+                Modified <relative-time datetime="Mon, 05 Jan 2026 23:44:03 &#43;0900" class="no-wrap">Mon, 05 Jan 2026 23:44:03 &#43;0900</relative-time>
                 
             </div>
         </div>
@@ -238,32 +238,32 @@
 <h2 id="what">What<a class="anchor" aria-hidden="true" href="#what"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
 <h3 id="-bqml-automl">| BQML (AutoML)<a class="anchor" aria-hidden="true" href="#-bqml-automl"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">create</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="k">replace</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">`</span><span class="err">{</span><span class="n">my_project</span><span class="p">.</span><span class="n">my_dataset</span><span class="err">}</span><span class="o">`</span><span class="p">.</span><span class="err">{モデル名}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">options</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">options</span><span class="p">(</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">     </span><span class="n">model_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;AUTOML_CLASSIFIER&#39;</span><span class="w">     </span><span class="c1">--( ※ )使用アルゴリズム
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">     </span><span class="cm">/* 使用モデル別にオプションを適時変更 */</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">     </span><span class="c1">-- , budget_hours = 1.0              --(e.g.)時間制限
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">     </span><span class="c1">-- , num_clusters=5                  --(e.g.)分割数（クラスタリング時）
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">     </span><span class="c1">-- , standardize_features = true     --(e.g.)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="err">{クエリ}</span><span class="w"> </span><span class="c1">-- 使用するデータセット
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">     </span><span class="c1">-- , num_clusters=5                  --(e.g.)分割数（クラスタリング時）
+</span></span></span><span class="line"><span class="cl"><span class="w">     </span><span class="c1">-- , standardize_features = true     --(e.g.)
+</span></span></span><span class="line"><span class="cl"><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="err">{クエリ}</span><span class="w"> </span><span class="c1">-- 使用するデータセット
+</span></span></span><span class="line"><span class="cl"><span class="p">;</span><span class="w">
 </span></span></span></code></pre></div><ol>
 <li>モデリング
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="o">#</span><span class="n">standardSQL</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/*****
+</span></span></span><span class="line"><span class="cl"><span class="cm">/*****
 </span></span></span><span class="line"><span class="cl"><span class="cm"> cf. カリフォルニア大学アーバイン校
 </span></span></span><span class="line"><span class="cl"><span class="cm">     https://academic-accelerator.com/Manuscript-Generator/jp/California-Irvine
 </span></span></span><span class="line"><span class="cl"><span class="cm">     Machine Learning データセットのリポジトリから『顧客解約予測データセット』（公開)
 </span></span></span><span class="line"><span class="cl"><span class="cm"> *****/</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/* MODEL_DEVLOP */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="cm">/* MODEL_DEVLOP */</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">create</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="k">replace</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">`</span><span class="n">my_dataset</span><span class="o">`</span><span class="p">.</span><span class="n">AUTO_ML_1</span><span class="w"> </span><span class="c1">-- モデル名
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">options</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">create</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="k">replace</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">`</span><span class="n">my_dataset</span><span class="o">`</span><span class="p">.</span><span class="n">AUTO_ML_1</span><span class="w"> </span><span class="c1">-- モデル名
+</span></span></span><span class="line"><span class="cl"><span class="k">options</span><span class="p">(</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">model_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;AUTOML_CLASSIFIER&#39;</span><span class="w"> </span><span class="c1">-- 使用アルゴリズム
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="c1">-- , input_label_cols = [&#39;&#39;]     -- ターゲット名（カラム）
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="n">budget_hours</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="w">             </span><span class="c1">-- 時間制限
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">-- , input_label_cols = [&#39;&#39;]     -- ターゲット名（カラム）
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="n">budget_hours</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="w">             </span><span class="c1">-- 時間制限
+</span></span></span><span class="line"><span class="cl"><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="cm">/* クエリ（学習に使用するデータを抽出する） */</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">select</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">State</span><span class="w">
@@ -272,7 +272,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">,</span><span class="w"> </span><span class="n">Total_Charge</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">Account_Length</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">avg_daily_spend</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">,</span><span class="w"> </span><span class="n">CustServ_Calls</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">Account_Length</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">avg_daily_cases</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">,</span><span class="w"> </span><span class="n">Churn_</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="c1">-- 推論するラベル
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="k">from</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">from</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="o">`</span><span class="n">my_dataset</span><span class="p">.</span><span class="n">CSV_CUSTOMER_ACTIVITY</span><span class="o">`</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">where</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nb">date</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">Record_Date</span><span class="w">
@@ -288,15 +288,15 @@
 </li>
 <li>評価・推論
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="o">#</span><span class="n">standardSQL</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/*****
+</span></span></span><span class="line"><span class="cl"><span class="cm">/*****
 </span></span></span><span class="line"><span class="cl"><span class="cm"> ◇  BigQuery ML
 </span></span></span><span class="line"><span class="cl"><span class="cm">    先に、「MODEL_DEVLOP」を実行。実行後、コメントアウトしてView化して同一ファイルで扱うのもあり
 </span></span></span><span class="line"><span class="cl"><span class="cm">    次に、「MODEL_EVALUATE」「MODEL_PREDICT」を実行。
 </span></span></span><span class="line"><span class="cl"><span class="cm"> *****/</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">with</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">with</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/* MODEL_EVALUATE */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="cm">/* MODEL_EVALUATE */</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">evaluation</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="p">(</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w">
@@ -320,7 +320,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/* MODEL_PREDICT */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="cm">/* MODEL_PREDICT */</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="n">predict</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="p">(</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">select</span><span class="w">
@@ -340,7 +340,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">,</span><span class="w"> </span><span class="n">Total_Charge</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">Account_Length</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">avg_daily_spend</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">,</span><span class="w"> </span><span class="n">CustServ_Calls</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">Account_Length</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">avg_daily_cases</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="c1">-- , Churn_ as label --∵ 推論時不要
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">            </span><span class="k">from</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">from</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="o">`</span><span class="n">my_dataset</span><span class="p">.</span><span class="n">CSV_CUSTOMER_ACTIVITY</span><span class="o">`</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">where</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="nb">date</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">Record_Date</span><span class="w">
@@ -348,11 +348,11 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">),</span><span class="w"> </span><span class="k">unnest</span><span class="p">(</span><span class="n">predicted_label_probs</span><span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">where</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">predicted_label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;True.&#39;</span><span class="w"> </span><span class="c1">--∵ 2値分類の為
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/* OUTPUT */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="cm">/* OUTPUT */</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">evaluation</span><span class="p">;</span><span class="w"> </span><span class="c1">-- モデル評価
+</span></span></span><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">evaluation</span><span class="p">;</span><span class="w"> </span><span class="c1">-- モデル評価
 </span></span></span><span class="line"><span class="cl"><span class="c1">-- select * from predict; -- 推論
 </span></span></span></code></pre></div><ul>
 <li>実施時に出たエラー文
@@ -396,8 +396,8 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">,</span><span class="w"> </span><span class="n">Survived</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">label</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">from</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="o">`</span><span class="n">Kaggle_titanic</span><span class="p">.</span><span class="n">preprocessed_data</span><span class="o">`</span><span class="w"> </span><span class="c1">--（前処理終わりのテーブル）
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">            </span><span class="k">left</span><span class="w"> </span><span class="k">join</span><span class="w">  </span><span class="o">`</span><span class="n">Kaggle_titanic</span><span class="p">.</span><span class="n">label_train</span><span class="o">`</span><span class="w"> </span><span class="k">using</span><span class="p">(</span><span class="n">PassengerId</span><span class="p">)</span><span class="w"> </span><span class="c1">-- ラベル付与
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">        </span><span class="k">where</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">left</span><span class="w"> </span><span class="k">join</span><span class="w">  </span><span class="o">`</span><span class="n">Kaggle_titanic</span><span class="p">.</span><span class="n">label_train</span><span class="o">`</span><span class="w"> </span><span class="k">using</span><span class="p">(</span><span class="n">PassengerId</span><span class="p">)</span><span class="w"> </span><span class="c1">-- ラベル付与
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">where</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">train_flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;train&#39;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
@@ -456,19 +456,19 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql:befor.sql" data-lang="sql:befor.sql"><span class="line"><span class="cl"><span class="w">    </span><span class="k">create</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">repalce</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="n">taxi</span><span class="p">.</span><span class="n">TOTAL_AMOUNT_MODEL</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nf">options</span><span class="w"> </span><span class="p">(</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">model_type</span><span class="o">=</span><span class="s1">&#39;linear_reg&#39;</span><span class="w">                </span><span class="c1">-- 線形回帰
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">        </span><span class="p">,</span><span class="w"> </span><span class="n">input_label_cols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;total_amount&#39;</span><span class="p">]</span><span class="w">  </span><span class="c1">-- ラベル名
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">,</span><span class="w"> </span><span class="n">input_label_cols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;total_amount&#39;</span><span class="p">]</span><span class="w">  </span><span class="c1">-- ラベル名
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="o">`</span><span class="n">taxi</span><span class="p">.</span><span class="n">sample_data</span><span class="o">`</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">;</span><span class="w">
 </span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql:after.sql" data-lang="sql:after.sql"><span class="line"><span class="cl"><span class="w">    </span><span class="k">create</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">repalce</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="n">taxi</span><span class="p">.</span><span class="n">TOTAL_AMOUNT_MODEL</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nf">options</span><span class="w"> </span><span class="p">(</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">model_type</span><span class="o">=</span><span class="s1">&#39;linear_reg&#39;</span><span class="w">                </span><span class="c1">-- 線形回帰
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">        </span><span class="p">,</span><span class="w"> </span><span class="n">input_label_cols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;total_amount&#39;</span><span class="p">]</span><span class="w">  </span><span class="c1">-- ラベル名
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">        </span><span class="p">,</span><span class="w"> </span><span class="n">num_trials</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">,</span><span class="w"> </span><span class="n">input_label_cols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;total_amount&#39;</span><span class="p">]</span><span class="w">  </span><span class="c1">-- ラベル名
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">,</span><span class="w"> </span><span class="n">num_trials</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">,</span><span class="w"> </span><span class="n">hparam_tuning_objectives</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;mean_squared_error&#39;</span><span class="p">]</span><span class="w">  </span><span class="c1">-- 平均二乗誤差(評価指標)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">        </span><span class="p">,</span><span class="w"> </span><span class="n">max_parallel_trials</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">,</span><span class="w"> </span><span class="n">max_parallel_trials</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">,</span><span class="w"> </span><span class="n">enable_global_explain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">TRUE</span><span class="w">  </span><span class="c1">-- 特徴量寄与度を確認の為（Explainable AI機能を用いる場合）
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="o">`</span><span class="n">taxi</span><span class="p">.</span><span class="n">sample_data</span><span class="o">`</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">;</span><span class="w">
 </span></span></span></code></pre></div><ul>
@@ -494,14 +494,14 @@
 （「is_optimal」列を確認すると、何回目のトライアルが最適なのか知れる。）</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-SQL" data-lang="SQL"><span class="line"><span class="cl"><span class="c1">-- 何回目のトライアルがよき？
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">ml</span><span class="p">.</span><span class="n">training_info</span><span class="p">(</span><span class="n">model</span><span class="w"> </span><span class="o">`</span><span class="n">taxi</span><span class="p">.</span><span class="n">TOTAL_AMOUNT_MODEL</span><span class="o">`</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">ml</span><span class="p">.</span><span class="n">training_info</span><span class="p">(</span><span class="n">model</span><span class="w"> </span><span class="o">`</span><span class="n">taxi</span><span class="p">.</span><span class="n">TOTAL_AMOUNT_MODEL</span><span class="o">`</span><span class="p">);</span><span class="w">
 </span></span></span></code></pre></div>cf. <a href="https://cloud.google.com/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-train">The ML.TRAINING_INFO function</a> - GoogleCloud</li>
 </ul>
 <h3 id="-mlglobal_explain">| ML.GLOBAL_EXPLAIN()<a class="anchor" aria-hidden="true" href="#-mlglobal_explain"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">-- どの特徴量がよき？
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">from</span><span class="w"> </span><span class="n">ml</span><span class="p">.</span><span class="n">global_explain</span><span class="p">(</span><span class="n">model</span><span class="w"> </span><span class="o">`</span><span class="n">taxi</span><span class="p">.</span><span class="n">TOTAL_AMOUNT_MODEL</span><span class="o">`</span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">from</span><span class="w"> </span><span class="n">ml</span><span class="p">.</span><span class="n">global_explain</span><span class="p">(</span><span class="n">model</span><span class="w"> </span><span class="o">`</span><span class="n">taxi</span><span class="p">.</span><span class="n">TOTAL_AMOUNT_MODEL</span><span class="o">`</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">;</span><span class="w">
 </span></span></span></code></pre></div><ul>
 <li><code>enable_global_explain()</code> パラメータを TRUE にしていた場合、「BigQuery Explainable AI」が使える。</li>
 <li>特徴毎の寄与度を確認することが出来る。（ランダムフォレストのフューチャーインポータンス的なことができる）</li>
@@ -509,16 +509,16 @@
 <h3 id="-mlgenerate_text">| ML.GENERATE_TEXT()<a class="anchor" aria-hidden="true" href="#-mlgenerate_text"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">with</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="p">(</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">select</span><span class="w"> </span><span class="s2">&#34;Find the biggest number from the following list: 4, 6, 1, 5, 2&#34;</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">prompt</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">select</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="o">*</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">from</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">from</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">ML</span><span class="p">.</span><span class="n">GENERATE_TEXT</span><span class="p">(</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">MODEL</span><span class="w"> </span><span class="o">`</span><span class="n">bq</span><span class="o">-</span><span class="n">analytics</span><span class="o">-</span><span class="n">jp</span><span class="o">-</span><span class="n">prod</span><span class="p">.</span><span class="n">llm_models_shops_bi_analysts</span><span class="p">.</span><span class="n">gemini_2_0_flash_lite_preview_02_05</span><span class="o">`</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">,</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">t</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">,</span><span class="w"> </span><span class="n">struct</span><span class="p">(</span><span class="k">true</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">flatten_json_output</span><span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">;</span><span class="w">
 </span></span></span></code></pre></div><h2 id="ref">Ref.<a class="anchor" aria-hidden="true" href="#ref"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
 <ul>
 <li><a href="https://blog.g-gen.co.jp/entry/bigquery-ml-explained">BigQuery MLを徹底解説！</a> Ggen</li>

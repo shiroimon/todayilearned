@@ -154,7 +154,7 @@
                 Created <relative-time datetime="Tue, 17 Dec 2024 22:39:48 &#43;0900" class="no-wrap">Tue, 17 Dec 2024 22:39:48 &#43;0900</relative-time>
                 
                 <span class="path-divider">|</span>
-                Modified <relative-time datetime="Fri, 31 Oct 2025 02:32:39 &#43;0900" class="no-wrap">Fri, 31 Oct 2025 02:32:39 &#43;0900</relative-time>
+                Modified <relative-time datetime="Mon, 05 Jan 2026 23:44:03 &#43;0900" class="no-wrap">Mon, 05 Jan 2026 23:44:03 &#43;0900</relative-time>
                 
             </div>
         </div>
@@ -382,28 +382,28 @@
 </ul>
 <h4 id="1-yaml概要理論編">[1] YAML概要（理論編）<a class="anchor" aria-hidden="true" href="#1-yaml概要理論編"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml:sample.yaml" data-lang="yaml:sample.yaml"><span class="line"><span class="cl"><span class="c"># An employee record        # コメントアウト</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">                         </span><span class="c"># セパレータ ※先頭行に記述</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;shiro&#34;</span><span class="w">               </span><span class="c"># 文字列</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">age</span><span class="p">:</span><span class="w"> </span><span class="m">30</span><span class="w">                     </span><span class="c"># 数値</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">job</span><span class="p">:</span><span class="w"> </span><span class="l">Data engineer         </span><span class="w"> </span><span class="c"># 文字列</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">employed</span><span class="p">:</span><span class="w"> </span><span class="kc">TRUE</span><span class="w">              </span><span class="c"># ブール値</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">hoge</span><span class="p">:</span><span class="w"> </span><span class="cp">!!null</span><span class="w"> </span><span class="kc">null</span><span class="w">           </span><span class="c"># Null値</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">languages</span><span class="p">:</span><span class="w">                  </span><span class="c"># Dict記述方法</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nn">---</span><span class="w">                         </span><span class="c"># セパレータ ※先頭行に記述</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;shiro&#34;</span><span class="w">               </span><span class="c"># 文字列</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">age</span><span class="p">:</span><span class="w"> </span><span class="m">30</span><span class="w">                     </span><span class="c"># 数値</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">job</span><span class="p">:</span><span class="w"> </span><span class="l">Data engineer         </span><span class="w"> </span><span class="c"># 文字列</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">employed</span><span class="p">:</span><span class="w"> </span><span class="kc">TRUE</span><span class="w">              </span><span class="c"># ブール値</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">hoge</span><span class="p">:</span><span class="w"> </span><span class="cp">!!null</span><span class="w"> </span><span class="kc">null</span><span class="w">           </span><span class="c"># Null値</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">languages</span><span class="p">:</span><span class="w">                  </span><span class="c"># Dict記述方法</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">python</span><span class="p">:</span><span class="w"> </span><span class="l">middle</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">shellscript</span><span class="p">:</span><span class="w"> </span><span class="l">row</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">sql</span><span class="p">:</span><span class="w"> </span><span class="l">high</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">address</span><span class="p">:</span><span class="w"> </span><span class="l">|                 </span><span class="w"> </span><span class="c"># 複数行文字列（改行保持）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">address</span><span class="p">:</span><span class="w"> </span><span class="l">|                 </span><span class="w"> </span><span class="c"># 複数行文字列（改行保持）</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">postal_code</span><span class="p">:</span><span class="w"> </span><span class="m">100-0001</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">city</span><span class="p">:</span><span class="w"> </span><span class="l">Tokyo</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">street</span><span class="p">:</span><span class="w"> </span><span class="l">Chiyoda 1-1</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">hobbies</span><span class="p">:</span><span class="w"> </span><span class="l">|-                </span><span class="w"> </span><span class="c"># 複数行文字列（折りたたみ）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">hobbies</span><span class="p">:</span><span class="w"> </span><span class="l">|-                </span><span class="w"> </span><span class="c"># 複数行文字列（折りたたみ）</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">I love programming.</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">I enjoy hiking.</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">I like cooking.</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">foods</span><span class="p">:</span><span class="w">                      </span><span class="c"># List記述方法</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">foods</span><span class="p">:</span><span class="w">                      </span><span class="c"># List記述方法</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">apple</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">banana</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">greatings</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">hello, hi, good morning] </span><span class="w"> </span><span class="c"># インラインリスト</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">greatings</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">hello, hi, good morning] </span><span class="w"> </span><span class="c"># インラインリスト</span><span class="w">
 </span></span></span></code></pre></div><p>YAMLとは設定ファイル</p>
 <ul>
 <li>シリアライズ（直列化）が容易

@@ -154,7 +154,7 @@
                 Created <relative-time datetime="Sat, 20 Jul 2024 16:13:42 &#43;0900" class="no-wrap">Sat, 20 Jul 2024 16:13:42 &#43;0900</relative-time>
                 
                 <span class="path-divider">|</span>
-                Modified <relative-time datetime="Thu, 02 Oct 2025 00:30:36 &#43;0900" class="no-wrap">Thu, 02 Oct 2025 00:30:36 &#43;0900</relative-time>
+                Modified <relative-time datetime="Mon, 05 Jan 2026 23:44:03 &#43;0900" class="no-wrap">Mon, 05 Jan 2026 23:44:03 &#43;0900</relative-time>
                 
             </div>
         </div>
@@ -249,15 +249,15 @@
 </li>
 <li>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-SQL" data-lang="SQL"><span class="line"><span class="cl"><span class="c1">-- 単一のCTE
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">with</span><span class="w"> </span><span class="n">SingleCTE</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">with</span><span class="w"> </span><span class="n">SingleCTE</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="p">(</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">select</span><span class="w"> </span><span class="n">column1</span><span class="p">,</span><span class="w"> </span><span class="n">column2</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">from</span><span class="w"> </span><span class="o">`</span><span class="n">dataset</span><span class="p">.</span><span class="k">table</span><span class="o">`</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">where</span><span class="w"> </span><span class="n">condition</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="n">column1</span><span class="p">,</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="k">count</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">from</span><span class="w"> </span><span class="n">SingleCTE</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">column1</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="n">column1</span><span class="p">,</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="k">count</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">from</span><span class="w"> </span><span class="n">SingleCTE</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">column1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">;</span><span class="w">
 </span></span></span></code></pre></div></li>
 </ul>
 </li>
@@ -266,7 +266,7 @@
 <li>定義: 複数のCTEを組み合わせて使用する場合、それらを総称してCTEsと言う。</li>
 <li>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-SQL" data-lang="SQL"><span class="line"><span class="cl"><span class="c1">-- 複数のCTE（CTEs）
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">with</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">with</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">FirstCTE</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="p">(</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">select</span><span class="w"> </span><span class="n">column1</span><span class="p">,</span><span class="w"> </span><span class="n">column2</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">from</span><span class="w"> </span><span class="o">`</span><span class="n">dataset</span><span class="p">.</span><span class="k">table</span><span class="o">`</span><span class="w">
@@ -283,10 +283,10 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">from</span><span class="w"> </span><span class="n">SecondCTE</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">where</span><span class="w"> </span><span class="n">condition3</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="n">column1</span><span class="p">,</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="k">count</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">from</span><span class="w"> </span><span class="n">ThirdCTE</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">column1</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="n">column1</span><span class="p">,</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="k">count</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">from</span><span class="w"> </span><span class="n">ThirdCTE</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">column1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">;</span><span class="w">
 </span></span></span></code></pre></div></li>
 </ul>
 </li>
@@ -326,38 +326,38 @@
 おおまかに、どのエリアにどのテーブル（整形したサブクエリ）が存在しているのかを予め決めておくことで、
 容易にクエリを記述・読み返すことができる。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="o">#</span><span class="n">standardSQL</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/* (memo)
+</span></span></span><span class="line"><span class="cl"><span class="cm">/* (memo)
 </span></span></span><span class="line"><span class="cl"><span class="cm"> * e.g. 分析依頼内容や、依頼者の要望クエリを要約しておく。
 </span></span></span><span class="line"><span class="cl"><span class="cm"> */</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/* UDF */</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--チームで共有するUDFはココに書いておく。
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/* PERIOD */</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--チャンク/パーティショニング（eg. 期間 ...etc.)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">declear</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">TO_</span><span class="w"> </span><span class="n">datetime</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">set</span><span class="w"> </span><span class="n">STARAT_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">set</span><span class="w"> </span><span class="n">END_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="cm">/* UDF */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">--チームで共有するUDFはココに書いておく。
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">with</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/* IMPORT */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="cm">/* PERIOD */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">--チャンク/パーティショニング（eg. 期間 ...etc.)
+</span></span></span><span class="line"><span class="cl"><span class="n">declear</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">TO_</span><span class="w"> </span><span class="n">datetime</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">set</span><span class="w"> </span><span class="n">STARAT_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">set</span><span class="w"> </span><span class="n">END_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">with</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="cm">/* IMPORT */</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="n">HOGE_RAW</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="s1">&#39;prj.ds.hoge_*&#39;</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">_table_suffix</span><span class="w"> </span><span class="k">between</span><span class="w"> </span><span class="n">STARAT_</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">END_</span><span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="n">FUGA_RAW</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="s1">&#39;prj.ds.fuga_*&#39;</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">_table_suffix</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">END_</span><span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="err">…</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/* PREPROCESS */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="cm">/* PREPROCESS */</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="n">HOGE_PREP</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">HOGE_RAW</span><span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="n">FUGA_PREP</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">FUGA_RAW</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">fuga_key</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">))</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="err">…</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/* AGGREGATION */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="cm">/* AGGREGATION */</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="n">HOGE_CALC</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="p">(</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">select</span><span class="w">
@@ -376,21 +376,21 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="err">…</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/* REPORT */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="cm">/* REPORT */</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">,</span><span class="w"> </span><span class="n">REPORT</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">HOGE_FUGA_MARGE</span><span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/* EDA */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="cm">/* EDA */</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">,</span><span class="w"> </span><span class="n">EDA</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="s1">&#39;-- eda --&#39;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">       </span><span class="o">#</span><span class="w"> </span><span class="err">探索的データ分析</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/* OUTPUT */</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">REPORT</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="cm">/* OUTPUT */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">REPORT</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">;</span><span class="w">
 </span></span></span></code></pre></div><h4 id="-アウトラインのの説明">| アウトラインの「/**/」の説明<a class="anchor" aria-hidden="true" href="#-アウトラインのの説明"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
 <table>
   <thead>
@@ -484,15 +484,15 @@
 <h4 id="-特徴量カラムの振る舞い">| 特徴量（カラム）の振る舞い<a class="anchor" aria-hidden="true" href="#-特徴量カラムの振る舞い"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
 <p>DQLの <code>SELECT句</code> でデータ抽出する際は、極力「 ＊ （=wild card）」を避ける。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="o">#</span><span class="n">standardSQL</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/* NG */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="cm">/* NG */</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">--会員データ
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="n">MEMBER</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">MEMBER</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="p">(</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="o">`</span><span class="n">pj</span><span class="p">.</span><span class="n">ds</span><span class="p">.</span><span class="k">table</span><span class="o">`</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">)</span><span class="w">
 </span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="o">#</span><span class="n">standardSQL</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/* OK */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="cm">/* OK */</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">--会員データ
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="n">MEMBER</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">MEMBER</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="p">(</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">select</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">member_id</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">,</span><span class="w"> </span><span class="n">gender</span><span class="w">

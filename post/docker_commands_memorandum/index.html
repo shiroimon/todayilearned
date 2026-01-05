@@ -154,7 +154,7 @@
                 Created <relative-time datetime="Wed, 21 Aug 2024 00:00:34 &#43;0900" class="no-wrap">Wed, 21 Aug 2024 00:00:34 &#43;0900</relative-time>
                 
                 <span class="path-divider">|</span>
-                Modified <relative-time datetime="Wed, 12 Nov 2025 19:22:12 &#43;0900" class="no-wrap">Wed, 12 Nov 2025 19:22:12 &#43;0900</relative-time>
+                Modified <relative-time datetime="Mon, 05 Jan 2026 23:44:03 &#43;0900" class="no-wrap">Mon, 05 Jan 2026 23:44:03 &#43;0900</relative-time>
                 
             </div>
         </div>
@@ -378,14 +378,14 @@ docker/
 </code></pre><h5 id="docker-dockerfile-作成">[Docker] Dockerfile 作成<a class="anchor" aria-hidden="true" href="#docker-dockerfile-作成"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h5>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh:Dockerfile.sh" data-lang="sh:Dockerfile.sh"><span class="line"><span class="cl">FROM ubuntu:latest
 </span></span><span class="line"><span class="cl">RUN apt-get update <span class="o">&amp;&amp;</span> apt-get install -y <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>    sudo <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>    wget <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>    vim
+</span></span></span><span class="line"><span class="cl">    sudo <span class="se">\
+</span></span></span><span class="line"><span class="cl">    wget <span class="se">\
+</span></span></span><span class="line"><span class="cl">    vim
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">WORKDIR /opt
 </span></span><span class="line"><span class="cl">RUN wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh <span class="o">&amp;&amp;</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>    sh Anaconda3-2019.10-Linux-x86_64.sh -b -p /opt/anaconda3 <span class="o">&amp;&amp;</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>    rm -f Anaconda3-2019.10-Linux-x86_64.sh
+</span></span></span><span class="line"><span class="cl">    sh Anaconda3-2019.10-Linux-x86_64.sh -b -p /opt/anaconda3 <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">    rm -f Anaconda3-2019.10-Linux-x86_64.sh
 </span></span><span class="line"><span class="cl">ENV PATH /opt/anaconda3/bin:<span class="nv">$PATH</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">WORKDIR /
@@ -442,9 +442,9 @@ docker/
 </span></span><span class="line"><span class="cl"><span class="c1"># コマンドをまとめ、改行で見やすく</span>
 </span></span><span class="line"><span class="cl">FROM ubuntu:latest
 </span></span><span class="line"><span class="cl">RUN  apt-get update <span class="o">&amp;&amp;</span> apt-get install <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>     XXX <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>     YYY <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>     ZZZ
+</span></span></span><span class="line"><span class="cl">     XXX <span class="se">\
+</span></span></span><span class="line"><span class="cl">     YYY <span class="se">\
+</span></span></span><span class="line"><span class="cl">     ZZZ
 </span></span></code></pre></div></li>
 </ul>
 <ol start="3">
@@ -462,9 +462,9 @@ docker/
 </ul>
 <h4 id="dockerfile実行">Dockerfile実行<a class="anchor" aria-hidden="true" href="#dockerfile実行"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ docker run <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>    -p 8888:8888 <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>    -v ~/docker/ds_python/:/work <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --name my-lab 511a925b20aa
+</span></span></span><span class="line"><span class="cl">    -p 8888:8888 <span class="se">\
+</span></span></span><span class="line"><span class="cl">    -v ~/docker/ds_python/:/work <span class="se">\
+</span></span></span><span class="line"><span class="cl">    --name my-lab 511a925b20aa
 </span></span></code></pre></div><ul>
 <li><code>-p</code> publishしてコンテナとホストのポートを設定</li>
 <li><code>-v</code> ホストとコンテナ内部のディレクトリを共有
@@ -481,9 +481,9 @@ docker/
 </span></span><span class="line"><span class="cl"><span class="c1"># Dockerイメージ作成してコンテナ起動</span>
 </span></span><span class="line"><span class="cl">$ docker build .
 </span></span><span class="line"><span class="cl">$ docker run <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>    -p 8888:8888 <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>    -v ~/docker/ds_python:work <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --name my-lab <span class="o">{</span>image<span class="o">}</span>
+</span></span></span><span class="line"><span class="cl">    -p 8888:8888 <span class="se">\
+</span></span></span><span class="line"><span class="cl">    -v ~/docker/ds_python:work <span class="se">\
+</span></span></span><span class="line"><span class="cl">    --name my-lab <span class="o">{</span>image<span class="o">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># SSHでクラウドに接続（セキュアにログイン）</span>
 </span></span><span class="line"><span class="cl">$ ssh -i hoge.pem ubuntu@ec2-00-100-200-300.ap-northeast-1.compute.amazonaws.com

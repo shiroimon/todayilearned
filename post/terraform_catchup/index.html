@@ -154,7 +154,7 @@
                 Created <relative-time datetime="Thu, 20 Feb 2025 18:49:06 &#43;0900" class="no-wrap">Thu, 20 Feb 2025 18:49:06 &#43;0900</relative-time>
                 
                 <span class="path-divider">|</span>
-                Modified <relative-time datetime="Tue, 04 Nov 2025 19:59:02 &#43;0900" class="no-wrap">Tue, 04 Nov 2025 19:59:02 &#43;0900</relative-time>
+                Modified <relative-time datetime="Mon, 05 Jan 2026 23:44:03 &#43;0900" class="no-wrap">Mon, 05 Jan 2026 23:44:03 &#43;0900</relative-time>
                 
             </div>
         </div>
@@ -259,11 +259,13 @@
 <h3 id="-terraform-フロー">### Terraform フロー<a class="anchor" aria-hidden="true" href="#-terraform-フロー"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 <blockquote>
 <p><img src="https://developer.hashicorp.com/_next/image?url=https%3A%2F%2Fcontent.hashicorp.com%2Fapi%2Fassets%3Fproduct%3Dtutorials%26version%3Dmain%26asset%3Dpublic%252Fimg%252Fterraform%252Fterraform-iac.png%26width%3D2400%26height%3D870&amp;w=3840&amp;q=75&amp;dpl=dpl_xNNd18u9GmymNBfmApwuT3J1ynMi" alt="img">
-cf. <a href="https://developer.hashicorp.com/terraform/tutorials/docker-get-started/infrastructure-as-code">https://developer.hashicorp.com/terraform/tutorials/docker-get-started/infrastructure-as-code</a></p></blockquote>
+cf. <a href="https://developer.hashicorp.com/terraform/tutorials/docker-get-started/infrastructure-as-code">https://developer.hashicorp.com/terraform/tutorials/docker-get-started/infrastructure-as-code</a></p>
+</blockquote>
 <blockquote>
 <p>[!NOTE] <br>
 1〜3: 事前準備<br>
-4〜5: 実運用系</p></blockquote>
+4〜5: 実運用系</p>
+</blockquote>
 <ol>
 <li>Terraformをインストール
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">brew tap hashicorp/tap
@@ -274,23 +276,23 @@ cf. <a href="https://developer.hashicorp.com/terraform/tutorials/docker-get-star
 </li>
 <li>定義ファイルの作成・配置
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tf:main.tf" data-lang="tf:main.tf"><span class="line"><span class="cl"><span class="c1">#e.g `VMware vSphere` に構築したい場合、provider にインフラ名 ”vsphere” を定義。(もしもAWSの場合、”aws”を定義)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">provider</span> <span class="s2">&#34;vsphere&#34;</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl"><span class="kr">provider</span> <span class="s2">&#34;vsphere&#34;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">user</span>                        <span class="o">=</span> <span class="nb">var</span><span class="p">.</span><span class="nx">vsphere_user</span><span class="c1"> #vsphereのユーザー名
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">password</span>                    <span class="o">=</span> <span class="nb">var</span><span class="p">.</span><span class="nx">vsphere_password</span><span class="c1"> #vsphereのパスワード
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">vsphere_server</span>              <span class="o">=</span> <span class="nb">var</span><span class="p">.</span><span class="nx">vcenter_server</span><span class="c1"> #vCenterのFQDN/IPアドレス
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">allow_unverified_ssl</span>        <span class="o">=</span> <span class="kc">true</span><span class="c1">  #SSL証明書の検証無効
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></span><span class="line"><span class="cl">  <span class="nx">password</span>                    <span class="o">=</span> <span class="nb">var</span><span class="p">.</span><span class="nx">vsphere_password</span><span class="c1"> #vsphereのパスワード
+</span></span></span><span class="line"><span class="cl">  <span class="nx">vsphere_server</span>              <span class="o">=</span> <span class="nb">var</span><span class="p">.</span><span class="nx">vcenter_server</span><span class="c1"> #vCenterのFQDN/IPアドレス
+</span></span></span><span class="line"><span class="cl">  <span class="nx">allow_unverified_ssl</span>        <span class="o">=</span> <span class="kc">true</span><span class="c1">  #SSL証明書の検証無効
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">[</span><span class="err">省略</span><span class="p">]</span><span class="c1">
 </span></span></span><span class="line"><span class="cl"><span class="c1">#Resource
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">resource</span> <span class="s2">&#34;vsphere_virtual_machine&#34;</span> <span class="s2">&#34;vm&#34;</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl"><span class="kr">resource</span> <span class="s2">&#34;vsphere_virtual_machine&#34;</span> <span class="s2">&#34;vm&#34;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nb">count</span>                       <span class="o">=</span> <span class="nb">var</span><span class="p">.</span><span class="nx">prov_vm_num</span><span class="c1">  #仮想マシンの数
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">name</span>                        <span class="o">=</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nb">var</span><span class="p">.</span><span class="nx">prov_vmname_prefix</span><span class="si">}${</span><span class="nb">format</span><span class="p">(</span><span class="s2">&#34;%03d&#34;</span><span class="p">,</span><span class="nb">count</span><span class="p">.</span><span class="nx">index</span><span class="o">+</span><span class="m">1</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="c1">
+</span></span></span><span class="line"><span class="cl">  <span class="nx">name</span>                        <span class="o">=</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nb">var</span><span class="p">.</span><span class="nx">prov_vmname_prefix</span><span class="si">}${</span><span class="nb">format</span><span class="p">(</span><span class="s2">&#34;%03d&#34;</span><span class="p">,</span><span class="nb">count</span><span class="p">.</span><span class="nx">index</span><span class="o">+</span><span class="m">1</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="c1">
 </span></span></span><span class="line"><span class="cl"><span class="c1">                                #仮想マシンの名前”接頭語”+”001”
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">[</span><span class="err">省略</span><span class="p">]</span><span class="c1">
+</span></span></span><span class="line"><span class="cl"><span class="p">[</span><span class="err">省略</span><span class="p">]</span><span class="c1">
 </span></span></span><span class="line"><span class="cl"><span class="c1">#Resource for VM Specs
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">num_cpus</span>                    <span class="o">=</span> <span class="nb">var</span><span class="p">.</span><span class="nx">prov_cpu_num</span><span class="c1">  #仮想マシンのCPUの数
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">memory</span>                      <span class="o">=</span> <span class="nb">var</span><span class="p">.</span><span class="nx">prov_mem_num</span><span class="c1">  #仮想マシンのメモリのMB
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">※変数の定義は別途必要</span>
+</span></span></span><span class="line"><span class="cl">  <span class="nx">num_cpus</span>                    <span class="o">=</span> <span class="nb">var</span><span class="p">.</span><span class="nx">prov_cpu_num</span><span class="c1">  #仮想マシンのCPUの数
+</span></span></span><span class="line"><span class="cl">  <span class="nx">memory</span>                      <span class="o">=</span> <span class="nb">var</span><span class="p">.</span><span class="nx">prov_mem_num</span><span class="c1">  #仮想マシンのメモリのMB
+</span></span></span><span class="line"><span class="cl"><span class="err">※変数の定義は別途必要</span>
 </span></span></code></pre></div><ul>
 <li>※ Terraformでは、拡張子.tf のファイル(テキストデータ)に、リソースの定義を記述</li>
 <li>※ なお、Terraformのコードは、<code>HCL</code> という独自言語により記述されているため、構文には注意</li>
@@ -343,15 +345,18 @@ cf. <a href="https://developer.hashicorp.com/terraform/tutorials/docker-get-star
 <ul>
 <li><a href="">Ansible</a>
 <blockquote>
-<p>設定ファイル playbook</p></blockquote>
+<p>設定ファイル playbook</p>
+</blockquote>
 </li>
 <li><a href="https://www.chef.io/">Chef</a>
 <blockquote>
-<p>設定ファイル recipe</p></blockquote>
+<p>設定ファイル recipe</p>
+</blockquote>
 </li>
 <li><a href="https://iasql.com/">IaSQL</a>
 <blockquote>
-<p>SQLでインフラを管理しようの試み</p></blockquote>
+<p>SQLでインフラを管理しようの試み</p>
+</blockquote>
 </li>
 </ul>
 <h2 id="ref">Ref.<a class="anchor" aria-hidden="true" href="#ref"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
