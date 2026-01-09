@@ -6,7 +6,7 @@
     <description>Recent content in CLI on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Jan 2026 23:44:03 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 08 Jan 2026 22:26:00 +0900</lastBuildDate>
     <atom:link href="https://shiroimon.kithub.f5.si/tags/cli/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[BigQuery] CLI</title>
@@ -28,6 +28,13 @@
       <pubDate>Tue, 26 Nov 2024 15:23:00 +0900</pubDate>
       <guid>https://shiroimon.kithub.f5.si/post/shell_commands_memorandum/</guid>
       <description>🐚 A black world appears when you open the terminal.</description>
+    </item>
+    <item>
+      <title>[GitHub] Copilot in Terminal</title>
+      <link>https://shiroimon.kithub.f5.si/post/github_coplilot_in_terminal/</link>
+      <pubDate>Mon, 18 Nov 2024 23:10:30 +0900</pubDate>
+      <guid>https://shiroimon.kithub.f5.si/post/github_coplilot_in_terminal/</guid>
+      <description>🤖 Notes on how to use in terminal (Vim)</description>
     </item>
     <item>
       <title>[WezTerm] Setup</title>

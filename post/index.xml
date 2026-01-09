@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Jan 2026 23:44:03 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 08 Jan 2026 22:26:00 +0900</lastBuildDate>
     <atom:link href="https://shiroimon.kithub.f5.si/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[GAS] Setup in local</title>
@@ -147,6 +147,13 @@
       <pubDate>Thu, 21 Nov 2024 12:06:08 +0900</pubDate>
       <guid>https://shiroimon.kithub.f5.si/post/github_oss_wana_be_join/</guid>
       <description>📍 About etiquette and the meaning of licenses when paticipating in OSS.</description>
+    </item>
+    <item>
+      <title>[GitHub] Copilot in Terminal</title>
+      <link>https://shiroimon.kithub.f5.si/post/github_coplilot_in_terminal/</link>
+      <pubDate>Mon, 18 Nov 2024 23:10:30 +0900</pubDate>
+      <guid>https://shiroimon.kithub.f5.si/post/github_coplilot_in_terminal/</guid>
+      <description>🤖 Notes on how to use in terminal (Vim)</description>
     </item>
     <item>
       <title>[Kubernetes] Catchup</title>
