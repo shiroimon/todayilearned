@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CUE on Today I Learned | KitHub</title>
-    <link>https://shiroimon.kithub.f5.si/tags/cue/</link>
+    <link>http://localhost:1313/tags/cue/</link>
     <description>Recent content in CUE on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Jan 2026 23:44:03 +0900</lastBuildDate>
-    <atom:link href="https://shiroimon.kithub.f5.si/tags/cue/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/cue/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Kubernetes] Catchup</title>
-      <link>https://shiroimon.kithub.f5.si/post/kubernetes_catchup/</link>
+      <link>http://localhost:1313/post/kubernetes_catchup/</link>
       <pubDate>Mon, 18 Nov 2024 13:29:33 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/kubernetes_catchup/</guid>
+      <guid>http://localhost:1313/post/kubernetes_catchup/</guid>
       <description>⚓️ About container orchestration tecnology.</description>
     </item>
   </channel>

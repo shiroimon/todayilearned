@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Connected Sheets on Today I Learned | KitHub</title>
-    <link>https://shiroimon.kithub.f5.si/tags/connected-sheets/</link>
+    <link>http://localhost:1313/tags/connected-sheets/</link>
     <description>Recent content in Connected Sheets on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Jan 2026 23:44:03 +0900</lastBuildDate>
-    <atom:link href="https://shiroimon.kithub.f5.si/tags/connected-sheets/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/connected-sheets/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Google Sheets] Used in functions</title>
-      <link>https://shiroimon.kithub.f5.si/post/google_sheets_used_functions/</link>
+      <link>http://localhost:1313/post/google_sheets_used_functions/</link>
       <pubDate>Tue, 22 Oct 2024 12:56:22 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/google_sheets_used_functions/</guid>
+      <guid>http://localhost:1313/post/google_sheets_used_functions/</guid>
       <description>📗 Make a memorandum of what you used with the most powerful free tool that anyone can use.</description>
     </item>
   </channel>

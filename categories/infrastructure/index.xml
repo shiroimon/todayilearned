@@ -2,80 +2,80 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Infrastructure on Today I Learned | KitHub</title>
-    <link>https://shiroimon.kithub.f5.si/categories/infrastructure/</link>
+    <link>http://localhost:1313/categories/infrastructure/</link>
     <description>Recent content in Infrastructure on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Jan 2026 23:44:03 +0900</lastBuildDate>
-    <atom:link href="https://shiroimon.kithub.f5.si/categories/infrastructure/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/infrastructure/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[BigQuery] CLI</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_cli/</link>
+      <link>http://localhost:1313/post/bigquery_cli/</link>
       <pubDate>Mon, 01 Sep 2025 21:43:34 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_cli/</guid>
+      <guid>http://localhost:1313/post/bigquery_cli/</guid>
       <description>🔍 Memos using CLI operations for each job type.</description>
     </item>
     <item>
       <title>[BigQuery] (Various) Data Transfer</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_about_various_data_transfer/</link>
+      <link>http://localhost:1313/post/bigquery_about_various_data_transfer/</link>
       <pubDate>Thu, 03 Apr 2025 11:11:44 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_about_various_data_transfer/</guid>
+      <guid>http://localhost:1313/post/bigquery_about_various_data_transfer/</guid>
       <description>🔍 Find out various data transfer methods starting from BigQuery.</description>
     </item>
     <item>
       <title>[BigQuery] INFORMATION_SCHEMA</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_about_information_schema/</link>
+      <link>http://localhost:1313/post/bigquery_about_information_schema/</link>
       <pubDate>Thu, 06 Mar 2025 17:39:31 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_about_information_schema/</guid>
+      <guid>http://localhost:1313/post/bigquery_about_information_schema/</guid>
       <description>🔍 It&amp;rsquo;s not good to know about data governance.</description>
     </item>
     <item>
       <title>[Terraform] Catchup</title>
-      <link>https://shiroimon.kithub.f5.si/post/terraform_catchup/</link>
+      <link>http://localhost:1313/post/terraform_catchup/</link>
       <pubDate>Thu, 20 Feb 2025 18:49:06 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/terraform_catchup/</guid>
+      <guid>http://localhost:1313/post/terraform_catchup/</guid>
       <description>✝️ A little while ago, I&amp;rsquo;ll be writing about my studies as an introduction to Terraform.</description>
     </item>
     <item>
       <title>[Kubernetes] Catchup</title>
-      <link>https://shiroimon.kithub.f5.si/post/kubernetes_catchup/</link>
+      <link>http://localhost:1313/post/kubernetes_catchup/</link>
       <pubDate>Mon, 18 Nov 2024 13:29:33 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/kubernetes_catchup/</guid>
+      <guid>http://localhost:1313/post/kubernetes_catchup/</guid>
       <description>⚓️ About container orchestration tecnology.</description>
     </item>
     <item>
       <title>[Argo Workflows] Catchup</title>
-      <link>https://shiroimon.kithub.f5.si/post/argo_workflows_catchup/</link>
+      <link>http://localhost:1313/post/argo_workflows_catchup/</link>
       <pubDate>Mon, 09 Sep 2024 12:40:59 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/argo_workflows_catchup/</guid>
+      <guid>http://localhost:1313/post/argo_workflows_catchup/</guid>
       <description>🐙 Understanding and implementing Argo projects and workflows.</description>
     </item>
     <item>
       <title>[Trocco][Embluk] Catchup</title>
-      <link>https://shiroimon.kithub.f5.si/post/trocco_and_embluk_catchup/</link>
+      <link>http://localhost:1313/post/trocco_and_embluk_catchup/</link>
       <pubDate>Wed, 21 Aug 2024 15:30:46 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/trocco_and_embluk_catchup/</guid>
+      <guid>http://localhost:1313/post/trocco_and_embluk_catchup/</guid>
       <description>🎢 Summarizing Trocco and Embluk to deepen understanding.</description>
     </item>
     <item>
       <title>[Docker] Commands memorandum</title>
-      <link>https://shiroimon.kithub.f5.si/post/docker_commands_memorandum/</link>
+      <link>http://localhost:1313/post/docker_commands_memorandum/</link>
       <pubDate>Wed, 21 Aug 2024 00:00:34 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/docker_commands_memorandum/</guid>
+      <guid>http://localhost:1313/post/docker_commands_memorandum/</guid>
       <description>🐳 Deepen my understanding of Docker&amp;rsquo;s basic commands and mechanisms.</description>
     </item>
     <item>
       <title>[BigQuery] Billing</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_billing_how_works/</link>
+      <link>http://localhost:1313/post/bigquery_billing_how_works/</link>
       <pubDate>Fri, 16 Aug 2024 20:35:07 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_billing_how_works/</guid>
+      <guid>http://localhost:1313/post/bigquery_billing_how_works/</guid>
       <description>🔍 Summarize billing mechanism, fee structure, and money-saving tips.</description>
     </item>
     <item>
       <title>[Terraform] Trying to build the environment</title>
-      <link>https://shiroimon.kithub.f5.si/post/terraform_trying_to_build_the_environment/</link>
+      <link>http://localhost:1313/post/terraform_trying_to_build_the_environment/</link>
       <pubDate>Fri, 26 Jul 2024 03:42:04 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/terraform_trying_to_build_the_environment/</guid>
+      <guid>http://localhost:1313/post/terraform_trying_to_build_the_environment/</guid>
       <description>✝️ I wll try setting up an environment to gain an initial understanding of IaC (Infrastructure as Code) provisioning.</description>
     </item>
   </channel>

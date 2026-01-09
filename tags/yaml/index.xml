@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>YAML on Today I Learned | KitHub</title>
-    <link>https://shiroimon.kithub.f5.si/tags/yaml/</link>
+    <link>http://localhost:1313/tags/yaml/</link>
     <description>Recent content in YAML on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Jan 2026 23:44:03 +0900</lastBuildDate>
-    <atom:link href="https://shiroimon.kithub.f5.si/tags/yaml/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/yaml/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[YAML] Catchup</title>
-      <link>https://shiroimon.kithub.f5.si/post/yaml_catchup/</link>
+      <link>http://localhost:1313/post/yaml_catchup/</link>
       <pubDate>Tue, 17 Dec 2024 22:39:48 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/yaml_catchup/</guid>
+      <guid>http://localhost:1313/post/yaml_catchup/</guid>
       <description>🚫 Understand Yaml, the configuratio file familiar to DevOps.</description>
     </item>
     <item>
       <title>[Kubernetes] Catchup</title>
-      <link>https://shiroimon.kithub.f5.si/post/kubernetes_catchup/</link>
+      <link>http://localhost:1313/post/kubernetes_catchup/</link>
       <pubDate>Mon, 18 Nov 2024 13:29:33 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/kubernetes_catchup/</guid>
+      <guid>http://localhost:1313/post/kubernetes_catchup/</guid>
       <description>⚓️ About container orchestration tecnology.</description>
     </item>
     <item>
       <title>[Argo Workflows] Catchup</title>
-      <link>https://shiroimon.kithub.f5.si/post/argo_workflows_catchup/</link>
+      <link>http://localhost:1313/post/argo_workflows_catchup/</link>
       <pubDate>Mon, 09 Sep 2024 12:40:59 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/argo_workflows_catchup/</guid>
+      <guid>http://localhost:1313/post/argo_workflows_catchup/</guid>
       <description>🐙 Understanding and implementing Argo projects and workflows.</description>
     </item>
     <item>
       <title>[Docker] Commands memorandum</title>
-      <link>https://shiroimon.kithub.f5.si/post/docker_commands_memorandum/</link>
+      <link>http://localhost:1313/post/docker_commands_memorandum/</link>
       <pubDate>Wed, 21 Aug 2024 00:00:34 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/docker_commands_memorandum/</guid>
+      <guid>http://localhost:1313/post/docker_commands_memorandum/</guid>
       <description>🐳 Deepen my understanding of Docker&amp;rsquo;s basic commands and mechanisms.</description>
     </item>
     <item>
       <title>[dbt] Seeking out basic understanding</title>
-      <link>https://shiroimon.kithub.f5.si/post/dbt_seeking_basic_understanding/</link>
+      <link>http://localhost:1313/post/dbt_seeking_basic_understanding/</link>
       <pubDate>Tue, 30 Jul 2024 02:30:55 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/dbt_seeking_basic_understanding/</guid>
+      <guid>http://localhost:1313/post/dbt_seeking_basic_understanding/</guid>
       <description>✴️ Wanna deepen my understanding by using my hands and referring to reference books.</description>
     </item>
   </channel>

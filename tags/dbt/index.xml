@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dbt on Today I Learned | KitHub</title>
-    <link>https://shiroimon.kithub.f5.si/tags/dbt/</link>
+    <link>http://localhost:1313/tags/dbt/</link>
     <description>Recent content in Dbt on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Jan 2026 23:44:03 +0900</lastBuildDate>
-    <atom:link href="https://shiroimon.kithub.f5.si/tags/dbt/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/dbt/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[BigQuery] (Various) Data Transfer</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_about_various_data_transfer/</link>
+      <link>http://localhost:1313/post/bigquery_about_various_data_transfer/</link>
       <pubDate>Thu, 03 Apr 2025 11:11:44 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_about_various_data_transfer/</guid>
+      <guid>http://localhost:1313/post/bigquery_about_various_data_transfer/</guid>
       <description>🔍 Find out various data transfer methods starting from BigQuery.</description>
     </item>
     <item>
       <title>[dbt] Seeking out basic understanding</title>
-      <link>https://shiroimon.kithub.f5.si/post/dbt_seeking_basic_understanding/</link>
+      <link>http://localhost:1313/post/dbt_seeking_basic_understanding/</link>
       <pubDate>Tue, 30 Jul 2024 02:30:55 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/dbt_seeking_basic_understanding/</guid>
+      <guid>http://localhost:1313/post/dbt_seeking_basic_understanding/</guid>
       <description>✴️ Wanna deepen my understanding by using my hands and referring to reference books.</description>
     </item>
   </channel>

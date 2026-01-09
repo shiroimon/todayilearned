@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Chrome Canary on Today I Learned | KitHub</title>
-    <link>https://shiroimon.kithub.f5.si/tags/chrome-canary/</link>
+    <link>http://localhost:1313/tags/chrome-canary/</link>
     <description>Recent content in Chrome Canary on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Jan 2026 23:44:03 +0900</lastBuildDate>
-    <atom:link href="https://shiroimon.kithub.f5.si/tags/chrome-canary/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/chrome-canary/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Google Chrome] This &amp; That</title>
-      <link>https://shiroimon.kithub.f5.si/post/google_chrome_this_and_that/</link>
+      <link>http://localhost:1313/post/google_chrome_this_and_that/</link>
       <pubDate>Tue, 25 Feb 2025 13:45:58 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/google_chrome_this_and_that/</guid>
+      <guid>http://localhost:1313/post/google_chrome_this_and_that/</guid>
       <description>⚪️</description>
     </item>
   </channel>

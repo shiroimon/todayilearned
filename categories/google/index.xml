@@ -2,122 +2,122 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Google on Today I Learned | KitHub</title>
-    <link>https://shiroimon.kithub.f5.si/categories/google/</link>
+    <link>http://localhost:1313/categories/google/</link>
     <description>Recent content in Google on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Jan 2026 23:44:03 +0900</lastBuildDate>
-    <atom:link href="https://shiroimon.kithub.f5.si/categories/google/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/google/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[GAS] Setup in local</title>
-      <link>https://shiroimon.kithub.f5.si/post/google_app_script_setup/</link>
+      <link>http://localhost:1313/post/google_app_script_setup/</link>
       <pubDate>Wed, 15 Oct 2025 18:48:39 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/google_app_script_setup/</guid>
+      <guid>http://localhost:1313/post/google_app_script_setup/</guid>
       <description>🟩 Local environment and Git-managed development environment.</description>
     </item>
     <item>
       <title>[BigQuery] CLI</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_cli/</link>
+      <link>http://localhost:1313/post/bigquery_cli/</link>
       <pubDate>Mon, 01 Sep 2025 21:43:34 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_cli/</guid>
+      <guid>http://localhost:1313/post/bigquery_cli/</guid>
       <description>🔍 Memos using CLI operations for each job type.</description>
     </item>
     <item>
       <title>[BigQuery] (Various) Data Transfer</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_about_various_data_transfer/</link>
+      <link>http://localhost:1313/post/bigquery_about_various_data_transfer/</link>
       <pubDate>Thu, 03 Apr 2025 11:11:44 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_about_various_data_transfer/</guid>
+      <guid>http://localhost:1313/post/bigquery_about_various_data_transfer/</guid>
       <description>🔍 Find out various data transfer methods starting from BigQuery.</description>
     </item>
     <item>
       <title>[Looker Studio] This and That</title>
-      <link>https://shiroimon.kithub.f5.si/post/looker_studio_this_and_that/</link>
+      <link>http://localhost:1313/post/looker_studio_this_and_that/</link>
       <pubDate>Mon, 24 Mar 2025 11:10:12 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/looker_studio_this_and_that/</guid>
+      <guid>http://localhost:1313/post/looker_studio_this_and_that/</guid>
       <description>🫧 How to use Google&amp;rsquo;s SaaS about BI.</description>
     </item>
     <item>
       <title>[BigQuery] Machine Learning</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_about_machine_learning/</link>
+      <link>http://localhost:1313/post/bigquery_about_machine_learning/</link>
       <pubDate>Fri, 14 Mar 2025 17:31:44 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_about_machine_learning/</guid>
+      <guid>http://localhost:1313/post/bigquery_about_machine_learning/</guid>
       <description>🔍 Completed within DWH, allowing modeling and analysis through queries</description>
     </item>
     <item>
       <title>[BigQuery] INFORMATION_SCHEMA</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_about_information_schema/</link>
+      <link>http://localhost:1313/post/bigquery_about_information_schema/</link>
       <pubDate>Thu, 06 Mar 2025 17:39:31 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_about_information_schema/</guid>
+      <guid>http://localhost:1313/post/bigquery_about_information_schema/</guid>
       <description>🔍 It&amp;rsquo;s not good to know about data governance.</description>
     </item>
     <item>
       <title>[BigQuery] Data analysis on preparation</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_data_analysis_on_preparation/</link>
+      <link>http://localhost:1313/post/bigquery_data_analysis_on_preparation/</link>
       <pubDate>Mon, 03 Mar 2025 22:23:20 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_data_analysis_on_preparation/</guid>
+      <guid>http://localhost:1313/post/bigquery_data_analysis_on_preparation/</guid>
       <description>🔍 I would like to prepare for data analysis using GoogleSQL inside BigQuery</description>
     </item>
     <item>
       <title>[Google Chrome] This &amp; That</title>
-      <link>https://shiroimon.kithub.f5.si/post/google_chrome_this_and_that/</link>
+      <link>http://localhost:1313/post/google_chrome_this_and_that/</link>
       <pubDate>Tue, 25 Feb 2025 13:45:58 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/google_chrome_this_and_that/</guid>
+      <guid>http://localhost:1313/post/google_chrome_this_and_that/</guid>
       <description>⚪️</description>
     </item>
     <item>
       <title>[Google Cloud] Tools memorandum</title>
-      <link>https://shiroimon.kithub.f5.si/post/google_cloud_tools_memorandum/</link>
+      <link>http://localhost:1313/post/google_cloud_tools_memorandum/</link>
       <pubDate>Tue, 21 Jan 2025 16:24:43 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/google_cloud_tools_memorandum/</guid>
+      <guid>http://localhost:1313/post/google_cloud_tools_memorandum/</guid>
       <description>☁️ I would like to summarize it to understand Cloud tools.</description>
     </item>
     <item>
       <title>[BigQuery] Data analyize catchup</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_data_analysis_catchup/</link>
+      <link>http://localhost:1313/post/bigquery_data_analysis_catchup/</link>
       <pubDate>Sat, 26 Oct 2024 00:22:05 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_data_analysis_catchup/</guid>
+      <guid>http://localhost:1313/post/bigquery_data_analysis_catchup/</guid>
       <description>🔍 Re-summarizeing the trajectory I learned as an introductory.</description>
     </item>
     <item>
       <title>[Google Sheets] Used in functions</title>
-      <link>https://shiroimon.kithub.f5.si/post/google_sheets_used_functions/</link>
+      <link>http://localhost:1313/post/google_sheets_used_functions/</link>
       <pubDate>Tue, 22 Oct 2024 12:56:22 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/google_sheets_used_functions/</guid>
+      <guid>http://localhost:1313/post/google_sheets_used_functions/</guid>
       <description>📗 Make a memorandum of what you used with the most powerful free tool that anyone can use.</description>
     </item>
     <item>
       <title>[BigQuery] Data Quality</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_about_data_quality/</link>
+      <link>http://localhost:1313/post/bigquery_about_data_quality/</link>
       <pubDate>Wed, 16 Oct 2024 13:49:54 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_about_data_quality/</guid>
+      <guid>http://localhost:1313/post/bigquery_about_data_quality/</guid>
       <description>🔍 Different perspective from data analysis. About data quality.</description>
     </item>
     <item>
       <title>[BigQuery] Used in functions</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_used_functions/</link>
+      <link>http://localhost:1313/post/bigquery_used_functions/</link>
       <pubDate>Thu, 29 Aug 2024 19:47:44 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_used_functions/</guid>
+      <guid>http://localhost:1313/post/bigquery_used_functions/</guid>
       <description>🔍 When I getting from my daily work. Added as need. I keep writing various tips.</description>
     </item>
     <item>
       <title>[BigQuery] Billing</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_billing_how_works/</link>
+      <link>http://localhost:1313/post/bigquery_billing_how_works/</link>
       <pubDate>Fri, 16 Aug 2024 20:35:07 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_billing_how_works/</guid>
+      <guid>http://localhost:1313/post/bigquery_billing_how_works/</guid>
       <description>🔍 Summarize billing mechanism, fee structure, and money-saving tips.</description>
     </item>
     <item>
       <title>[BigQuery] Structured data processing 100&#39;s</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_structured_data_processing_100/</link>
+      <link>http://localhost:1313/post/bigquery_structured_data_processing_100/</link>
       <pubDate>Fri, 26 Jul 2024 04:23:38 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_structured_data_processing_100/</guid>
+      <guid>http://localhost:1313/post/bigquery_structured_data_processing_100/</guid>
       <description>🔍 Tried using SQL to learn the basics of data science.</description>
     </item>
     <item>
       <title>[BigQuery] CTEs in data analyisis</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_data_analysis_on_cte/</link>
+      <link>http://localhost:1313/post/bigquery_data_analysis_on_cte/</link>
       <pubDate>Sat, 20 Jul 2024 16:13:42 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_data_analysis_on_cte/</guid>
+      <guid>http://localhost:1313/post/bigquery_data_analysis_on_cte/</guid>
       <description>🔍 Things to keep in mind when analyzing data using SQL.</description>
     </item>
   </channel>

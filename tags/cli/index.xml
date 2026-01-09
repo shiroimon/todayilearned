@@ -2,73 +2,73 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CLI on Today I Learned | KitHub</title>
-    <link>https://shiroimon.kithub.f5.si/tags/cli/</link>
+    <link>http://localhost:1313/tags/cli/</link>
     <description>Recent content in CLI on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 08 Jan 2026 22:26:00 +0900</lastBuildDate>
-    <atom:link href="https://shiroimon.kithub.f5.si/tags/cli/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/cli/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[BigQuery] CLI</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_cli/</link>
+      <link>http://localhost:1313/post/bigquery_cli/</link>
       <pubDate>Mon, 01 Sep 2025 21:43:34 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_cli/</guid>
+      <guid>http://localhost:1313/post/bigquery_cli/</guid>
       <description>🔍 Memos using CLI operations for each job type.</description>
     </item>
     <item>
       <title>[macOS] Commands memorandum</title>
-      <link>https://shiroimon.kithub.f5.si/post/macos_commands_memorandum/</link>
+      <link>http://localhost:1313/post/macos_commands_memorandum/</link>
       <pubDate>Tue, 28 Jan 2025 00:50:32 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/macos_commands_memorandum/</guid>
+      <guid>http://localhost:1313/post/macos_commands_memorandum/</guid>
       <description>🍏 macOS useful commands and tips.</description>
     </item>
     <item>
       <title>[Zsh] Commands memorandum</title>
-      <link>https://shiroimon.kithub.f5.si/post/shell_commands_memorandum/</link>
+      <link>http://localhost:1313/post/shell_commands_memorandum/</link>
       <pubDate>Tue, 26 Nov 2024 15:23:00 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/shell_commands_memorandum/</guid>
+      <guid>http://localhost:1313/post/shell_commands_memorandum/</guid>
       <description>🐚 A black world appears when you open the terminal.</description>
     </item>
     <item>
       <title>[GitHub] Copilot in Terminal</title>
-      <link>https://shiroimon.kithub.f5.si/post/github_coplilot_in_terminal/</link>
+      <link>http://localhost:1313/post/github_coplilot_in_terminal/</link>
       <pubDate>Mon, 18 Nov 2024 23:10:30 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/github_coplilot_in_terminal/</guid>
+      <guid>http://localhost:1313/post/github_coplilot_in_terminal/</guid>
       <description>🤖 Notes on how to use in terminal (Vim)</description>
     </item>
     <item>
       <title>[WezTerm] Setup</title>
-      <link>https://shiroimon.kithub.f5.si/post/wezterm_setup/</link>
+      <link>http://localhost:1313/post/wezterm_setup/</link>
       <pubDate>Thu, 24 Oct 2024 10:40:32 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/wezterm_setup/</guid>
+      <guid>http://localhost:1313/post/wezterm_setup/</guid>
       <description>🟣 Would like to use the most powerful terminal that rumored on the street.</description>
     </item>
     <item>
       <title>[Git] Branches pruning</title>
-      <link>https://shiroimon.kithub.f5.si/post/github_branches_pruning/</link>
+      <link>http://localhost:1313/post/github_branches_pruning/</link>
       <pubDate>Tue, 24 Sep 2024 18:08:08 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/github_branches_pruning/</guid>
+      <guid>http://localhost:1313/post/github_branches_pruning/</guid>
       <description>📍When developing on GitHub, I often switch branches, just like pruning.</description>
     </item>
     <item>
       <title>[Vim] Building plugin</title>
-      <link>https://shiroimon.kithub.f5.si/post/vim_building_plugin/</link>
+      <link>http://localhost:1313/post/vim_building_plugin/</link>
       <pubDate>Wed, 11 Sep 2024 19:39:49 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/vim_building_plugin/</guid>
+      <guid>http://localhost:1313/post/vim_building_plugin/</guid>
       <description>✅ Once I gain a deeper understanding, what may be able to develop general-purpose automated tools.</description>
     </item>
     <item>
       <title>[Docker] Commands memorandum</title>
-      <link>https://shiroimon.kithub.f5.si/post/docker_commands_memorandum/</link>
+      <link>http://localhost:1313/post/docker_commands_memorandum/</link>
       <pubDate>Wed, 21 Aug 2024 00:00:34 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/docker_commands_memorandum/</guid>
+      <guid>http://localhost:1313/post/docker_commands_memorandum/</guid>
       <description>🐳 Deepen my understanding of Docker&amp;rsquo;s basic commands and mechanisms.</description>
     </item>
     <item>
       <title>[Vim] Commands memorandum</title>
-      <link>https://shiroimon.kithub.f5.si/post/vim_commands_memorandum/</link>
+      <link>http://localhost:1313/post/vim_commands_memorandum/</link>
       <pubDate>Sat, 17 Aug 2024 01:02:03 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/vim_commands_memorandum/</guid>
+      <guid>http://localhost:1313/post/vim_commands_memorandum/</guid>
       <description>✅ A list of vim commands for the TextEditor tool, along with various tips.</description>
     </item>
   </channel>

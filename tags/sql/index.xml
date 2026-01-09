@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SQL on Today I Learned | KitHub</title>
-    <link>https://shiroimon.kithub.f5.si/tags/sql/</link>
+    <link>http://localhost:1313/tags/sql/</link>
     <description>Recent content in SQL on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Jan 2026 23:44:03 +0900</lastBuildDate>
-    <atom:link href="https://shiroimon.kithub.f5.si/tags/sql/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/sql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[BigQuery] (Various) Data Transfer</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_about_various_data_transfer/</link>
+      <link>http://localhost:1313/post/bigquery_about_various_data_transfer/</link>
       <pubDate>Thu, 03 Apr 2025 11:11:44 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_about_various_data_transfer/</guid>
+      <guid>http://localhost:1313/post/bigquery_about_various_data_transfer/</guid>
       <description>🔍 Find out various data transfer methods starting from BigQuery.</description>
     </item>
     <item>
       <title>[BigQuery] Data analysis on preparation</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_data_analysis_on_preparation/</link>
+      <link>http://localhost:1313/post/bigquery_data_analysis_on_preparation/</link>
       <pubDate>Mon, 03 Mar 2025 22:23:20 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_data_analysis_on_preparation/</guid>
+      <guid>http://localhost:1313/post/bigquery_data_analysis_on_preparation/</guid>
       <description>🔍 I would like to prepare for data analysis using GoogleSQL inside BigQuery</description>
     </item>
     <item>
       <title>[BigQuery] Data analyize catchup</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_data_analysis_catchup/</link>
+      <link>http://localhost:1313/post/bigquery_data_analysis_catchup/</link>
       <pubDate>Sat, 26 Oct 2024 00:22:05 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_data_analysis_catchup/</guid>
+      <guid>http://localhost:1313/post/bigquery_data_analysis_catchup/</guid>
       <description>🔍 Re-summarizeing the trajectory I learned as an introductory.</description>
     </item>
     <item>
       <title>[BigQuery] Data Quality</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_about_data_quality/</link>
+      <link>http://localhost:1313/post/bigquery_about_data_quality/</link>
       <pubDate>Wed, 16 Oct 2024 13:49:54 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_about_data_quality/</guid>
+      <guid>http://localhost:1313/post/bigquery_about_data_quality/</guid>
       <description>🔍 Different perspective from data analysis. About data quality.</description>
     </item>
     <item>
       <title>[BigQuery] Used in functions</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_used_functions/</link>
+      <link>http://localhost:1313/post/bigquery_used_functions/</link>
       <pubDate>Thu, 29 Aug 2024 19:47:44 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_used_functions/</guid>
+      <guid>http://localhost:1313/post/bigquery_used_functions/</guid>
       <description>🔍 When I getting from my daily work. Added as need. I keep writing various tips.</description>
     </item>
     <item>
       <title>[dbt] Seeking out basic understanding</title>
-      <link>https://shiroimon.kithub.f5.si/post/dbt_seeking_basic_understanding/</link>
+      <link>http://localhost:1313/post/dbt_seeking_basic_understanding/</link>
       <pubDate>Tue, 30 Jul 2024 02:30:55 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/dbt_seeking_basic_understanding/</guid>
+      <guid>http://localhost:1313/post/dbt_seeking_basic_understanding/</guid>
       <description>✴️ Wanna deepen my understanding by using my hands and referring to reference books.</description>
     </item>
     <item>
       <title>[BigQuery] Structured data processing 100&#39;s</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_structured_data_processing_100/</link>
+      <link>http://localhost:1313/post/bigquery_structured_data_processing_100/</link>
       <pubDate>Fri, 26 Jul 2024 04:23:38 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_structured_data_processing_100/</guid>
+      <guid>http://localhost:1313/post/bigquery_structured_data_processing_100/</guid>
       <description>🔍 Tried using SQL to learn the basics of data science.</description>
     </item>
     <item>
       <title>[BigQuery] CTEs in data analyisis</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_data_analysis_on_cte/</link>
+      <link>http://localhost:1313/post/bigquery_data_analysis_on_cte/</link>
       <pubDate>Sat, 20 Jul 2024 16:13:42 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_data_analysis_on_cte/</guid>
+      <guid>http://localhost:1313/post/bigquery_data_analysis_on_cte/</guid>
       <description>🔍 Things to keep in mind when analyzing data using SQL.</description>
     </item>
   </channel>

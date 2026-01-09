@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kubernetes on Today I Learned | KitHub</title>
-    <link>https://shiroimon.kithub.f5.si/tags/kubernetes/</link>
+    <link>http://localhost:1313/tags/kubernetes/</link>
     <description>Recent content in Kubernetes on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Jan 2026 23:44:03 +0900</lastBuildDate>
-    <atom:link href="https://shiroimon.kithub.f5.si/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Kubernetes] Catchup</title>
-      <link>https://shiroimon.kithub.f5.si/post/kubernetes_catchup/</link>
+      <link>http://localhost:1313/post/kubernetes_catchup/</link>
       <pubDate>Mon, 18 Nov 2024 13:29:33 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/kubernetes_catchup/</guid>
+      <guid>http://localhost:1313/post/kubernetes_catchup/</guid>
       <description>⚓️ About container orchestration tecnology.</description>
     </item>
     <item>
       <title>[Argo Workflows] Catchup</title>
-      <link>https://shiroimon.kithub.f5.si/post/argo_workflows_catchup/</link>
+      <link>http://localhost:1313/post/argo_workflows_catchup/</link>
       <pubDate>Mon, 09 Sep 2024 12:40:59 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/argo_workflows_catchup/</guid>
+      <guid>http://localhost:1313/post/argo_workflows_catchup/</guid>
       <description>🐙 Understanding and implementing Argo projects and workflows.</description>
     </item>
     <item>
       <title>[Terraform] Trying to build the environment</title>
-      <link>https://shiroimon.kithub.f5.si/post/terraform_trying_to_build_the_environment/</link>
+      <link>http://localhost:1313/post/terraform_trying_to_build_the_environment/</link>
       <pubDate>Fri, 26 Jul 2024 03:42:04 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/terraform_trying_to_build_the_environment/</guid>
+      <guid>http://localhost:1313/post/terraform_trying_to_build_the_environment/</guid>
       <description>✝️ I wll try setting up an environment to gain an initial understanding of IaC (Infrastructure as Code) provisioning.</description>
     </item>
   </channel>

@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on Today I Learned | KitHub</title>
-    <link>https://shiroimon.kithub.f5.si/tags/python/</link>
+    <link>http://localhost:1313/tags/python/</link>
     <description>Recent content in Python on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Jan 2026 23:44:03 +0900</lastBuildDate>
-    <atom:link href="https://shiroimon.kithub.f5.si/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Python] Basicly data-handling &lt;Numpy&gt;</title>
-      <link>https://shiroimon.kithub.f5.si/post/python_basicly_datahandling_at_numpy/</link>
+      <link>http://localhost:1313/post/python_basicly_datahandling_at_numpy/</link>
       <pubDate>Thu, 13 Feb 2025 12:45:32 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/python_basicly_datahandling_at_numpy/</guid>
+      <guid>http://localhost:1313/post/python_basicly_datahandling_at_numpy/</guid>
       <description>🔷</description>
     </item>
     <item>
       <title>[Python] Basicly data-handling &lt;Pandas&gt;</title>
-      <link>https://shiroimon.kithub.f5.si/post/python_basicly_datahandling_at_pandas/</link>
+      <link>http://localhost:1313/post/python_basicly_datahandling_at_pandas/</link>
       <pubDate>Thu, 13 Feb 2025 12:45:32 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/python_basicly_datahandling_at_pandas/</guid>
+      <guid>http://localhost:1313/post/python_basicly_datahandling_at_pandas/</guid>
       <description>🐼</description>
     </item>
     <item>
       <title>[dbt] Seeking out basic understanding</title>
-      <link>https://shiroimon.kithub.f5.si/post/dbt_seeking_basic_understanding/</link>
+      <link>http://localhost:1313/post/dbt_seeking_basic_understanding/</link>
       <pubDate>Tue, 30 Jul 2024 02:30:55 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/dbt_seeking_basic_understanding/</guid>
+      <guid>http://localhost:1313/post/dbt_seeking_basic_understanding/</guid>
       <description>✴️ Wanna deepen my understanding by using my hands and referring to reference books.</description>
     </item>
   </channel>

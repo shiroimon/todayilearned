@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OSS on Today I Learned | KitHub</title>
-    <link>https://shiroimon.kithub.f5.si/tags/oss/</link>
+    <link>http://localhost:1313/tags/oss/</link>
     <description>Recent content in OSS on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Jan 2026 23:44:03 +0900</lastBuildDate>
-    <atom:link href="https://shiroimon.kithub.f5.si/tags/oss/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/oss/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[GitHub] Wana be join OSS</title>
-      <link>https://shiroimon.kithub.f5.si/post/github_oss_wana_be_join/</link>
+      <link>http://localhost:1313/post/github_oss_wana_be_join/</link>
       <pubDate>Thu, 21 Nov 2024 12:06:08 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/github_oss_wana_be_join/</guid>
+      <guid>http://localhost:1313/post/github_oss_wana_be_join/</guid>
       <description>📍 About etiquette and the meaning of licenses when paticipating in OSS.</description>
     </item>
     <item>
       <title>[Trocco][Embluk] Catchup</title>
-      <link>https://shiroimon.kithub.f5.si/post/trocco_and_embluk_catchup/</link>
+      <link>http://localhost:1313/post/trocco_and_embluk_catchup/</link>
       <pubDate>Wed, 21 Aug 2024 15:30:46 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/trocco_and_embluk_catchup/</guid>
+      <guid>http://localhost:1313/post/trocco_and_embluk_catchup/</guid>
       <description>🎢 Summarizing Trocco and Embluk to deepen understanding.</description>
     </item>
   </channel>

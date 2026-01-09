@@ -2,332 +2,332 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Today I Learned | KitHub</title>
-    <link>https://shiroimon.kithub.f5.si/post/</link>
+    <link>http://localhost:1313/post/</link>
     <description>Recent content in Posts on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 08 Jan 2026 22:26:00 +0900</lastBuildDate>
-    <atom:link href="https://shiroimon.kithub.f5.si/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[GAS] Setup in local</title>
-      <link>https://shiroimon.kithub.f5.si/post/google_app_script_setup/</link>
+      <link>http://localhost:1313/post/google_app_script_setup/</link>
       <pubDate>Wed, 15 Oct 2025 18:48:39 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/google_app_script_setup/</guid>
+      <guid>http://localhost:1313/post/google_app_script_setup/</guid>
       <description>🟩 Local environment and Git-managed development environment.</description>
     </item>
     <item>
       <title>[CodexCLI] Catchup</title>
-      <link>https://shiroimon.kithub.f5.si/post/codexcli_catchup/</link>
+      <link>http://localhost:1313/post/codexcli_catchup/</link>
       <pubDate>Fri, 10 Oct 2025 16:13:19 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/codexcli_catchup/</guid>
+      <guid>http://localhost:1313/post/codexcli_catchup/</guid>
       <description>🧠 The rise of CloudCode from OpenAI has finally come out.</description>
     </item>
     <item>
       <title>[BigQuery] CLI</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_cli/</link>
+      <link>http://localhost:1313/post/bigquery_cli/</link>
       <pubDate>Mon, 01 Sep 2025 21:43:34 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_cli/</guid>
+      <guid>http://localhost:1313/post/bigquery_cli/</guid>
       <description>🔍 Memos using CLI operations for each job type.</description>
     </item>
     <item>
       <title>[Tableau] This and That</title>
-      <link>https://shiroimon.kithub.f5.si/post/tableau_this_and_that/</link>
+      <link>http://localhost:1313/post/tableau_this_and_that/</link>
       <pubDate>Mon, 02 Jun 2025 14:46:08 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/tableau_this_and_that/</guid>
+      <guid>http://localhost:1313/post/tableau_this_and_that/</guid>
       <description>✨A little while ago, I&amp;rsquo;ll be writing about my studies as an introduction to Tableau</description>
     </item>
     <item>
       <title>[BigQuery] (Various) Data Transfer</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_about_various_data_transfer/</link>
+      <link>http://localhost:1313/post/bigquery_about_various_data_transfer/</link>
       <pubDate>Thu, 03 Apr 2025 11:11:44 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_about_various_data_transfer/</guid>
+      <guid>http://localhost:1313/post/bigquery_about_various_data_transfer/</guid>
       <description>🔍 Find out various data transfer methods starting from BigQuery.</description>
     </item>
     <item>
       <title>[Looker Studio] This and That</title>
-      <link>https://shiroimon.kithub.f5.si/post/looker_studio_this_and_that/</link>
+      <link>http://localhost:1313/post/looker_studio_this_and_that/</link>
       <pubDate>Mon, 24 Mar 2025 11:10:12 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/looker_studio_this_and_that/</guid>
+      <guid>http://localhost:1313/post/looker_studio_this_and_that/</guid>
       <description>🫧 How to use Google&amp;rsquo;s SaaS about BI.</description>
     </item>
     <item>
       <title>[Beatbox] Catchup</title>
-      <link>https://shiroimon.kithub.f5.si/post/other/beatbox_catchup/</link>
+      <link>http://localhost:1313/post/other/beatbox_catchup/</link>
       <pubDate>Sun, 16 Mar 2025 19:17:36 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/other/beatbox_catchup/</guid>
+      <guid>http://localhost:1313/post/other/beatbox_catchup/</guid>
       <description>🎙️I think it&amp;rsquo;s cool to use the respiratory organs and mouth to make beats.</description>
     </item>
     <item>
       <title>[BigQuery] Machine Learning</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_about_machine_learning/</link>
+      <link>http://localhost:1313/post/bigquery_about_machine_learning/</link>
       <pubDate>Fri, 14 Mar 2025 17:31:44 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_about_machine_learning/</guid>
+      <guid>http://localhost:1313/post/bigquery_about_machine_learning/</guid>
       <description>🔍 Completed within DWH, allowing modeling and analysis through queries</description>
     </item>
     <item>
       <title>[BigQuery] INFORMATION_SCHEMA</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_about_information_schema/</link>
+      <link>http://localhost:1313/post/bigquery_about_information_schema/</link>
       <pubDate>Thu, 06 Mar 2025 17:39:31 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_about_information_schema/</guid>
+      <guid>http://localhost:1313/post/bigquery_about_information_schema/</guid>
       <description>🔍 It&amp;rsquo;s not good to know about data governance.</description>
     </item>
     <item>
       <title>[BigQuery] Data analysis on preparation</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_data_analysis_on_preparation/</link>
+      <link>http://localhost:1313/post/bigquery_data_analysis_on_preparation/</link>
       <pubDate>Mon, 03 Mar 2025 22:23:20 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_data_analysis_on_preparation/</guid>
+      <guid>http://localhost:1313/post/bigquery_data_analysis_on_preparation/</guid>
       <description>🔍 I would like to prepare for data analysis using GoogleSQL inside BigQuery</description>
     </item>
     <item>
       <title>[Google Chrome] This &amp; That</title>
-      <link>https://shiroimon.kithub.f5.si/post/google_chrome_this_and_that/</link>
+      <link>http://localhost:1313/post/google_chrome_this_and_that/</link>
       <pubDate>Tue, 25 Feb 2025 13:45:58 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/google_chrome_this_and_that/</guid>
+      <guid>http://localhost:1313/post/google_chrome_this_and_that/</guid>
       <description>⚪️</description>
     </item>
     <item>
       <title>[Terraform] Catchup</title>
-      <link>https://shiroimon.kithub.f5.si/post/terraform_catchup/</link>
+      <link>http://localhost:1313/post/terraform_catchup/</link>
       <pubDate>Thu, 20 Feb 2025 18:49:06 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/terraform_catchup/</guid>
+      <guid>http://localhost:1313/post/terraform_catchup/</guid>
       <description>✝️ A little while ago, I&amp;rsquo;ll be writing about my studies as an introduction to Terraform.</description>
     </item>
     <item>
       <title>[Python] Basicly data-handling &lt;Numpy&gt;</title>
-      <link>https://shiroimon.kithub.f5.si/post/python_basicly_datahandling_at_numpy/</link>
+      <link>http://localhost:1313/post/python_basicly_datahandling_at_numpy/</link>
       <pubDate>Thu, 13 Feb 2025 12:45:32 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/python_basicly_datahandling_at_numpy/</guid>
+      <guid>http://localhost:1313/post/python_basicly_datahandling_at_numpy/</guid>
       <description>🔷</description>
     </item>
     <item>
       <title>[Python] Basicly data-handling &lt;Pandas&gt;</title>
-      <link>https://shiroimon.kithub.f5.si/post/python_basicly_datahandling_at_pandas/</link>
+      <link>http://localhost:1313/post/python_basicly_datahandling_at_pandas/</link>
       <pubDate>Thu, 13 Feb 2025 12:45:32 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/python_basicly_datahandling_at_pandas/</guid>
+      <guid>http://localhost:1313/post/python_basicly_datahandling_at_pandas/</guid>
       <description>🐼</description>
     </item>
     <item>
       <title>[macOS] Commands memorandum</title>
-      <link>https://shiroimon.kithub.f5.si/post/macos_commands_memorandum/</link>
+      <link>http://localhost:1313/post/macos_commands_memorandum/</link>
       <pubDate>Tue, 28 Jan 2025 00:50:32 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/macos_commands_memorandum/</guid>
+      <guid>http://localhost:1313/post/macos_commands_memorandum/</guid>
       <description>🍏 macOS useful commands and tips.</description>
     </item>
     <item>
       <title>[Google Cloud] Tools memorandum</title>
-      <link>https://shiroimon.kithub.f5.si/post/google_cloud_tools_memorandum/</link>
+      <link>http://localhost:1313/post/google_cloud_tools_memorandum/</link>
       <pubDate>Tue, 21 Jan 2025 16:24:43 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/google_cloud_tools_memorandum/</guid>
+      <guid>http://localhost:1313/post/google_cloud_tools_memorandum/</guid>
       <description>☁️ I would like to summarize it to understand Cloud tools.</description>
     </item>
     <item>
       <title>[Vim] CSV Control</title>
-      <link>https://shiroimon.kithub.f5.si/post/vim_csv_control/</link>
+      <link>http://localhost:1313/post/vim_csv_control/</link>
       <pubDate>Thu, 26 Dec 2024 21:27:07 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/vim_csv_control/</guid>
+      <guid>http://localhost:1313/post/vim_csv_control/</guid>
       <description>✅ God&amp;rsquo;s tool that lets you edit CSVs like Excel in Vim.</description>
     </item>
     <item>
       <title>[YAML] Catchup</title>
-      <link>https://shiroimon.kithub.f5.si/post/yaml_catchup/</link>
+      <link>http://localhost:1313/post/yaml_catchup/</link>
       <pubDate>Tue, 17 Dec 2024 22:39:48 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/yaml_catchup/</guid>
+      <guid>http://localhost:1313/post/yaml_catchup/</guid>
       <description>🚫 Understand Yaml, the configuratio file familiar to DevOps.</description>
     </item>
     <item>
       <title>[Zsh] Commands memorandum</title>
-      <link>https://shiroimon.kithub.f5.si/post/shell_commands_memorandum/</link>
+      <link>http://localhost:1313/post/shell_commands_memorandum/</link>
       <pubDate>Tue, 26 Nov 2024 15:23:00 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/shell_commands_memorandum/</guid>
+      <guid>http://localhost:1313/post/shell_commands_memorandum/</guid>
       <description>🐚 A black world appears when you open the terminal.</description>
     </item>
     <item>
       <title>[GitHub] Wana be join OSS</title>
-      <link>https://shiroimon.kithub.f5.si/post/github_oss_wana_be_join/</link>
+      <link>http://localhost:1313/post/github_oss_wana_be_join/</link>
       <pubDate>Thu, 21 Nov 2024 12:06:08 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/github_oss_wana_be_join/</guid>
+      <guid>http://localhost:1313/post/github_oss_wana_be_join/</guid>
       <description>📍 About etiquette and the meaning of licenses when paticipating in OSS.</description>
     </item>
     <item>
       <title>[GitHub] Copilot in Terminal</title>
-      <link>https://shiroimon.kithub.f5.si/post/github_coplilot_in_terminal/</link>
+      <link>http://localhost:1313/post/github_coplilot_in_terminal/</link>
       <pubDate>Mon, 18 Nov 2024 23:10:30 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/github_coplilot_in_terminal/</guid>
+      <guid>http://localhost:1313/post/github_coplilot_in_terminal/</guid>
       <description>🤖 Notes on how to use in terminal (Vim)</description>
     </item>
     <item>
       <title>[Kubernetes] Catchup</title>
-      <link>https://shiroimon.kithub.f5.si/post/kubernetes_catchup/</link>
+      <link>http://localhost:1313/post/kubernetes_catchup/</link>
       <pubDate>Mon, 18 Nov 2024 13:29:33 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/kubernetes_catchup/</guid>
+      <guid>http://localhost:1313/post/kubernetes_catchup/</guid>
       <description>⚓️ About container orchestration tecnology.</description>
     </item>
     <item>
       <title>[BigQuery] Data analyize catchup</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_data_analysis_catchup/</link>
+      <link>http://localhost:1313/post/bigquery_data_analysis_catchup/</link>
       <pubDate>Sat, 26 Oct 2024 00:22:05 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_data_analysis_catchup/</guid>
+      <guid>http://localhost:1313/post/bigquery_data_analysis_catchup/</guid>
       <description>🔍 Re-summarizeing the trajectory I learned as an introductory.</description>
     </item>
     <item>
       <title>[WezTerm] Setup</title>
-      <link>https://shiroimon.kithub.f5.si/post/wezterm_setup/</link>
+      <link>http://localhost:1313/post/wezterm_setup/</link>
       <pubDate>Thu, 24 Oct 2024 10:40:32 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/wezterm_setup/</guid>
+      <guid>http://localhost:1313/post/wezterm_setup/</guid>
       <description>🟣 Would like to use the most powerful terminal that rumored on the street.</description>
     </item>
     <item>
       <title>[Google Sheets] Used in functions</title>
-      <link>https://shiroimon.kithub.f5.si/post/google_sheets_used_functions/</link>
+      <link>http://localhost:1313/post/google_sheets_used_functions/</link>
       <pubDate>Tue, 22 Oct 2024 12:56:22 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/google_sheets_used_functions/</guid>
+      <guid>http://localhost:1313/post/google_sheets_used_functions/</guid>
       <description>📗 Make a memorandum of what you used with the most powerful free tool that anyone can use.</description>
     </item>
     <item>
       <title>[BigQuery] Data Quality</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_about_data_quality/</link>
+      <link>http://localhost:1313/post/bigquery_about_data_quality/</link>
       <pubDate>Wed, 16 Oct 2024 13:49:54 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_about_data_quality/</guid>
+      <guid>http://localhost:1313/post/bigquery_about_data_quality/</guid>
       <description>🔍 Different perspective from data analysis. About data quality.</description>
     </item>
     <item>
       <title>[macOS] UNIX is ancestor</title>
-      <link>https://shiroimon.kithub.f5.si/post/macos_unix_is_ancestor/</link>
+      <link>http://localhost:1313/post/macos_unix_is_ancestor/</link>
       <pubDate>Mon, 30 Sep 2024 23:28:04 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/macos_unix_is_ancestor/</guid>
+      <guid>http://localhost:1313/post/macos_unix_is_ancestor/</guid>
       <description>🩶 About the legacy of inventions from a previous era that heavily influenced macOS.</description>
     </item>
     <item>
       <title>[Git] Branches pruning</title>
-      <link>https://shiroimon.kithub.f5.si/post/github_branches_pruning/</link>
+      <link>http://localhost:1313/post/github_branches_pruning/</link>
       <pubDate>Tue, 24 Sep 2024 18:08:08 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/github_branches_pruning/</guid>
+      <guid>http://localhost:1313/post/github_branches_pruning/</guid>
       <description>📍When developing on GitHub, I often switch branches, just like pruning.</description>
     </item>
     <item>
       <title>[Vim] Building plugin</title>
-      <link>https://shiroimon.kithub.f5.si/post/vim_building_plugin/</link>
+      <link>http://localhost:1313/post/vim_building_plugin/</link>
       <pubDate>Wed, 11 Sep 2024 19:39:49 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/vim_building_plugin/</guid>
+      <guid>http://localhost:1313/post/vim_building_plugin/</guid>
       <description>✅ Once I gain a deeper understanding, what may be able to develop general-purpose automated tools.</description>
     </item>
     <item>
       <title>[Argo Workflows] Catchup</title>
-      <link>https://shiroimon.kithub.f5.si/post/argo_workflows_catchup/</link>
+      <link>http://localhost:1313/post/argo_workflows_catchup/</link>
       <pubDate>Mon, 09 Sep 2024 12:40:59 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/argo_workflows_catchup/</guid>
+      <guid>http://localhost:1313/post/argo_workflows_catchup/</guid>
       <description>🐙 Understanding and implementing Argo projects and workflows.</description>
     </item>
     <item>
       <title>[BigQuery] Used in functions</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_used_functions/</link>
+      <link>http://localhost:1313/post/bigquery_used_functions/</link>
       <pubDate>Thu, 29 Aug 2024 19:47:44 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_used_functions/</guid>
+      <guid>http://localhost:1313/post/bigquery_used_functions/</guid>
       <description>🔍 When I getting from my daily work. Added as need. I keep writing various tips.</description>
     </item>
     <item>
       <title>[Trocco][Embluk] Catchup</title>
-      <link>https://shiroimon.kithub.f5.si/post/trocco_and_embluk_catchup/</link>
+      <link>http://localhost:1313/post/trocco_and_embluk_catchup/</link>
       <pubDate>Wed, 21 Aug 2024 15:30:46 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/trocco_and_embluk_catchup/</guid>
+      <guid>http://localhost:1313/post/trocco_and_embluk_catchup/</guid>
       <description>🎢 Summarizing Trocco and Embluk to deepen understanding.</description>
     </item>
     <item>
       <title>[Docker] Commands memorandum</title>
-      <link>https://shiroimon.kithub.f5.si/post/docker_commands_memorandum/</link>
+      <link>http://localhost:1313/post/docker_commands_memorandum/</link>
       <pubDate>Wed, 21 Aug 2024 00:00:34 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/docker_commands_memorandum/</guid>
+      <guid>http://localhost:1313/post/docker_commands_memorandum/</guid>
       <description>🐳 Deepen my understanding of Docker&amp;rsquo;s basic commands and mechanisms.</description>
     </item>
     <item>
       <title>[Vim] Commands memorandum</title>
-      <link>https://shiroimon.kithub.f5.si/post/vim_commands_memorandum/</link>
+      <link>http://localhost:1313/post/vim_commands_memorandum/</link>
       <pubDate>Sat, 17 Aug 2024 01:02:03 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/vim_commands_memorandum/</guid>
+      <guid>http://localhost:1313/post/vim_commands_memorandum/</guid>
       <description>✅ A list of vim commands for the TextEditor tool, along with various tips.</description>
     </item>
     <item>
       <title>[BigQuery] Billing</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_billing_how_works/</link>
+      <link>http://localhost:1313/post/bigquery_billing_how_works/</link>
       <pubDate>Fri, 16 Aug 2024 20:35:07 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_billing_how_works/</guid>
+      <guid>http://localhost:1313/post/bigquery_billing_how_works/</guid>
       <description>🔍 Summarize billing mechanism, fee structure, and money-saving tips.</description>
     </item>
     <item>
       <title>[Freelance] How to Jisui &lt;自炊&gt;</title>
-      <link>https://shiroimon.kithub.f5.si/post/other/freelance_how_to_jisui/</link>
+      <link>http://localhost:1313/post/other/freelance_how_to_jisui/</link>
       <pubDate>Fri, 16 Aug 2024 18:41:57 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/other/freelance_how_to_jisui/</guid>
+      <guid>http://localhost:1313/post/other/freelance_how_to_jisui/</guid>
       <description>📚 Converting cut-up books into digital data. Also, an article on how to cut books and store the data.</description>
     </item>
     <item>
       <title>[macOS] Looks like native application</title>
-      <link>https://shiroimon.kithub.f5.si/post/macos_looks_like_native_application/</link>
+      <link>http://localhost:1313/post/macos_looks_like_native_application/</link>
       <pubDate>Sat, 03 Aug 2024 16:04:18 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/macos_looks_like_native_application/</guid>
+      <guid>http://localhost:1313/post/macos_looks_like_native_application/</guid>
       <description>🍏 A little trick to use it like a native laptop application.</description>
     </item>
     <item>
       <title>[English] Abbreviations</title>
-      <link>https://shiroimon.kithub.f5.si/post/english_abbreviations/</link>
+      <link>http://localhost:1313/post/english_abbreviations/</link>
       <pubDate>Tue, 30 Jul 2024 12:48:55 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/english_abbreviations/</guid>
+      <guid>http://localhost:1313/post/english_abbreviations/</guid>
       <description>🗽 About abbreviations. They also appear in business and professional situations.</description>
     </item>
     <item>
       <title>[dbt] Seeking out basic understanding</title>
-      <link>https://shiroimon.kithub.f5.si/post/dbt_seeking_basic_understanding/</link>
+      <link>http://localhost:1313/post/dbt_seeking_basic_understanding/</link>
       <pubDate>Tue, 30 Jul 2024 02:30:55 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/dbt_seeking_basic_understanding/</guid>
+      <guid>http://localhost:1313/post/dbt_seeking_basic_understanding/</guid>
       <description>✴️ Wanna deepen my understanding by using my hands and referring to reference books.</description>
     </item>
     <item>
       <title>[BigQuery] Structured data processing 100&#39;s</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_structured_data_processing_100/</link>
+      <link>http://localhost:1313/post/bigquery_structured_data_processing_100/</link>
       <pubDate>Fri, 26 Jul 2024 04:23:38 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_structured_data_processing_100/</guid>
+      <guid>http://localhost:1313/post/bigquery_structured_data_processing_100/</guid>
       <description>🔍 Tried using SQL to learn the basics of data science.</description>
     </item>
     <item>
       <title>[Terraform] Trying to build the environment</title>
-      <link>https://shiroimon.kithub.f5.si/post/terraform_trying_to_build_the_environment/</link>
+      <link>http://localhost:1313/post/terraform_trying_to_build_the_environment/</link>
       <pubDate>Fri, 26 Jul 2024 03:42:04 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/terraform_trying_to_build_the_environment/</guid>
+      <guid>http://localhost:1313/post/terraform_trying_to_build_the_environment/</guid>
       <description>✝️ I wll try setting up an environment to gain an initial understanding of IaC (Infrastructure as Code) provisioning.</description>
     </item>
     <item>
       <title>[GitHub] This &amp; That</title>
-      <link>https://shiroimon.kithub.f5.si/post/github_this_and_that/</link>
+      <link>http://localhost:1313/post/github_this_and_that/</link>
       <pubDate>Wed, 24 Jul 2024 15:08:13 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/github_this_and_that/</guid>
+      <guid>http://localhost:1313/post/github_this_and_that/</guid>
       <description>📍 Various things to make your GitHub life more enjoyable.</description>
     </item>
     <item>
       <title>[Slack] Writing etiquette</title>
-      <link>https://shiroimon.kithub.f5.si/post/slack_writing_etiquette/</link>
+      <link>http://localhost:1313/post/slack_writing_etiquette/</link>
       <pubDate>Tue, 23 Jul 2024 18:17:17 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/slack_writing_etiquette/</guid>
+      <guid>http://localhost:1313/post/slack_writing_etiquette/</guid>
       <description>🔔 Learn writing etiquette using Slack&amp;rsquo;s unique notation.</description>
     </item>
     <item>
       <title>[GitHub] How to check difference code</title>
-      <link>https://shiroimon.kithub.f5.si/post/github_how_to_check_difference/</link>
+      <link>http://localhost:1313/post/github_how_to_check_difference/</link>
       <pubDate>Tue, 23 Jul 2024 04:13:21 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/github_how_to_check_difference/</guid>
+      <guid>http://localhost:1313/post/github_how_to_check_difference/</guid>
       <description>📍 Methods and tools to capture code fixes faster and more accurately.</description>
     </item>
     <item>
       <title>[BigQuery] CTEs in data analyisis</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_data_analysis_on_cte/</link>
+      <link>http://localhost:1313/post/bigquery_data_analysis_on_cte/</link>
       <pubDate>Sat, 20 Jul 2024 16:13:42 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_data_analysis_on_cte/</guid>
+      <guid>http://localhost:1313/post/bigquery_data_analysis_on_cte/</guid>
       <description>🔍 Things to keep in mind when analyzing data using SQL.</description>
     </item>
     <item>
       <title>[GitHub] How to use issues</title>
-      <link>https://shiroimon.kithub.f5.si/post/github_issues_how_to_use/</link>
+      <link>http://localhost:1313/post/github_issues_how_to_use/</link>
       <pubDate>Thu, 18 Jul 2024 18:30:01 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/github_issues_how_to_use/</guid>
+      <guid>http://localhost:1313/post/github_issues_how_to_use/</guid>
       <description>📍 How to effectively use &amp;lsquo;Issues&amp;rsquo; in GitHub repository.</description>
     </item>
   </channel>
