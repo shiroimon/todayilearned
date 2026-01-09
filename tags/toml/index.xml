@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>TOML on Today I Learned | KitHub</title>
-    <link>http://localhost:1313/tags/toml/</link>
+    <link>https://shiroimon.kithub.f5.si/tags/toml/</link>
     <description>Recent content in TOML on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Jan 2026 23:44:03 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/toml/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://shiroimon.kithub.f5.si/tags/toml/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[YAML] Catchup</title>
-      <link>http://localhost:1313/post/yaml_catchup/</link>
+      <link>https://shiroimon.kithub.f5.si/post/yaml_catchup/</link>
       <pubDate>Tue, 17 Dec 2024 22:39:48 +0900</pubDate>
-      <guid>http://localhost:1313/post/yaml_catchup/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/yaml_catchup/</guid>
       <description>🚫 Understand Yaml, the configuratio file familiar to DevOps.</description>
     </item>
   </channel>

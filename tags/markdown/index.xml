@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Markdown on Today I Learned | KitHub</title>
-    <link>http://localhost:1313/tags/markdown/</link>
+    <link>https://shiroimon.kithub.f5.si/tags/markdown/</link>
     <description>Recent content in Markdown on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Jan 2026 23:44:03 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://shiroimon.kithub.f5.si/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Slack] Writing etiquette</title>
-      <link>http://localhost:1313/post/slack_writing_etiquette/</link>
+      <link>https://shiroimon.kithub.f5.si/post/slack_writing_etiquette/</link>
       <pubDate>Tue, 23 Jul 2024 18:17:17 +0900</pubDate>
-      <guid>http://localhost:1313/post/slack_writing_etiquette/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/slack_writing_etiquette/</guid>
       <description>🔔 Learn writing etiquette using Slack&amp;rsquo;s unique notation.</description>
     </item>
   </channel>

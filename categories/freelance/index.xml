@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Freelance on Today I Learned | KitHub</title>
-    <link>http://localhost:1313/categories/freelance/</link>
+    <link>https://shiroimon.kithub.f5.si/categories/freelance/</link>
     <description>Recent content in Freelance on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Jan 2026 23:44:03 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/freelance/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://shiroimon.kithub.f5.si/categories/freelance/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Freelance] How to Jisui &lt;自炊&gt;</title>
-      <link>http://localhost:1313/post/other/freelance_how_to_jisui/</link>
+      <link>https://shiroimon.kithub.f5.si/post/other/freelance_how_to_jisui/</link>
       <pubDate>Fri, 16 Aug 2024 18:41:57 +0900</pubDate>
-      <guid>http://localhost:1313/post/other/freelance_how_to_jisui/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/other/freelance_how_to_jisui/</guid>
       <description>📚 Converting cut-up books into digital data. Also, an article on how to cut books and store the data.</description>
     </item>
   </channel>

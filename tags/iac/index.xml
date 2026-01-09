@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>IaC on Today I Learned | KitHub</title>
-    <link>http://localhost:1313/tags/iac/</link>
+    <link>https://shiroimon.kithub.f5.si/tags/iac/</link>
     <description>Recent content in IaC on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Jan 2026 23:44:03 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/iac/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://shiroimon.kithub.f5.si/tags/iac/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Terraform] Catchup</title>
-      <link>http://localhost:1313/post/terraform_catchup/</link>
+      <link>https://shiroimon.kithub.f5.si/post/terraform_catchup/</link>
       <pubDate>Thu, 20 Feb 2025 18:49:06 +0900</pubDate>
-      <guid>http://localhost:1313/post/terraform_catchup/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/terraform_catchup/</guid>
       <description>✝️ A little while ago, I&amp;rsquo;ll be writing about my studies as an introduction to Terraform.</description>
     </item>
     <item>
       <title>[Terraform] Trying to build the environment</title>
-      <link>http://localhost:1313/post/terraform_trying_to_build_the_environment/</link>
+      <link>https://shiroimon.kithub.f5.si/post/terraform_trying_to_build_the_environment/</link>
       <pubDate>Fri, 26 Jul 2024 03:42:04 +0900</pubDate>
-      <guid>http://localhost:1313/post/terraform_trying_to_build_the_environment/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/terraform_trying_to_build_the_environment/</guid>
       <description>✝️ I wll try setting up an environment to gain an initial understanding of IaC (Infrastructure as Code) provisioning.</description>
     </item>
   </channel>

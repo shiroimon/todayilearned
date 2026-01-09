@@ -2,74 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Know-How on Today I Learned | KitHub</title>
-    <link>http://localhost:1313/categories/know-how/</link>
+    <link>https://shiroimon.kithub.f5.si/categories/know-how/</link>
     <description>Recent content in Know-How on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Jan 2026 23:44:03 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/know-how/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Jan 2026 18:30:00 +0900</lastBuildDate>
+    <atom:link href="https://shiroimon.kithub.f5.si/categories/know-how/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[BigQuery] Data analysis on preparation</title>
-      <link>http://localhost:1313/post/bigquery_data_analysis_on_preparation/</link>
+      <link>https://shiroimon.kithub.f5.si/post/bigquery_data_analysis_on_preparation/</link>
       <pubDate>Mon, 03 Mar 2025 22:23:20 +0900</pubDate>
-      <guid>http://localhost:1313/post/bigquery_data_analysis_on_preparation/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/bigquery_data_analysis_on_preparation/</guid>
       <description>🔍 I would like to prepare for data analysis using GoogleSQL inside BigQuery</description>
     </item>
     <item>
       <title>[GitHub] Wana be join OSS</title>
-      <link>http://localhost:1313/post/github_oss_wana_be_join/</link>
+      <link>https://shiroimon.kithub.f5.si/post/github_oss_wana_be_join/</link>
       <pubDate>Thu, 21 Nov 2024 12:06:08 +0900</pubDate>
-      <guid>http://localhost:1313/post/github_oss_wana_be_join/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/github_oss_wana_be_join/</guid>
       <description>📍 About etiquette and the meaning of licenses when paticipating in OSS.</description>
     </item>
     <item>
       <title>[Kubernetes] Catchup</title>
-      <link>http://localhost:1313/post/kubernetes_catchup/</link>
+      <link>https://shiroimon.kithub.f5.si/post/kubernetes_catchup/</link>
       <pubDate>Mon, 18 Nov 2024 13:29:33 +0900</pubDate>
-      <guid>http://localhost:1313/post/kubernetes_catchup/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/kubernetes_catchup/</guid>
       <description>⚓️ About container orchestration tecnology.</description>
     </item>
     <item>
       <title>[Freelance] How to Jisui &lt;自炊&gt;</title>
-      <link>http://localhost:1313/post/other/freelance_how_to_jisui/</link>
+      <link>https://shiroimon.kithub.f5.si/post/other/freelance_how_to_jisui/</link>
       <pubDate>Fri, 16 Aug 2024 18:41:57 +0900</pubDate>
-      <guid>http://localhost:1313/post/other/freelance_how_to_jisui/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/other/freelance_how_to_jisui/</guid>
       <description>📚 Converting cut-up books into digital data. Also, an article on how to cut books and store the data.</description>
     </item>
     <item>
       <title>[macOS] Looks like native application</title>
-      <link>http://localhost:1313/post/macos_looks_like_native_application/</link>
+      <link>https://shiroimon.kithub.f5.si/post/macos_looks_like_native_application/</link>
       <pubDate>Sat, 03 Aug 2024 16:04:18 +0900</pubDate>
-      <guid>http://localhost:1313/post/macos_looks_like_native_application/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/macos_looks_like_native_application/</guid>
       <description>🍏 A little trick to use it like a native laptop application.</description>
     </item>
     <item>
       <title>[GitHub] This &amp; That</title>
-      <link>http://localhost:1313/post/github_this_and_that/</link>
+      <link>https://shiroimon.kithub.f5.si/post/github_this_and_that/</link>
       <pubDate>Wed, 24 Jul 2024 15:08:13 +0900</pubDate>
-      <guid>http://localhost:1313/post/github_this_and_that/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/github_this_and_that/</guid>
       <description>📍 Various things to make your GitHub life more enjoyable.</description>
     </item>
     <item>
       <title>[GitHub] How to check difference code</title>
-      <link>http://localhost:1313/post/github_how_to_check_difference/</link>
+      <link>https://shiroimon.kithub.f5.si/post/github_how_to_check_difference/</link>
       <pubDate>Tue, 23 Jul 2024 04:13:21 +0900</pubDate>
-      <guid>http://localhost:1313/post/github_how_to_check_difference/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/github_how_to_check_difference/</guid>
       <description>📍 Methods and tools to capture code fixes faster and more accurately.</description>
     </item>
     <item>
       <title>[BigQuery] CTEs in data analyisis</title>
-      <link>http://localhost:1313/post/bigquery_data_analysis_on_cte/</link>
+      <link>https://shiroimon.kithub.f5.si/post/bigquery_data_analysis_on_cte/</link>
       <pubDate>Sat, 20 Jul 2024 16:13:42 +0900</pubDate>
-      <guid>http://localhost:1313/post/bigquery_data_analysis_on_cte/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/bigquery_data_analysis_on_cte/</guid>
       <description>🔍 Things to keep in mind when analyzing data using SQL.</description>
-    </item>
-    <item>
-      <title>[GitHub] How to use issues</title>
-      <link>http://localhost:1313/post/github_issues_how_to_use/</link>
-      <pubDate>Thu, 18 Jul 2024 18:30:01 +0900</pubDate>
-      <guid>http://localhost:1313/post/github_issues_how_to_use/</guid>
-      <description>📍 How to effectively use &amp;lsquo;Issues&amp;rsquo; in GitHub repository.</description>
     </item>
   </channel>
 </rss>

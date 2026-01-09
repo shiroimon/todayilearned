@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>BQML on Today I Learned | KitHub</title>
-    <link>http://localhost:1313/tags/bqml/</link>
+    <link>https://shiroimon.kithub.f5.si/tags/bqml/</link>
     <description>Recent content in BQML on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Jan 2026 23:44:03 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/bqml/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://shiroimon.kithub.f5.si/tags/bqml/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[BigQuery] Machine Learning</title>
-      <link>http://localhost:1313/post/bigquery_about_machine_learning/</link>
+      <link>https://shiroimon.kithub.f5.si/post/bigquery_about_machine_learning/</link>
       <pubDate>Fri, 14 Mar 2025 17:31:44 +0900</pubDate>
-      <guid>http://localhost:1313/post/bigquery_about_machine_learning/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/bigquery_about_machine_learning/</guid>
       <description>🔍 Completed within DWH, allowing modeling and analysis through queries</description>
     </item>
   </channel>

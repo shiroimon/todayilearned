@@ -2,388 +2,397 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/post/google_app_script_setup/</loc>
+    <loc>https://shiroimon.kithub.f5.si/post/claude_code_slash_command_usage/</loc>
+    <lastmod>2026-01-09T18:14:52+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/categories/ai/</loc>
+    <lastmod>2026-01-09T18:14:52+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/anthropic/</loc>
+    <lastmod>2026-01-09T18:14:52+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/categories/</loc>
+    <lastmod>2026-01-09T18:30:00+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/claude-code/</loc>
+    <lastmod>2026-01-09T18:14:52+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/post/</loc>
+    <lastmod>2026-01-09T18:30:00+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/</loc>
+    <lastmod>2026-01-09T18:30:00+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/</loc>
+    <lastmod>2026-01-09T18:30:00+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/post/looker_this_and_that/</loc>
+    <lastmod>2026-01-09T18:18:01+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/categories/bi/</loc>
+    <lastmod>2026-01-09T18:18:01+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/categories/google/</loc>
+    <lastmod>2026-01-09T18:18:01+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/looker/</loc>
+    <lastmod>2026-01-09T18:18:01+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/post/google_app_script_setup/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/google-apps-script/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/post/codexcli_catchup/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/codex/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/openai/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/post/bigquery_cli/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/bigquery/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/cli/</loc>
     <lastmod>2026-01-08T22:26:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/google/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/google-cloud/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/google-apps-script/</loc>
+    <loc>https://shiroimon.kithub.f5.si/categories/infrastructure/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/</loc>
+    <loc>https://shiroimon.kithub.f5.si/post/tableau_this_and_that/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/tableau/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/post/bigquery_about_various_data_transfer/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/categories/data-reliability-engineer/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/datalake/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/dbt/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/dwh/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/etl/elt/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/sql/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/post/looker_studio_this_and_that/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/looker-studio/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/post/other/beatbox_catchup/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/categories/hobby/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/post/bigquery_about_machine_learning/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/bqml/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/categories/data-analytics-engineer/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/post/bigquery_about_information_schema/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/post/bigquery_data_analysis_on_preparation/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/categories/know-how/</loc>
+    <lastmod>2026-01-09T18:30:00+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/post/google_chrome_this_and_that/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/chrome-canary/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/chromium/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/google-chrome/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/post/terraform_catchup/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/iac/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/terraform/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/post/python_basicly_datahandling_at_numpy/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/post/python_basicly_datahandling_at_pandas/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/numpy/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/pandas/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/python/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/post/macos_commands_memorandum/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/macos/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/post/google_cloud_tools_memorandum/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/post/vim_csv_control/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/csv/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/vim/</loc>
     <lastmod>2026-01-08T22:26:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://shiroimon.kithub.f5.si/post/yaml_catchup/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/categories/hands-on/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/json/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/toml/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/categories/udemy/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/xml/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/yaml/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/post/shell_commands_memorandum/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/shell/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/zsh/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/post/github_oss_wana_be_join/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/github/</loc>
+    <lastmod>2026-01-09T18:30:00+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/oss/</loc>
+    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/post/github_coplilot_in_terminal/</loc>
     <lastmod>2026-01-08T22:26:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/github-copilot/</loc>
     <lastmod>2026-01-08T22:26:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/codexcli_catchup/</loc>
+    <loc>https://shiroimon.kithub.f5.si/post/kubernetes_catchup/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/ai/</loc>
-    <lastmod>2026-01-08T22:26:00+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/codex/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/openai/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/bigquery_cli/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/bigquery/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/cli/</loc>
-    <lastmod>2026-01-08T22:26:00+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/google-cloud/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/infrastructure/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/tableau_this_and_that/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/bi/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/tableau/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/bigquery_about_various_data_transfer/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/data-reliability-engineer/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/datalake/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/dbt/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/dwh/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/etl/elt/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/sql/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/looker_studio_this_and_that/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/looker/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/looker-studio/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/other/beatbox_catchup/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/hobby/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/bigquery_about_machine_learning/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/bqml/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/data-analytics-engineer/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/bigquery_about_information_schema/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/bigquery_data_analysis_on_preparation/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/know-how/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/google_chrome_this_and_that/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/chrome-canary/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/chromium/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/google-chrome/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/terraform_catchup/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/iac/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/terraform/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/python_basicly_datahandling_at_numpy/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/python_basicly_datahandling_at_pandas/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/numpy/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/pandas/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/python/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/macos_commands_memorandum/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/macos/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/google_cloud_tools_memorandum/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/vim_csv_control/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/csv/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/vim/</loc>
-    <lastmod>2026-01-08T22:26:00+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/yaml_catchup/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/hands-on/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/json/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/toml/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/udemy/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/xml/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/yaml/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/shell_commands_memorandum/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/shell/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/zsh/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/github_oss_wana_be_join/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/github/</loc>
-    <lastmod>2026-01-08T22:26:00+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/oss/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/github_coplilot_in_terminal/</loc>
-    <lastmod>2026-01-08T22:26:00+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/github-copilot/</loc>
-    <lastmod>2026-01-08T22:26:00+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/kubernetes_catchup/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/cue/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cue/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/docker/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/docker/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/kubernetes/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/kubernetes/</loc>
+    <loc>https://shiroimon.kithub.f5.si/post/bigquery_data_analysis_catchup/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/bigquery_data_analysis_catchup/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/data-mart/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/data-mart/</loc>
+    <loc>https://shiroimon.kithub.f5.si/post/wezterm_setup/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/wezterm_setup/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/lua/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/lua/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/terminal/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/terminal/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/wezterm/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/wezterm/</loc>
+    <loc>https://shiroimon.kithub.f5.si/post/google_sheets_used_functions/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/google_sheets_used_functions/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/connected-sheets/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/connected-sheets/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/google-sheets/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/google-sheets/</loc>
+    <loc>https://shiroimon.kithub.f5.si/post/bigquery_about_data_quality/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/bigquery_about_data_quality/</loc>
+    <loc>https://shiroimon.kithub.f5.si/post/macos_unix_is_ancestor/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/macos_unix_is_ancestor/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/linux/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/linux/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/unix/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/unix/</loc>
+    <loc>https://shiroimon.kithub.f5.si/post/github_branches_pruning/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/github_branches_pruning/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/git/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/vim_building_plugin/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+    <loc>https://shiroimon.kithub.f5.si/tags/git/</loc>
+    <lastmod>2026-01-09T18:29:02+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/vim-script/</loc>
+    <loc>https://shiroimon.kithub.f5.si/post/vim_building_plugin/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/argo_workflows_catchup/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/vim-script/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/argo-workflows/</loc>
+    <loc>https://shiroimon.kithub.f5.si/post/argo_workflows_catchup/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/dag/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/argo-workflows/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/data-pipline/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/dag/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/bigquery_used_functions/</loc>
+    <loc>https://shiroimon.kithub.f5.si/categories/data-pipline/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/trocco_and_embluk_catchup/</loc>
+    <loc>https://shiroimon.kithub.f5.si/post/bigquery_used_functions/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/embluk/</loc>
+    <loc>https://shiroimon.kithub.f5.si/post/trocco_and_embluk_catchup/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/saas/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/embluk/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/trocco/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/saas/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/docker_commands_memorandum/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/trocco/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/container/</loc>
+    <loc>https://shiroimon.kithub.f5.si/post/docker_commands_memorandum/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/vim_commands_memorandum/</loc>
+    <loc>https://shiroimon.kithub.f5.si/categories/container/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ide/</loc>
+    <loc>https://shiroimon.kithub.f5.si/post/vim_commands_memorandum/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/texteditor/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/ide/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/bigquery_billing_how_works/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/texteditor/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/other/freelance_how_to_jisui/</loc>
+    <loc>https://shiroimon.kithub.f5.si/post/bigquery_billing_how_works/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/freelance/</loc>
+    <loc>https://shiroimon.kithub.f5.si/post/other/freelance_how_to_jisui/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/notebooklm/</loc>
+    <loc>https://shiroimon.kithub.f5.si/categories/freelance/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/pdf/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/notebooklm/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/macos_looks_like_native_application/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/pdf/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/chrome/</loc>
+    <loc>https://shiroimon.kithub.f5.si/post/macos_looks_like_native_application/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/english_abbreviations/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/chrome/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/english/</loc>
+    <loc>https://shiroimon.kithub.f5.si/post/english_abbreviations/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/slack/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/english/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/dbt_seeking_basic_understanding/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/slack/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/bigquery_structured_data_processing_100/</loc>
+    <loc>https://shiroimon.kithub.f5.si/post/dbt_seeking_basic_understanding/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/terraform_trying_to_build_the_environment/</loc>
+    <loc>https://shiroimon.kithub.f5.si/post/bigquery_structured_data_processing_100/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/gke/</loc>
+    <loc>https://shiroimon.kithub.f5.si/post/terraform_trying_to_build_the_environment/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/github_this_and_that/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/gke/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/slack_writing_etiquette/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+    <loc>https://shiroimon.kithub.f5.si/post/github_this_and_that/</loc>
+    <lastmod>2026-01-09T18:30:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/gfm/</loc>
+    <loc>https://shiroimon.kithub.f5.si/post/slack_writing_etiquette/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/markdown/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/gfm/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/github_how_to_check_difference/</loc>
+    <loc>https://shiroimon.kithub.f5.si/tags/markdown/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/sourcegraph/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+    <loc>https://shiroimon.kithub.f5.si/post/github_how_to_check_difference/</loc>
+    <lastmod>2026-01-09T18:29:02+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/bigquery_data_analysis_on_cte/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+    <loc>https://shiroimon.kithub.f5.si/tags/sourcegraph/</loc>
+    <lastmod>2026-01-09T18:29:02+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/github_issues_how_to_use/</loc>
+    <loc>https://shiroimon.kithub.f5.si/post/bigquery_data_analysis_on_cte/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/readme/</loc>
+    <loc>https://shiroimon.kithub.f5.si/readme/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url>
 </urlset>

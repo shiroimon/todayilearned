@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>English on Today I Learned | KitHub</title>
-    <link>http://localhost:1313/tags/english/</link>
+    <link>https://shiroimon.kithub.f5.si/tags/english/</link>
     <description>Recent content in English on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Jan 2026 23:44:03 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/english/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://shiroimon.kithub.f5.si/tags/english/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[English] Abbreviations</title>
-      <link>http://localhost:1313/post/english_abbreviations/</link>
+      <link>https://shiroimon.kithub.f5.si/post/english_abbreviations/</link>
       <pubDate>Tue, 30 Jul 2024 12:48:55 +0900</pubDate>
-      <guid>http://localhost:1313/post/english_abbreviations/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/english_abbreviations/</guid>
       <description>🗽 About abbreviations. They also appear in business and professional situations.</description>
     </item>
   </channel>

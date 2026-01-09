@@ -2,31 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AI on Today I Learned | KitHub</title>
-    <link>http://localhost:1313/categories/ai/</link>
+    <link>https://shiroimon.kithub.f5.si/categories/ai/</link>
     <description>Recent content in AI on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Jan 2026 22:26:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Jan 2026 18:14:52 +0900</lastBuildDate>
+    <atom:link href="https://shiroimon.kithub.f5.si/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Claude Code] Slash Command Usage</title>
+      <link>https://shiroimon.kithub.f5.si/post/claude_code_slash_command_usage/</link>
+      <pubDate>Wed, 07 Jan 2026 11:56:35 +0900</pubDate>
+      <guid>https://shiroimon.kithub.f5.si/post/claude_code_slash_command_usage/</guid>
+      <description>💥 How to Use Slash Commands in Claude Code.</description>
+    </item>
     <item>
       <title>[CodexCLI] Catchup</title>
-      <link>http://localhost:1313/post/codexcli_catchup/</link>
+      <link>https://shiroimon.kithub.f5.si/post/codexcli_catchup/</link>
       <pubDate>Fri, 10 Oct 2025 16:13:19 +0900</pubDate>
-      <guid>http://localhost:1313/post/codexcli_catchup/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/codexcli_catchup/</guid>
       <description>🧠 The rise of CloudCode from OpenAI has finally come out.</description>
     </item>
     <item>
       <title>[BigQuery] Machine Learning</title>
-      <link>http://localhost:1313/post/bigquery_about_machine_learning/</link>
+      <link>https://shiroimon.kithub.f5.si/post/bigquery_about_machine_learning/</link>
       <pubDate>Fri, 14 Mar 2025 17:31:44 +0900</pubDate>
-      <guid>http://localhost:1313/post/bigquery_about_machine_learning/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/bigquery_about_machine_learning/</guid>
       <description>🔍 Completed within DWH, allowing modeling and analysis through queries</description>
     </item>
     <item>
       <title>[GitHub] Copilot in Terminal</title>
-      <link>http://localhost:1313/post/github_coplilot_in_terminal/</link>
+      <link>https://shiroimon.kithub.f5.si/post/github_coplilot_in_terminal/</link>
       <pubDate>Mon, 18 Nov 2024 23:10:30 +0900</pubDate>
-      <guid>http://localhost:1313/post/github_coplilot_in_terminal/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/github_coplilot_in_terminal/</guid>
       <description>🤖 Notes on how to use in terminal (Vim)</description>
     </item>
   </channel>

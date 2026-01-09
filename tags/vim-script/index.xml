@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vim Script on Today I Learned | KitHub</title>
-    <link>http://localhost:1313/tags/vim-script/</link>
+    <link>https://shiroimon.kithub.f5.si/tags/vim-script/</link>
     <description>Recent content in Vim Script on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Jan 2026 23:44:03 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/vim-script/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://shiroimon.kithub.f5.si/tags/vim-script/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Vim] Building plugin</title>
-      <link>http://localhost:1313/post/vim_building_plugin/</link>
+      <link>https://shiroimon.kithub.f5.si/post/vim_building_plugin/</link>
       <pubDate>Wed, 11 Sep 2024 19:39:49 +0900</pubDate>
-      <guid>http://localhost:1313/post/vim_building_plugin/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/vim_building_plugin/</guid>
       <description>✅ Once I gain a deeper understanding, what may be able to develop general-purpose automated tools.</description>
     </item>
   </channel>

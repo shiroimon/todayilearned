@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Google Cloud on Today I Learned | KitHub</title>
-    <link>http://localhost:1313/tags/google-cloud/</link>
+    <link>https://shiroimon.kithub.f5.si/tags/google-cloud/</link>
     <description>Recent content in Google Cloud on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Jan 2026 23:44:03 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/google-cloud/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://shiroimon.kithub.f5.si/tags/google-cloud/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[BigQuery] CLI</title>
-      <link>http://localhost:1313/post/bigquery_cli/</link>
+      <link>https://shiroimon.kithub.f5.si/post/bigquery_cli/</link>
       <pubDate>Mon, 01 Sep 2025 21:43:34 +0900</pubDate>
-      <guid>http://localhost:1313/post/bigquery_cli/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/bigquery_cli/</guid>
       <description>🔍 Memos using CLI operations for each job type.</description>
     </item>
     <item>
       <title>[BigQuery] (Various) Data Transfer</title>
-      <link>http://localhost:1313/post/bigquery_about_various_data_transfer/</link>
+      <link>https://shiroimon.kithub.f5.si/post/bigquery_about_various_data_transfer/</link>
       <pubDate>Thu, 03 Apr 2025 11:11:44 +0900</pubDate>
-      <guid>http://localhost:1313/post/bigquery_about_various_data_transfer/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/bigquery_about_various_data_transfer/</guid>
       <description>🔍 Find out various data transfer methods starting from BigQuery.</description>
     </item>
     <item>
       <title>[BigQuery] INFORMATION_SCHEMA</title>
-      <link>http://localhost:1313/post/bigquery_about_information_schema/</link>
+      <link>https://shiroimon.kithub.f5.si/post/bigquery_about_information_schema/</link>
       <pubDate>Thu, 06 Mar 2025 17:39:31 +0900</pubDate>
-      <guid>http://localhost:1313/post/bigquery_about_information_schema/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/bigquery_about_information_schema/</guid>
       <description>🔍 It&amp;rsquo;s not good to know about data governance.</description>
     </item>
     <item>
       <title>[Google Cloud] Tools memorandum</title>
-      <link>http://localhost:1313/post/google_cloud_tools_memorandum/</link>
+      <link>https://shiroimon.kithub.f5.si/post/google_cloud_tools_memorandum/</link>
       <pubDate>Tue, 21 Jan 2025 16:24:43 +0900</pubDate>
-      <guid>http://localhost:1313/post/google_cloud_tools_memorandum/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/google_cloud_tools_memorandum/</guid>
       <description>☁️ I would like to summarize it to understand Cloud tools.</description>
     </item>
     <item>
       <title>[BigQuery] Billing</title>
-      <link>http://localhost:1313/post/bigquery_billing_how_works/</link>
+      <link>https://shiroimon.kithub.f5.si/post/bigquery_billing_how_works/</link>
       <pubDate>Fri, 16 Aug 2024 20:35:07 +0900</pubDate>
-      <guid>http://localhost:1313/post/bigquery_billing_how_works/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/bigquery_billing_how_works/</guid>
       <description>🔍 Summarize billing mechanism, fee structure, and money-saving tips.</description>
     </item>
   </channel>

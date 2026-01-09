@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Claude Code on Today I Learned | KitHub</title>
-    <link>http://localhost:1313/tags/claude-code/</link>
+    <link>https://shiroimon.kithub.f5.si/tags/claude-code/</link>
     <description>Recent content in Claude Code on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Jan 2026 22:22:47 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/claude-code/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Jan 2026 18:14:52 +0900</lastBuildDate>
+    <atom:link href="https://shiroimon.kithub.f5.si/tags/claude-code/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Claude Code] Slash Command Usage</title>
-      <link>http://localhost:1313/post/claude_code_slash_command_usage/</link>
+      <link>https://shiroimon.kithub.f5.si/post/claude_code_slash_command_usage/</link>
       <pubDate>Wed, 07 Jan 2026 11:56:35 +0900</pubDate>
-      <guid>http://localhost:1313/post/claude_code_slash_command_usage/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/claude_code_slash_command_usage/</guid>
       <description>💥 How to Use Slash Commands in Claude Code.</description>
     </item>
   </channel>

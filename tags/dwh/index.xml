@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DWH on Today I Learned | KitHub</title>
-    <link>http://localhost:1313/tags/dwh/</link>
+    <link>https://shiroimon.kithub.f5.si/tags/dwh/</link>
     <description>Recent content in DWH on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Jan 2026 23:44:03 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/dwh/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://shiroimon.kithub.f5.si/tags/dwh/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[BigQuery] (Various) Data Transfer</title>
-      <link>http://localhost:1313/post/bigquery_about_various_data_transfer/</link>
+      <link>https://shiroimon.kithub.f5.si/post/bigquery_about_various_data_transfer/</link>
       <pubDate>Thu, 03 Apr 2025 11:11:44 +0900</pubDate>
-      <guid>http://localhost:1313/post/bigquery_about_various_data_transfer/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/bigquery_about_various_data_transfer/</guid>
       <description>🔍 Find out various data transfer methods starting from BigQuery.</description>
     </item>
     <item>
       <title>[BigQuery] Data analyize catchup</title>
-      <link>http://localhost:1313/post/bigquery_data_analysis_catchup/</link>
+      <link>https://shiroimon.kithub.f5.si/post/bigquery_data_analysis_catchup/</link>
       <pubDate>Sat, 26 Oct 2024 00:22:05 +0900</pubDate>
-      <guid>http://localhost:1313/post/bigquery_data_analysis_catchup/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/bigquery_data_analysis_catchup/</guid>
       <description>🔍 Re-summarizeing the trajectory I learned as an introductory.</description>
     </item>
     <item>
       <title>[BigQuery] Data Quality</title>
-      <link>http://localhost:1313/post/bigquery_about_data_quality/</link>
+      <link>https://shiroimon.kithub.f5.si/post/bigquery_about_data_quality/</link>
       <pubDate>Wed, 16 Oct 2024 13:49:54 +0900</pubDate>
-      <guid>http://localhost:1313/post/bigquery_about_data_quality/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/bigquery_about_data_quality/</guid>
       <description>🔍 Different perspective from data analysis. About data quality.</description>
     </item>
   </channel>

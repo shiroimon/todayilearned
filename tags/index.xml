@@ -2,458 +2,472 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Today I Learned | KitHub</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://shiroimon.kithub.f5.si/tags/</link>
     <description>Recent content in Tags on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Jan 2026 22:26:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Jan 2026 18:30:00 +0900</lastBuildDate>
+    <atom:link href="https://shiroimon.kithub.f5.si/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Google Apps Script</title>
-      <link>http://localhost:1313/tags/google-apps-script/</link>
-      <pubDate>Wed, 15 Oct 2025 18:48:39 +0900</pubDate>
-      <guid>http://localhost:1313/tags/google-apps-script/</guid>
+      <title>Anthropic</title>
+      <link>https://shiroimon.kithub.f5.si/tags/anthropic/</link>
+      <pubDate>Wed, 07 Jan 2026 11:56:35 +0900</pubDate>
+      <guid>https://shiroimon.kithub.f5.si/tags/anthropic/</guid>
       <description></description>
     </item>
     <item>
-      <title>Codex</title>
-      <link>http://localhost:1313/tags/codex/</link>
-      <pubDate>Fri, 10 Oct 2025 16:13:19 +0900</pubDate>
-      <guid>http://localhost:1313/tags/codex/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>OpenAI</title>
-      <link>http://localhost:1313/tags/openai/</link>
-      <pubDate>Fri, 10 Oct 2025 16:13:19 +0900</pubDate>
-      <guid>http://localhost:1313/tags/openai/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>BigQuery</title>
-      <link>http://localhost:1313/tags/bigquery/</link>
-      <pubDate>Mon, 01 Sep 2025 21:43:34 +0900</pubDate>
-      <guid>http://localhost:1313/tags/bigquery/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>CLI</title>
-      <link>http://localhost:1313/tags/cli/</link>
-      <pubDate>Mon, 01 Sep 2025 21:43:34 +0900</pubDate>
-      <guid>http://localhost:1313/tags/cli/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Google Cloud</title>
-      <link>http://localhost:1313/tags/google-cloud/</link>
-      <pubDate>Mon, 01 Sep 2025 21:43:34 +0900</pubDate>
-      <guid>http://localhost:1313/tags/google-cloud/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tableau</title>
-      <link>http://localhost:1313/tags/tableau/</link>
-      <pubDate>Mon, 02 Jun 2025 14:46:08 +0900</pubDate>
-      <guid>http://localhost:1313/tags/tableau/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>DataLake</title>
-      <link>http://localhost:1313/tags/datalake/</link>
-      <pubDate>Thu, 03 Apr 2025 11:11:44 +0900</pubDate>
-      <guid>http://localhost:1313/tags/datalake/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Dbt</title>
-      <link>http://localhost:1313/tags/dbt/</link>
-      <pubDate>Thu, 03 Apr 2025 11:11:44 +0900</pubDate>
-      <guid>http://localhost:1313/tags/dbt/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>DWH</title>
-      <link>http://localhost:1313/tags/dwh/</link>
-      <pubDate>Thu, 03 Apr 2025 11:11:44 +0900</pubDate>
-      <guid>http://localhost:1313/tags/dwh/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>ETL/ELT</title>
-      <link>http://localhost:1313/tags/etl/elt/</link>
-      <pubDate>Thu, 03 Apr 2025 11:11:44 +0900</pubDate>
-      <guid>http://localhost:1313/tags/etl/elt/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>SQL</title>
-      <link>http://localhost:1313/tags/sql/</link>
-      <pubDate>Thu, 03 Apr 2025 11:11:44 +0900</pubDate>
-      <guid>http://localhost:1313/tags/sql/</guid>
+      <title>Claude Code</title>
+      <link>https://shiroimon.kithub.f5.si/tags/claude-code/</link>
+      <pubDate>Wed, 07 Jan 2026 11:56:35 +0900</pubDate>
+      <guid>https://shiroimon.kithub.f5.si/tags/claude-code/</guid>
       <description></description>
     </item>
     <item>
       <title>Looker</title>
-      <link>http://localhost:1313/tags/looker/</link>
-      <pubDate>Mon, 24 Mar 2025 11:10:12 +0900</pubDate>
-      <guid>http://localhost:1313/tags/looker/</guid>
+      <link>https://shiroimon.kithub.f5.si/tags/looker/</link>
+      <pubDate>Tue, 02 Dec 2025 16:39:00 +0900</pubDate>
+      <guid>https://shiroimon.kithub.f5.si/tags/looker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Google Apps Script</title>
+      <link>https://shiroimon.kithub.f5.si/tags/google-apps-script/</link>
+      <pubDate>Wed, 15 Oct 2025 18:48:39 +0900</pubDate>
+      <guid>https://shiroimon.kithub.f5.si/tags/google-apps-script/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Codex</title>
+      <link>https://shiroimon.kithub.f5.si/tags/codex/</link>
+      <pubDate>Fri, 10 Oct 2025 16:13:19 +0900</pubDate>
+      <guid>https://shiroimon.kithub.f5.si/tags/codex/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenAI</title>
+      <link>https://shiroimon.kithub.f5.si/tags/openai/</link>
+      <pubDate>Fri, 10 Oct 2025 16:13:19 +0900</pubDate>
+      <guid>https://shiroimon.kithub.f5.si/tags/openai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>BigQuery</title>
+      <link>https://shiroimon.kithub.f5.si/tags/bigquery/</link>
+      <pubDate>Mon, 01 Sep 2025 21:43:34 +0900</pubDate>
+      <guid>https://shiroimon.kithub.f5.si/tags/bigquery/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CLI</title>
+      <link>https://shiroimon.kithub.f5.si/tags/cli/</link>
+      <pubDate>Mon, 01 Sep 2025 21:43:34 +0900</pubDate>
+      <guid>https://shiroimon.kithub.f5.si/tags/cli/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Google Cloud</title>
+      <link>https://shiroimon.kithub.f5.si/tags/google-cloud/</link>
+      <pubDate>Mon, 01 Sep 2025 21:43:34 +0900</pubDate>
+      <guid>https://shiroimon.kithub.f5.si/tags/google-cloud/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tableau</title>
+      <link>https://shiroimon.kithub.f5.si/tags/tableau/</link>
+      <pubDate>Mon, 02 Jun 2025 14:46:08 +0900</pubDate>
+      <guid>https://shiroimon.kithub.f5.si/tags/tableau/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DataLake</title>
+      <link>https://shiroimon.kithub.f5.si/tags/datalake/</link>
+      <pubDate>Thu, 03 Apr 2025 11:11:44 +0900</pubDate>
+      <guid>https://shiroimon.kithub.f5.si/tags/datalake/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dbt</title>
+      <link>https://shiroimon.kithub.f5.si/tags/dbt/</link>
+      <pubDate>Thu, 03 Apr 2025 11:11:44 +0900</pubDate>
+      <guid>https://shiroimon.kithub.f5.si/tags/dbt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DWH</title>
+      <link>https://shiroimon.kithub.f5.si/tags/dwh/</link>
+      <pubDate>Thu, 03 Apr 2025 11:11:44 +0900</pubDate>
+      <guid>https://shiroimon.kithub.f5.si/tags/dwh/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ETL/ELT</title>
+      <link>https://shiroimon.kithub.f5.si/tags/etl/elt/</link>
+      <pubDate>Thu, 03 Apr 2025 11:11:44 +0900</pubDate>
+      <guid>https://shiroimon.kithub.f5.si/tags/etl/elt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SQL</title>
+      <link>https://shiroimon.kithub.f5.si/tags/sql/</link>
+      <pubDate>Thu, 03 Apr 2025 11:11:44 +0900</pubDate>
+      <guid>https://shiroimon.kithub.f5.si/tags/sql/</guid>
       <description></description>
     </item>
     <item>
       <title>Looker Studio</title>
-      <link>http://localhost:1313/tags/looker-studio/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/looker-studio/</link>
       <pubDate>Mon, 24 Mar 2025 11:10:12 +0900</pubDate>
-      <guid>http://localhost:1313/tags/looker-studio/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/looker-studio/</guid>
       <description></description>
     </item>
     <item>
       <title>BQML</title>
-      <link>http://localhost:1313/tags/bqml/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/bqml/</link>
       <pubDate>Fri, 14 Mar 2025 17:31:44 +0900</pubDate>
-      <guid>http://localhost:1313/tags/bqml/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/bqml/</guid>
       <description></description>
     </item>
     <item>
       <title>Chrome Canary</title>
-      <link>http://localhost:1313/tags/chrome-canary/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/chrome-canary/</link>
       <pubDate>Tue, 25 Feb 2025 13:45:58 +0900</pubDate>
-      <guid>http://localhost:1313/tags/chrome-canary/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/chrome-canary/</guid>
       <description></description>
     </item>
     <item>
       <title>Chromium</title>
-      <link>http://localhost:1313/tags/chromium/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/chromium/</link>
       <pubDate>Tue, 25 Feb 2025 13:45:58 +0900</pubDate>
-      <guid>http://localhost:1313/tags/chromium/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/chromium/</guid>
       <description></description>
     </item>
     <item>
       <title>Google Chrome</title>
-      <link>http://localhost:1313/tags/google-chrome/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/google-chrome/</link>
       <pubDate>Tue, 25 Feb 2025 13:45:58 +0900</pubDate>
-      <guid>http://localhost:1313/tags/google-chrome/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/google-chrome/</guid>
       <description></description>
     </item>
     <item>
       <title>IaC</title>
-      <link>http://localhost:1313/tags/iac/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/iac/</link>
       <pubDate>Thu, 20 Feb 2025 18:49:06 +0900</pubDate>
-      <guid>http://localhost:1313/tags/iac/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/iac/</guid>
       <description></description>
     </item>
     <item>
       <title>Terraform</title>
-      <link>http://localhost:1313/tags/terraform/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/terraform/</link>
       <pubDate>Thu, 20 Feb 2025 18:49:06 +0900</pubDate>
-      <guid>http://localhost:1313/tags/terraform/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/terraform/</guid>
       <description></description>
     </item>
     <item>
       <title>NumPy</title>
-      <link>http://localhost:1313/tags/numpy/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/numpy/</link>
       <pubDate>Thu, 13 Feb 2025 12:45:32 +0900</pubDate>
-      <guid>http://localhost:1313/tags/numpy/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/numpy/</guid>
       <description></description>
     </item>
     <item>
       <title>Pandas</title>
-      <link>http://localhost:1313/tags/pandas/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/pandas/</link>
       <pubDate>Thu, 13 Feb 2025 12:45:32 +0900</pubDate>
-      <guid>http://localhost:1313/tags/pandas/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/pandas/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
-      <link>http://localhost:1313/tags/python/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/python/</link>
       <pubDate>Thu, 13 Feb 2025 12:45:32 +0900</pubDate>
-      <guid>http://localhost:1313/tags/python/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/python/</guid>
       <description></description>
     </item>
     <item>
       <title>MacOS</title>
-      <link>http://localhost:1313/tags/macos/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/macos/</link>
       <pubDate>Tue, 28 Jan 2025 00:50:32 +0900</pubDate>
-      <guid>http://localhost:1313/tags/macos/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/macos/</guid>
       <description></description>
     </item>
     <item>
       <title>CSV</title>
-      <link>http://localhost:1313/tags/csv/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/csv/</link>
       <pubDate>Thu, 26 Dec 2024 21:27:07 +0900</pubDate>
-      <guid>http://localhost:1313/tags/csv/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/csv/</guid>
       <description></description>
     </item>
     <item>
       <title>Vim</title>
-      <link>http://localhost:1313/tags/vim/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/vim/</link>
       <pubDate>Thu, 26 Dec 2024 21:27:07 +0900</pubDate>
-      <guid>http://localhost:1313/tags/vim/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/vim/</guid>
       <description></description>
     </item>
     <item>
       <title>JSON</title>
-      <link>http://localhost:1313/tags/json/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/json/</link>
       <pubDate>Tue, 17 Dec 2024 22:39:48 +0900</pubDate>
-      <guid>http://localhost:1313/tags/json/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/json/</guid>
       <description></description>
     </item>
     <item>
       <title>TOML</title>
-      <link>http://localhost:1313/tags/toml/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/toml/</link>
       <pubDate>Tue, 17 Dec 2024 22:39:48 +0900</pubDate>
-      <guid>http://localhost:1313/tags/toml/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/toml/</guid>
       <description></description>
     </item>
     <item>
       <title>XML</title>
-      <link>http://localhost:1313/tags/xml/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/xml/</link>
       <pubDate>Tue, 17 Dec 2024 22:39:48 +0900</pubDate>
-      <guid>http://localhost:1313/tags/xml/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/xml/</guid>
       <description></description>
     </item>
     <item>
       <title>YAML</title>
-      <link>http://localhost:1313/tags/yaml/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/yaml/</link>
       <pubDate>Tue, 17 Dec 2024 22:39:48 +0900</pubDate>
-      <guid>http://localhost:1313/tags/yaml/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/yaml/</guid>
       <description></description>
     </item>
     <item>
       <title>Shell</title>
-      <link>http://localhost:1313/tags/shell/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/shell/</link>
       <pubDate>Tue, 26 Nov 2024 15:23:00 +0900</pubDate>
-      <guid>http://localhost:1313/tags/shell/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/shell/</guid>
       <description></description>
     </item>
     <item>
       <title>Zsh</title>
-      <link>http://localhost:1313/tags/zsh/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/zsh/</link>
       <pubDate>Tue, 26 Nov 2024 15:23:00 +0900</pubDate>
-      <guid>http://localhost:1313/tags/zsh/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/zsh/</guid>
       <description></description>
     </item>
     <item>
       <title>GitHub</title>
-      <link>http://localhost:1313/tags/github/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/github/</link>
       <pubDate>Thu, 21 Nov 2024 12:06:08 +0900</pubDate>
-      <guid>http://localhost:1313/tags/github/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/github/</guid>
       <description></description>
     </item>
     <item>
       <title>OSS</title>
-      <link>http://localhost:1313/tags/oss/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/oss/</link>
       <pubDate>Thu, 21 Nov 2024 12:06:08 +0900</pubDate>
-      <guid>http://localhost:1313/tags/oss/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/oss/</guid>
       <description></description>
     </item>
     <item>
       <title>GitHub Copilot</title>
-      <link>http://localhost:1313/tags/github-copilot/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/github-copilot/</link>
       <pubDate>Mon, 18 Nov 2024 23:10:30 +0900</pubDate>
-      <guid>http://localhost:1313/tags/github-copilot/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/github-copilot/</guid>
       <description></description>
     </item>
     <item>
       <title>CUE</title>
-      <link>http://localhost:1313/tags/cue/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/cue/</link>
       <pubDate>Mon, 18 Nov 2024 13:29:33 +0900</pubDate>
-      <guid>http://localhost:1313/tags/cue/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/cue/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker</title>
-      <link>http://localhost:1313/tags/docker/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/docker/</link>
       <pubDate>Mon, 18 Nov 2024 13:29:33 +0900</pubDate>
-      <guid>http://localhost:1313/tags/docker/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>Kubernetes</title>
-      <link>http://localhost:1313/tags/kubernetes/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/kubernetes/</link>
       <pubDate>Mon, 18 Nov 2024 13:29:33 +0900</pubDate>
-      <guid>http://localhost:1313/tags/kubernetes/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/kubernetes/</guid>
       <description></description>
     </item>
     <item>
       <title>Data Mart</title>
-      <link>http://localhost:1313/tags/data-mart/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/data-mart/</link>
       <pubDate>Sat, 26 Oct 2024 00:22:05 +0900</pubDate>
-      <guid>http://localhost:1313/tags/data-mart/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/data-mart/</guid>
       <description></description>
     </item>
     <item>
       <title>Lua</title>
-      <link>http://localhost:1313/tags/lua/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/lua/</link>
       <pubDate>Thu, 24 Oct 2024 10:40:32 +0900</pubDate>
-      <guid>http://localhost:1313/tags/lua/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/lua/</guid>
       <description></description>
     </item>
     <item>
       <title>Terminal</title>
-      <link>http://localhost:1313/tags/terminal/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/terminal/</link>
       <pubDate>Thu, 24 Oct 2024 10:40:32 +0900</pubDate>
-      <guid>http://localhost:1313/tags/terminal/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/terminal/</guid>
       <description></description>
     </item>
     <item>
       <title>WezTerm</title>
-      <link>http://localhost:1313/tags/wezterm/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/wezterm/</link>
       <pubDate>Thu, 24 Oct 2024 10:40:32 +0900</pubDate>
-      <guid>http://localhost:1313/tags/wezterm/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/wezterm/</guid>
       <description></description>
     </item>
     <item>
       <title>Connected Sheets</title>
-      <link>http://localhost:1313/tags/connected-sheets/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/connected-sheets/</link>
       <pubDate>Tue, 22 Oct 2024 12:56:22 +0900</pubDate>
-      <guid>http://localhost:1313/tags/connected-sheets/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/connected-sheets/</guid>
       <description></description>
     </item>
     <item>
       <title>Google Sheets</title>
-      <link>http://localhost:1313/tags/google-sheets/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/google-sheets/</link>
       <pubDate>Tue, 22 Oct 2024 12:56:22 +0900</pubDate>
-      <guid>http://localhost:1313/tags/google-sheets/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/google-sheets/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>http://localhost:1313/tags/linux/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/linux/</link>
       <pubDate>Mon, 30 Sep 2024 23:28:04 +0900</pubDate>
-      <guid>http://localhost:1313/tags/linux/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Unix</title>
-      <link>http://localhost:1313/tags/unix/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/unix/</link>
       <pubDate>Mon, 30 Sep 2024 23:28:04 +0900</pubDate>
-      <guid>http://localhost:1313/tags/unix/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/unix/</guid>
       <description></description>
     </item>
     <item>
       <title>Git</title>
-      <link>http://localhost:1313/tags/git/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/git/</link>
       <pubDate>Tue, 24 Sep 2024 18:08:08 +0900</pubDate>
-      <guid>http://localhost:1313/tags/git/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/git/</guid>
       <description></description>
     </item>
     <item>
       <title>Vim Script</title>
-      <link>http://localhost:1313/tags/vim-script/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/vim-script/</link>
       <pubDate>Wed, 11 Sep 2024 19:39:49 +0900</pubDate>
-      <guid>http://localhost:1313/tags/vim-script/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/vim-script/</guid>
       <description></description>
     </item>
     <item>
       <title>Argo Workflows</title>
-      <link>http://localhost:1313/tags/argo-workflows/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/argo-workflows/</link>
       <pubDate>Mon, 09 Sep 2024 12:40:59 +0900</pubDate>
-      <guid>http://localhost:1313/tags/argo-workflows/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/argo-workflows/</guid>
       <description></description>
     </item>
     <item>
       <title>DAG</title>
-      <link>http://localhost:1313/tags/dag/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/dag/</link>
       <pubDate>Mon, 09 Sep 2024 12:40:59 +0900</pubDate>
-      <guid>http://localhost:1313/tags/dag/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/dag/</guid>
       <description></description>
     </item>
     <item>
       <title>Embluk</title>
-      <link>http://localhost:1313/tags/embluk/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/embluk/</link>
       <pubDate>Wed, 21 Aug 2024 15:30:46 +0900</pubDate>
-      <guid>http://localhost:1313/tags/embluk/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/embluk/</guid>
       <description></description>
     </item>
     <item>
       <title>SaaS</title>
-      <link>http://localhost:1313/tags/saas/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/saas/</link>
       <pubDate>Wed, 21 Aug 2024 15:30:46 +0900</pubDate>
-      <guid>http://localhost:1313/tags/saas/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/saas/</guid>
       <description></description>
     </item>
     <item>
       <title>Trocco</title>
-      <link>http://localhost:1313/tags/trocco/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/trocco/</link>
       <pubDate>Wed, 21 Aug 2024 15:30:46 +0900</pubDate>
-      <guid>http://localhost:1313/tags/trocco/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/trocco/</guid>
       <description></description>
     </item>
     <item>
       <title>IDE</title>
-      <link>http://localhost:1313/tags/ide/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/ide/</link>
       <pubDate>Sat, 17 Aug 2024 01:02:03 +0900</pubDate>
-      <guid>http://localhost:1313/tags/ide/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/ide/</guid>
       <description></description>
     </item>
     <item>
       <title>TextEditor</title>
-      <link>http://localhost:1313/tags/texteditor/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/texteditor/</link>
       <pubDate>Sat, 17 Aug 2024 01:02:03 +0900</pubDate>
-      <guid>http://localhost:1313/tags/texteditor/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/texteditor/</guid>
       <description></description>
     </item>
     <item>
       <title>NotebookLM</title>
-      <link>http://localhost:1313/tags/notebooklm/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/notebooklm/</link>
       <pubDate>Fri, 16 Aug 2024 18:41:57 +0900</pubDate>
-      <guid>http://localhost:1313/tags/notebooklm/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/notebooklm/</guid>
       <description></description>
     </item>
     <item>
       <title>PDF</title>
-      <link>http://localhost:1313/tags/pdf/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/pdf/</link>
       <pubDate>Fri, 16 Aug 2024 18:41:57 +0900</pubDate>
-      <guid>http://localhost:1313/tags/pdf/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/pdf/</guid>
       <description></description>
     </item>
     <item>
       <title>Chrome</title>
-      <link>http://localhost:1313/tags/chrome/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/chrome/</link>
       <pubDate>Sat, 03 Aug 2024 16:04:18 +0900</pubDate>
-      <guid>http://localhost:1313/tags/chrome/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/chrome/</guid>
       <description></description>
     </item>
     <item>
       <title>English</title>
-      <link>http://localhost:1313/tags/english/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/english/</link>
       <pubDate>Tue, 30 Jul 2024 12:48:55 +0900</pubDate>
-      <guid>http://localhost:1313/tags/english/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/english/</guid>
       <description></description>
     </item>
     <item>
       <title>Slack</title>
-      <link>http://localhost:1313/tags/slack/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/slack/</link>
       <pubDate>Tue, 30 Jul 2024 12:48:55 +0900</pubDate>
-      <guid>http://localhost:1313/tags/slack/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/slack/</guid>
       <description></description>
     </item>
     <item>
       <title>GKE</title>
-      <link>http://localhost:1313/tags/gke/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/gke/</link>
       <pubDate>Fri, 26 Jul 2024 03:42:04 +0900</pubDate>
-      <guid>http://localhost:1313/tags/gke/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/gke/</guid>
       <description></description>
     </item>
     <item>
       <title>GFM</title>
-      <link>http://localhost:1313/tags/gfm/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/gfm/</link>
       <pubDate>Tue, 23 Jul 2024 18:17:17 +0900</pubDate>
-      <guid>http://localhost:1313/tags/gfm/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/gfm/</guid>
       <description></description>
     </item>
     <item>
       <title>Markdown</title>
-      <link>http://localhost:1313/tags/markdown/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/markdown/</link>
       <pubDate>Tue, 23 Jul 2024 18:17:17 +0900</pubDate>
-      <guid>http://localhost:1313/tags/markdown/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/markdown/</guid>
       <description></description>
     </item>
     <item>
       <title>SourceGraph</title>
-      <link>http://localhost:1313/tags/sourcegraph/</link>
+      <link>https://shiroimon.kithub.f5.si/tags/sourcegraph/</link>
       <pubDate>Tue, 23 Jul 2024 04:13:21 +0900</pubDate>
-      <guid>http://localhost:1313/tags/sourcegraph/</guid>
+      <guid>https://shiroimon.kithub.f5.si/tags/sourcegraph/</guid>
       <description></description>
     </item>
   </channel>

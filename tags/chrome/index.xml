@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Chrome on Today I Learned | KitHub</title>
-    <link>http://localhost:1313/tags/chrome/</link>
+    <link>https://shiroimon.kithub.f5.si/tags/chrome/</link>
     <description>Recent content in Chrome on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Jan 2026 23:44:03 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/chrome/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://shiroimon.kithub.f5.si/tags/chrome/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[macOS] Looks like native application</title>
-      <link>http://localhost:1313/post/macos_looks_like_native_application/</link>
+      <link>https://shiroimon.kithub.f5.si/post/macos_looks_like_native_application/</link>
       <pubDate>Sat, 03 Aug 2024 16:04:18 +0900</pubDate>
-      <guid>http://localhost:1313/post/macos_looks_like_native_application/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/macos_looks_like_native_application/</guid>
       <description>🍏 A little trick to use it like a native laptop application.</description>
     </item>
   </channel>
