@@ -1,10 +1,9 @@
-const CACHE_VERSION = 'v1.0.0';
+// ビルド時のタイムスタンプでキャッシュバージョンを自動更新
+const CACHE_VERSION = 'v-1769161481';
 const CACHE_NAME = `til-blog-${CACHE_VERSION}`;
 
-// キャッシュするリソース
+// キャッシュするリソース（HTMLファイルを除く静的アセットのみ）
 const STATIC_CACHE_URLS = [
-  '/',
-  '/index.html',
   '/css/frameworks.min.css',
   '/css/github.min.css',
   '/css/github-style.css',
@@ -63,11 +62,20 @@ self.addEventListener('fetch', (event) => {
   if (url.origin !== self.location.origin) {
     return;
   }
-  // 記事ページ（/post/配下）は Network First
-  if (url.pathname.startsWith('/post/')) {
+
+  // HTMLドキュメント（.html または拡張子なし）は Network First
+  // デプロイ後に常に最新版を取得するため
+  const isHTMLDocument =
+    request.destination === 'document' ||
+    url.pathname.endsWith('.html') ||
+    url.pathname === '/' ||
+    (!url.pathname.includes('.') && !url.pathname.startsWith('/css') && !url.pathname.startsWith('/js') && !url.pathname.startsWith('/images'));
+
+  if (isHTMLDocument) {
     event.respondWith(
       fetch(request)
         .then((response) => {
+          // 最新版を取得できたらキャッシュに保存（オフライン時用）
           if (response && response.ok) {
             const responseClone = response.clone();
             caches.open(CACHE_NAME).then((cache) => cache.put(request, responseClone));
@@ -75,20 +83,21 @@ self.addEventListener('fetch', (event) => {
           return response;
         })
         .catch(() => {
+          // ネットワークエラー時のみキャッシュから返す
           return caches.match(request).then((cachedResponse) => {
             if (cachedResponse) {
               return cachedResponse;
             }
-            if (request.destination === 'document') {
-              return caches.match('/offline.html');
-            }
+            // キャッシュもない場合はオフラインページ
+            return caches.match('/offline.html');
           });
         })
     );
     return;
   }
 
-  // 静的リソースは Cache First with Network Fallback
+  // CSS/JS/画像などの静的アセットは Cache First
+  // パフォーマンスのため、キャッシュを優先
   event.respondWith(
     caches.match(request)
       .then((cachedResponse) => {
@@ -109,10 +118,8 @@ self.addEventListener('fetch', (event) => {
             return networkResponse;
           })
           .catch(() => {
-            // ネットワークエラー時はオフラインページを返す
-            if (request.destination === 'document') {
-              return caches.match('/offline.html');
-            }
+            // 静的アセット取得失敗時は何も返さない
+            return new Response('', { status: 404 });
           });
       })
   );
