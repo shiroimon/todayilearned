@@ -202,7 +202,7 @@ if ('serviceWorker' in navigator) {
                 Created <relative-time datetime="Wed, 07 Jan 2026 11:56:35 &#43;0900" class="no-wrap">Wed, 07 Jan 2026 11:56:35 &#43;0900</relative-time>
                 
                 <span class="path-divider">|</span>
-                Modified <relative-time datetime="Sun, 11 Jan 2026 12:32:15 &#43;0900" class="no-wrap">Sun, 11 Jan 2026 12:32:15 &#43;0900</relative-time>
+                Modified <relative-time datetime="Mon, 26 Jan 2026 19:19:09 &#43;0900" class="no-wrap">Mon, 26 Jan 2026 19:19:09 &#43;0900</relative-time>
                 
             </div>
         </div>
@@ -235,7 +235,7 @@ if ('serviceWorker' in navigator) {
                     <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list"></div>
                 </div>
             </details-menu>
-            734 Words
+            947 Words
             <span class="path-divider">|</span>
             1 min
             </div>
@@ -285,8 +285,9 @@ if ('serviceWorker' in navigator) {
 <h2 id="what">What<a class="anchor" aria-hidden="true" href="#what"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
 <blockquote>
 <p>[!note]
-Claude Code完全ガイド<br>
-<a href="https://zenn.dev/heku/books/claude-code-guide">https://zenn.dev/heku/books/claude-code-guide</a></p>
+<br> <img width=10% src="https://res.cloudinary.com/zenn/image/fetch/s--l0lbiOAk--/c_fill%2Cf_jpg%2Cfl_progressive%2Ch_700%2Cq_90%2Cw_500/https://storage.googleapis.com/zenn-user-upload/book_cover/d76db289f3.png?_a=BACAGSGT" />
+<br> Claude Code完全ガイド
+<br> <a href="https://zenn.dev/heku/books/claude-code-guide">https://zenn.dev/heku/books/claude-code-guide</a></p>
 </blockquote>
 <p>↑ これ読んでおけばOK牧場ﾚﾍﾞﾙ</p>
 <h3 id="ざっくり理解">ざっくり理解<a class="anchor" aria-hidden="true" href="#ざっくり理解"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
@@ -308,19 +309,23 @@ Claude Code完全ガイド<br>
           <td>部署別ﾏﾆｭｱﾙ</td>
       </tr>
       <tr>
-          <td>Skills</td>
+          <td>.claude/skills/</td>
           <td>社内Wiki・ﾅﾚｯｼﾞ</td>
       </tr>
       <tr>
-          <td>Sub Agents</td>
-          <td>専門ﾁｰﾑ・外部ｺﾝｻﾙ</td>
+          <td>.claude/tasks/</td>
+          <td></td>
       </tr>
       <tr>
-          <td>Custom Commands</td>
+          <td>.claude/commands/</td>
           <td>定型業務ﾃﾝﾌﾟﾚｰﾄ</td>
       </tr>
       <tr>
-          <td>Hooks</td>
+          <td>.claude/agents/</td>
+          <td>ｻﾌﾞｴｰｼﾞｪﾝﾄ 専門ﾁｰﾑ・外部ｺﾝｻﾙ</td>
+      </tr>
+      <tr>
+          <td>Hooks (settings.json)</td>
           <td>自動化ｼｽﾃﾑ（ﾗｲﾌｻｲｸﾙｲﾍﾞﾝﾄ）<br> eg. 出勤時自動打刻</td>
       </tr>
   </tbody>
@@ -348,25 +353,31 @@ Claude Code完全ガイド<br>
           <td></td>
       </tr>
       <tr>
-          <td>Skills</td>
+          <td>.claude/skills/</td>
           <td>🦀 Claude本体</td>
           <td>必要時(Claud判断)</td>
           <td>知識を詰め込み必要な時に参照（ﾛｰﾄﾞ）</td>
       </tr>
       <tr>
-          <td>Sub Agents</td>
-          <td>🦀 Claude本体</td>
-          <td>手　動</td>
-          <td>User実行<br> eg. <code>/suggest-commit</code></td>
+          <td>.claude/tasks/</td>
+          <td></td>
+          <td></td>
+          <td><code>CLAUDE_CODE-TASK_LIST=groceries claude</code> <br>環境変数を用いて複数セッションで、１つのタスクリストで共同作業させることが可能</td>
       </tr>
       <tr>
-          <td>Custom Commands</td>
+          <td>.claude/commands/</td>
           <td>🦞 別Claude</td>
           <td>必要時</td>
           <td>複数の別Claudeが同時並列に動く<br> eg. 同時ｺｰﾄﾞ調査🦞🦞</td>
       </tr>
       <tr>
-          <td>Hooks</td>
+          <td>.claude/agents/</td>
+          <td>🦀 Claude本体</td>
+          <td>手　動</td>
+          <td>User実行<br> eg. <code>/suggest-commit</code><br> eg. <code>quality-checker</code></td>
+      </tr>
+      <tr>
+          <td>Hooks (setttings.json)</td>
           <td>🐚 Shell</td>
           <td>自　動</td>
           <td>決定論的*</td>
@@ -405,15 +416,23 @@ Claude Code完全ガイド<br>
 </li>
 <li>cf. <a href="https://zenn.dev/aun_phonogram/articles/4be2f4745726fb">Claude Codeですぐ制限にかからないようにするコツ</a> Zenn</li>
 </ul>
-<h3 id="記憶の一時預け">記憶の一時預け<a class="anchor" aria-hidden="true" href="#記憶の一時預け"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<h3 id="記憶の一時預け独自skiiks">記憶の一時預け（独自Skiiks）<a class="anchor" aria-hidden="true" href="#記憶の一時預け独自skiiks"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 <ul>
 <li>usage:「記憶して」と言えば残る。「思い出して」と言えば戻れる。</li>
 <li>cf. <a href="https://zenn.dev/yamadashy/articles/claude-code-agent-skills-agent-memory">Claude Codeで記憶領域を持つための独自のAgent Skillsを使っている</a> Zenn</li>
 </ul>
+<h3></h3>
+<ul>
+<li>修正実行３択の最初のYESに <code>tab</code> でついで注文</li>
+<li><code>Ctrl+S</code> 下書き保存（プロンプト一次保存 <code>≒ git stash</code>）</li>
+</ul>
 <h2 id="ref">Ref.<a class="anchor" aria-hidden="true" href="#ref"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
 <ul>
+<li><a href="https://note.com/ai_driven/n/nce437c34242f">Claude Code Workflow Studio完全ガイド｜ビジュアルでAIワークフローを構築する新時代</a> note</li>
 <li><a href="https://zenn.dev/aun_phonogram/articles/475f3cca8f40a3">Agent Skillsを一番かんたんに作る方法（Claude Code + skill-creator）</a> Zenn</li>
 <li><a href="https://zenn.dev/modokkin/articles/zenn-2025-12-03-tech-claude-code-plugins">Claude Code公式Pluginのすすめ</a> Zenn</li>
+<li><a href="https://zenn.dev/tacoms/articles/552140c84aaefa">Claude CodeのSub agentsでコンテキスト枯渇問題をサクッと解決できたはなし</a> Zenn</li>
+<li><a href="https://syu-m-5151.hatenablog.com/entry/2025/09/09/143306">Claude CodeのSubagentsは設定したほうがいい</a> Hatena Blog</li>
 <li>X: <a href="https://x.com/sora19ai/status/2005900586328441020?s=46&amp;t=RSRnjQg5szbGQ19iUHwMlg">https://x.com/sora19ai/status/2005900586328441020?s=46&amp;t=RSRnjQg5szbGQ19iUHwMlg</a></li>
 </ul>
 </article>
