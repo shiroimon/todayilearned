@@ -3,40 +3,49 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://shiroimon.kithub.f5.si/post/claude_code_slash_command_usage/</loc>
-    <lastmod>2026-01-26T19:19:09+09:00</lastmod>
+    <lastmod>2026-01-30T13:02:57+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/categories/ai/</loc>
-    <lastmod>2026-01-26T19:19:09+09:00</lastmod>
+    <lastmod>2026-01-30T13:02:57+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/tags/anthropic/</loc>
-    <lastmod>2026-01-26T19:19:09+09:00</lastmod>
+    <lastmod>2026-01-30T13:02:57+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/categories/</loc>
-    <lastmod>2026-01-26T19:19:09+09:00</lastmod>
+    <lastmod>2026-02-02T09:14:22+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/tags/claude-code/</loc>
-    <lastmod>2026-01-26T19:19:09+09:00</lastmod>
+    <lastmod>2026-01-30T13:02:57+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/post/</loc>
-    <lastmod>2026-01-26T19:19:09+09:00</lastmod>
+    <lastmod>2026-02-02T09:14:22+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/tags/</loc>
-    <lastmod>2026-01-26T19:19:09+09:00</lastmod>
+    <lastmod>2026-02-02T09:14:22+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/</loc>
-    <lastmod>2026-01-26T19:36:04+09:00</lastmod>
+    <lastmod>2026-02-02T09:16:19+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/post/looker_this_and_that/</loc>
-    <lastmod>2026-01-09T18:18:01+09:00</lastmod>
+    <lastmod>2026-02-02T09:14:22+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/categories/bi/</loc>
-    <lastmod>2026-01-09T18:18:01+09:00</lastmod>
+    <lastmod>2026-02-02T09:14:22+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/categories/google/</loc>
-    <lastmod>2026-01-09T18:18:01+09:00</lastmod>
+    <lastmod>2026-02-02T09:14:22+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/tags/looker/</loc>
-    <lastmod>2026-01-09T18:18:01+09:00</lastmod>
+    <lastmod>2026-02-02T09:14:22+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/lookml/</loc>
+    <lastmod>2026-02-02T09:14:22+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/sql/</loc>
+    <lastmod>2026-02-02T09:14:22+09:00</lastmod>
+  </url><url>
+    <loc>https://shiroimon.kithub.f5.si/tags/yaml/</loc>
+    <lastmod>2026-02-02T09:14:22+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/post/google_app_script_setup/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
@@ -60,13 +69,13 @@
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/tags/cli/</loc>
-    <lastmod>2026-01-23T18:55:46+09:00</lastmod>
+    <lastmod>2026-02-02T09:11:36+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/tags/google-cloud/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/categories/infrastructure/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+    <lastmod>2026-02-02T09:11:36+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/post/tableau_this_and_that/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
@@ -90,9 +99,6 @@
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/tags/etl/elt/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>https://shiroimon.kithub.f5.si/tags/sql/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/post/looker_studio_this_and_that/</loc>
@@ -180,25 +186,22 @@
     <lastmod>2026-01-08T22:26:00+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/post/yaml_catchup/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+    <lastmod>2026-02-02T09:12:39+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/categories/hands-on/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+    <lastmod>2026-02-02T09:12:39+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/tags/json/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+    <lastmod>2026-02-02T09:12:39+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/tags/toml/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+    <lastmod>2026-02-02T09:12:39+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/categories/udemy/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+    <lastmod>2026-02-02T09:12:39+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/tags/xml/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
-  </url><url>
-    <loc>https://shiroimon.kithub.f5.si/tags/yaml/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+    <lastmod>2026-02-02T09:12:39+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/post/shell_commands_memorandum/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
@@ -231,7 +234,7 @@
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/tags/docker/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+    <lastmod>2026-02-02T09:11:36+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/tags/kubernetes/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
@@ -315,10 +318,10 @@
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/post/docker_commands_memorandum/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+    <lastmod>2026-02-02T09:11:36+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/categories/container/</loc>
-    <lastmod>2026-01-05T23:44:03+09:00</lastmod>
+    <lastmod>2026-02-02T09:11:36+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/post/vim_commands_memorandum/</loc>
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
@@ -393,6 +396,6 @@
     <lastmod>2026-01-05T23:44:03+09:00</lastmod>
   </url><url>
     <loc>https://shiroimon.kithub.f5.si/readme/</loc>
-    <lastmod>2026-01-26T19:36:04+09:00</lastmod>
+    <lastmod>2026-02-02T09:16:19+09:00</lastmod>
   </url>
 </urlset>

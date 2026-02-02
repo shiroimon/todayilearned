@@ -6,8 +6,15 @@
     <description>Recent content in SQL on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Jan 2026 23:44:03 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 02 Feb 2026 09:14:22 +0900</lastBuildDate>
     <atom:link href="https://shiroimon.kithub.f5.si/tags/sql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Looker] This and That</title>
+      <link>https://shiroimon.kithub.f5.si/post/looker_this_and_that/</link>
+      <pubDate>Tue, 02 Dec 2025 16:39:00 +0900</pubDate>
+      <guid>https://shiroimon.kithub.f5.si/post/looker_this_and_that/</guid>
+      <description>🫧 How to use Google&amp;rsquo;s SaaS about BI.</description>
+    </item>
     <item>
       <title>[BigQuery] (Various) Data Transfer</title>
       <link>https://shiroimon.kithub.f5.si/post/bigquery_about_various_data_transfer/</link>

@@ -202,7 +202,7 @@ if ('serviceWorker' in navigator) {
                 Created <relative-time datetime="Wed, 21 Aug 2024 00:00:34 &#43;0900" class="no-wrap">Wed, 21 Aug 2024 00:00:34 &#43;0900</relative-time>
                 
                 <span class="path-divider">|</span>
-                Modified <relative-time datetime="Mon, 05 Jan 2026 23:44:03 &#43;0900" class="no-wrap">Mon, 05 Jan 2026 23:44:03 &#43;0900</relative-time>
+                Modified <relative-time datetime="Mon, 02 Feb 2026 09:11:36 &#43;0900" class="no-wrap">Mon, 02 Feb 2026 09:11:36 &#43;0900</relative-time>
                 
             </div>
         </div>
@@ -235,9 +235,9 @@ if ('serviceWorker' in navigator) {
                     <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list"></div>
                 </div>
             </details-menu>
-            2158 Words
+            3471 Words
             <span class="path-divider">|</span>
-            4 min
+            6 min
             </div>
 
             
@@ -306,6 +306,17 @@ if ('serviceWorker' in navigator) {
 <li><a href="https://www.docker.com/">Docker</a></li>
 <li><a href="https://hub.docker.com/">Docker Hub</a> Docker image がたくさんあるところ</li>
 <li><a href="https://docs.docker.com/desktop/setup/install/mac-install/">Docker Desktop on Mac</a></li>
+<li><a href="https://docs.docker.jp/">Docker Documentation (日本語)</a></li>
+<li><a href="https://www.docker.com/sites/default/files/d8/2019-09/docker-cheat-sheet.pdf">Docker Cheat Sheet</a></li>
+<li>
+
+<div>
+    <div class="github-card" data-github="jesseduffield/lazydocker" data-theme="default"></div>
+    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+</div>
+
+ <!-- https://github.com/jesseduffield/lazydocker --></li>
+<li><a href="https://formulae.brew.sh/formula/lazydocker">https://formulae.brew.sh/formula/lazydocker</a></li>
 </ul>
 <h4 id="docker-フロー">[Docker] フロー<a class="anchor" aria-hidden="true" href="#docker-フロー"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
 <pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph LR
@@ -423,7 +434,7 @@ docker/
   │ └ anaconda3
   └ work/          : 「my-lab」と紐づいている
                     (eg. Jupyterlabなどで分析「test.ipnb」などが格納される)
-</code></pre><h5 id="docker-dockerfile-作成">[Docker] Dockerfile 作成<a class="anchor" aria-hidden="true" href="#docker-dockerfile-作成"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h5>
+</code></pre><h5 id="作成">作成<a class="anchor" aria-hidden="true" href="#作成"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h5>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh:Dockerfile.sh" data-lang="sh:Dockerfile.sh"><span class="line"><span class="cl">FROM ubuntu:latest
 </span></span><span class="line"><span class="cl">RUN apt-get update <span class="o">&amp;&amp;</span> apt-get install -y <span class="se">\
 </span></span></span><span class="line"><span class="cl">    sudo <span class="se">\
@@ -508,7 +519,7 @@ docker/
 </ul>
 </li>
 </ul>
-<h4 id="dockerfile実行">Dockerfile実行<a class="anchor" aria-hidden="true" href="#dockerfile実行"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<h4 id="実行">実行<a class="anchor" aria-hidden="true" href="#実行"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ docker run <span class="se">\
 </span></span></span><span class="line"><span class="cl">    -p 8888:8888 <span class="se">\
 </span></span></span><span class="line"><span class="cl">    -v ~/docker/ds_python/:/work <span class="se">\
@@ -576,7 +587,155 @@ docker/
 </span></span><span class="line"><span class="cl"><span class="o">(</span>aws<span class="o">)</span>$ docker load &lt; myimage.tar <span class="c1"># tarファイルを解凍</span>
 </span></span><span class="line"><span class="cl"><span class="o">(</span>aws<span class="o">)</span>$ docker run -it <span class="o">{</span>imageID<span class="o">}</span> bash
 </span></span></code></pre></div><h3 id="docker-compose">[Docker Compose]<a class="anchor" aria-hidden="true" href="#docker-compose"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+
+
+<div>
+    <div class="github-card" data-github="docker/compose" data-theme="default"></div>
+    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+</div>
+
+
+<h3 id="docker-compose-ollama--open-webui-環境構築手順実践">[Docker Compose] Ollama + Open WebUI 環境構築手順（実践）<a class="anchor" aria-hidden="true" href="#docker-compose-ollama--open-webui-環境構築手順実践"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<blockquote>
+<ul>
+<li>ollama : Local LLMs Made Easy</li>
+<li>Open WebUI : The open source web interface for LLMs
+cf. <a href="https://qiita.com/kkawaharanet/items/b80d7cde49364aa94963">https://qiita.com/kkawaharanet/items/b80d7cde49364aa94963</a></li>
+</ul>
+</blockquote>
+<h4 id="概要-1">概要<a class="anchor" aria-hidden="true" href="#概要-1"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<pre tabindex="0"><code># 作業ディレクトリ
+ollama-setup/
+  ├── docker-compose.yml  : Docker Compose 設定ファイル
+  ├── open_webui_data/    : Open WebUI のデータ保存用ボリューム
+  └── ollama_data/        : Ollama のデータ保存用ボリューム
+</code></pre><pre tabindex="0"><code># ネットワークの仕組み
+
+ 💻 あなたのMac (localhost)
+  ├── ポート 3000  →  open-webui コンテナ :8080
+  ├── ポート 11434 →  ollama     コンテナ :11434
+  │
+  └── Docker内部ネットワーク (ollama-setup_default)
+      ├── open-webui コンテナ
+      │   └── http://ollama:11434 で Ollama にアクセス
+      └── ollama コンテナ
+</code></pre><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml:docker-compose.yml" data-lang="yml:docker-compose.yml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">                                      </span><span class="c"># 複数のコンテナを定義するセクション</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># [サービス1]: Ollama (LLM実行エンジン)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">ollama</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">ollama/ollama:latest               </span><span class="w"> </span><span class="c"># Docker Hubから取得するイメージ</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">ollama                    </span><span class="w"> </span><span class="c"># コンテナ名を&#34;ollama&#34;に固定</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;11434:11434&#34;</span><span class="w">                          </span><span class="c"># ポートマッピング（ホスト:コンテナ）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">ollama_data:/root/.ollama</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">OLLAMA_INSECURE=true                  </span><span class="w"> </span><span class="c"># データ永続化</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">unless-stopped                   </span><span class="w"> </span><span class="c"># 自動再起動設定</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># [サービス2]: Open WebUI (ブラウザUI)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">open-webui</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">ghcr.io/open-webui/open-webui:main </span><span class="w"> </span><span class="c"># GitHub Container Registryから取得</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">open-webui</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;3000:8080&#34;</span><span class="w">                            </span><span class="c"># Mac側:3000 → コンテナ内:8080</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">OLLAMA_BASE_URL=http://ollama:11434   </span><span class="w"> </span><span class="c"># Ollamaへの接続先</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">open_webui_data:/app/backend/data     </span><span class="w"> </span><span class="c"># チャット履歴などを保存</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">ollama                                </span><span class="w"> </span><span class="c"># ollamaコンテナを先に起動</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">unless-stopped</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">volumes</span><span class="p">:</span><span class="w">                                       </span><span class="c"># データ永続化用のボリューム定義</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">ollama_data</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">open_webui_data</span><span class="p">:</span><span class="w">
+</span></span></span></code></pre></div><h4 id="実装-docker-compose-使用">実装 (Docker Compose 使用)<a class="anchor" aria-hidden="true" href="#実装-docker-compose-使用"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># [1] 環境構築</span>
+</span></span><span class="line"><span class="cl">cat <span class="s">&lt;&lt; EOF &gt; docker-compose.yml
+</span></span></span><span class="line"><span class="cl"><span class="s">services:
+</span></span></span><span class="line"><span class="cl"><span class="s">  ollama:
+</span></span></span><span class="line"><span class="cl"><span class="s">    image: ollama/ollama:latest
+</span></span></span><span class="line"><span class="cl"><span class="s">    container_name: ollama
+</span></span></span><span class="line"><span class="cl"><span class="s">    ports:
+</span></span></span><span class="line"><span class="cl"><span class="s">      - &#34;11434:11434&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s">    volumes:
+</span></span></span><span class="line"><span class="cl"><span class="s">      - ollama_data:/root/.ollama
+</span></span></span><span class="line"><span class="cl"><span class="s">    environment:
+</span></span></span><span class="line"><span class="cl"><span class="s">      - OLLAMA_INSECURE=true
+</span></span></span><span class="line"><span class="cl"><span class="s">    restart: unless-stopped
+</span></span></span><span class="line"><span class="cl"><span class="s">
+</span></span></span><span class="line"><span class="cl"><span class="s">  open-webui:
+</span></span></span><span class="line"><span class="cl"><span class="s">    image: ghcr.io/open-webui/open-webui:main
+</span></span></span><span class="line"><span class="cl"><span class="s">    container_name: open-webui
+</span></span></span><span class="line"><span class="cl"><span class="s">    ports:
+</span></span></span><span class="line"><span class="cl"><span class="s">      - &#34;3000:8080&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s">    environment:
+</span></span></span><span class="line"><span class="cl"><span class="s">      - OLLAMA_BASE_URL=http://ollama:11434
+</span></span></span><span class="line"><span class="cl"><span class="s">    volumes:
+</span></span></span><span class="line"><span class="cl"><span class="s">      - open_webui_data:/app/backend/data
+</span></span></span><span class="line"><span class="cl"><span class="s">    depends_on:
+</span></span></span><span class="line"><span class="cl"><span class="s">      - ollama
+</span></span></span><span class="line"><span class="cl"><span class="s">    restart: unless-stopped
+</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># [2] Dockerコンテナの起動</span>
+</span></span><span class="line"><span class="cl">docker compose up -d
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># [3] Ollamaモデルのダウンロード</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># コンテナ内でコマンド実行</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># docker exec -it ollama bash   # ollamaコンテナ内でbash起動</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">docker <span class="nb">exec</span> -it ollama ollama pull llama3.2
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># [4] Open WebUIにアクセス</span>
+</span></span><span class="line"><span class="cl">open http://localhost:3000
+</span></span></code></pre></div><h4 id="環境ollamaとopen-webuiの起動停止">環境（OllamaとOpen WebUI）の起動・停止<a class="anchor" aria-hidden="true" href="#環境ollamaとopen-webuiの起動停止"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<p>┌─────────────────────┬────────────────────────┐
+│        目的         │        コマンド        │
+├─────────────────────┼────────────────────────┤
+│ 一時的に止めたい    │ <code>docker compose stop</code> -&gt; <code>docker compose start</code>
+├─────────────────────┼────────────────────────┤
+│ Mac再起動前に片付け │ <code>docker compose down</code> -&gt; <code>docker compose up -d</code>
+├─────────────────────┼────────────────────────┤
+│ 完全にやり直したい  │ <code>docker compose down -v</code> -&gt; <code>docker compose up -d</code>
+└─────────────────────┴────────────────────────┘</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># [監視] リソース確認</span>
+</span></span><span class="line"><span class="cl">docker images                 <span class="c1"># ダウンロード済みイメージ一覧</span>
+</span></span><span class="line"><span class="cl">docker volume ls              <span class="c1"># ボリューム一覧</span>
+</span></span><span class="line"><span class="cl">docker system df              <span class="c1"># ディスク使用量</span>
+</span></span><span class="line"><span class="cl">docker logs ollama            <span class="c1"># ollamaコンテナのログ</span>
+</span></span><span class="line"><span class="cl">docker logs -f open-webui     <span class="c1"># リアルタイムでログ表示（-f: follow）</span>
+</span></span></code></pre></div><h4 id="代替docker経由ではなくmac上に直接ollamaをインストールする方法も">代替（Docker経由ではなく、Mac上に直接Ollamaをインストールする方法も）<a class="anchor" aria-hidden="true" href="#代替docker経由ではなくmac上に直接ollamaをインストールする方法も"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Homebrewでインストール</span>
+</span></span><span class="line"><span class="cl">brew install ollama
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Ollamaサービス起動</span>
+</span></span><span class="line"><span class="cl">ollama serve <span class="p">&amp;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># モデルダウンロード</span>
+</span></span><span class="line"><span class="cl">ollama pull llama3.2
+</span></span></code></pre></div><h4 id="代替構成例ollamaをmac上で直接実行しopen-webuiをdockerで起動">代替構成例（OllamaをMac上で直接実行し、Open WebUIをDockerで起動）<a class="anchor" aria-hidden="true" href="#代替構成例ollamaをmac上で直接実行しopen-webuiをdockerで起動"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># Homebrewでインストール</span>
+</span></span><span class="line"><span class="cl">brew install ollama
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># バックグラウンドで起動</span>
+</span></span><span class="line"><span class="cl">brew services start ollama
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># モデルダウンロード</span>
+</span></span><span class="line"><span class="cl">ollama pull llama3.2
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Open WebUIだけDockerで起動（既存の設定で動く）</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/ollama-setup
+</span></span><span class="line"><span class="cl">docker compose up -d open-webui
+</span></span></code></pre></div><p>この構成:</p>
+<ul>
+<li>Ollama: Mac上で直接実行（証明書問題なし）</li>
+<li>Open WebUI: Docker コンテナ（http://localhost:3000でアクセス可能）</li>
+</ul>
 <h3 id="docker-swarm">[Docker Swarm]<a class="anchor" aria-hidden="true" href="#docker-swarm"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p><code>{comming soon...}</code></p>
 <h2 id="ref">Ref.<a class="anchor" aria-hidden="true" href="#ref"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
 <ul>
 <li><a href="https://www.creationline.com/lab/29979">Docker Hubでパーソナルアクセストークンが利用可能になりました！</a> CL LAB</li>
