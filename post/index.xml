@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Feb 2026 09:14:22 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 09 Feb 2026 22:31:54 +0900</lastBuildDate>
     <atom:link href="https://shiroimon.kithub.f5.si/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Claude Code] Slash Command Usage</title>
@@ -93,13 +93,6 @@
       <description>🔍 I would like to prepare for data analysis using GoogleSQL inside BigQuery</description>
     </item>
     <item>
-      <title>[Google Chrome] This &amp; That</title>
-      <link>https://shiroimon.kithub.f5.si/post/google_chrome_this_and_that/</link>
-      <pubDate>Tue, 25 Feb 2025 13:45:58 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/google_chrome_this_and_that/</guid>
-      <description>⚪️</description>
-    </item>
-    <item>
       <title>[Terraform] Catchup</title>
       <link>https://shiroimon.kithub.f5.si/post/terraform_catchup/</link>
       <pubDate>Thu, 20 Feb 2025 18:49:06 +0900</pubDate>
@@ -161,13 +154,6 @@
       <pubDate>Thu, 21 Nov 2024 12:06:08 +0900</pubDate>
       <guid>https://shiroimon.kithub.f5.si/post/github_oss_wana_be_join/</guid>
       <description>📍 About etiquette and the meaning of licenses when paticipating in OSS.</description>
-    </item>
-    <item>
-      <title>[GitHub] Copilot in Terminal</title>
-      <link>https://shiroimon.kithub.f5.si/post/github_coplilot_in_terminal/</link>
-      <pubDate>Mon, 18 Nov 2024 23:10:30 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/github_coplilot_in_terminal/</guid>
-      <description>🤖 Notes on how to use in terminal (Vim)</description>
     </item>
     <item>
       <title>[Kubernetes] Catchup</title>
@@ -322,13 +308,6 @@
       <pubDate>Tue, 23 Jul 2024 18:17:17 +0900</pubDate>
       <guid>https://shiroimon.kithub.f5.si/post/slack_writing_etiquette/</guid>
       <description>🔔 Learn writing etiquette using Slack&amp;rsquo;s unique notation.</description>
-    </item>
-    <item>
-      <title>[GitHub] How to check difference code</title>
-      <link>https://shiroimon.kithub.f5.si/post/github_how_to_check_difference/</link>
-      <pubDate>Tue, 23 Jul 2024 04:13:21 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/github_how_to_check_difference/</guid>
-      <description>📍 Methods and tools to capture code fixes faster and more accurately.</description>
     </item>
     <item>
       <title>[BigQuery] CTEs in data analyisis</title>

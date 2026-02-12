@@ -202,7 +202,7 @@ if ('serviceWorker' in navigator) {
                 Created <relative-time datetime="Wed, 07 Jan 2026 11:56:35 &#43;0900" class="no-wrap">Wed, 07 Jan 2026 11:56:35 &#43;0900</relative-time>
                 
                 <span class="path-divider">|</span>
-                Modified <relative-time datetime="Fri, 30 Jan 2026 13:02:57 &#43;0900" class="no-wrap">Fri, 30 Jan 2026 13:02:57 &#43;0900</relative-time>
+                Modified <relative-time datetime="Mon, 09 Feb 2026 22:21:03 &#43;0900" class="no-wrap">Mon, 09 Feb 2026 22:21:03 &#43;0900</relative-time>
                 
             </div>
         </div>
@@ -235,7 +235,7 @@ if ('serviceWorker' in navigator) {
                     <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list"></div>
                 </div>
             </details-menu>
-            981 Words
+            1258 Words
             <span class="path-divider">|</span>
             1 min
             </div>
@@ -430,7 +430,41 @@ if ('serviceWorker' in navigator) {
 <li>Sub agents: コンテキスト枯渇問題を解決</li>
 <li>cf. <a href="https://zenn.dev/tacoms/articles/552140c84aaefa">Claude CodeのSub agentsでコンテキスト枯渇問題をサクッと解決できたはなし</a> Zenn</li>
 </ul>
-<h2 id="ref">Ref.<a class="anchor" aria-hidden="true" href="#ref"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<h3 id="hooks">HOOKS<a class="anchor" aria-hidden="true" href="#hooks"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<h3 id="statusline">StatusLine<a class="anchor" aria-hidden="true" href="#statusline"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+
+
+<div>
+    <div class="github-card" data-github="sirmalloc/ccstatusline" data-theme="default"></div>
+    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+</div>
+
+
+<!-- https://github.com/sirmalloc/ccstatusline -->
+<ul>
+<li>cf. <a href="https://note.com/syogaku/n/n8ff66e37b3ab">https://note.com/syogaku/n/n8ff66e37b3ab</a></li>
+</ul>
+<p>セットアップ</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">ccstatuslineをインストールして、見やすい監視機能を設定してください。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">以下の手順で実行してください：
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">1. ~/.claude/settings.json を確認して、現在の設定を表示
+</span></span><span class="line"><span class="cl">2. ccstatuslineの設定を追加（bunx ccstatusline@latestを使用）
+</span></span><span class="line"><span class="cl">3. 以下のウィジェットを含む推奨設定を提案：
+</span></span><span class="line"><span class="cl">   - モデル名
+</span></span><span class="line"><span class="cl">   - コンテキスト使用率（使用可能率）
+</span></span><span class="line"><span class="cl">   - セッションコスト
+</span></span><span class="line"><span class="cl">   - ブロックタイマー
+</span></span><span class="line"><span class="cl">   - 入力/出力トークン数
+</span></span><span class="line"><span class="cl">   - Gitブランチ
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">4. 設定を保存してClaude Codeの再起動方法を教えてください
+</span></span></code></pre></div><p>元に戻す手順</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 問題があった場合、以下のコマンドで復元できます:</span>
+</span></span><span class="line"><span class="cl">cp ~/.claude/settings.json.bak ~/.claude/settings.json
+</span></span><span class="line"><span class="cl">cp ~/.config/ccstatusline/settings.json.bak ~/.config/ccstatusline/settings.json
+</span></span></code></pre></div><h2 id="ref">Ref.<a class="anchor" aria-hidden="true" href="#ref"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
 <ul>
 <li><a href="https://note.com/ai_driven/n/nce437c34242f">Claude Code Workflow Studio完全ガイド｜ビジュアルでAIワークフローを構築する新時代</a> note</li>
 <li><a href="https://zenn.dev/aun_phonogram/articles/475f3cca8f40a3">Agent Skillsを一番かんたんに作る方法（Claude Code + skill-creator）</a> Zenn</li>

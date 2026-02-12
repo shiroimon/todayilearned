@@ -6,7 +6,7 @@
     <description>Recent content in Git on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Jan 2026 18:29:02 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 05 Jan 2026 23:44:03 +0900</lastBuildDate>
     <atom:link href="https://shiroimon.kithub.f5.si/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Git] Branches pruning</title>
@@ -14,13 +14,6 @@
       <pubDate>Tue, 24 Sep 2024 18:08:08 +0900</pubDate>
       <guid>https://shiroimon.kithub.f5.si/post/github_branches_pruning/</guid>
       <description>📍When developing on GitHub, I often switch branches, just like pruning.</description>
-    </item>
-    <item>
-      <title>[GitHub] How to check difference code</title>
-      <link>https://shiroimon.kithub.f5.si/post/github_how_to_check_difference/</link>
-      <pubDate>Tue, 23 Jul 2024 04:13:21 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/github_how_to_check_difference/</guid>
-      <description>📍 Methods and tools to capture code fixes faster and more accurately.</description>
     </item>
   </channel>
 </rss>
