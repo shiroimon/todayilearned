@@ -202,7 +202,7 @@ if ('serviceWorker' in navigator) {
                 Created <relative-time datetime="Tue, 02 Dec 2025 16:39:00 &#43;0900" class="no-wrap">Tue, 02 Dec 2025 16:39:00 &#43;0900</relative-time>
                 
                 <span class="path-divider">|</span>
-                Modified <relative-time datetime="Mon, 02 Feb 2026 09:14:22 &#43;0900" class="no-wrap">Mon, 02 Feb 2026 09:14:22 &#43;0900</relative-time>
+                Modified <relative-time datetime="Tue, 17 Feb 2026 17:26:14 &#43;0900" class="no-wrap">Tue, 17 Feb 2026 17:26:14 &#43;0900</relative-time>
                 
             </div>
         </div>
@@ -235,7 +235,7 @@ if ('serviceWorker' in navigator) {
                     <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list"></div>
                 </div>
             </details-menu>
-            1124 Words
+            2094 Words
             <span class="path-divider">|</span>
             2 min
             </div>
@@ -305,21 +305,64 @@ if ('serviceWorker' in navigator) {
 <p><code>SSIA</code></p>
 <h2 id="what">What<a class="anchor" aria-hidden="true" href="#what"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
 <p>初めは怖かったLooker。しかし、ある言葉に救われた。<br>
-『Looker は BI。LookMK なんてほぼ YAML!』 &hellip; !!! <br>
+『Looker は BI。LookML なんてほぼ YAML!』 &hellip; !!! <br>
 そう！細かいルールはあるにせよ、<code>SQL</code>と<code>YAML</code>が分かれば、概ね怖くない代物！</p>
 <h3 id="looker-全体概要">[Looker] 全体概要<a class="anchor" aria-hidden="true" href="#looker-全体概要"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">looker_project/
-</span></span><span class="line"><span class="cl">├── manifest.lkml
-</span></span><span class="line"><span class="cl">├── dashboards/
-</span></span><span class="line"><span class="cl">    ├── sample_dashboard.dashboard.lkml
-</span></span><span class="line"><span class="cl">    └── sample_dashboard.dashboard2.lkml
-</span></span><span class="line"><span class="cl">├── model/sample_model.model.lkml
-</span></span><span class="line"><span class="cl">└── views/sample_view.view.lkml
-</span></span></code></pre></div><pre tabindex="0"><code class="language-yml.manifest.lkml" data-lang="yml.manifest.lkml">connection: &#34;your_connection_name&#34;
+<p>Ref.</p>
+<ul>
+<li>Google Cloud Looker Community: <a href="https://discuss.google.dev/c/looker">https://discuss.google.dev/c/looker</a></li>
+<li><a href="https://docs.cloud.google.com/looker/docs/chart-config-editor?hl=ja">グラフ構成エディタを使用した可視化のカスタマイズ</a> Google Cloud Looker</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> my_looker_project/
+</span></span><span class="line"><span class="cl">  ├── manifest.lkml          # プロジェクト設定（モデル名、ロケールなど）
+</span></span><span class="line"><span class="cl">  ├── *.model.lkml           # モデルファイル（DB接続、Explore定義）
+</span></span><span class="line"><span class="cl">  │
+</span></span><span class="line"><span class="cl">  ├── views/                 # View ファイル（テーブル定義）
+</span></span><span class="line"><span class="cl">  │   ├── orders.view.lkml
+</span></span><span class="line"><span class="cl">  │   ├── users.view.lkml
+</span></span><span class="line"><span class="cl">  │   └── products.view.lkml
+</span></span><span class="line"><span class="cl">  │
+</span></span><span class="line"><span class="cl">  ├── explores/              # Explore を分離する場合（任意）
+</span></span><span class="line"><span class="cl">  │   └── order_analysis.explore.lkml
+</span></span><span class="line"><span class="cl">  │
+</span></span><span class="line"><span class="cl">  ├── dashboards/            # LookMLダッシュボード（任意）
+</span></span><span class="line"><span class="cl">  │   └── sales_overview.dashboard.lookml
+</span></span><span class="line"><span class="cl">  │
+</span></span><span class="line"><span class="cl">  ├── data_tests/            # データテスト（任意）
+</span></span><span class="line"><span class="cl">  │   └── tests.lkml
+</span></span><span class="line"><span class="cl">  │
+</span></span><span class="line"><span class="cl">  └── documents/             # ドキュメント（任意）
+</span></span><span class="line"><span class="cl">      └── README.md
+</span></span></code></pre></div><details>
+  <summary>Lookerのプロジェクト構成例（最小版）</summary>
+  <p></p>
+  <blockquote>
+<p>[!note]</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl"> my_looker_project/
+</span></span><span class="line"><span class="cl">  ├── manifest.lkml          # プロジェクト設定（モデル名、ロケールなど）
+</span></span><span class="line"><span class="cl">  ├── sample.model.lkml      # モデルファイル（DB接続、Explore定義）
+</span></span><span class="line"><span class="cl">  └── views/                 # View ファイル（テーブル定義）
+</span></span><span class="line"><span class="cl">      └── orders.view.lkml
+</span></span></code></pre></div><p>Explore画面からデータを探索できるように、
+Model で View を include し、Explore を定義すればOK！</p>
+</blockquote>
+
+  <p></p>
+</details>
+
+<pre tabindex="0"><code class="language-yml:manifest.lkml" data-lang="yml:manifest.lkml">connection: &#34;your_connection_name&#34;
 include: &#34;/views/*.view.lkml&#34;
 include: &#34;/models/*.model.lkml&#34;
 include: &#34;/dashboards/*.dashboard.lkml&#34;
-</code></pre><pre tabindex="0"><code class="language-yml.views/sample_view.view.lkml" data-lang="yml.views/sample_view.view.lkml">view: sample_view {
+</code></pre><pre tabindex="0"><code class="language-yml:sample.model.lkml" data-lang="yml:sample.model.lkml">model: sample_model {
+  explore: sample_view {
+    join: another_view {
+      type: left_outer
+      sql_on: ${sample_view.id} = ${another_view.sample_view_id} ;;
+    }
+  }
+}
+</code></pre><pre tabindex="0"><code class="language-yml:views/orders.view.lkml" data-lang="yml:views/orders.view.lkml">view: sample_view {
   dimension: id {
     type: number
     sql: ${TABLE}.id ;;
@@ -330,15 +373,14 @@ include: &#34;/dashboards/*.dashboard.lkml&#34;
     sql: ${TABLE}.id ;;
   }
 }
-</code></pre><pre tabindex="0"><code class="language-yml.model/sample_model.model.lkml" data-lang="yml.model/sample_model.model.lkml">model: sample_model {
-  explore: sample_view {
-    join: another_view {
-      type: left_outer
-      sql_on: ${sample_view.id} = ${another_view.sample_view_id} ;;
-    }
+</code></pre><pre tabindex="0"><code class="language-yml:explores/order_analysis.explore.lkml" data-lang="yml:explores/order_analysis.explore.lkml">explore: order_analysis {
+  from: sample_view
+  join: another_view {
+    type: left_outer
+    sql_on: ${sample_view.id} = ${another_view.sample_view_id} ;;
   }
 }
-</code></pre><pre tabindex="0"><code class="language-yml.dashboards/sample_dashboard.dashboard.lkml" data-lang="yml.dashboards/sample_dashboard.dashboard.lkml">dashboard: sample_dashboard {
+</code></pre><pre tabindex="0"><code class="language-yml.dashboards/sales_overview.dashboard.lkml" data-lang="yml.dashboards/sales_overview.dashboard.lkml">dashboard: sample_dashboard {
   title: &#34;Sample Dashboard&#34;
   layout: {
     type: &#34;grid&#34;
@@ -483,11 +525,64 @@ element: {
 <li>cf. <a href="https://zenn.dev/google_cloud_jp/articles/48159e8495944d">【Looker】非エンジニアでもOK！Geminiで自由にオリジナルのグラフ（カスタムビジュアライゼーション）をカンタン爆速作成する方法</a> Zenn</li>
 <li>cf. <a href="https://docs.cloud.google.com/looker/docs/themes-for-internal-dashboards?hl=ja">内部ダッシュボードのテーマ</a> Google Cloud Looker</li>
 </ul>
-<h2 id="ref">Ref.<a class="anchor" aria-hidden="true" href="#ref"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<h3 id="looker-分析">[Looker] 分析<a class="anchor" aria-hidden="true" href="#looker-分析"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p>⏺ データキューブとは</p>
+<p>データキューブは、多次元でデータを分析するための概念モデルです。</p>
+<p>基本的な考え方</p>
+<p>通常のテーブル（2次元）を、3次元以上に拡張したものをイメージしてください。</p>
+<pre tabindex="0"><code>      [時間軸]
+         |
+         |
+         +------[地域軸]
+        /
+       /
+  [商品軸]
+</code></pre><p>各軸（= ディメンション）の交点にあるセルに、売上額や件数などの<strong>メジャー（集計値）</strong>
+が入ります。</p>
+<p>具体例</p>
+<p>例えば売上データなら：</p>
+<table>
+  <thead>
+      <tr>
+          <th>ディメンション</th>
+          <th>例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>時間</td>
+          <td>2025年1月, 2月, &hellip;</td>
+      </tr>
+      <tr>
+          <td>地域</td>
+          <td>東京, 大阪, &hellip;</td>
+      </tr>
+      <tr>
+          <td>商品カテゴリ</td>
+          <td>食品, 家電, &hellip;</td>
+      </tr>
+  </tbody>
+</table>
+<p>この3軸の任意の組み合わせで「売上合計」や「件数」をスライスして見られる、というのがデータキューブの考え方。</p>
+<p>Looker との関係</p>
+<p>Lookerでは Explore がデータキューブに相当します。</p>
 <ul>
-<li>Google Cloud Looker Community: <a href="https://discuss.google.dev/c/looker">https://discuss.google.dev/c/looker</a></li>
-<li><a href="https://docs.cloud.google.com/looker/docs/chart-config-editor?hl=ja">グラフ構成エディタを使用した可視化のカスタマイズ</a> Google Cloud Looker</li>
+<li>View でディメンションとメジャーを定義</li>
+<li>Explore でそれらを結合し、ユーザーが自由に軸を選んで集計できる状態にする</li>
 </ul>
+<p>つまり「データキューブを設計する」とは、Lookerの文脈では
+どのディメンションとメジャーを用意し、どうjoinして Explore として公開するか
+を決めることです。</p>
+<p>OLAP操作との関連用語</p>
+<p>データキューブに対する操作として、以下の用語もよく使われます：</p>
+<ul>
+<li>スライス — 1つの軸を固定して断面を見る（例：東京だけ）</li>
+<li>ダイス — 複数軸で範囲を絞る（例：東京×食品）</li>
+<li>ドリルダウン — 粒度を細かくする（例：年→月→日）</li>
+<li>ロールアップ — 粒度を粗くする（例：日→月→年）</li>
+</ul>
+<p>チームで「データキューブ」と言われたら、「この分析テーマについて、どんな切り口（ディ
+メンション）と集計値（メジャー）を用意するか」という設計の話だと理解すれば大丈夫。</p>
 </article>
         </div>
         </div>

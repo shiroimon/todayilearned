@@ -10,7 +10,7 @@
     <link rel="stylesheet" href='https://shiroimon.kithub.f5.si/css/light.css' />
     <link rel="stylesheet" href='https://shiroimon.kithub.f5.si/css/dark.css' />
     <link rel="stylesheet" href='https://shiroimon.kithub.f5.si/css/syntax.css' />
-    <title>[macOS] Looks like native application - Today I Learned | KitHub</title>
+    <title>[Claude Code] Miscellaneous &lt;雑記&gt; - Today I Learned | KitHub</title>
     
     <link rel="icon" type="image/x-icon" href='../../images/github-mark.png'>
     
@@ -21,11 +21,11 @@
 
     
     <meta name="description"
-  content="🍏 A little trick to use it like a native laptop application." />
+  content="💥 How to use various features of Claude Code, including Slash Commands, Skills, Commands, Agents, Hooks, and more. Tips and best practices for maximizing your productivity with Claude Code." />
 <meta name="keywords"
   content='blog' />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://shiroimon.kithub.f5.si/post/macos_looks_like_native_application/" />
+<link rel="canonical" href="https://shiroimon.kithub.f5.si/post/claude_code_usage_miscellaneous/" />
 
 
 <link rel="manifest" href="../../manifest.json">
@@ -41,27 +41,27 @@
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="[macOS] Looks like native application - Today I Learned | KitHub" />
+<meta name="twitter:title" content="[Claude Code] Miscellaneous &lt;雑記&gt; - Today I Learned | KitHub" />
 <meta name="twitter:description"
-  content="🍏 A little trick to use it like a native laptop application." />
+  content="💥 How to use various features of Claude Code, including Slash Commands, Skills, Commands, Agents, Hooks, and more. Tips and best practices for maximizing your productivity with Claude Code." />
 <meta name="twitter:site" content="https://shiroimon.kithub.f5.si/" />
-<meta name="twitter:creator" content="shiro" />
+<meta name="twitter:creator" content="shiroimon" />
 <meta name="twitter:image"
   content="https://shiroimon.kithub.f5.si/">
 
 
 <meta property="og:type" content="article" />
-<meta property="og:title" content="[macOS] Looks like native application - Today I Learned | KitHub">
+<meta property="og:title" content="[Claude Code] Miscellaneous &lt;雑記&gt; - Today I Learned | KitHub">
 <meta property="og:description"
-  content="🍏 A little trick to use it like a native laptop application." />
-<meta property="og:url" content="https://shiroimon.kithub.f5.si/post/macos_looks_like_native_application/" />
-<meta property="og:site_name" content="[macOS] Looks like native application" />
+  content="💥 How to use various features of Claude Code, including Slash Commands, Skills, Commands, Agents, Hooks, and more. Tips and best practices for maximizing your productivity with Claude Code." />
+<meta property="og:url" content="https://shiroimon.kithub.f5.si/post/claude_code_usage_miscellaneous/" />
+<meta property="og:site_name" content="[Claude Code] Miscellaneous &lt;雑記&gt;" />
 <meta property="og:image"
   content="https://shiroimon.kithub.f5.si/">
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
 
-<meta property="article:published_time" content="2024-08-03 16:04:18 &#43;0900 JST" />
+<meta property="article:published_time" content="2026-01-07 11:56:35 &#43;0900 JST" />
 
 
 
@@ -195,14 +195,14 @@ if ('serviceWorker' in navigator) {
             <h1 class="break-word f3 text-normal mb-md-0 mb-1">
                 <span class="author"><a href="https://shiroimon.kithub.f5.si/"></a></span>
                 <span class="path-divider">/</span>
-                <strong class="css-truncate css-truncate-target mr-1" style="max-width: 410px"><a href="https://shiroimon.kithub.f5.si/post/macos_looks_like_native_application/">[macOS] Looks like native application</a></strong>
+                <strong class="css-truncate css-truncate-target mr-1" style="max-width: 410px"><a href="https://shiroimon.kithub.f5.si/post/claude_code_usage_miscellaneous/">[Claude Code] Miscellaneous &lt;雑記&gt;</a></strong>
             </h1>
             
             <div class="note m-0">
-                Created <relative-time datetime="Sat, 03 Aug 2024 16:04:18 &#43;0900" class="no-wrap">Sat, 03 Aug 2024 16:04:18 &#43;0900</relative-time>
+                Created <relative-time datetime="Wed, 07 Jan 2026 11:56:35 &#43;0900" class="no-wrap">Wed, 07 Jan 2026 11:56:35 &#43;0900</relative-time>
                 
                 <span class="path-divider">|</span>
-                Modified <relative-time datetime="Tue, 17 Feb 2026 13:41:23 &#43;0900" class="no-wrap">Tue, 17 Feb 2026 13:41:23 &#43;0900</relative-time>
+                Modified <relative-time datetime="Tue, 17 Feb 2026 13:35:50 &#43;0900" class="no-wrap">Tue, 17 Feb 2026 13:35:50 &#43;0900</relative-time>
                 
             </div>
         </div>
@@ -235,9 +235,9 @@ if ('serviceWorker' in navigator) {
                     <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list"></div>
                 </div>
             </details-menu>
-            540 Words
+            1361 Words
             <span class="path-divider">|</span>
-            1 min
+            2 min
             </div>
 
             
@@ -247,24 +247,24 @@ if ('serviceWorker' in navigator) {
                     
                     
                     
-                    <a class="muted-link mr-3" href="../../tags/macos">
+                    <a class="muted-link mr-3" href="../../tags/anthropic">
                         <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
                             <path fill-rule="evenodd"
                                 d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
                             </path>
                         </svg>
-                        macOS
+                        Anthropic
                     </a>
                     
                     
                     
-                    <a class="muted-link mr-3" href="../../tags/chrome">
+                    <a class="muted-link mr-3" href="../../tags/claude-code">
                         <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
                             <path fill-rule="evenodd"
                                 d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
                             </path>
                         </svg>
-                        Chrome
+                        Claude Code
                     </a>
                     
                     
@@ -278,64 +278,228 @@ if ('serviceWorker' in navigator) {
         
         <div class="Box-body px-5 pb-5" style="z-index: 1">
             <article class="markdown-body entry-content container-lg"><!-- Icon Badge -->
-<p><img src="https://img.shields.io/badge/-macOS-000000.svg?logo=apple&amp;style=flat&amp;color=F0F8FF&amp;logoColor=000" alt="macOS">
-<img src="https://img.shields.io/badge/-Google%20Chrome-4285F4.svg?logo=googlechrome&amp;style=flat&amp;color=F0F8FF&amp;logoColor=4285F4" alt="Google Chrome"></p>
+<p><img src="https://img.shields.io/badge/-Anthropic-000000.svg?logo=anthropic&amp;style=flat&amp;color=F0F8FF&amp;logoColor=000000" alt="Anthropic">
+<img src="https://img.shields.io/badge/-ClaudeCode-D97757.svg?logo=claude&amp;style=flat&amp;color=F0F8FF&amp;logoColor=D97757" alt="ClaudeCode"></p>
 <h2 id="why">Why<a class="anchor" aria-hidden="true" href="#why"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
-<p>普段ブラウザー（e.g. Google Chrome）を使用していて思うことがある。<br>
-よく使うWebアプリケーションをタブ分割ではなく、ネイティブアプリケーションのように使用したいと。</p>
-<p>せめてデスクトップ上だけでも。。</p>
+<p><code>SSIA</code></p>
 <h2 id="what">What<a class="anchor" aria-hidden="true" href="#what"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
-<ul>
-<li>Google Chromeのデフォルト機能を用いて（エセ）ネイティブアプリをDockに追加</li>
-<li>PWAの技術とはまた違う</li>
-</ul>
-<h2 id="how">How<a class="anchor" aria-hidden="true" href="#how"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
-<ul>
-<li>
-<p>想定環境</p>
-<ul>
-<li>Google Chrome（2024/08現在の最新版）</li>
-<li>MacBook (Chromeが動けばどのマシンでもいけると思う）</li>
-</ul>
-</li>
-<li>
-<p>手順</p>
-<ul>
-<li>アプリケーション化
-<ol>
-<li>Google Chrome で任意のWebアプリケーションにアクセス。</li>
-<li>[≡]右上設定ファイルが畳まれているボタン &gt; [Save and Share] &gt; [Install page as App&hellip;] &gt; [Install]
-<ul>
-<li>格納先（<code>e.g.</code>）：<code>$HOME/Applications/Chrome Apps/[page].app</code></li>
-</ul>
-</li>
-</ol>
-</li>
-<li>アイコン変更（任意）
-<ol>
-<li>作成された<code>[page].app</code> を右クリック &gt; [Show Package Contents]</li>
-<li><code>Contents/Resources/app.icns</code> を同名、同拡張子で置換。
-<ul>
-<li>いい感じにアイコン作りたい時は以下が便利
-<ul>
-<li><code>.png</code> ↔︎<code>.icns</code> なら <a href="https://cloudconvert.com/">cloudconvert</a></li>
-<li>何でもできる なら <a href="https://www.bannerkoubou.com/">BANNER KOUBOU</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="why-1">Why<a class="anchor" aria-hidden="true" href="#why-1"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
-<p>PDFに画像を張り付けたい</p>
-<h2 id="what-1">What<a class="anchor" aria-hidden="true" href="#what-1"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<hr>
+<h3 id="20260xxx-時点">2026/0X/XX 時点<a class="anchor" aria-hidden="true" href="#20260xxx-時点"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<hr>
+<h3 id="20260107-時点">2026/01/07 時点<a class="anchor" aria-hidden="true" href="#20260107-時点"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 <blockquote>
-<p>Macのプレビューでは、PDFファイルに直接画像を貼ることはできないので、一旦、適当な画像ファイルに、PDFに貼りたい画像を貼ってから、それをPDFファイルにコピー＆ペーストします。</p>
+<p>[!note]
+<br> <img width=10% src="https://res.cloudinary.com/zenn/image/fetch/s--l0lbiOAk--/c_fill%2Cf_jpg%2Cfl_progressive%2Ch_700%2Cq_90%2Cw_500/https://storage.googleapis.com/zenn-user-upload/book_cover/d76db289f3.png?_a=BACAGSGT" />
+<br> Claude Code完全ガイド
+<br> <a href="https://zenn.dev/heku/books/claude-code-guide">https://zenn.dev/heku/books/claude-code-guide</a></p>
 </blockquote>
-<p>cf. <a href="https://mi-chan-nel.com/images-on-pdf-file/">PDFファイルの好きなところに画像を貼る方法【Macのプレビューで可能】</a></p>
+<p>↑ これ読んでおけばOK牧場ﾚﾍﾞﾙ</p>
+<p>トークン節約系 Slash Commands</p>
+<p>本体の様々な機能ざっくり理解</p>
+<table>
+  <thead>
+      <tr>
+          <th>機能やﾌｧｲﾙ</th>
+          <th>企業組織でいうと</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CLAUDE.md</td>
+          <td>経営理念・就業規則</td>
+      </tr>
+      <tr>
+          <td>.claude/rules/</td>
+          <td>部署別ﾏﾆｭｱﾙ</td>
+      </tr>
+      <tr>
+          <td>.claude/skills/</td>
+          <td>社内Wiki・ﾅﾚｯｼﾞ</td>
+      </tr>
+      <tr>
+          <td>.claude/tasks/</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>.claude/commands/</td>
+          <td>定型業務ﾃﾝﾌﾟﾚｰﾄ</td>
+      </tr>
+      <tr>
+          <td>.claude/agents/</td>
+          <td>ｻﾌﾞｴｰｼﾞｪﾝﾄ 専門ﾁｰﾑ・外部ｺﾝｻﾙ</td>
+      </tr>
+      <tr>
+          <td>Hooks (settings.json)</td>
+          <td>自動化ｼｽﾃﾑ（ﾗｲﾌｻｲｸﾙｲﾍﾞﾝﾄ）<br> eg. 出勤時自動打刻</td>
+      </tr>
+  </tbody>
+</table>
+<table>
+  <thead>
+      <tr>
+          <th>機能やﾌｧｲﾙ</th>
+          <th>Who</th>
+          <th>When</th>
+          <th>remark</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CLAUDE.md</td>
+          <td>🦀 Claude本体</td>
+          <td>常　時</td>
+          <td>確率論的*</td>
+      </tr>
+      <tr>
+          <td>.claude/rules/</td>
+          <td>🦀 Claude本体</td>
+          <td>条件付(Claud判断)</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>.claude/skills/</td>
+          <td>🦀 Claude本体</td>
+          <td>必要時(Claud判断)</td>
+          <td>知識を詰め込み必要な時に参照（ﾛｰﾄﾞ）</td>
+      </tr>
+      <tr>
+          <td>.claude/tasks/</td>
+          <td></td>
+          <td></td>
+          <td><code>CLAUDE_CODE-TASK_LIST=groceries claude</code> <br>環境変数を用いて複数セッションで、１つのタスクリストで共同作業させることが可能</td>
+      </tr>
+      <tr>
+          <td>.claude/commands/</td>
+          <td>🦞 別Claude</td>
+          <td>必要時</td>
+          <td>複数の別Claudeが同時並列に動く<br> eg. 同時ｺｰﾄﾞ調査🦞🦞</td>
+      </tr>
+      <tr>
+          <td>.claude/agents/</td>
+          <td>🦀 Claude本体</td>
+          <td>手　動</td>
+          <td>User実行<br> eg. <code>/suggest-commit</code><br> eg. <code>quality-checker</code></td>
+      </tr>
+      <tr>
+          <td>Hooks (setttings.json)</td>
+          <td>🐚 Shell</td>
+          <td>自　動</td>
+          <td>決定論的*</td>
+      </tr>
+  </tbody>
+</table>
+<ul>
+<li>*確率論的: 同じ入力でも出力が変わる可能性がある
+<ul>
+<li>→ 柔軟的だが、不確実性がある</li>
+</ul>
+</li>
+<li>*決定論的: 同じ入力なら同じ出力が返る
+<ul>
+<li>→ 固定的だが、確実性がある</li>
+</ul>
+</li>
+</ul>
+<pre tabindex="0"><code>image:
+
+    Claude本体 🦀 「働け！」
+               ↓ ↓ ↓
+    別Claude群 🦞🦞🦞...（同時並列に稼働）
+</code></pre><h3 id="skills">SKILLS<a class="anchor" aria-hidden="true" href="#skills"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<ul>
+<li>usage:「記憶して」と言えば残る。「思い出して」と言えば戻れる。</li>
+<li>cf. <a href="https://zenn.dev/yamadashy/articles/claude-code-agent-skills-agent-memory">Claude Codeで記憶領域を持つための独自のAgent Skillsを使っている</a> Zenn</li>
+</ul>
+<h3 id="commands">COMMANDS<a class="anchor" aria-hidden="true" href="#commands"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<ul>
+<li>修正実行３択の最初のYESに <code>tab</code> でついで注文</li>
+<li><code>Ctrl+S</code> 下書き保存（プロンプト一次保存 <code>≒ git stash</code>）</li>
+</ul>
+<h3 id="agents">AGENTS<a class="anchor" aria-hidden="true" href="#agents"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<ul>
+<li>Sub agents: コンテキスト枯渇問題を解決</li>
+<li>cf. <a href="https://zenn.dev/tacoms/articles/552140c84aaefa">Claude CodeのSub agentsでコンテキスト枯渇問題をサクッと解決できたはなし</a> Zenn</li>
+</ul>
+<h3 id="hooks">HOOKS<a class="anchor" aria-hidden="true" href="#hooks"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<h3 id="statusline">StatusLine<a class="anchor" aria-hidden="true" href="#statusline"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+
+
+<div>
+    <div class="github-card" data-github="sirmalloc/ccstatusline" data-theme="default"></div>
+    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+</div>
+
+
+<!-- https://github.com/sirmalloc/ccstatusline -->
+<ul>
+<li>cf. <a href="https://note.com/syogaku/n/n8ff66e37b3ab">https://note.com/syogaku/n/n8ff66e37b3ab</a></li>
+</ul>
+<p>セットアップ プロンプト</p>
+<pre tabindex="0"><code>ccstatuslineをインストールして、見やすい監視機能を設定してください。
+
+以下の手順で実行してください：
+
+1. ~/.claude/settings.json を確認して、現在の設定を表示
+2. ccstatuslineの設定を追加（bunx ccstatusline@latestを使用）
+3. 以下のウィジェットを含む推奨設定を提案：
+   - モデル名
+   - コンテキスト使用率（使用可能率）
+   - セッションコスト
+   - ブロックタイマー
+   - 入力/出力トークン数
+   - Gitブランチ
+
+4. 設定を保存してClaude Codeの再起動方法を教えてください
+</code></pre><p>元に戻す手順</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 復元</span>
+</span></span><span class="line"><span class="cl">cp ~/.claude/settings.json.bak ~/.claude/settings.json
+</span></span><span class="line"><span class="cl">cp ~/.config/ccstatusline/settings.json.bak ~/.config/ccstatusline/settings.json
+</span></span></code></pre></div><h3 id="slash-commands">Slash Commands<a class="anchor" aria-hidden="true" href="#slash-commands"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p>よく使う Slash Commands</p>
+<ul>
+<li><code>/insight</code> : 自分のClaude Code使用状況を分析・可視化する</li>
+<li><code>/debug</code>   : SKILLsをブラッシュアップしたい</li>
+<li><code>/compact</code> : 重要な情報だけを表示して、会話をすっきりさせる</li>
+</ul>
+<p>トークン節約系 Slash Commands</p>
+<ul>
+<li>
+<p><code>/context</code> : コンテキスト確認</p>
+</li>
+<li>
+<p><code>/usage</code>   : 使用状況確認</p>
+</li>
+<li>
+<p><code>/clear</code>   : 会話履歴をクリア</p>
+</li>
+<li>
+<p><code>/resume</code>  : 会話履歴を再開</p>
+</li>
+<li>
+<p><code>/export</code>  : 会話履歴をﾌｧｲﾙで出して、新しい会話に引き継ぐ小技</p>
+</li>
+<li>
+<p><code>/rewind</code>  : 会話を指定したターンまで巻き戻す（軌道修正）</p>
+</li>
+<li>
+<p><code>/fork</code>    : 会話を指定したターンから分岐させる（軌道修正）</p>
+</li>
+<li>
+<p>Planモード（<code>Shift+Tab×2</code>）: 計画を立ててから実装に向く</p>
+<ul>
+<li>cf. <a href="https://zenn.dev/aun_phonogram/articles/4be2f4745726fb">Claude Codeですぐ制限にかからないようにするコツ</a> Zenn</li>
+</ul>
+</li>
+</ul>
+<h2 id="ref">Ref.<a class="anchor" aria-hidden="true" href="#ref"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<ul>
+<li><a href="https://note.com/ai_driven/n/nce437c34242f">Claude Code Workflow Studio完全ガイド｜ビジュアルでAIワークフローを構築する新時代</a> note</li>
+<li><a href="https://zenn.dev/aun_phonogram/articles/475f3cca8f40a3">Agent Skillsを一番かんたんに作る方法（Claude Code + skill-creator）</a> Zenn</li>
+<li><a href="https://zenn.dev/modokkin/articles/zenn-2025-12-03-tech-claude-code-plugins">Claude Code公式Pluginのすすめ</a> Zenn</li>
+<li><a href="https://zenn.dev/tacoms/articles/552140c84aaefa">Claude CodeのSub agentsでコンテキスト枯渇問題をサクッと解決できたはなし</a> Zenn</li>
+<li><a href="https://syu-m-5151.hatenablog.com/entry/2025/09/09/143306">Claude CodeのSubagentsは設定したほうがいい</a> Hatena Blog</li>
+<li>X: <a href="https://x.com/sora19ai/status/2005900586328441020?s=46&amp;t=RSRnjQg5szbGQ19iUHwMlg">https://x.com/sora19ai/status/2005900586328441020?s=46&amp;t=RSRnjQg5szbGQ19iUHwMlg</a></li>
+</ul>
 </article>
         </div>
         </div>
@@ -405,8 +569,6 @@ if ('serviceWorker' in navigator) {
   
   
     
-      
-    
   
 <div id="gitalk-container" class="gitalk-container"></div>
 <link rel="stylesheet" href='https://shiroimon.kithub.f5.si/css/gitalk.css'>
@@ -423,7 +585,7 @@ if ('serviceWorker' in navigator) {
     pagerDirection: 'last',
     createIssueManually:  false ,
     distractionFreeMode:  false ,
-    id: '3d826fd02135a4ab0e114d42f2125517'
+    id: 'df3b7bc5af6d90900aa7caa1ee96ec29'
   });
   gitalk.render('gitalk-container');
 </script>

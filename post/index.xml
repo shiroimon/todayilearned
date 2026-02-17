@@ -6,14 +6,14 @@
     <description>Recent content in Posts on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Feb 2026 22:31:54 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 17 Feb 2026 17:26:14 +0900</lastBuildDate>
     <atom:link href="https://shiroimon.kithub.f5.si/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>[Claude Code] Slash Command Usage</title>
-      <link>https://shiroimon.kithub.f5.si/post/claude_code_slash_command_usage/</link>
+      <title>[Claude Code] Miscellaneous &lt;雑記&gt;</title>
+      <link>https://shiroimon.kithub.f5.si/post/claude_code_usage_miscellaneous/</link>
       <pubDate>Wed, 07 Jan 2026 11:56:35 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/claude_code_slash_command_usage/</guid>
-      <description>💥 How to Use Slash Commands in Claude Code.</description>
+      <guid>https://shiroimon.kithub.f5.si/post/claude_code_usage_miscellaneous/</guid>
+      <description>💥 How to use various features of Claude Code, including Slash Commands, Skills, Commands, Agents, Hooks, and more. Tips and best practices for maximizing your productivity with Claude Code.</description>
     </item>
     <item>
       <title>[Looker] This and That</title>
@@ -63,13 +63,6 @@
       <pubDate>Mon, 24 Mar 2025 11:10:12 +0900</pubDate>
       <guid>https://shiroimon.kithub.f5.si/post/looker_studio_this_and_that/</guid>
       <description>🫧 How to use Google&amp;rsquo;s SaaS about BI.</description>
-    </item>
-    <item>
-      <title>[Beatbox] Catchup</title>
-      <link>https://shiroimon.kithub.f5.si/post/other/beatbox_catchup/</link>
-      <pubDate>Sun, 16 Mar 2025 19:17:36 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/other/beatbox_catchup/</guid>
-      <description>🎙️I think it&amp;rsquo;s cool to use the respiratory organs and mouth to make beats.</description>
     </item>
     <item>
       <title>[BigQuery] Machine Learning</title>
@@ -189,6 +182,13 @@
       <pubDate>Wed, 16 Oct 2024 13:49:54 +0900</pubDate>
       <guid>https://shiroimon.kithub.f5.si/post/bigquery_about_data_quality/</guid>
       <description>🔍 Different perspective from data analysis. About data quality.</description>
+    </item>
+    <item>
+      <title>[BUMP OF CHICKEN] Lyrics analysis</title>
+      <link>https://shiroimon.kithub.f5.si/post/other/boc_lyric_analysis/</link>
+      <pubDate>Tue, 01 Oct 2024 15:10:50 +0900</pubDate>
+      <guid>https://shiroimon.kithub.f5.si/post/other/boc_lyric_analysis/</guid>
+      <description>🛰️ To see beyond the abyss of favorite songs created by my favorite artists.</description>
     </item>
     <item>
       <title>[macOS] UNIX is ancestor</title>
