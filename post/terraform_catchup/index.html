@@ -202,7 +202,7 @@ if ('serviceWorker' in navigator) {
                 Created <relative-time datetime="Thu, 20 Feb 2025 18:49:06 &#43;0900" class="no-wrap">Thu, 20 Feb 2025 18:49:06 &#43;0900</relative-time>
                 
                 <span class="path-divider">|</span>
-                Modified <relative-time datetime="Mon, 05 Jan 2026 23:44:03 &#43;0900" class="no-wrap">Mon, 05 Jan 2026 23:44:03 &#43;0900</relative-time>
+                Modified <relative-time datetime="Mon, 16 Mar 2026 12:58:55 &#43;0900" class="no-wrap">Mon, 16 Mar 2026 12:58:55 &#43;0900</relative-time>
                 
             </div>
         </div>
@@ -235,7 +235,7 @@ if ('serviceWorker' in navigator) {
                     <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list"></div>
                 </div>
             </details-menu>
-            1697 Words
+            2231 Words
             <span class="path-divider">|</span>
             2 min
             </div>
@@ -356,6 +356,24 @@ cf. <a href="https://developer.hashicorp.com/terraform/tutorials/docker-get-star
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">terraform apply
 </span></span></code></pre></div></li>
 </ol>
+<h3 id="-hcl-は何にコンパイルされるのか">### HCL は何にコンパイルされるのか？<a class="anchor" aria-hidden="true" href="#-hcl-は何にコンパイルされるのか"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<blockquote>
+<p><strong>Q.</strong> Terraform は宣言的IaCで、HCLという言語で動いている。宣言型言語はコンパイルされると思うが、最終的にHCLは何のファイルをコンパイルしているのか？ YAML的なものを動的に生成して、GCPのAPIでリソース管理しているのか？</p>
+</blockquote>
+<p>HCLは「コンパイル」というよりも <strong>「評価（evaluate）」</strong> に近い動作をする。中間ファイル（YAMLなど）は生成しない。</p>
+<pre tabindex="0"><code>HCL (.tf files)
+  ↓ parse
+内部的なグラフ構造（リソース間の依存関係DAG）
+  ↓ plan
+State ファイル（JSON）と現状の差分を算出
+  ↓ apply
+Provider 経由で各クラウドの API を直接呼ぶ
+</code></pre><ol>
+<li><strong>HCL → 内部データ構造</strong>: HCLをパースしてリソースの依存グラフ（DAG）を構築する。中間ファイルは生成しない</li>
+<li><strong>State ファイル（<code>terraform.tfstate</code>）が核</strong>: JSON形式で「今どんなリソースが存在するか」を記録している。<code>plan</code> 時に「HCLの宣言内容」と「Stateの現状」を比較して差分を算出する</li>
+<li><strong>Provider が API を抽象化</strong>: GCPなら <code>google</code> provider → GCP REST API、Lookerなら <code>hirosassa/looker</code> provider → Looker API のように、Provider ごとに CRUD の実装を持ち、各サービスのAPIを直接呼ぶ</li>
+</ol>
+<p>つまり「宣言されたあるべき姿」と「Stateに記録された現状」のdiffを取り、差分だけAPIで反映する仕組み。</p>
 <h3 id="-terraform-apply">### Terraform apply<a class="anchor" aria-hidden="true" href="#-terraform-apply"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 <p>apply 対象範囲 <code>terraterraform_parent/</code> 配下の <code>.tf</code>ファイルを全て。<br>
 しかし、子階層には関与せず、其々の子階層は独立的に同時でapply対象となる。</p>

@@ -202,7 +202,7 @@ if ('serviceWorker' in navigator) {
                 Created <relative-time datetime="Tue, 26 Nov 2024 15:23:00 &#43;0900" class="no-wrap">Tue, 26 Nov 2024 15:23:00 &#43;0900</relative-time>
                 
                 <span class="path-divider">|</span>
-                Modified <relative-time datetime="Mon, 05 Jan 2026 23:44:03 &#43;0900" class="no-wrap">Mon, 05 Jan 2026 23:44:03 &#43;0900</relative-time>
+                Modified <relative-time datetime="Mon, 16 Mar 2026 13:03:43 &#43;0900" class="no-wrap">Mon, 16 Mar 2026 13:03:43 &#43;0900</relative-time>
                 
             </div>
         </div>
@@ -235,7 +235,7 @@ if ('serviceWorker' in navigator) {
                     <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list"></div>
                 </div>
             </details-menu>
-            645 Words
+            787 Words
             <span class="path-divider">|</span>
             2 min
             </div>
@@ -347,6 +347,18 @@ if ('serviceWorker' in navigator) {
 </span></span><span class="line"><span class="cl">~/sandbox/prodctions/dev/user
 </span></span><span class="line"><span class="cl">% <span class="nb">cd</span> dev prod   <span class="c1"># 特定のディレクトリ構造であればジャンプできる</span>
 </span></span><span class="line"><span class="cl">~/sandbox/prodctions/prod/user
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 直前のディレクトリに戻る</span>
+</span></span><span class="line"><span class="cl">% <span class="nb">cd</span> /some/path
+</span></span><span class="line"><span class="cl">% <span class="nb">cd</span> /another/path
+</span></span><span class="line"><span class="cl">% <span class="nb">cd</span> -            <span class="c1"># → /some/path に戻る（トグルで行き来できる）</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># pushd / popd :ディレクトリスタックで複数箇所を管理</span>
+</span></span><span class="line"><span class="cl">% <span class="nb">pushd</span> /path/a   <span class="c1"># /path/a に移動（元の場所をスタックに保存）</span>
+</span></span><span class="line"><span class="cl">% <span class="nb">pushd</span> /path/b   <span class="c1"># /path/b に移動（/path/a もスタックに保存）</span>
+</span></span><span class="line"><span class="cl">% <span class="nb">dirs</span> -v          <span class="c1"># スタックの中身を確認</span>
+</span></span><span class="line"><span class="cl">% <span class="nb">popd</span>             <span class="c1"># /path/a に戻る</span>
+</span></span><span class="line"><span class="cl">% <span class="nb">popd</span>             <span class="c1"># 最初の場所に戻る</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># Directory Hash (Zsh特有)</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># 移動先ルートパスをメモ書きできる</span>
