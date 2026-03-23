@@ -67,7 +67,7 @@ function switchYear(year) {
     }
 }
 
-function monthly(year, month, posts) {
+function monthly(year, month, posts, isFirst) {
     const monthPosts = posts.filter(post =>
         post.date.getFullYear().toString() === year && post.date.getMonth() === month
     );
@@ -105,7 +105,7 @@ function monthly(year, month, posts) {
             </svg>
           </div>
           <div class="TimelineItem-body">
-            <details class="Details-element details-reset" open>
+            <details class="Details-element details-reset"${isFirst ? ' open' : ''}>
               <summary role="button" class="btn-link f4 muted-link no-underline lh-condensed width-full">
                 <span class="color-text-primary ws-normal text-left">
                   Created ${monthPosts.length} post${monthPosts.length > 1 ? 's' : ''}
@@ -175,9 +175,17 @@ function graph(year, posts, startDate, endDate) {
         } else {
             count[date]++;
         }
+    }
 
-        // 更新日のカウント
+    // 更新日のカウント（全記事を対象にし、表示範囲内の更新のみカウント）
+    for (const post of contributions) {
         const lastmodifyDate = new Date(post.lastmodifyDate);
+        if (lastmodifyDate < startDate || lastmodifyDate > endDate) continue;
+        // 投稿日と同じ日の更新はスキップ（重複カウント防止）
+        const publishDate = new Date(post.publishDate);
+        if (lastmodifyDate.getFullYear() === publishDate.getFullYear() &&
+            lastmodifyDate.getMonth() === publishDate.getMonth() &&
+            lastmodifyDate.getDate() === publishDate.getDate()) continue;
         const updateDate = `${lastmodifyDate.getFullYear()}-${(lastmodifyDate.getMonth() + 1).toString().padStart(2, '0')}-${lastmodifyDate.getDate().toString().padStart(2, '0')}`;
         if (updateCount[updateDate] === undefined) {
             updateCount[updateDate] = 1;
@@ -351,90 +359,62 @@ function setRelativeTime() {
 
 // 記事を表示する関数
 function displayPosts(posts) {
-    const recentPostsContainer = document.getElementById('recent-posts');
-    const olderPostsContainer = document.getElementById('older-posts');
+    console.log('displayPosts called, posts:', posts.length);
     const postsActivityContainer = document.getElementById('posts-activity');
-
-    if (!recentPostsContainer || !olderPostsContainer || !postsActivityContainer) return;
+    console.log('postsActivityContainer:', postsActivityContainer);
+    if (!postsActivityContainer) return;
 
     // コンテナをクリア
-    recentPostsContainer.innerHTML = '';
-    olderPostsContainer.innerHTML = '';
+    postsActivityContainer.innerHTML = '';
 
-    // 現在の年を取得
-    const currentYear = new Date().getFullYear();
-
-    // 記事を最新のものと古いものに分ける
-    const recentPosts = posts.filter(post => {
-        const postDate = new Date(post.date);
-        return postDate.getFullYear() === currentYear;
-    });
-
-    const olderPosts = posts.filter(post => {
-        const postDate = new Date(post.date);
-        return postDate.getFullYear() < currentYear;
-    });
-
-    // 最新の記事を表示
-    if (recentPosts.length > 0) {
-        const ms = [];
-        for (const post of recentPosts) {
-            const time = post.date.getFullYear().toString() + "-" + post.date.getMonth().toString();
-            if (!ms.includes(time)) {
-                ms.push(time);
-            }
-        }
-
-        for (const time of ms) {
-            const array = time.split("-");
-            const node = document.createElement('div');
-            node.innerHTML = monthly(array[0], Number(array[1]), recentPosts);
-            recentPostsContainer.appendChild(node);
+    // 月ごとのキーを収集
+    const ms = [];
+    for (const post of posts) {
+        const time = post.date.getFullYear().toString() + "-" + post.date.getMonth().toString();
+        if (!ms.includes(time)) {
+            ms.push(time);
         }
     }
 
-    // 古い記事がある場合、Show moreボタンを表示
-    if (olderPosts.length > 0) {
-        // 古い記事のリストを作成（初期状態では非表示）
-        const ms = [];
-        for (const post of olderPosts) {
-            const time = post.date.getFullYear().toString() + "-" + post.date.getMonth().toString();
-            if (!ms.includes(time)) {
-                ms.push(time);
-            }
-        }
+    console.log('months:', ms);
 
-        for (const time of ms) {
-            const array = time.split("-");
-            const node = document.createElement('div');
-            node.innerHTML = monthly(array[0], Number(array[1]), olderPosts);
-            olderPostsContainer.appendChild(node);
+    // 最初の2ヶ月分だけ表示し、残りはhiddenにする
+    // 直近の月だけdetailsを開いた状態にする
+    let count = 0;
+    for (const time of ms) {
+        const array = time.split("-");
+        const node = document.createElement('div');
+        node.innerHTML = monthly(array[0], Number(array[1]), posts, count === 0);
+        if (count >= 2) {
+            node.classList.add('hidden');
         }
+        postsActivityContainer.appendChild(node);
+        count++;
+    }
 
-        // Show moreボタンを追加
+    // 3ヶ月以上ある場合、Show more activityボタンを追加
+    if (ms.length > 2) {
         const showMoreButton = document.createElement('div');
+        showMoreButton.id = 'show-more-activity';
         showMoreButton.className = 'width-full pb-4';
         showMoreButton.style.cssText = 'clear: both;';
         showMoreButton.innerHTML = `
-            <div class="mt-3 d-flex flex-justify-center">
-                <button class="btn btn-sm btn-outline BtnGroup-item" id="show-more-activity">
+            <div class="mt-3">
+                <button class="btn btn-outline width-full" onclick="showMoreActivity(this.closest('#show-more-activity'))">
                     Show more activity
                 </button>
             </div>
         `;
-
-        // ボタンをposts-activity内に追加
         postsActivityContainer.appendChild(showMoreButton);
-
-        // Show moreボタンのクリックイベント
-        document.getElementById('show-more-activity').addEventListener('click', () => {
-            if (olderPostsContainer.style.display === 'none') {
-                olderPostsContainer.style.display = 'block';
-                showMoreButton.querySelector('button').textContent = 'Show less activity';
-            } else {
-                olderPostsContainer.style.display = 'none';
-                showMoreButton.querySelector('button').textContent = 'Show more activity';
-            }
-        });
     }
+}
+
+function showMoreActivity(self) {
+    const activities = document.querySelector('#posts-activity').childNodes;
+    for (const item of activities) {
+        if (item.classList) {
+            item.classList.remove('hidden');
+        }
+    }
+    self.classList.add('hidden');
 }
