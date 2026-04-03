@@ -1,62 +1,43 @@
-// Gistのdata-color-mode属性をdarkに変更するスクリプト
-// スタイリング（背景透明、テーブル外枠、内線透過）はCSS（gist.css）で管理
+// Gistのdata-color-modeをページのテーマに連動させるスクリプト
 (function() {
-    // Gistのdata-color-modeをdarkに変更する関数
-    function setGistDarkMode(gistFile) {
-        const currentMode = gistFile.getAttribute('data-color-mode');
-        // lightモードまたは属性がない場合はdarkに変更
-        if (!currentMode || currentMode === 'light') {
-            gistFile.setAttribute('data-color-mode', 'dark');
-        }
+    function getPageColorMode() {
+        return document.documentElement.getAttribute('data-color-mode') || 'light';
     }
 
-    // Gistが読み込まれるまで待機する関数
-    function waitForGist() {
-        const gistFiles = document.querySelectorAll('.gist-file[data-color-mode="light"]');
-
-        // data-color-mode属性をdarkに変更
+    function applyGistColorMode() {
+        var mode = getPageColorMode();
+        var gistFiles = document.querySelectorAll('.gist-file');
         gistFiles.forEach(function(gistFile) {
-            setGistDarkMode(gistFile);
-        });
-
-        // 既に読み込まれているGist（data-color-mode属性がない場合も含む）にも適用
-        const allGistFiles = document.querySelectorAll('.gist-file');
-        allGistFiles.forEach(function(gistFile) {
-            setGistDarkMode(gistFile);
+            gistFile.setAttribute('data-color-mode', mode);
+            gistFile.setAttribute('data-dark-theme', 'dark');
+            gistFile.setAttribute('data-light-theme', 'light');
         });
     }
 
     // DOMが読み込まれた後に実行
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', waitForGist);
+        document.addEventListener('DOMContentLoaded', applyGistColorMode);
     } else {
-        waitForGist();
+        applyGistColorMode();
     }
 
-    // Gistが動的に読み込まれる場合に備えて、MutationObserverで監視
-    const observer = new MutationObserver(function(mutations) {
+    // Gistが動的に読み込まれる場合 & テーマ切り替え時に対応
+    var observer = new MutationObserver(function(mutations) {
         mutations.forEach(function(mutation) {
+            // テーマ切り替え検知（html要素のdata-color-mode変更）
+            if (mutation.type === 'attributes' && mutation.target === document.documentElement) {
+                applyGistColorMode();
+                return;
+            }
+            // 新しいGist要素の追加検知
             if (mutation.type === 'childList') {
                 mutation.addedNodes.forEach(function(node) {
-                    if (node.nodeType === 1) { // Element node
-                        const gistFiles = node.querySelectorAll ?
-                            node.querySelectorAll('.gist-file[data-color-mode="light"]') : [];
-
-                        gistFiles.forEach(function(gistFile) {
-                            setGistDarkMode(gistFile);
-                        });
-
-                        // ノード自体がgist-fileの場合
+                    if (node.nodeType === 1) {
                         if (node.classList && node.classList.contains('gist-file')) {
-                            setGistDarkMode(node);
-                        }
-
-                        // ノード内にgist-fileが含まれている場合も適用
-                        if (node.querySelectorAll) {
-                            const allGistFiles = node.querySelectorAll('.gist-file');
-                            allGistFiles.forEach(function(gistFile) {
-                                setGistDarkMode(gistFile);
-                            });
+                            applyGistColorMode();
+                        } else if (node.querySelectorAll) {
+                            var gists = node.querySelectorAll('.gist-file');
+                            if (gists.length > 0) applyGistColorMode();
                         }
                     }
                 });
@@ -64,9 +45,8 @@
         });
     });
 
-    // ドキュメント全体を監視
-    observer.observe(document.body, {
-        childList: true,
-        subtree: true
-    });
+    // html要素のdata-color-mode属性変更を監視
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-color-mode'] });
+    // body以下のDOM追加を監視（Gist動的読み込み対応）
+    observer.observe(document.body, { childList: true, subtree: true });
 })();

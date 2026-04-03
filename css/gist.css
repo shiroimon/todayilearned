@@ -17,10 +17,12 @@
     border: none !important;
 }
 
-.gist-file table {
+.gist-file table,
+.markdown-body .gist-file table {
+    display: table !important;
+    width: 100% !important;
     background-color: transparent !important;
     border-collapse: collapse !important;
-    /* テーブルの外枠を非表示 */
     border: none !important;
 }
 
@@ -29,7 +31,9 @@
     border: none !important;
 }
 
-.gist-file tr {
+.gist-file tr,
+.markdown-body .gist-file table tr,
+.markdown-body .gist-file table tr:nth-child(2n) {
     background-color: transparent !important;
     border: none !important;
     border-top: none !important;
@@ -43,8 +47,17 @@
 
 /* テーブルの内側のボーダー（敷居線）を全て透過させる */
 .gist-file table td,
-.gist-file table th {
+.gist-file table th,
+.markdown-body .gist-file table td,
+.markdown-body .gist-file table th {
+    padding: 0 !important;
     border: none !important;
+}
+
+/* 行番号セルにはパディングを付ける */
+.gist-file table td.blob-num,
+.markdown-body .gist-file table td.blob-num {
+    padding: 0 10px !important;
 }
 
 /* すべての行の上下ボーダーを非表示 */
@@ -63,6 +76,14 @@
 .gist-file table tr:last-child td,
 .gist-file table tr:last-child th {
     border-bottom: none !important;
+}
+
+/* Gist内のコードフォントをGitHub標準に合わせる */
+/* テーマの .blob-code-inner のフォント指定を上書きし、ブロック文字を正しく描画する */
+.gist .blob-code-inner {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace !important;
+    font-size: 12px !important;
+    line-height: 20px !important;
 }
 
 /* gist-metaを非表示にする */

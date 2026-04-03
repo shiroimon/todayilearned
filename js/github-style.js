@@ -386,7 +386,7 @@ function displayPosts(posts) {
         const node = document.createElement('div');
         node.innerHTML = monthly(array[0], Number(array[1]), posts, count === 0);
         if (count >= 2) {
-            node.classList.add('hidden');
+            node.hidden = true;
         }
         postsActivityContainer.appendChild(node);
         count++;
@@ -412,9 +412,9 @@ function displayPosts(posts) {
 function showMoreActivity(self) {
     const activities = document.querySelector('#posts-activity').childNodes;
     for (const item of activities) {
-        if (item.classList) {
-            item.classList.remove('hidden');
+        if (item.nodeType === 1) {
+            item.hidden = false;
         }
     }
-    self.classList.add('hidden');
+    self.hidden = true;
 }
