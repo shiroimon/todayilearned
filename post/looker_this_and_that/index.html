@@ -202,7 +202,7 @@ if ('serviceWorker' in navigator) {
                 Created <relative-time datetime="Tue, 02 Dec 2025 16:39:00 &#43;0900" class="no-wrap">Tue, 02 Dec 2025 16:39:00 &#43;0900</relative-time>
                 
                 <span class="path-divider">|</span>
-                Modified <relative-time datetime="Tue, 17 Feb 2026 17:26:14 &#43;0900" class="no-wrap">Tue, 17 Feb 2026 17:26:14 &#43;0900</relative-time>
+                Modified <relative-time datetime="Tue, 31 Mar 2026 00:12:01 &#43;0900" class="no-wrap">Tue, 31 Mar 2026 00:12:01 &#43;0900</relative-time>
                 
             </div>
         </div>
@@ -235,9 +235,9 @@ if ('serviceWorker' in navigator) {
                     <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list"></div>
                 </div>
             </details-menu>
-            2094 Words
+            3064 Words
             <span class="path-divider">|</span>
-            2 min
+            3 min
             </div>
 
             
@@ -307,33 +307,74 @@ if ('serviceWorker' in navigator) {
 <p>初めは怖かったLooker。しかし、ある言葉に救われた。<br>
 『Looker は BI。LookML なんてほぼ YAML!』 &hellip; !!! <br>
 そう！細かいルールはあるにせよ、<code>SQL</code>と<code>YAML</code>が分かれば、概ね怖くない代物！</p>
-<h3 id="looker-全体概要">[Looker] 全体概要<a class="anchor" aria-hidden="true" href="#looker-全体概要"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
-<p>Ref.</p>
+<h3 id="looker">[Looker]<a class="anchor" aria-hidden="true" href="#looker"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 <ul>
-<li>Google Cloud Looker Community: <a href="https://discuss.google.dev/c/looker">https://discuss.google.dev/c/looker</a></li>
+<li><a href="https://discuss.google.dev/c/looker">Google Cloud Looker Community</a></li>
 <li><a href="https://docs.cloud.google.com/looker/docs/chart-config-editor?hl=ja">グラフ構成エディタを使用した可視化のカスタマイズ</a> Google Cloud Looker</li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> my_looker_project/
-</span></span><span class="line"><span class="cl">  ├── manifest.lkml          # プロジェクト設定（モデル名、ロケールなど）
-</span></span><span class="line"><span class="cl">  ├── *.model.lkml           # モデルファイル（DB接続、Explore定義）
-</span></span><span class="line"><span class="cl">  │
-</span></span><span class="line"><span class="cl">  ├── views/                 # View ファイル（テーブル定義）
-</span></span><span class="line"><span class="cl">  │   ├── orders.view.lkml
-</span></span><span class="line"><span class="cl">  │   ├── users.view.lkml
-</span></span><span class="line"><span class="cl">  │   └── products.view.lkml
-</span></span><span class="line"><span class="cl">  │
-</span></span><span class="line"><span class="cl">  ├── explores/              # Explore を分離する場合（任意）
-</span></span><span class="line"><span class="cl">  │   └── order_analysis.explore.lkml
-</span></span><span class="line"><span class="cl">  │
-</span></span><span class="line"><span class="cl">  ├── dashboards/            # LookMLダッシュボード（任意）
-</span></span><span class="line"><span class="cl">  │   └── sales_overview.dashboard.lookml
-</span></span><span class="line"><span class="cl">  │
-</span></span><span class="line"><span class="cl">  ├── data_tests/            # データテスト（任意）
-</span></span><span class="line"><span class="cl">  │   └── tests.lkml
-</span></span><span class="line"><span class="cl">  │
-</span></span><span class="line"><span class="cl">  └── documents/             # ドキュメント（任意）
-</span></span><span class="line"><span class="cl">      └── README.md
-</span></span></code></pre></div><details>
+<h3 id="looker-全体概要">[Looker] 全体概要<a class="anchor" aria-hidden="true" href="#looker-全体概要"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<blockquote>
+<p>[!NOTE]
+<strong>データの流れ</strong>:
+<br>
+<br> データは <code>BQ → view → explore→ dashboard</code> の順に流れる。
+<br> ディレクトリ構成もこの流れに沿って上流から下流へ並べて示す。</p>
+<ol>
+<li><strong>BQ</strong> — BigQuery上の実テーブル（データソース）</li>
+<li><strong>View</strong> — BQテーブルを参照し、dimension/measureを定義</li>
+<li><strong>Explore</strong> — Viewを結合して、ユーザーが探索できる単位を作る</li>
+<li><strong>Dashboard</strong> — Exploreから取得したデータをタイル（グラフ等）で描画</li>
+</ol>
+<p>厳密に言えば、間に <strong>Model</strong> が挟まる（ModelがBQ接続を指定し、Exploreをユーザーに公開する役割）。
+<br> 完全に書くと <code>BQ → View → Model(Explore定義) → Dashboard</code>。
+<br> ただし、Modelは「配線役」であってデータ変換の層ではないので、データの流れという観点では <code>BQ → View → Explore → Dashboard</code> で十分。</p>
+</blockquote>
+<pre tabindex="0"><code> my_looker_project/
+  │
+  │  ── プロジェクト設定【必須】──────────────────────────────
+  │
+  ├── manifest.lkml          ← BQ接続先のデータセット名・定数を定義
+  ├── manifest_lock.lkml      （自動生成、手動編集不要）
+  │
+  │  ── [1] View 定義層【必須】（上流：BQ テーブル参照）──────
+  │         sql_table_name で BQ テーブルを直接参照、
+  │         または derived_table で複数テーブルを結合・加工。
+  │         dimension（属性）・measure（集計値）を定義する。
+  │
+  ├── views/
+  │   ├── orders.view.lkml
+  │   ├── users.view.lkml
+  │   └── products.view.lkml
+  │
+  │  ── [2] Explore 定義層【任意】（中流：view を結合）───────
+  │         view を JOIN し、ユーザーがデータ探索できる単位を作る。
+  │         ※ view ファイル内で explore を定義するケースもある
+  │
+  ├── explores/
+  │   └── order_analysis.explore.lkml
+  │
+  │  ── [3] Model 定義層【必須】（BQ と Explore の紐付け）────
+  │         connection で BQ プロジェクトを指定し、
+  │         どの Explore をユーザーに提供するかを宣言する。
+  │
+  ├── models/
+  │   └── *.model.lkml
+  │
+  │  ── [4] Dashboard 描画層【任意】（下流：BI 表示）─────────
+  │         explore を参照し、タイルごとに
+  │         dimension / measure / filter を選んで描画する。
+  │
+  ├── dashboards/
+  │   └── sales_overview.dashboard.lookml
+  │
+  │  ── その他【任意】──────────────────────────────────────
+  │         データテストやドキュメントなど、プロジェクトに必要なファイルを配置。
+  │
+  ├── data_tests/
+  │   └── tests.lkml
+  └── documents/
+      └── README.md
+</code></pre><details>
   <summary>Lookerのプロジェクト構成例（最小版）</summary>
   <p></p>
   <blockquote>
@@ -350,56 +391,79 @@ Model で View を include し、Explore を定義すればOK！</p>
   <p></p>
 </details>
 
-<pre tabindex="0"><code class="language-yml:manifest.lkml" data-lang="yml:manifest.lkml">connection: &#34;your_connection_name&#34;
-include: &#34;/views/*.view.lkml&#34;
-include: &#34;/models/*.model.lkml&#34;
-include: &#34;/dashboards/*.dashboard.lkml&#34;
-</code></pre><pre tabindex="0"><code class="language-yml:sample.model.lkml" data-lang="yml:sample.model.lkml">model: sample_model {
-  explore: sample_view {
-    join: another_view {
-      type: left_outer
-      sql_on: ${sample_view.id} = ${another_view.sample_view_id} ;;
-    }
-  }
-}
-</code></pre><pre tabindex="0"><code class="language-yml:views/orders.view.lkml" data-lang="yml:views/orders.view.lkml">view: sample_view {
-  dimension: id {
-    type: number
-    sql: ${TABLE}.id ;;
-  }
-
-  measure: count {
-    type: count
-    sql: ${TABLE}.id ;;
-  }
-}
-</code></pre><pre tabindex="0"><code class="language-yml:explores/order_analysis.explore.lkml" data-lang="yml:explores/order_analysis.explore.lkml">explore: order_analysis {
-  from: sample_view
-  join: another_view {
-    type: left_outer
-    sql_on: ${sample_view.id} = ${another_view.sample_view_id} ;;
-  }
-}
-</code></pre><pre tabindex="0"><code class="language-yml.dashboards/sales_overview.dashboard.lkml" data-lang="yml.dashboards/sales_overview.dashboard.lkml">dashboard: sample_dashboard {
-  title: &#34;Sample Dashboard&#34;
-  layout: {
-    type: &#34;grid&#34;
-    columns: 12
-  }
-element: {
-    title: &#34;Sample Tile&#34;
-    type: &#34;lookml_tile&#34;
-    lookml_tile: {
-        model: &#34;sample_model&#34;
-        explore: &#34;sample_view&#34;
-        fields: [&#34;sample_view.id&#34;, &#34;sample_view.count&#34;]
-        filters: {}
-        visualization: {
-            type: &#34;bar&#34;
-        }
-    }
-}
-</code></pre><h3 id="looker-webui">[Looker] WebUI<a class="anchor" aria-hidden="true" href="#looker-webui"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<hr>
+<h3 id="looker-個別ファイル">[Looker] 個別ファイル<a class="anchor" aria-hidden="true" href="#looker-個別ファイル"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<blockquote>
+<p>[!WARNING]
+Syntaxの関係上、拡張子を<code>.yaml</code>としているが、実際には<code>.lkml</code>である点に注意</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml:manifest.yaml" data-lang="yml:manifest.yaml"><span class="line"><span class="cl"><span class="nt">connection</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;your_connection_name&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">include</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;/views/*.view.lkml&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">include</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;/models/*.model.lkml&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">include</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;/dashboards/*.dashboard.lkml&#34;</span><span class="w">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml:views/orders.view.yaml" data-lang="yaml:views/orders.view.yaml"><span class="line"><span class="cl"><span class="nt">view</span><span class="p">:</span><span class="w"> </span><span class="l">sample_view {</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">dimension</span><span class="p">:</span><span class="w"> </span><span class="l">id {</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">number</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">sql</span><span class="p">:</span><span class="w"> </span><span class="l">${TABLE}.id ;;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>}<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">measure</span><span class="p">:</span><span class="w"> </span><span class="l">count {</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">count</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">sql</span><span class="p">:</span><span class="w"> </span><span class="l">${TABLE}.id ;;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>}<span class="w">
+</span></span></span><span class="line"><span class="cl">}<span class="w">
+</span></span></span></code></pre></div><blockquote>
+<p>[!TIP]
+<br> <strong>Looker = セマンティックレイヤー</strong> と呼ばれる理由
+<br>
+<br> Lookerはよくセマンティくレイヤーと言われるが、view定義をモリモリにするとそうなる
+<br> View にビジネスロジックを集約する設計思想に由来。</p>
+<ul>
+<li><code>measure</code> で「売上」「解約率」など指標の計算式を一元定義</li>
+<li><code>dimension</code> に <code>label</code> / <code>description</code> で業務用語を付与</li>
+<li><code>derived_table</code> でテーブル結合・加工ロジックを吸収</li>
+<li><code>drill_fields</code> でドリルダウン先を定義</li>
+</ul>
+<p>「&ldquo;売上&rdquo; とはこの SQL である」という定義を View 層に持たせることで、
+ダッシュボードごとに SQL を書き直す必要がなくなり、全社で指標の定義が統一される。</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml:explores/order_analysis.explore.yaml" data-lang="yml:explores/order_analysis.explore.yaml"><span class="line"><span class="cl"><span class="nt">explore</span><span class="p">:</span><span class="w"> </span><span class="l">order_analysis {</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">from</span><span class="p">:</span><span class="w"> </span><span class="l">sample_view</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">join</span><span class="p">:</span><span class="w"> </span><span class="l">another_view {</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">left_outer</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">sql_on</span><span class="p">:</span><span class="w"> </span><span class="l">${sample_view.id} = ${another_view.sample_view_id} ;;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>}<span class="w">
+</span></span></span><span class="line"><span class="cl">}<span class="w">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml:sample.model.yaml" data-lang="yaml:sample.model.yaml"><span class="line"><span class="cl"><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="l">sample_model {</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">explore</span><span class="p">:</span><span class="w"> </span><span class="l">sample_view {</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">join</span><span class="p">:</span><span class="w"> </span><span class="l">another_view {</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">left_outer</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">sql_on</span><span class="p">:</span><span class="w"> </span><span class="l">${sample_view.id} = ${another_view.sample_view_id} ;;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>}<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>}<span class="w">
+</span></span></span><span class="line"><span class="cl">}<span class="w">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml:dashboards/sales_overview.dashboard.yaml" data-lang="yml:dashboards/sales_overview.dashboard.yaml"><span class="line"><span class="cl"><span class="nt">dashboard</span><span class="p">:</span><span class="w"> </span><span class="l">sample_dashboard {</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Sample Dashboard&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">layout</span><span class="p">:</span><span class="w"> </span>{<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;grid&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">columns</span><span class="p">:</span><span class="w"> </span><span class="m">12</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>}<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">element</span><span class="p">:</span><span class="w"> </span>{<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Sample Tile&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;lookml_tile&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">lookml_tile</span><span class="p">:</span><span class="w"> </span>{<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;sample_model&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">explore</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;sample_view&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">fields</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;sample_view.id&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;sample_view.count&#34;</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">filters</span><span class="p">:</span><span class="w"> </span>{}<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">visualization</span><span class="p">:</span><span class="w"> </span>{<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;bar&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>}<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>}<span class="w">
+</span></span></span><span class="line"><span class="cl">}<span class="w">
+</span></span></span></code></pre></div><hr>
+<h3 id="looker-用語集">[Looker] 用語集<a class="anchor" aria-hidden="true" href="#looker-用語集"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<h4 id="webui">WebUI<a class="anchor" aria-hidden="true" href="#webui"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
 <ul>
 <li><strong>Explore</strong> (エクスプローラ)
 <ul>
@@ -419,7 +483,7 @@ element: {
 <li><strong>Looker Blocks</strong> (ルッカーブロック)</li>
 <li><strong>Looker Marketplace</strong> (ルッカーマーケットプレイス)</li>
 </ul>
-<h3 id="looker-lookml基礎">[Looker] LookML（基礎）<a class="anchor" aria-hidden="true" href="#looker-lookml基礎"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<h4 id="lookml基礎">LookML（基礎）<a class="anchor" aria-hidden="true" href="#lookml基礎"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
 <ul>
 <li><strong>Model</strong> (モデル)
 <ul>
@@ -482,7 +546,7 @@ element: {
 </ul>
 </li>
 </ul>
-<h3 id="looker-lookml応用">[Looker] LookML（応用）<a class="anchor" aria-hidden="true" href="#looker-lookml応用"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<h4 id="lookml応用">LookML（応用）<a class="anchor" aria-hidden="true" href="#lookml応用"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
 <ul>
 <li>
 <p><strong>DT</strong> (Derived Table: 派生テーブル）</p>
@@ -505,6 +569,7 @@ element: {
 </ul>
 </li>
 </ul>
+<hr>
 <h3 id="looker-展望">[Looker] 展望<a class="anchor" aria-hidden="true" href="#looker-展望"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 <h4 id="gemini-in-looker">Gemini in Looker<a class="anchor" aria-hidden="true" href="#gemini-in-looker"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">ZOZO さんのGemini in Looker によるダッシュボード要約の話。 <a href="https://t.co/1X3ez6QNhr">https://t.co/1X3ez6QNhr</a> <a href="https://t.co/IElFG9jsMs">pic.twitter.com/IElFG9jsMs</a></p>&mdash; Kazunori Sato (@kazunori_279) <a href="https://twitter.com/kazunori_279/status/1989045500990144996?ref_src=twsrc%5Etfw">November 13, 2025</a></blockquote>
