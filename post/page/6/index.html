@@ -18,6 +18,7 @@
 
     <link rel="stylesheet" href="http://localhost:1313/css/gist.css">
     <script type="text/javascript" src="http://localhost:1313/js/gist-dark-mode.js"></script>
+    
 
     
     <meta name="description"
@@ -80,6 +81,27 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js')
       .then((registration) => {
         console.log('[PWA] Service Worker registered:', registration.scope);
+
+        
+        registration.addEventListener('updatefound', () => {
+          const newWorker = registration.installing;
+          console.log('[PWA] New Service Worker found, updating...');
+
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'activated') {
+              console.log('[PWA] New Service Worker activated');
+              
+              if (navigator.serviceWorker.controller) {
+                window.location.reload();
+              }
+            }
+          });
+        });
+
+        
+        setInterval(() => {
+          registration.update();
+        }, 60 * 60 * 1000);
       })
       .catch((error) => {
         console.error('[PWA] Service Worker registration failed:', error);
@@ -180,7 +202,16 @@ if ('serviceWorker' in navigator) {
                 </path>
               </svg>
               Posts
-              <span class="Counter">67</span>
+              <span class="Counter">69</span>
+            </a>
+            <a class="UnderlineNav-item " href="http://localhost:1313/aboutme">
+              <svg class="octicon octicon-person UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16"
+                version="1.1" width="16">
+                <path fill-rule="evenodd"
+                  d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z">
+                </path>
+              </svg>
+              About Me
             </a>
           </nav>
           <div class="profile-color-modes js-promo-color-modes-banner-profile isInitialToggle">
@@ -357,7 +388,7 @@ if ('serviceWorker' in navigator) {
         </div>
 
         <div class="p-note user-profile-bio mb-3 js-user-profile-bio f4">
-          <div>What one learned / knew that day.</div>
+          <div>What one learned / knew that day. #Data Engineer.</div>
         </div>
 
         <div class="d-flex flex-column">
@@ -426,19 +457,9 @@ if ('serviceWorker' in navigator) {
           
 
           
-          <a style="margin: 0 10px 10px 0;" href="https://stackoverflow.com/u/shiro">
-            <img alt="@stackoverflow" width="32" height="32" src="http://localhost:1313/images/stackoverflow.png" class="avatar">
-          </a>
-          
 
           
 
-          
-          
-          
-          <a style="margin: 0 10px 10px 0;" href="https://mastodon.social/@shiroimon">
-            <img alt="@mastodon" width="32" height="32" src="../../../images/mastodon.png" class="avatar">
-          </a>
           
           
           
@@ -448,8 +469,8 @@ if ('serviceWorker' in navigator) {
           
           
           
-          <a style="margin: 0 10px 10px 0;" href="https://www.freelance-jp.org/talents/10586">
-            <img alt="@Freelance Association" width="32" height="32" src="../../../images/freelance_assoc.png" class="avatar">
+          <a style="margin: 0 10px 10px 0;" href="https://wakatime.com/@shiroimon">
+            <img alt="@WakeTime" width="32" height="32" src="../../../images/wakatime.png" class="avatar">
           </a>
           
           
@@ -468,6 +489,12 @@ if ('serviceWorker' in navigator) {
           
           <a style="margin: 0 10px 10px 0;" href="https://opensea.io/shiroimon">
             <img alt="@Open Sea" width="32" height="32" src="../../../images/opensea.png" class="avatar">
+          </a>
+          
+          
+          
+          <a style="margin: 0 10px 10px 0;" href="https://www.udemy.com/user/ht-169/">
+            <img alt="@Udemy" width="32" height="32" src="../../../images/udemy.png" class="avatar">
           </a>
           
           
@@ -498,7 +525,7 @@ if ('serviceWorker' in navigator) {
       </svg>
       Overview
     </a>
-    <a class='UnderlineNav-item   selected '
+    <a class='UnderlineNav-item  selected '
       href="http://localhost:1313/post">
       <svg class="octicon octicon-repo UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16" version="1.1"
         width="16">
@@ -507,7 +534,16 @@ if ('serviceWorker' in navigator) {
         </path>
       </svg>
       Posts
-      <span class="Counter ">67</span>
+      <span class="Counter ">69</span>
+    </a>
+    <a class="UnderlineNav-item " href="http://localhost:1313/aboutme">
+      <svg class="octicon octicon-person UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16" version="1.1"
+        width="16">
+        <path fill-rule="evenodd"
+          d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z">
+        </path>
+      </svg>
+      About Me
     </a>
   </nav>
 </div>
@@ -543,7 +579,7 @@ if ('serviceWorker' in navigator) {
                     <div class="d-flex flex-wrap">
                     
                         <a class="topic-tag topic-tag-link f6 mb-2 mr-2" href="../../../categories/ai">
-                            ai <span class="color-text-tertiary">6</span>
+                            ai <span class="color-text-tertiary">5</span>
                         </a>
                     
                         <a class="topic-tag topic-tag-link f6 mb-2 mr-2" href="../../../categories/bi">
@@ -665,7 +701,7 @@ if ('serviceWorker' in navigator) {
                         </a>
                     
                         <a class="topic-tag topic-tag-link f6 mb-2 mr-2" href="../../../tags/cli">
-                            cli <span class="color-text-tertiary">10</span>
+                            cli <span class="color-text-tertiary">9</span>
                         </a>
                     
                         <a class="topic-tag topic-tag-link f6 mb-2 mr-2" href="../../../tags/codex">
@@ -761,7 +797,7 @@ if ('serviceWorker' in navigator) {
                         </a>
                     
                         <a class="topic-tag topic-tag-link f6 mb-2 mr-2" href="../../../tags/ide">
-                            ide <span class="color-text-tertiary">2</span>
+                            ide <span class="color-text-tertiary">1</span>
                         </a>
                     
                         <a class="topic-tag topic-tag-link f6 mb-2 mr-2" href="../../../tags/json">
@@ -780,16 +816,16 @@ if ('serviceWorker' in navigator) {
                             linux <span class="color-text-tertiary">1</span>
                         </a>
                     
-                        <a class="topic-tag topic-tag-link f6 mb-2 mr-2" href="../../../tags/llm">
-                            llm <span class="color-text-tertiary">1</span>
-                        </a>
-                    
                         <a class="topic-tag topic-tag-link f6 mb-2 mr-2" href="../../../tags/looker">
                             looker <span class="color-text-tertiary">2</span>
                         </a>
                     
                         <a class="topic-tag topic-tag-link f6 mb-2 mr-2" href="../../../tags/looker-studio">
                             looker studio <span class="color-text-tertiary">1</span>
+                        </a>
+                    
+                        <a class="topic-tag topic-tag-link f6 mb-2 mr-2" href="../../../tags/lookml">
+                            lookml <span class="color-text-tertiary">1</span>
                         </a>
                     
                         <a class="topic-tag topic-tag-link f6 mb-2 mr-2" href="../../../tags/lua">
@@ -865,7 +901,7 @@ if ('serviceWorker' in navigator) {
                         </a>
                     
                         <a class="topic-tag topic-tag-link f6 mb-2 mr-2" href="../../../tags/sql">
-                            sql <span class="color-text-tertiary">9</span>
+                            sql <span class="color-text-tertiary">10</span>
                         </a>
                     
                         <a class="topic-tag topic-tag-link f6 mb-2 mr-2" href="../../../tags/statistic">
@@ -921,7 +957,7 @@ if ('serviceWorker' in navigator) {
                         </a>
                     
                         <a class="topic-tag topic-tag-link f6 mb-2 mr-2" href="../../../tags/yaml">
-                            yaml <span class="color-text-tertiary">5</span>
+                            yaml <span class="color-text-tertiary">6</span>
                         </a>
                     
                         <a class="topic-tag topic-tag-link f6 mb-2 mr-2" href="../../../tags/zsh">
@@ -951,6 +987,358 @@ if ('serviceWorker' in navigator) {
             
             <div class="d-inline-block mb-1">
                 <h3 class="wb-break-all">
+                    <a href="http://localhost:1313/post/other/bodymake_/">[Bodymake] </a>
+                </h3>
+            </div>
+
+            
+            <div>
+            <div class="col-12 d-inline-block text-gray mb-2 pr-4">
+                🏋️ A brief summary of the article.
+            </div>
+            </div>
+
+            <div class="f6 text-gray mt-2">
+                
+                <div class="mb-1">
+                
+                </div>
+
+                
+                <div>
+                Created
+                <relative-time datetime="Fri, 25 Oct 2024 09:09:27 &#43;0900" class="no-wrap" title="Fri, 25 Oct 2024 09:09:27 &#43;0900">
+                    Fri, 25 Oct 2024 09:09:27 &#43;0900
+                </relative-time>
+                
+                · Updated
+                <relative-time datetime="Mon, 05 Jan 2026 23:44:03 &#43;0900" class="no-wrap" title="Mon, 05 Jan 2026 23:44:03 &#43;0900">
+                    Mon, 05 Jan 2026 23:44:03 &#43;0900
+                </relative-time>
+                
+                </div>
+            </div>
+        </div>
+        </li>
+    
+        <li class="col-12 d-flex width-full py-4 border-bottom color-border-secondary public source">
+        <div class="col-12 d-inline-block">
+            
+            <div class="d-inline-block mb-1">
+                <h3 class="wb-break-all">
+                    <a href="http://localhost:1313/post/bigquery_data_analysis_catchup/">[BigQuery] Data analyize catchup</a>
+                </h3>
+            </div>
+
+            
+            <div>
+            <div class="col-12 d-inline-block text-gray mb-2 pr-4">
+                🔍 Re-summarizeing the trajectory I learned as an introductory.
+            </div>
+            </div>
+
+            <div class="f6 text-gray mt-2">
+                
+                <div class="mb-1">
+                
+                
+                
+                <a class="muted-link mr-3" href='../../../tags/bigquery'>
+                    <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
+                    </svg>
+                    BigQuery
+                </a>
+                
+                
+                
+                <a class="muted-link mr-3" href='../../../tags/sql'>
+                    <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
+                    </svg>
+                    SQL
+                </a>
+                
+                
+                
+                <a class="muted-link mr-3" href='../../../tags/dwh'>
+                    <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
+                    </svg>
+                    DWH
+                </a>
+                
+                
+                
+                <a class="muted-link mr-3" href='../../../tags/data-mart'>
+                    <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
+                    </svg>
+                    Data Mart
+                </a>
+                
+                
+                
+                </div>
+
+                
+                <div>
+                Created
+                <relative-time datetime="Sat, 26 Oct 2024 00:22:05 &#43;0900" class="no-wrap" title="Sat, 26 Oct 2024 00:22:05 &#43;0900">
+                    Sat, 26 Oct 2024 00:22:05 &#43;0900
+                </relative-time>
+                
+                · Updated
+                <relative-time datetime="Mon, 05 Jan 2026 23:44:03 &#43;0900" class="no-wrap" title="Mon, 05 Jan 2026 23:44:03 &#43;0900">
+                    Mon, 05 Jan 2026 23:44:03 &#43;0900
+                </relative-time>
+                
+                </div>
+            </div>
+        </div>
+        </li>
+    
+        <li class="col-12 d-flex width-full py-4 border-bottom color-border-secondary public source">
+        <div class="col-12 d-inline-block">
+            
+            <div class="d-inline-block mb-1">
+                <h3 class="wb-break-all">
+                    <a href="http://localhost:1313/post/kubernetes_catchup/">[Kubernetes] Catchup</a>
+                </h3>
+            </div>
+
+            
+            <div>
+            <div class="col-12 d-inline-block text-gray mb-2 pr-4">
+                ⚓️ About container orchestration tecnology.
+            </div>
+            </div>
+
+            <div class="f6 text-gray mt-2">
+                
+                <div class="mb-1">
+                
+                
+                
+                <a class="muted-link mr-3" href='../../../tags/kubernetes'>
+                    <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
+                    </svg>
+                    Kubernetes
+                </a>
+                
+                
+                
+                <a class="muted-link mr-3" href='../../../tags/docker'>
+                    <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
+                    </svg>
+                    Docker
+                </a>
+                
+                
+                
+                <a class="muted-link mr-3" href='../../../tags/cue'>
+                    <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
+                    </svg>
+                    CUE
+                </a>
+                
+                
+                
+                <a class="muted-link mr-3" href='../../../tags/yaml'>
+                    <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
+                    </svg>
+                    YAML
+                </a>
+                
+                
+                
+                </div>
+
+                
+                <div>
+                Created
+                <relative-time datetime="Mon, 18 Nov 2024 13:29:33 &#43;0900" class="no-wrap" title="Mon, 18 Nov 2024 13:29:33 &#43;0900">
+                    Mon, 18 Nov 2024 13:29:33 &#43;0900
+                </relative-time>
+                
+                · Updated
+                <relative-time datetime="Mon, 05 Jan 2026 23:44:03 &#43;0900" class="no-wrap" title="Mon, 05 Jan 2026 23:44:03 &#43;0900">
+                    Mon, 05 Jan 2026 23:44:03 &#43;0900
+                </relative-time>
+                
+                </div>
+            </div>
+        </div>
+        </li>
+    
+        <li class="col-12 d-flex width-full py-4 border-bottom color-border-secondary public source">
+        <div class="col-12 d-inline-block">
+            
+            <div class="d-inline-block mb-1">
+                <h3 class="wb-break-all">
+                    <a href="http://localhost:1313/post/macos_revival_latest_os/">[macOS] Revival latest OS</a>
+                </h3>
+            </div>
+
+            
+            <div>
+            <div class="col-12 d-inline-block text-gray mb-2 pr-4">
+                🍏
+            </div>
+            </div>
+
+            <div class="f6 text-gray mt-2">
+                
+                <div class="mb-1">
+                
+                
+                
+                <a class="muted-link mr-3" href='../../../tags/macos'>
+                    <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
+                    </svg>
+                    macOS
+                </a>
+                
+                
+                
+                </div>
+
+                
+                <div>
+                Created
+                <relative-time datetime="Fri, 03 Jan 2025 14:10:14 &#43;0900" class="no-wrap" title="Fri, 03 Jan 2025 14:10:14 &#43;0900">
+                    Fri, 03 Jan 2025 14:10:14 &#43;0900
+                </relative-time>
+                
+                · Updated
+                <relative-time datetime="Mon, 05 Jan 2026 23:44:03 &#43;0900" class="no-wrap" title="Mon, 05 Jan 2026 23:44:03 &#43;0900">
+                    Mon, 05 Jan 2026 23:44:03 &#43;0900
+                </relative-time>
+                
+                </div>
+            </div>
+        </div>
+        </li>
+    
+        <li class="col-12 d-flex width-full py-4 border-bottom color-border-secondary public source">
+        <div class="col-12 d-inline-block">
+            
+            <div class="d-inline-block mb-1">
+                <h3 class="wb-break-all">
+                    <a href="http://localhost:1313/post/google_cloud_tools_memorandum/">[Google Cloud] Tools memorandum</a>
+                </h3>
+            </div>
+
+            
+            <div>
+            <div class="col-12 d-inline-block text-gray mb-2 pr-4">
+                ☁️ I would like to summarize it to understand Cloud tools.
+            </div>
+            </div>
+
+            <div class="f6 text-gray mt-2">
+                
+                <div class="mb-1">
+                
+                
+                
+                <a class="muted-link mr-3" href='../../../tags/google-cloud'>
+                    <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
+                    </svg>
+                    Google Cloud
+                </a>
+                
+                
+                
+                </div>
+
+                
+                <div>
+                Created
+                <relative-time datetime="Tue, 21 Jan 2025 16:24:43 &#43;0900" class="no-wrap" title="Tue, 21 Jan 2025 16:24:43 &#43;0900">
+                    Tue, 21 Jan 2025 16:24:43 &#43;0900
+                </relative-time>
+                
+                · Updated
+                <relative-time datetime="Mon, 05 Jan 2026 23:44:03 &#43;0900" class="no-wrap" title="Mon, 05 Jan 2026 23:44:03 &#43;0900">
+                    Mon, 05 Jan 2026 23:44:03 &#43;0900
+                </relative-time>
+                
+                </div>
+            </div>
+        </div>
+        </li>
+    
+        <li class="col-12 d-flex width-full py-4 border-bottom color-border-secondary public source">
+        <div class="col-12 d-inline-block">
+            
+            <div class="d-inline-block mb-1">
+                <h3 class="wb-break-all">
+                    <a href="http://localhost:1313/post/python_machine_learning/">[Python] Machine Learning</a>
+                </h3>
+            </div>
+
+            
+            <div>
+            <div class="col-12 d-inline-block text-gray mb-2 pr-4">
+                🐍
+            </div>
+            </div>
+
+            <div class="f6 text-gray mt-2">
+                
+                <div class="mb-1">
+                
+                
+                
+                <a class="muted-link mr-3" href='../../../tags/python'>
+                    <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
+                    </svg>
+                    Python
+                </a>
+                
+                
+                
+                <a class="muted-link mr-3" href='../../../tags/statistic'>
+                    <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
+                    </svg>
+                    Statistic
+                </a>
+                
+                
+                
+                </div>
+
+                
+                <div>
+                Created
+                <relative-time datetime="Thu, 13 Feb 2025 12:43:55 &#43;0900" class="no-wrap" title="Thu, 13 Feb 2025 12:43:55 &#43;0900">
+                    Thu, 13 Feb 2025 12:43:55 &#43;0900
+                </relative-time>
+                
+                · Updated
+                <relative-time datetime="Mon, 05 Jan 2026 23:44:03 &#43;0900" class="no-wrap" title="Mon, 05 Jan 2026 23:44:03 &#43;0900">
+                    Mon, 05 Jan 2026 23:44:03 &#43;0900
+                </relative-time>
+                
+                </div>
+            </div>
+        </div>
+        </li>
+    
+        <li class="col-12 d-flex width-full py-4 border-bottom color-border-secondary public source">
+        <div class="col-12 d-inline-block">
+            
+            <div class="d-inline-block mb-1">
+                <h3 class="wb-break-all">
                     <a href="http://localhost:1313/post/bigquery_data_analysis_on_preparation/">[BigQuery] Data analysis on preparation</a>
                 </h3>
             </div>
@@ -968,7 +1356,7 @@ if ('serviceWorker' in navigator) {
                 
                 
                 
-                <a class="muted-link mr-3" href="../../../tags/bigquery">
+                <a class="muted-link mr-3" href='../../../tags/bigquery'>
                     <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
                         <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
                     </svg>
@@ -977,7 +1365,7 @@ if ('serviceWorker' in navigator) {
                 
                 
                 
-                <a class="muted-link mr-3" href="../../../tags/sql">
+                <a class="muted-link mr-3" href='../../../tags/sql'>
                     <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
                         <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
                     </svg>
@@ -1027,7 +1415,7 @@ if ('serviceWorker' in navigator) {
                 
                 
                 
-                <a class="muted-link mr-3" href="../../../tags/bigquery">
+                <a class="muted-link mr-3" href='../../../tags/bigquery'>
                     <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
                         <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
                     </svg>
@@ -1036,7 +1424,7 @@ if ('serviceWorker' in navigator) {
                 
                 
                 
-                <a class="muted-link mr-3" href="../../../tags/google-cloud">
+                <a class="muted-link mr-3" href='../../../tags/google-cloud'>
                     <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
                         <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
                     </svg>
@@ -1086,7 +1474,7 @@ if ('serviceWorker' in navigator) {
                 
                 
                 
-                <a class="muted-link mr-3" href="../../../tags/bigquery">
+                <a class="muted-link mr-3" href='../../../tags/bigquery'>
                     <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
                         <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
                     </svg>
@@ -1095,7 +1483,7 @@ if ('serviceWorker' in navigator) {
                 
                 
                 
-                <a class="muted-link mr-3" href="../../../tags/bqml">
+                <a class="muted-link mr-3" href='../../../tags/bqml'>
                     <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
                         <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
                     </svg>
@@ -1111,45 +1499,6 @@ if ('serviceWorker' in navigator) {
                 Created
                 <relative-time datetime="Fri, 14 Mar 2025 17:31:44 &#43;0900" class="no-wrap" title="Fri, 14 Mar 2025 17:31:44 &#43;0900">
                     Fri, 14 Mar 2025 17:31:44 &#43;0900
-                </relative-time>
-                
-                · Updated
-                <relative-time datetime="Mon, 05 Jan 2026 23:44:03 &#43;0900" class="no-wrap" title="Mon, 05 Jan 2026 23:44:03 &#43;0900">
-                    Mon, 05 Jan 2026 23:44:03 &#43;0900
-                </relative-time>
-                
-                </div>
-            </div>
-        </div>
-        </li>
-    
-        <li class="col-12 d-flex width-full py-4 border-bottom color-border-secondary public source">
-        <div class="col-12 d-inline-block">
-            
-            <div class="d-inline-block mb-1">
-                <h3 class="wb-break-all">
-                    <a href="http://localhost:1313/post/other/beatbox_catchup/">[Beatbox] Catchup</a>
-                </h3>
-            </div>
-
-            
-            <div>
-            <div class="col-12 d-inline-block text-gray mb-2 pr-4">
-                🎙️I think it&rsquo;s cool to use the respiratory organs and mouth to make beats.
-            </div>
-            </div>
-
-            <div class="f6 text-gray mt-2">
-                
-                <div class="mb-1">
-                
-                </div>
-
-                
-                <div>
-                Created
-                <relative-time datetime="Sun, 16 Mar 2025 19:17:36 &#43;0900" class="no-wrap" title="Sun, 16 Mar 2025 19:17:36 &#43;0900">
-                    Sun, 16 Mar 2025 19:17:36 &#43;0900
                 </relative-time>
                 
                 · Updated
@@ -1184,7 +1533,7 @@ if ('serviceWorker' in navigator) {
                 
                 
                 
-                <a class="muted-link mr-3" href="../../../tags/bigquery">
+                <a class="muted-link mr-3" href='../../../tags/bigquery'>
                     <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
                         <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
                     </svg>
@@ -1193,7 +1542,7 @@ if ('serviceWorker' in navigator) {
                 
                 
                 
-                <a class="muted-link mr-3" href="../../../tags/jupyter-lab">
+                <a class="muted-link mr-3" href='../../../tags/jupyter-lab'>
                     <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
                         <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
                     </svg>
@@ -1202,7 +1551,7 @@ if ('serviceWorker' in navigator) {
                 
                 
                 
-                <a class="muted-link mr-3" href="../../../tags/python">
+                <a class="muted-link mr-3" href='../../../tags/python'>
                     <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
                         <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
                     </svg>
@@ -1211,7 +1560,7 @@ if ('serviceWorker' in navigator) {
                 
                 
                 
-                <a class="muted-link mr-3" href="../../../tags/postgersql">
+                <a class="muted-link mr-3" href='../../../tags/postgersql'>
                     <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
                         <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
                     </svg>
@@ -1220,7 +1569,7 @@ if ('serviceWorker' in navigator) {
                 
                 
                 
-                <a class="muted-link mr-3" href="../../../tags/statistic">
+                <a class="muted-link mr-3" href='../../../tags/statistic'>
                     <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
                         <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
                     </svg>
@@ -1236,287 +1585,6 @@ if ('serviceWorker' in navigator) {
                 Created
                 <relative-time datetime="Tue, 18 Mar 2025 02:15:17 &#43;0900" class="no-wrap" title="Tue, 18 Mar 2025 02:15:17 &#43;0900">
                     Tue, 18 Mar 2025 02:15:17 &#43;0900
-                </relative-time>
-                
-                · Updated
-                <relative-time datetime="Mon, 05 Jan 2026 23:44:03 &#43;0900" class="no-wrap" title="Mon, 05 Jan 2026 23:44:03 &#43;0900">
-                    Mon, 05 Jan 2026 23:44:03 &#43;0900
-                </relative-time>
-                
-                </div>
-            </div>
-        </div>
-        </li>
-    
-        <li class="col-12 d-flex width-full py-4 border-bottom color-border-secondary public source">
-        <div class="col-12 d-inline-block">
-            
-            <div class="d-inline-block mb-1">
-                <h3 class="wb-break-all">
-                    <a href="http://localhost:1313/post/other/nft_this_and_that/">[NFT] This and That</a>
-                </h3>
-            </div>
-
-            
-            <div>
-            <div class="col-12 d-inline-block text-gray mb-2 pr-4">
-                🖼️
-            </div>
-            </div>
-
-            <div class="f6 text-gray mt-2">
-                
-                <div class="mb-1">
-                
-                
-                
-                
-                
-                </div>
-
-                
-                <div>
-                Created
-                <relative-time datetime="Tue, 18 Mar 2025 23:53:43 &#43;0900" class="no-wrap" title="Tue, 18 Mar 2025 23:53:43 &#43;0900">
-                    Tue, 18 Mar 2025 23:53:43 &#43;0900
-                </relative-time>
-                
-                · Updated
-                <relative-time datetime="Mon, 05 Jan 2026 23:44:03 &#43;0900" class="no-wrap" title="Mon, 05 Jan 2026 23:44:03 &#43;0900">
-                    Mon, 05 Jan 2026 23:44:03 &#43;0900
-                </relative-time>
-                
-                </div>
-            </div>
-        </div>
-        </li>
-    
-        <li class="col-12 d-flex width-full py-4 border-bottom color-border-secondary public source">
-        <div class="col-12 d-inline-block">
-            
-            <div class="d-inline-block mb-1">
-                <h3 class="wb-break-all">
-                    <a href="http://localhost:1313/post/looker_studio_this_and_that/">[Looker Studio] This and That</a>
-                </h3>
-            </div>
-
-            
-            <div>
-            <div class="col-12 d-inline-block text-gray mb-2 pr-4">
-                🫧 How to use Google&rsquo;s SaaS about BI.
-            </div>
-            </div>
-
-            <div class="f6 text-gray mt-2">
-                
-                <div class="mb-1">
-                
-                
-                
-                <a class="muted-link mr-3" href="../../../tags/looker-studio">
-                    <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
-                        <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
-                    </svg>
-                    Looker Studio
-                </a>
-                
-                
-                
-                <a class="muted-link mr-3" href="../../../tags/looker">
-                    <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
-                        <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
-                    </svg>
-                    Looker
-                </a>
-                
-                
-                
-                </div>
-
-                
-                <div>
-                Created
-                <relative-time datetime="Mon, 24 Mar 2025 11:10:12 &#43;0900" class="no-wrap" title="Mon, 24 Mar 2025 11:10:12 &#43;0900">
-                    Mon, 24 Mar 2025 11:10:12 &#43;0900
-                </relative-time>
-                
-                · Updated
-                <relative-time datetime="Mon, 05 Jan 2026 23:44:03 &#43;0900" class="no-wrap" title="Mon, 05 Jan 2026 23:44:03 &#43;0900">
-                    Mon, 05 Jan 2026 23:44:03 &#43;0900
-                </relative-time>
-                
-                </div>
-            </div>
-        </div>
-        </li>
-    
-        <li class="col-12 d-flex width-full py-4 border-bottom color-border-secondary public source">
-        <div class="col-12 d-inline-block">
-            
-            <div class="d-inline-block mb-1">
-                <h3 class="wb-break-all">
-                    <a href="http://localhost:1313/post/bigquery_about_various_data_transfer/">[BigQuery] (Various) Data Transfer</a>
-                </h3>
-            </div>
-
-            
-            <div>
-            <div class="col-12 d-inline-block text-gray mb-2 pr-4">
-                🔍 Find out various data transfer methods starting from BigQuery.
-            </div>
-            </div>
-
-            <div class="f6 text-gray mt-2">
-                
-                <div class="mb-1">
-                
-                
-                
-                <a class="muted-link mr-3" href="../../../tags/bigquery">
-                    <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
-                        <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
-                    </svg>
-                    BigQuery
-                </a>
-                
-                
-                
-                <a class="muted-link mr-3" href="../../../tags/google-cloud">
-                    <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
-                        <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
-                    </svg>
-                    Google Cloud
-                </a>
-                
-                
-                
-                <a class="muted-link mr-3" href="../../../tags/etl/elt">
-                    <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
-                        <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
-                    </svg>
-                    ETL/ELT
-                </a>
-                
-                
-                
-                <a class="muted-link mr-3" href="../../../tags/sql">
-                    <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
-                        <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
-                    </svg>
-                    SQL
-                </a>
-                
-                
-                
-                <a class="muted-link mr-3" href="../../../tags/dbt">
-                    <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
-                        <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
-                    </svg>
-                    dbt
-                </a>
-                
-                
-                
-                </div>
-
-                
-                <div>
-                Created
-                <relative-time datetime="Thu, 03 Apr 2025 11:11:44 &#43;0900" class="no-wrap" title="Thu, 03 Apr 2025 11:11:44 &#43;0900">
-                    Thu, 03 Apr 2025 11:11:44 &#43;0900
-                </relative-time>
-                
-                · Updated
-                <relative-time datetime="Mon, 05 Jan 2026 23:44:03 &#43;0900" class="no-wrap" title="Mon, 05 Jan 2026 23:44:03 &#43;0900">
-                    Mon, 05 Jan 2026 23:44:03 &#43;0900
-                </relative-time>
-                
-                </div>
-            </div>
-        </div>
-        </li>
-    
-        <li class="col-12 d-flex width-full py-4 border-bottom color-border-secondary public source">
-        <div class="col-12 d-inline-block">
-            
-            <div class="d-inline-block mb-1">
-                <h3 class="wb-break-all">
-                    <a href="http://localhost:1313/post/other/freelance_this_and_that/">[Freelance] This and That</a>
-                </h3>
-            </div>
-
-            
-            <div>
-            <div class="col-12 d-inline-block text-gray mb-2 pr-4">
-                🆓 A wide range of knowledge is required to become a freelance engineer.
-            </div>
-            </div>
-
-            <div class="f6 text-gray mt-2">
-                
-                <div class="mb-1">
-                
-                
-                
-                
-                
-                </div>
-
-                
-                <div>
-                Created
-                <relative-time datetime="Tue, 08 Apr 2025 10:47:32 &#43;0900" class="no-wrap" title="Tue, 08 Apr 2025 10:47:32 &#43;0900">
-                    Tue, 08 Apr 2025 10:47:32 &#43;0900
-                </relative-time>
-                
-                · Updated
-                <relative-time datetime="Mon, 05 Jan 2026 23:44:03 &#43;0900" class="no-wrap" title="Mon, 05 Jan 2026 23:44:03 &#43;0900">
-                    Mon, 05 Jan 2026 23:44:03 &#43;0900
-                </relative-time>
-                
-                </div>
-            </div>
-        </div>
-        </li>
-    
-        <li class="col-12 d-flex width-full py-4 border-bottom color-border-secondary public source">
-        <div class="col-12 d-inline-block">
-            
-            <div class="d-inline-block mb-1">
-                <h3 class="wb-break-all">
-                    <a href="http://localhost:1313/post/tableau_this_and_that/">[Tableau] This and That</a>
-                </h3>
-            </div>
-
-            
-            <div>
-            <div class="col-12 d-inline-block text-gray mb-2 pr-4">
-                ✨A little while ago, I&rsquo;ll be writing about my studies as an introduction to Tableau
-            </div>
-            </div>
-
-            <div class="f6 text-gray mt-2">
-                
-                <div class="mb-1">
-                
-                
-                
-                <a class="muted-link mr-3" href="../../../tags/tableau">
-                    <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
-                        <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
-                    </svg>
-                    Tableau
-                </a>
-                
-                
-                
-                </div>
-
-                
-                <div>
-                Created
-                <relative-time datetime="Mon, 02 Jun 2025 14:46:08 &#43;0900" class="no-wrap" title="Mon, 02 Jun 2025 14:46:08 &#43;0900">
-                    Mon, 02 Jun 2025 14:46:08 &#43;0900
                 </relative-time>
                 
                 · Updated
@@ -1579,7 +1647,7 @@ else {
     githubIconElement.setAttribute('class', 'octicon')
     githubIconElement.setAttribute('color', '#f0f6fc')
   }
-  if (twitterIconElement)  twitterIconElement.setAttribute('fill', 'white') 
+  if (twitterIconElement)  twitterIconElement.setAttribute('fill', 'white')
 }
 </script>
 

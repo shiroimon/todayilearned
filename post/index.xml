@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Apr 2026 17:42:23 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 05 Apr 2026 19:07:59 +0900</lastBuildDate>
     <atom:link href="https://shiroimon.kithub.f5.si/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Claude Code] Miscellaneous &lt;雑記&gt;</title>
@@ -118,7 +118,7 @@
       <link>https://shiroimon.kithub.f5.si/post/yaml_catchup/</link>
       <pubDate>Tue, 17 Dec 2024 22:39:48 +0900</pubDate>
       <guid>https://shiroimon.kithub.f5.si/post/yaml_catchup/</guid>
-      <description>🚫 Understand Yaml, the configuratio file familiar to DevOps.</description>
+      <description>❗️Understand Yaml, the configuratio file familiar to DevOps.</description>
     </item>
     <item>
       <title>[Zsh] Commands memorandum</title>

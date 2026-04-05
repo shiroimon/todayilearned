@@ -6,14 +6,14 @@
     <description>Recent content in XML on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Feb 2026 09:12:39 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 05 Apr 2026 19:07:59 +0900</lastBuildDate>
     <atom:link href="https://shiroimon.kithub.f5.si/tags/xml/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[YAML] Catchup</title>
       <link>https://shiroimon.kithub.f5.si/post/yaml_catchup/</link>
       <pubDate>Tue, 17 Dec 2024 22:39:48 +0900</pubDate>
       <guid>https://shiroimon.kithub.f5.si/post/yaml_catchup/</guid>
-      <description>🚫 Understand Yaml, the configuratio file familiar to DevOps.</description>
+      <description>❗️Understand Yaml, the configuratio file familiar to DevOps.</description>
     </item>
   </channel>
 </rss>
