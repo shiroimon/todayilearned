@@ -10,23 +10,23 @@
     <atom:link href="https://shiroimon.kithub.f5.si/tags/macos/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[macOS] Commands memorandum</title>
-      <link>https://shiroimon.kithub.f5.si/post/macos_commands_memorandum/</link>
+      <link>https://shiroimon.kithub.f5.si/post/other/macos_commands_memorandum/</link>
       <pubDate>Tue, 28 Jan 2025 00:50:32 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/macos_commands_memorandum/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/other/macos_commands_memorandum/</guid>
       <description>🍏 macOS useful commands and tips.</description>
     </item>
     <item>
       <title>[macOS] UNIX is ancestor</title>
-      <link>https://shiroimon.kithub.f5.si/post/macos_unix_is_ancestor/</link>
+      <link>https://shiroimon.kithub.f5.si/post/other/macos_unix_is_ancestor/</link>
       <pubDate>Mon, 30 Sep 2024 23:28:04 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/macos_unix_is_ancestor/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/other/macos_unix_is_ancestor/</guid>
       <description>🩶 About the legacy of inventions from a previous era that heavily influenced macOS.</description>
     </item>
     <item>
       <title>[macOS] Looks like native application</title>
-      <link>https://shiroimon.kithub.f5.si/post/macos_looks_like_native_application/</link>
+      <link>https://shiroimon.kithub.f5.si/post/other/macos_looks_like_native_application/</link>
       <pubDate>Sat, 03 Aug 2024 16:04:18 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/macos_looks_like_native_application/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/other/macos_looks_like_native_application/</guid>
       <description>🍏 A little trick to use it like a native laptop application.</description>
     </item>
   </channel>

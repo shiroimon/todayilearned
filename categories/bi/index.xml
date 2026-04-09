@@ -6,7 +6,7 @@
     <description>Recent content in BI on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Apr 2026 17:42:23 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 31 Mar 2026 00:12:01 +0900</lastBuildDate>
     <atom:link href="https://shiroimon.kithub.f5.si/categories/bi/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Looker] This and That</title>
@@ -21,13 +21,6 @@
       <pubDate>Mon, 02 Jun 2025 14:46:08 +0900</pubDate>
       <guid>https://shiroimon.kithub.f5.si/post/tableau_this_and_that/</guid>
       <description>✨A little while ago, I&amp;rsquo;ll be writing about my studies as an introduction to Tableau</description>
-    </item>
-    <item>
-      <title>[Looker Studio] This and That</title>
-      <link>https://shiroimon.kithub.f5.si/post/looker_studio_this_and_that/</link>
-      <pubDate>Mon, 24 Mar 2025 11:10:12 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/looker_studio_this_and_that/</guid>
-      <description>🫧 How to use Google&amp;rsquo;s SaaS about BI.</description>
     </item>
   </channel>
 </rss>

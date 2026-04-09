@@ -6,7 +6,7 @@
     <description>Recent content in Google on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Apr 2026 17:42:23 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 01 Apr 2026 20:58:59 +0900</lastBuildDate>
     <atom:link href="https://shiroimon.kithub.f5.si/categories/google/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Looker] This and That</title>
@@ -35,13 +35,6 @@
       <pubDate>Thu, 03 Apr 2025 11:11:44 +0900</pubDate>
       <guid>https://shiroimon.kithub.f5.si/post/bigquery_about_various_data_transfer/</guid>
       <description>🔍 Find out various data transfer methods starting from BigQuery.</description>
-    </item>
-    <item>
-      <title>[Looker Studio] This and That</title>
-      <link>https://shiroimon.kithub.f5.si/post/looker_studio_this_and_that/</link>
-      <pubDate>Mon, 24 Mar 2025 11:10:12 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/looker_studio_this_and_that/</guid>
-      <description>🫧 How to use Google&amp;rsquo;s SaaS about BI.</description>
     </item>
     <item>
       <title>[BigQuery] Machine Learning</title>

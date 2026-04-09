@@ -58,13 +58,6 @@
       <description>🔍 Find out various data transfer methods starting from BigQuery.</description>
     </item>
     <item>
-      <title>[Looker Studio] This and That</title>
-      <link>https://shiroimon.kithub.f5.si/post/looker_studio_this_and_that/</link>
-      <pubDate>Mon, 24 Mar 2025 11:10:12 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/looker_studio_this_and_that/</guid>
-      <description>🫧 How to use Google&amp;rsquo;s SaaS about BI.</description>
-    </item>
-    <item>
       <title>[BigQuery] Machine Learning</title>
       <link>https://shiroimon.kithub.f5.si/post/bigquery_about_machine_learning/</link>
       <pubDate>Fri, 14 Mar 2025 17:31:44 +0900</pubDate>
@@ -94,9 +87,9 @@
     </item>
     <item>
       <title>[macOS] Commands memorandum</title>
-      <link>https://shiroimon.kithub.f5.si/post/macos_commands_memorandum/</link>
+      <link>https://shiroimon.kithub.f5.si/post/other/macos_commands_memorandum/</link>
       <pubDate>Tue, 28 Jan 2025 00:50:32 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/macos_commands_memorandum/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/other/macos_commands_memorandum/</guid>
       <description>🍏 macOS useful commands and tips.</description>
     </item>
     <item>
@@ -178,9 +171,9 @@
     </item>
     <item>
       <title>[macOS] UNIX is ancestor</title>
-      <link>https://shiroimon.kithub.f5.si/post/macos_unix_is_ancestor/</link>
+      <link>https://shiroimon.kithub.f5.si/post/other/macos_unix_is_ancestor/</link>
       <pubDate>Mon, 30 Sep 2024 23:28:04 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/macos_unix_is_ancestor/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/other/macos_unix_is_ancestor/</guid>
       <description>🩶 About the legacy of inventions from a previous era that heavily influenced macOS.</description>
     </item>
     <item>
@@ -248,16 +241,16 @@
     </item>
     <item>
       <title>[macOS] Looks like native application</title>
-      <link>https://shiroimon.kithub.f5.si/post/macos_looks_like_native_application/</link>
+      <link>https://shiroimon.kithub.f5.si/post/other/macos_looks_like_native_application/</link>
       <pubDate>Sat, 03 Aug 2024 16:04:18 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/macos_looks_like_native_application/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/other/macos_looks_like_native_application/</guid>
       <description>🍏 A little trick to use it like a native laptop application.</description>
     </item>
     <item>
       <title>[English] Abbreviations</title>
-      <link>https://shiroimon.kithub.f5.si/post/english_abbreviations/</link>
+      <link>https://shiroimon.kithub.f5.si/post/other/english_abbreviations/</link>
       <pubDate>Tue, 30 Jul 2024 12:48:55 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/english_abbreviations/</guid>
+      <guid>https://shiroimon.kithub.f5.si/post/other/english_abbreviations/</guid>
       <description>🗽 About abbreviations. They also appear in business and professional situations.</description>
     </item>
     <item>
