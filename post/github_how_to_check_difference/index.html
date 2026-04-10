@@ -16,7 +16,7 @@
     
     <meta name="theme-color" content="#1e2327">
 
-    <link rel="stylesheet" href="http://localhost:1313/css/gist.css">
+    <link rel="stylesheet" href="http://localhost:1313/css/gist.css"><link rel="stylesheet" href="http://localhost:1313/css/markdown-alert.css">
     <script type="text/javascript" src="http://localhost:1313/js/gist-dark-mode.js"></script>
     
 
@@ -222,6 +222,7 @@ if ('serviceWorker' in navigator) {
         
         <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
         <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+
             
             <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
             <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
@@ -288,6 +289,15 @@ if ('serviceWorker' in navigator) {
         </div>
 
         
+        
+        
+        
+        <div class="flash flash-warn" style="margin: 16px 20px 0; padding: 12px 16px; border: 1px solid rgba(212, 167, 44, 0.4); border-radius: 6px; background-color: rgba(212, 167, 44, 0.1); color: var(--color-text-primary, #24292f);">
+            ⚠ この記事が書かれてから<strong>1年以上</strong>が経過しています。内容が古いのであまり参考にはしないでください。
+        </div>
+        
+
+        
         <div class="Box-body px-5 pb-5" style="z-index: 1">
             <article class="markdown-body entry-content container-lg"><!-- Icon Badge -->
 <p><img src="https://img.shields.io/badge/-Git-F05032.svg?logo=git&amp;style=flat&amp;color=F0F8FF&amp;logoColor=" alt="Git">
@@ -298,8 +308,9 @@ if ('serviceWorker' in navigator) {
 バグ修正時やペアプログラミングの際、はたまたコードレビュー時に鋭くかつ適切に理解ができる効果を期待したいため。</p>
 <h2 id="how">How<a class="anchor" aria-hidden="true" href="#how"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
 <h3 id="app-sourcegraph">[App] SourceGraph<a class="anchor" aria-hidden="true" href="#app-sourcegraph"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+
 <blockquote>
-<p>
+    <p>
 
 <div>
     <div class="github-card" data-github="sourcegraph" data-theme="default"></div>
@@ -317,10 +328,13 @@ if ('serviceWorker' in navigator) {
 <li><a href="https://www.software.com/reports/code-time-report">Global Code Time Report</a> Software</li>
 <li><a href="https://qiita.com/YusukeIzawa/items/b50f19fdc59b9ef50884">ソースコードgrep地獄を助けるSourceGraph</a> Qiita</li>
 </ul>
-</blockquote>
-<h3 id="heading"><del>[WebUI] GitHub Code Search (β版)</del><a class="anchor" aria-hidden="true" href="#heading"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
-<blockquote>
 
+</blockquote>
+
+<h3 id="heading"><del>[WebUI] GitHub Code Search (β版)</del><a class="anchor" aria-hidden="true" href="#heading"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+
+<blockquote>
+    
 
 <div>
     <div class="github-card" data-github="features/code-search" data-theme="default"></div>
@@ -339,10 +353,13 @@ if ('serviceWorker' in navigator) {
 <p>検索窓に「<code>repo:{your/repository/name} {your/file.name}</code>」
 会社の凄い人は、こんな風に検索をかけて調べていた。<br>
 ※最近では専らコレばかり使用している。</p>
+
 </blockquote>
+
 <h3 id="webui-url">[WebUI] URL<a class="anchor" aria-hidden="true" href="#webui-url"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+
 <blockquote>
-<p>URLを加工してBrowser画面上で比較</p>
+    <p>URLを加工してBrowser画面上で比較</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">※ 便宜的にURLノード別に改行している
 </span></span><span class="line"><span class="cl">https://github.com
 </span></span><span class="line"><span class="cl">       /[ユーザー（組織）名]
@@ -387,15 +404,21 @@ if ('serviceWorker' in navigator) {
 </ol>
 </li>
 </ul>
+
 </blockquote>
+
 <h3 id="webui-link-share">[WebUI] Link Share<a class="anchor" aria-hidden="true" href="#webui-link-share"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+
 <blockquote>
-<p>GitHubのWebUI上で、コードやページに対して共有リンクを発行することができる。<br>
+    <p>GitHubのWebUI上で、コードやページに対して共有リンクを発行することができる。<br>
 修正したい箇所や共有したい箇所に対して、右クリックで発行してシェア。</p>
+
 </blockquote>
+
 <h3 id="cli--git-diff">[CLI] $ git diff<a class="anchor" aria-hidden="true" href="#cli--git-diff"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+
 <blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ git diff
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ git diff
 </span></span></code></pre></div><ul>
 <li>コミット間
 <ol>
@@ -413,7 +436,9 @@ if ('serviceWorker' in navigator) {
 </ul>
 </li>
 </ul>
+
 </blockquote>
+
 <h3 id="cli--git-grep">[CLI] $ git grep<a class="anchor" aria-hidden="true" href="#cli--git-grep"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 <p><a href="https://www.r-staffing.co.jp/engineer/entry/20200626_1">第13話 どのコミットでバグが入ったかgit blameで調べてみよう【連載】マンガでわかるGit ～コマンド編～</a></p>
 <h3 id="cli--git-blame">[CLI] $ git blame<a class="anchor" aria-hidden="true" href="#cli--git-blame"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
@@ -484,8 +509,6 @@ if ('serviceWorker' in navigator) {
 
 
 
-
-
 <script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js" crossorigin="anonymous"></script>
 <script>
 
@@ -535,7 +558,7 @@ if ('serviceWorker' in navigator) {
     clientSecret: '08c9365618f3a7434fe608970e757bba3d2369bc',
     repo: 'todayilearned',
     owner: 'shiroimon',
-    admin: ["shiroimon"],
+    admin: "shiroimon",
     labels: ["gitalk"],
     perPage:  10 ,
     pagerDirection: 'last',

@@ -1,0 +1,102 @@
+.markdown-alert {
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    border-left: 4px solid;
+    border-radius: 6px;
+}
+
+.markdown-alert > :first-child {
+    margin-top: 0;
+}
+
+.markdown-alert > :last-child {
+    margin-bottom: 0;
+}
+
+.markdown-alert-title {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.markdown-alert-title .octicon {
+    margin-right: 8px;
+    fill: currentColor;
+}
+
+/* Note - Blue */
+.markdown-alert-note {
+    border-left-color: #1f6feb;
+    background-color: rgba(31, 111, 235, 0.05);
+}
+
+.markdown-alert-note .markdown-alert-title {
+    color: #1f6feb;
+}
+
+/* Tip - Green */
+.markdown-alert-tip {
+    border-left-color: #238636;
+    background-color: rgba(35, 134, 54, 0.05);
+}
+
+.markdown-alert-tip .markdown-alert-title {
+    color: #238636;
+}
+
+/* Important - Purple */
+.markdown-alert-important {
+    border-left-color: #8957e5;
+    background-color: rgba(137, 87, 229, 0.05);
+}
+
+.markdown-alert-important .markdown-alert-title {
+    color: #8957e5;
+}
+
+/* Warning - Yellow */
+.markdown-alert-warning {
+    border-left-color: #d29922;
+    background-color: rgba(210, 153, 34, 0.05);
+}
+
+.markdown-alert-warning .markdown-alert-title {
+    color: #d29922;
+}
+
+/* Caution - Red */
+.markdown-alert-caution {
+    border-left-color: #da3633;
+    background-color: rgba(218, 54, 51, 0.05);
+}
+
+.markdown-alert-caution .markdown-alert-title {
+    color: #da3633;
+}
+
+/* Dark mode overrides */
+[data-color-mode="dark"] .markdown-alert-note,
+.dark .markdown-alert-note {
+    background-color: rgba(31, 111, 235, 0.1);
+}
+
+[data-color-mode="dark"] .markdown-alert-tip,
+.dark .markdown-alert-tip {
+    background-color: rgba(35, 134, 54, 0.1);
+}
+
+[data-color-mode="dark"] .markdown-alert-important,
+.dark .markdown-alert-important {
+    background-color: rgba(137, 87, 229, 0.1);
+}
+
+[data-color-mode="dark"] .markdown-alert-warning,
+.dark .markdown-alert-warning {
+    background-color: rgba(210, 153, 34, 0.1);
+}
+
+[data-color-mode="dark"] .markdown-alert-caution,
+.dark .markdown-alert-caution {
+    background-color: rgba(218, 54, 51, 0.1);
+}

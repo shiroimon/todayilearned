@@ -16,7 +16,7 @@
     
     <meta name="theme-color" content="#1e2327">
 
-    <link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/gist.css">
+    <link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/gist.css"><link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/markdown-alert.css">
     <script type="text/javascript" src="https://shiroimon.kithub.f5.si/js/gist-dark-mode.js"></script>
     
 
@@ -222,6 +222,7 @@ if ('serviceWorker' in navigator) {
         
         <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
         <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+
             
             <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
             <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
@@ -236,7 +237,7 @@ if ('serviceWorker' in navigator) {
                     <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list"></div>
                 </div>
             </details-menu>
-            622 Words
+            621 Words
             <span class="path-divider">|</span>
             2 min
             </div>
@@ -277,6 +278,11 @@ if ('serviceWorker' in navigator) {
         </div>
 
         
+        
+        
+        
+
+        
         <div class="Box-body px-5 pb-5" style="z-index: 1">
             <article class="markdown-body entry-content container-lg"><!-- Icon Badge -->
 <p><img src="https://img.shields.io/badge/-Open%20AI-412991.svg?logo=openai&amp;style=flat&amp;color=F0F8FF&amp;logoColor=412991" alt="Open AI"></p>
@@ -312,11 +318,15 @@ if ('serviceWorker' in navigator) {
 </li>
 </ul>
 <h3 id="install">Install<a class="anchor" aria-hidden="true" href="#install"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
-<blockquote>
-<p>[!warnig]
-定期的にアップデートを確認して、最新バージョンに保つことをお勧め。
+
+<div class="markdown-alert markdown-alert-warnig">
+    <p class="markdown-alert-title">
+        
+    </p>
+    <p>定期的にアップデートを確認して、最新バージョンに保つことをお勧め。
 週に1~2回程度配布されている。</p>
-</blockquote>
+</div>
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">% brew install codex
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">% npm install -g @openai/codex
 </span></span></code></pre></div><ul>
@@ -442,8 +452,6 @@ if ('serviceWorker' in navigator) {
 
 
 
-
-
 <script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js" crossorigin="anonymous"></script>
 <script>
 
@@ -491,7 +499,7 @@ if ('serviceWorker' in navigator) {
     clientSecret: '08c9365618f3a7434fe608970e757bba3d2369bc',
     repo: 'todayilearned',
     owner: 'shiroimon',
-    admin: ["shiroimon"],
+    admin: "shiroimon",
     labels: ["gitalk"],
     perPage:  10 ,
     pagerDirection: 'last',

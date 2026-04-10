@@ -16,7 +16,7 @@
     
     <meta name="theme-color" content="#1e2327">
 
-    <link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/gist.css">
+    <link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/gist.css"><link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/markdown-alert.css">
     <script type="text/javascript" src="https://shiroimon.kithub.f5.si/js/gist-dark-mode.js"></script>
     
 
@@ -222,6 +222,7 @@ if ('serviceWorker' in navigator) {
         
         <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
         <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+
             
             <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
             <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
@@ -277,6 +278,15 @@ if ('serviceWorker' in navigator) {
         </div>
 
         
+        
+        
+        
+        <div class="flash flash-warn" style="margin: 16px 20px 0; padding: 12px 16px; border: 1px solid rgba(212, 167, 44, 0.4); border-radius: 6px; background-color: rgba(212, 167, 44, 0.1); color: var(--color-text-primary, #24292f);">
+            ⚠ この記事が書かれてから<strong>1年以上</strong>が経過しています。内容が古いのであまり参考にはしないでください。
+        </div>
+        
+
+        
         <div class="Box-body px-5 pb-5" style="z-index: 1">
             <article class="markdown-body entry-content container-lg"><!-- Icon Badge -->
 <h2 id="why">Why<a class="anchor" aria-hidden="true" href="#why"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
@@ -290,17 +300,31 @@ if ('serviceWorker' in navigator) {
 </div>
 
 
-<blockquote>
-<p>[!TIP] <br>
-2026年1月にも push があり、アーカイブもされていないのでメンテナンスは続いている。 <br>
+
+<div class="markdown-alert markdown-alert-tip">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>
+        Tip
+        
+    </p>
+    <p>2026年1月にも push があり、アーカイブもされていないのでメンテナンスは続いている。 <br>
 ただ2010年からのプラグインで、Vim専用（Neovim向け最適化なし）の古典的な設計。<br>
 今の用途（CSVのfiletype検出・基本的なシンタックスハイライト・ヘッダー認識）には十分！</p>
-</blockquote>
-<blockquote>
-<p>[!NOTE] <br>
-主な操作コマンドが、列指向（縦持ち）が強いので、<br>
+</div>
+
+
+<div class="markdown-alert markdown-alert-note">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>
+        Note
+        
+    </p>
+    <p>主な操作コマンドが、列指向（縦持ち）が強いので、<br>
 仮に、元データが行指向（横持ち）なら、先に <code>:CSVTranspose</code> (転置行列)で変換をかましたほうが分析しやすいかもしれない。</p>
-</blockquote>
+</div>
+
 <hr>
 <h3 id="表示系">表示系<a class="anchor" aria-hidden="true" href="#表示系"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 <h4 id="テーブル描画">テーブル描画<a class="anchor" aria-hidden="true" href="#テーブル描画"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
@@ -625,8 +649,9 @@ if ('serviceWorker' in navigator) {
 </table>
 <hr>
 <h3 id="番外編">番外編<a class="anchor" aria-hidden="true" href="#番外編"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+
 <blockquote>
-<p>Go制のCLIツール
+    <p>Go制のCLIツール
 
 
 <div>
@@ -637,9 +662,12 @@ if ('serviceWorker' in navigator) {
 </p>
 <!-- https://github.com/hymkor/csvi -->
 <p>cf. <a href="https://zenn.dev/zetamatta/articles/terminal-csv-editor">本番環境で戦うためのターミナルCSVエディタをGoで作っています</a> Zenn</p>
+
 </blockquote>
+
+
 <blockquote>
-<p>揃えることに特化した最強ツール
+    <p>揃えることに特化した最強ツール
 
 
 <div>
@@ -650,7 +678,9 @@ if ('serviceWorker' in navigator) {
 </p>
 <!-- https://github.com/junegunn/vim-easy-align -->
 <p>cf. <a href="https://news.mynavi.jp/techplus/article/techp5142/">第248回 にわか管理者のためのLinux運用入門 Vimを使う - 「良い具合」にそろえるプラグイン「vim-easy-align」</a></p>
+
 </blockquote>
+
 <hr>
 <h3 id="references">References<a class="anchor" aria-hidden="true" href="#references"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 <ul>
@@ -721,8 +751,6 @@ if ('serviceWorker' in navigator) {
 
 
 
-
-
 <script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js" crossorigin="anonymous"></script>
 <script>
 
@@ -770,7 +798,7 @@ if ('serviceWorker' in navigator) {
     clientSecret: '08c9365618f3a7434fe608970e757bba3d2369bc',
     repo: 'todayilearned',
     owner: 'shiroimon',
-    admin: ["shiroimon"],
+    admin: "shiroimon",
     labels: ["gitalk"],
     perPage:  10 ,
     pagerDirection: 'last',

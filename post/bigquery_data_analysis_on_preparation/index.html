@@ -16,7 +16,7 @@
     
     <meta name="theme-color" content="#1e2327">
 
-    <link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/gist.css">
+    <link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/gist.css"><link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/markdown-alert.css">
     <script type="text/javascript" src="https://shiroimon.kithub.f5.si/js/gist-dark-mode.js"></script>
     
 
@@ -222,6 +222,7 @@ if ('serviceWorker' in navigator) {
         
         <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
         <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+
             
             <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
             <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
@@ -275,6 +276,15 @@ if ('serviceWorker' in navigator) {
             </div>
         </div>
         </div>
+
+        
+        
+        
+        
+        <div class="flash flash-warn" style="margin: 16px 20px 0; padding: 12px 16px; border: 1px solid rgba(212, 167, 44, 0.4); border-radius: 6px; background-color: rgba(212, 167, 44, 0.1); color: var(--color-text-primary, #24292f);">
+            ⚠ この記事が書かれてから<strong>1年以上</strong>が経過しています。内容が古いのであまり参考にはしないでください。
+        </div>
+        
 
         
         <div class="Box-body px-5 pb-5" style="z-index: 1">
@@ -513,8 +523,6 @@ at [99:99]
 
 
 
-
-
 <script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js" crossorigin="anonymous"></script>
 <script>
 
@@ -562,7 +570,7 @@ at [99:99]
     clientSecret: '08c9365618f3a7434fe608970e757bba3d2369bc',
     repo: 'todayilearned',
     owner: 'shiroimon',
-    admin: ["shiroimon"],
+    admin: "shiroimon",
     labels: ["gitalk"],
     perPage:  10 ,
     pagerDirection: 'last',

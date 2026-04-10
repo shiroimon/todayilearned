@@ -16,7 +16,7 @@
     
     <meta name="theme-color" content="#1e2327">
 
-    <link rel="stylesheet" href="http://localhost:1313/css/gist.css">
+    <link rel="stylesheet" href="http://localhost:1313/css/gist.css"><link rel="stylesheet" href="http://localhost:1313/css/markdown-alert.css">
     <script type="text/javascript" src="http://localhost:1313/js/gist-dark-mode.js"></script>
     
 
@@ -222,6 +222,7 @@ if ('serviceWorker' in navigator) {
         
         <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
         <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+
             
             <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
             <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
@@ -266,6 +267,11 @@ if ('serviceWorker' in navigator) {
         </div>
 
         
+        
+        
+        
+
+        
         <div class="Box-body px-5 pb-5" style="z-index: 1">
             <article class="markdown-body entry-content container-lg"><!-- Icon Badge -->
 <p><img src="https://img.shields.io/badge/-GO-00ADD8.svg?logo=go&amp;style=flat&amp;color=F0F8FF&amp;logoColor=00ADD8" alt="GO"></p>
@@ -275,17 +281,24 @@ if ('serviceWorker' in navigator) {
 <h3 id="goの特徴">Goの特徴<a class="anchor" aria-hidden="true" href="#goの特徴"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 <img width=60% src="https://assets.st-note.com/img/1675649226030-JEN1WCkod8.jpg" />
 <h3 id="a-tour-of-go">A Tour of Go<a class="anchor" aria-hidden="true" href="#a-tour-of-go"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
-<blockquote>
-<p>[!NOTE] <br>
-Welcome to a tour of Go</p>
+
+<div class="markdown-alert markdown-alert-note">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>
+        Note
+        
+    </p>
+    <p>Welcome to a tour of Go</p>
 <ul>
 <li><a href="https://go.dev/tour/list">https://go.dev/tour/list</a> / <a href="https://go-tour-jp.appspot.com/list">JP</a></li>
 <li><a href="https://go.dev/blog/playground">https://go.dev/blog/playground</a></li>
 <li><details>
   <summary>details</summary>
   <p></p>
-  <blockquote>
-<p>Using the tour</p>
+  
+<blockquote>
+    <p>Using the tour</p>
 <ul>
 <li><a href="https://go-tour-jp.appspot.com/welcome/1">/welcome/</a></li>
 </ul>
@@ -303,16 +316,25 @@ Welcome to a tour of Go</p>
 <ul>
 <li><a href="https://go-tour-jp.appspot.com/concurrency/1">/concurrency/</a></li>
 </ul>
+
 </blockquote>
+
 
   <p></p>
 </details>
 </li>
 </ul>
-</blockquote>
-<blockquote>
-<p>[!TIP]
-<strong>全部やる必要はない</strong> (AI曰く)。 以下を優先的に読む:</p>
+</div>
+
+
+<div class="markdown-alert markdown-alert-tip">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>
+        Tip
+        
+    </p>
+    <p><strong>全部やる必要はない</strong> (AI曰く)。 以下を優先的に読む:</p>
 <ul>
 <li>Basics (p1-p16): さっと通す</li>
 <li>Flow control (p1-p13): for, if, switch, defer をさっと通す</li>
@@ -320,7 +342,8 @@ Welcome to a tour of Go</p>
 <li>Methods and interfaces: struct + method, interface → <strong>最重要。ここに時間をかける</strong></li>
 <li>Concurrency → <strong>スキップしてもよい</strong>（<code>Bubble Tea</code> を用いたTUI開発の場合では内部で処理するため直接使わない）</li>
 </ul>
-</blockquote>
+</div>
+
 <h4 id="basics">Basics<a class="anchor" aria-hidden="true" href="#basics"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
 <ul>
 <li>p1. Packages
@@ -604,12 +627,19 @@ Welcome to a tour of Go</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">,</span><span class="w"> </span><span class="nx">z</span><span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
-</span></span></span></code></pre></div><blockquote>
-<p>[!NOTE]
-<br> C言語では暗黙的に型変換（implicit conversion）が行われますが、
+</span></span></span></code></pre></div>
+<div class="markdown-alert markdown-alert-note">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>
+        Note
+        
+    </p>
+    <p><br> C言語では暗黙的に型変換（implicit conversion）が行われますが、
 <br> Goではすべての型変換を明示的に書く必要がある。
 <br> これにより、<strong>意図しない精度の損失</strong>や<strong>データの切り捨て</strong>を防ぐ（コードの安全性UP）</p>
-</blockquote>
+</div>
+
 <ul>
 <li>p14. Type inference
 <ul>
@@ -2670,8 +2700,6 @@ Welcome to a tour of Go</p>
 
 
 
-
-
 <script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js" crossorigin="anonymous"></script>
 <script>
 
@@ -2719,7 +2747,7 @@ Welcome to a tour of Go</p>
     clientSecret: '08c9365618f3a7434fe608970e757bba3d2369bc',
     repo: 'todayilearned',
     owner: 'shiroimon',
-    admin: ["shiroimon"],
+    admin: "shiroimon",
     labels: ["gitalk"],
     perPage:  10 ,
     pagerDirection: 'last',
