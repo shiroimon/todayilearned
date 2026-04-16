@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Apr 2026 19:14:55 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2026 21:47:21 +0900</lastBuildDate>
     <atom:link href="https://shiroimon.kithub.f5.si/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Claude Code] Miscellaneous &lt;雑記&gt;</title>
@@ -280,13 +280,6 @@
       <pubDate>Wed, 24 Jul 2024 15:08:13 +0900</pubDate>
       <guid>https://shiroimon.kithub.f5.si/post/github_this_and_that/</guid>
       <description>📍 Various things to make your GitHub life more enjoyable.</description>
-    </item>
-    <item>
-      <title>[Slack] Writing etiquette</title>
-      <link>https://shiroimon.kithub.f5.si/post/slack_writing_etiquette/</link>
-      <pubDate>Tue, 23 Jul 2024 18:17:17 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/slack_writing_etiquette/</guid>
-      <description>🔔 Learn writing etiquette using Slack&amp;rsquo;s unique notation.</description>
     </item>
     <item>
       <title>[BigQuery] CTEs in data analyisis</title>
