@@ -6,7 +6,7 @@
     <description>Recent content in Slack on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Apr 2026 21:47:19 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 09 Apr 2026 22:51:13 +0900</lastBuildDate>
     <atom:link href="https://shiroimon.kithub.f5.si/tags/slack/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[English] Abbreviations</title>
@@ -14,6 +14,13 @@
       <pubDate>Tue, 30 Jul 2024 12:48:55 +0900</pubDate>
       <guid>https://shiroimon.kithub.f5.si/post/other/english_abbreviations/</guid>
       <description>🗽 About abbreviations. They also appear in business and professional situations.</description>
+    </item>
+    <item>
+      <title>[Slack] Writing etiquette</title>
+      <link>https://shiroimon.kithub.f5.si/post/slack_writing_etiquette/</link>
+      <pubDate>Tue, 23 Jul 2024 18:17:17 +0900</pubDate>
+      <guid>https://shiroimon.kithub.f5.si/post/slack_writing_etiquette/</guid>
+      <description>🔔 Learn writing etiquette using Slack&amp;rsquo;s unique notation.</description>
     </item>
   </channel>
 </rss>

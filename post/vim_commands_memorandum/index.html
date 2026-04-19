@@ -203,7 +203,7 @@ if ('serviceWorker' in navigator) {
                 Created <relative-time datetime="Sat, 17 Aug 2024 01:02:03 &#43;0900" class="no-wrap">Sat, 17 Aug 2024 01:02:03 &#43;0900</relative-time>
                 
                 <span class="path-divider">|</span>
-                Modified <relative-time datetime="Tue, 14 Apr 2026 01:16:43 &#43;0900" class="no-wrap">Tue, 14 Apr 2026 01:16:43 &#43;0900</relative-time>
+                Modified <relative-time datetime="Fri, 20 Mar 2026 18:03:13 &#43;0900" class="no-wrap">Fri, 20 Mar 2026 18:03:13 &#43;0900</relative-time>
                 
             </div>
         </div>
@@ -237,9 +237,9 @@ if ('serviceWorker' in navigator) {
                     <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list"></div>
                 </div>
             </details-menu>
-            2891 Words
+            1912 Words
             <span class="path-divider">|</span>
-            4 min
+            2 min
             </div>
 
             
@@ -569,198 +569,6 @@ if ('serviceWorker' in navigator) {
 </ul>
 </li>
 </ul>
-<h3 id="advanced--plugins">Advanced / Plugins<a class="anchor" aria-hidden="true" href="#advanced--plugins"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
-<ul>
-<li>
-<p><strong>Log</strong></p>
-<ul>
-<li>[:]<code>messages</code>    : メモリ上のログメッセージを表示</li>
-<li>[:]<code>history</code>     : <code>.viminfo</code> のコマンド履歴
-<ul>
-<li>[:]<code>ctrl + f</code>  : (同上)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Diff</strong></p>
-<ul>
-<li>
-<p>使い方</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># vimdiff コマンド（起動時）</span>
-</span></span><span class="line"><span class="cl">vim -d file1.go file2.go
-</span></span><span class="line"><span class="cl"><span class="c1"># または</span>
-</span></span><span class="line"><span class="cl">vimdiff file1.go file2.go
-</span></span></code></pre></div><ul>
-<li>最も簡単な方法</li>
-<li>起動時に2つ以上のファイルを縦分割で開いて差分表示</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># :diffsplit コマンド（Vim内）</span>
-</span></span><span class="line"><span class="cl">:diffsplit file2.go
-</span></span></code></pre></div><ul>
-<li>file1.go を開いている状態で実行</li>
-<li>水平分割で file2.go を開いて差分表示</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># :vertical diffsplit（縦分割版）</span>
-</span></span><span class="line"><span class="cl">:vertical diffsplit file2.md
-</span></span><span class="line"><span class="cl"><span class="c1"># または</span>
-</span></span><span class="line"><span class="cl">:vert diffsplit file2.md
-</span></span></code></pre></div><ul>
-<li>縦分割で差分表示（見やすい場合が多い）</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 手動で差分モードを有効化</span>
-</span></span><span class="line"><span class="cl">:split file2.txt
-</span></span><span class="line"><span class="cl">:windo diffthis
-</span></span></code></pre></div></li>
-<li>
-<p>※ 差分モード中に使用できるコマンド</p>
-<ul>
-<li><code>]c</code>                  : 次の差分へ移動</li>
-<li><code>[c</code>                  : 前の差分へ移動</li>
-<li><code>do</code> (<code>:diffget</code>)     : もう一方から変更を取り込む</li>
-<li><code>dp</code> (<code>:diffput</code>)     : 変更をもう一方に適用</li>
-<li>[:]<code>diffupdate</code>       : 差分表示を更新</li>
-<li>[:]<code>diffoff</code>          : 差分モードをオフ</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>複数ファイル 一括置換</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 複数ファイルを 一括置換</span>
-</span></span><span class="line"><span class="cl">vim *.sqlx
-</span></span><span class="line"><span class="cl">:argdo %s/anonymous_insomnia_/anonymous_depression_/g <span class="p">|</span> update
-</span></span></code></pre></div><ul>
-<li>→ [:]<code>ReplaceAll hoge/fuga</code> : <code>.vimrc</code> にて自作</li>
-</ul>
-</li>
-<li>
-<p><strong>Text Manipulation 補足</strong></p>
-<ul>
-<li>[v] + <code>gu</code> / <code>gU</code>   : 小文字 / 大文字 変換</li>
-<li>[v] + <code>zo</code> / <code>zc</code>   : folding ON / OFF</li>
-</ul>
-</li>
-<li>
-<p><strong>Git</strong></p>
-<ul>
-<li>
-<p>[vim-fugitive] Git Diff / Diffsplit</p>
-<ul>
-<li>
-<p><code>.vimrc</code> で <code>:git</code> → <code>:Git</code> エイリアスが設定済み（小文字で入力可能）</p>
-</li>
-<li>
-<p><code>:git diffsplit</code> → <code>:Gdiffsplit</code> にエイリアス済み</p>
-</li>
-<li>
-<p>差分表示</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">:git diff                <span class="c1"># unstaged changes（ステージ前の変更）</span>
-</span></span><span class="line"><span class="cl">:git diff --staged       <span class="c1"># ステージ済みの差分</span>
-</span></span><span class="line"><span class="cl">:git diff HEAD~1         <span class="c1"># 直前コミットとの差分</span>
-</span></span><span class="line"><span class="cl">:git diff master         <span class="c1"># master ブランチとの差分</span>
-</span></span></code></pre></div></li>
-<li>
-<p>左右分割で比較（diffsplit）</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">:git diffsplit           <span class="c1"># HEAD（最新コミット）と現在のファイルを左右比較</span>
-</span></span><span class="line"><span class="cl">:git diffsplit master    <span class="c1"># master 時点のファイルと比較（ブランチの変更全体を確認）</span>
-</span></span><span class="line"><span class="cl">:git diffsplit HEAD~1    <span class="c1"># 1つ前のコミットと比較</span>
-</span></span><span class="line"><span class="cl">:git diffsplit abc1234   <span class="c1"># 任意のコミットハッシュと比較</span>
-</span></span></code></pre></div><ul>
-<li>左 = 指定したリビジョン、右 = 作業コピー</li>
-</ul>
-</li>
-<li>
-<p>diffsplit 中の操作
-※ <code>]c</code> は <code>]</code> → <code>c</code> の順押し（同時押しではない）</p>
-<table>
-  <thead>
-      <tr>
-          <th>キー</th>
-          <th>説明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>]c</code></td>
-          <td>次の差分箇所にジャンプ</td>
-      </tr>
-      <tr>
-          <td><code>[c</code></td>
-          <td>前の差分箇所にジャンプ</td>
-      </tr>
-      <tr>
-          <td><code>do</code> (<code>:diffget</code>)</td>
-          <td>もう一方から変更を取り込む</td>
-      </tr>
-      <tr>
-          <td><code>dp</code> (<code>:diffput</code>)</td>
-          <td>変更をもう一方に適用</td>
-      </tr>
-      <tr>
-          <td><code>:only</code> / <code>:on</code></td>
-          <td>diff ビューを閉じて元に戻る</td>
-      </tr>
-      <tr>
-          <td><code>Tab</code> / <code>Shift+Tab</code></td>
-          <td>左右ウィンドウ切り替え（.vimrc 設定）</td>
-      </tr>
-  </tbody>
-</table>
-</li>
-<li>
-<p>実用的なワークフロー</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 1. 作業ブランチで master との差分を確認</span>
-</span></span><span class="line"><span class="cl">:git diffsplit master
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 2. ]c / [c で差分箇所を移動して確認</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 3. 確認が終わったら閉じる</span>
-</span></span><span class="line"><span class="cl">:only
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 補助：コミット一覧を確認してハッシュを取得</span>
-</span></span><span class="line"><span class="cl">:git log --oneline
-</span></span><span class="line"><span class="cl">:git commits             <span class="c1"># FZF でコミット一覧（インタラクティブ選択）</span>
-</span></span></code></pre></div></li>
-</ul>
-</li>
-<li>
-<p>[GitHub Copilot]</p>
-<ul>
-<li><a href="https://github.com/github/copilot.vim">https://github.com/github/copilot.vim</a></li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># install &amp; setup</span>
-</span></span><span class="line"><span class="cl">brew install node@22
-</span></span><span class="line"><span class="cl">git clone <span class="se">\
-</span></span></span><span class="line"><span class="cl">    --depth<span class="o">=</span><span class="m">1</span> https://github.com/github/copilot.vim.git <span class="se">\
-</span></span></span><span class="line"><span class="cl">    ~/.vim/pack/github/start/copilot.vim
-</span></span></code></pre></div><ul>
-<li>
-<p>[:]<code>Copilot setup</code>        : 初回セットアップ</p>
-</li>
-<li>
-<p>[:]<code>Copilot enable</code>       : 有効化</p>
-</li>
-<li>
-<p>[:]<code>Copilot disable</code>      : 無効化</p>
-</li>
-<li>
-<p>[:]<code>Copilot status</code>       : ステータス表示</p>
-</li>
-<li>
-<p>[:]<code>help copilot</code>         : ヘルプ表示</p>
-</li>
-<li>
-<p>cf. <a href="https://github.com/settings/copilot/features">GitHub Copilot Features</a></p>
-</li>
-<li>
-<p>cf. <a href="https://docs.github.com/ja/copilot/how-tos/use-copilot-agents/use-copilot-cli">GitHub Copilot CLI</a></p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
 <h3 id="convenience">Convenience<a class="anchor" aria-hidden="true" href="#convenience"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 <ul>
 <li>一括操作：コメントアウト
@@ -821,28 +629,6 @@ if ('serviceWorker' in navigator) {
 </ul>
 <h2 id="ref">Ref.<a class="anchor" aria-hidden="true" href="#ref"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
 <ul>
-<li>Vim
-<ul>
-<li><a href="https://www.vim.org">https://www.vim.org</a> (<a href="https://vim-jp.org/vimdoc-ja/">help - Vim日本語ドキュメント</a>)</li>
-<li><a href="https://vimawesome.com">https://vimawesome.com</a></li>
-</ul>
-</li>
-<li>vim-jp（ｺﾐｭﾆﾃｨ）
-<ul>
-<li><a href="https://vim-jp.org">https://vim-jp.org</a>
-<ul>
-<li><a href="https://github.com/vim-jp">https://github.com/vim-jp</a></li>
-<li><a href="https://zenn.dev/p/vim_jp">https://zenn.dev/p/vim_jp</a></li>
-<li><a href="https://vim-jp.org/reading-vimrc/">vimrc読書会</a> vim-jp</li>
-<li><a href="https://vim-jp.org/ekiden/">vim駅伝</a> vim-jp</li>
-</ul>
-</li>
-<li>運営：<a href="https://zenn.dev/monaqa">monaqa</a> san</li>
-</ul>
-</li>
-<li><a href="https://original-game.com/convenient_tools/set-vimrc/">.vimrc自動生成</a></li>
-<li><a href="https://zenn.dev/skanehira/articles/2020-12-05-vim-my-philosophy">My Vim philosophy</a> Zenn</li>
-<li><a href="https://zenn.dev/antyuntyun/articles/vim_custmoize">vimのカスタマイズは.vimrcのみで完結させたい</a> Zenn</li>
 <li><a href="https://qiita.com/moko_Swallows/items/be918efda9cfebcbf6b6">Vimの基本的なコマンドリスト</a> Qiita</li>
 <li><a href="https://qiita.com/hachi8833/items/7beeee825c11f7437f54">Vim幼稚園からVim小学校へ</a> Qiita</li>
 <li><a href="https://knowledge.sakura.ad.jp/21687/">はじめてのVim 〜 Vimはいいぞ！ゴリラと学ぶVim講座(1)</a> さくらのナレッジ</li>
