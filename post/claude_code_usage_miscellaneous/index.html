@@ -237,9 +237,9 @@ if ('serviceWorker' in navigator) {
                     <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list"></div>
                 </div>
             </details-menu>
-            4287 Words
+            5292 Words
             <span class="path-divider">|</span>
-            3 min
+            4 min
             </div>
 
             
@@ -294,6 +294,79 @@ if ('serviceWorker' in navigator) {
 <li><a href="https://code.claude.com/docs">https://code.claude.com/docs</a></li>
 </ul>
 <h2 id="what">What<a class="anchor" aria-hidden="true" href="#what"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<hr>
+<h3 id="20260510-追記">2026/05/10 追記<a class="anchor" aria-hidden="true" href="#20260510-追記"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<h4 id="claude-code-を-docker-コンテナ内で動かす">Claude Code を Docker コンテナ内で動かす<a class="anchor" aria-hidden="true" href="#claude-code-を-docker-コンテナ内で動かす"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<p>ホスト環境を汚さず、<code>--dangerously-skip-permissions</code> を比較的安全に使いたい場合に有効。</p>
+<h5 id="パターンa-ワンライナー試用向け">パターンA: ワンライナー（試用向け）<a class="anchor" aria-hidden="true" href="#パターンa-ワンライナー試用向け"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h5>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">docker run -it --rm <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -v <span class="s2">&#34;</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">&#34;</span>:/workspace <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -v <span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/.claude&#34;</span>:/root/.claude <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -v <span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/.claude.json&#34;</span>:/root/.claude.json <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -w /workspace <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -e <span class="nv">ANTHROPIC_API_KEY</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$ANTHROPIC_API_KEY</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  node:20 <span class="se">\
+</span></span></span><span class="line"><span class="cl">  bash -c <span class="s2">&#34;npm i -g @anthropic-ai/claude-code &amp;&amp; claude&#34;</span>
+</span></span></code></pre></div><ul>
+<li>ホストの認証情報（<code>~/.claude</code>, <code>~/.claude.json</code>）をマウントして引き継ぐ</li>
+<li>毎回 <code>npm i</code> するので遅い → パターンBへ</li>
+</ul>
+<h5 id="パターンb-dockerfile-を用意常用向け">パターンB: Dockerfile を用意（常用向け）<a class="anchor" aria-hidden="true" href="#パターンb-dockerfile-を用意常用向け"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h5>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl"><span class="k">FROM</span><span class="w"> </span><span class="s">node:20-bookworm</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="k">RUN</span> apt-get update <span class="o">&amp;&amp;</span> apt-get install -y <span class="se">\
+</span></span></span><span class="line"><span class="cl">    git ripgrep fzf less <span class="se">\
+</span></span></span><span class="line"><span class="cl"> <span class="o">&amp;&amp;</span> rm -rf /var/lib/apt/lists/*<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="k">RUN</span> npm install -g @anthropic-ai/claude-code<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/workspace</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="k">ENTRYPOINT</span> <span class="p">[</span><span class="s2">&#34;claude&#34;</span><span class="p">]</span><span class="err">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">docker build -t my-claude .
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">docker run -it --rm <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -v <span class="s2">&#34;</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">&#34;</span>:/workspace <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -v <span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/.claude&#34;</span>:/root/.claude <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -v <span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/.claude.json&#34;</span>:/root/.claude.json <span class="se">\
+</span></span></span><span class="line"><span class="cl">  my-claude
+</span></span></code></pre></div><h5 id="パターンc-公式-devcontainervs-code--cursor-連携">パターンC: 公式 DevContainer（VS Code / Cursor 連携）<a class="anchor" aria-hidden="true" href="#パターンc-公式-devcontainervs-code--cursor-連携"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h5>
+<p><code>.devcontainer/</code> テンプレートを置いて「Reopen in Container」で起動。
+ファイアウォール初期化スクリプト付きで、<code>--dangerously-skip-permissions</code> を安全に使う設計になっている。</p>
+<ul>
+<li><a href="https://docs.claude.com/en/docs/claude-code/devcontainer">https://docs.claude.com/en/docs/claude-code/devcontainer</a></li>
+</ul>
+<h5 id="認証">認証<a class="anchor" aria-hidden="true" href="#認証"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h5>
+<table>
+  <thead>
+      <tr>
+          <th>方式</th>
+          <th>設定</th>
+          <th>向いている用途</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>API キー</td>
+          <td><code>ANTHROPIC_API_KEY</code> を環境変数で渡す</td>
+          <td>CI、使い捨てコンテナ</td>
+      </tr>
+      <tr>
+          <td>OAuth（Pro/Max）</td>
+          <td><code>~/.claude</code> と <code>~/.claude.json</code> をマウント</td>
+          <td>ローカル開発</td>
+      </tr>
+  </tbody>
+</table>
+<ul>
+<li>OAuth方式で複数コンテナ同時起動するとトークン更新が競合することがある</li>
+<li>コンテナ内で初回ログインする場合は <code>claude login</code> → 表示URLをホスト側ブラウザで開く</li>
+</ul>
+<h5 id="落とし穴">落とし穴<a class="anchor" aria-hidden="true" href="#落とし穴"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h5>
+<ul>
+<li><code>git</code> が無いと多くの操作で失敗する → Dockerfile に必ず入れる</li>
+<li>macOS で <code>-v &quot;$(pwd)&quot;:/workspace</code> は I/O が遅い → <code>:cached</code> フラグを付ける</li>
+<li><code>--user $(id -u):$(id -g)</code> で UID を合わせるとマウント先の所有権問題は解消するが、<code>npm i -g</code> が効かなくなることがある</li>
+</ul>
 <hr>
 <h3 id="20260224-追記">2026/02/24 追記<a class="anchor" aria-hidden="true" href="#20260224-追記"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 <h4 id="subagenttask-tool">Subagent（Task tool）<a class="anchor" aria-hidden="true" href="#subagenttask-tool"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
@@ -447,8 +520,26 @@ if ('serviceWorker' in navigator) {
 </span></span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><hr>
+<h3 id="20260427-追記">2026/04/27 追記<a class="anchor" aria-hidden="true" href="#20260427-追記"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<h4 id="settingslocaljson-の書き込み先は-cwd"><code>settings.local.json</code> の書き込み先は CWD<a class="anchor" aria-hidden="true" href="#settingslocaljson-の書き込み先は-cwd"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<p>Claude Code で permission を承認すると、<strong>プロジェクトルート（.git のある場所）ではなく CWD</strong> の <code>.claude/settings.local.json</code> に書き込まれる。</p>
+<pre tabindex="0"><code>project/          ← .git はここ
+├── .claude/
+│   └── settings.local.json   ← ここには書かれない
+└── sub/
+    └── .claude/
+        └── settings.local.json   ← cd sub/ で起動→ここに書かれる
+</code></pre><p>推測だが、モノレポ・マルチコンテキスト対応が設計意図と思われる。</p>
+<pre tabindex="0"><code>monorepo/
+├── frontend/   ←playwright, npm 系の permission が欲しい
+├── backend/    ←docker, db 系の permission が欲しい
+└── infra/      ←terraform, gcloud 系の permission が欲しい
+</code></pre><p>ディレクトリごとに必要な permission が異なるケースでは、CWD 単位で分離する方が合理的。</p>
+<p>ただし、チケット単位でディレクトリを切る運用だと同じ permission セットなのにファイルが増産される。</p>
+<p>対策例: 月次 cron で子ディレクトリの permission をルートにマージし、子ディレクトリ側を削除するスクリプトを回す。</p>
+<hr>
 <h3 id="20260219-追記">2026/02/19 追記<a class="anchor" aria-hidden="true" href="#20260219-追記"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
-<h4 id="claudesettingsjsonとclaudesettingslocaljson-の違い">.claude/settings.json<code>と</code>.claude/settings.local.json` の違い<a class="anchor" aria-hidden="true" href="#claudesettingsjsonとclaudesettingslocaljson-の違い"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<h4 id="claudesettingsjson-と-claudesettingslocaljson-の違い"><code>.claude/settings.json</code> と <code>.claude/settings.local.json</code> の違い<a class="anchor" aria-hidden="true" href="#claudesettingsjson-と-claudesettingslocaljson-の違い"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
 <table>
   <thead>
       <tr>
@@ -537,6 +628,42 @@ if ('serviceWorker' in navigator) {
     <ul>
 <li>Claude Code公式ドキュメントのベストプラクティスセクション</li>
 <li>例: <code>prompt-engineering</code> ベストプラクティス（プロンプトエンジニアリングのコツ）</li>
+</ul>
+
+</blockquote>
+
+
+
+<div>
+    <div class="github-card" data-github="affaan-m/everything-claude-code" data-theme="default"></div>
+    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+</div>
+
+
+<!-- https://github.com/affaan-m/everything-claude-code -->
+
+<blockquote>
+    <ul>
+<li>48エージェント・183スキル・79コマンド・34ルールを同梱した包括的パフォーマンス最適化システム</li>
+<li>Anthropic Hackathon 2025 優勝作</li>
+</ul>
+
+</blockquote>
+
+
+
+<div>
+    <div class="github-card" data-github="ComposioHQ/awesome-claude-skills" data-theme="default"></div>
+    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+</div>
+
+
+<!-- https://github.com/ComposioHQ/awesome-claude-skills -->
+
+<blockquote>
+    <ul>
+<li>Claude向けスキルの Awesome List</li>
+<li>開発ツール、データ分析、ビジネス支援、クリエイティブなど多カテゴリを網羅</li>
 </ul>
 
 </blockquote>

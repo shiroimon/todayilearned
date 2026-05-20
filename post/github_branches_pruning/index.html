@@ -237,9 +237,9 @@ if ('serviceWorker' in navigator) {
                     <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list"></div>
                 </div>
             </details-menu>
-            5968 Words
+            9037 Words
             <span class="path-divider">|</span>
-            8 min
+            12 min
             </div>
 
             
@@ -312,7 +312,7 @@ remote -[main] repository ----------------------------------------------------&g
              | ❶/clone　                                   ↑ ⑤/push |
              ↓                  ↑ ③/commit -- ↑ ④/commit -┘         ↓ ❻/pull
 local   [main] branch ----------|------------- |----------------------&gt;
-             | ❷/chackout　　   | /add         | /add
+             | ❷/checkout　　   | /add         | /add
              └-&gt; Aさん[feature_A] branch ------┘
 </code></pre><h2 id="ref">REF<a class="anchor" aria-hidden="true" href="#ref"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
 <ul>
@@ -327,7 +327,7 @@ local   [main] branch ----------|------------- |----------------------&gt;
 ### 
 ```
 -[main] branch ------------------------------------------
-      └> Aさん[faeture_A] branch ------------------------
+      └> Aさん[feature_A] branch ------------------------
                         └> Bさん[feature_C] branch ------
 ```
 --------------------------------------------------------->
@@ -355,7 +355,7 @@ local   [main] branch ----------|------------- |----------------------&gt;
   <tbody>
       <tr>
           <td style="text-align: left">GitHub flow</td>
-          <td style="text-align: left">2種(<code>master/main</code>, <code>feature</code>）</td>
+          <td style="text-align: left"><code>master/main</code> + 任意命名の短命トピックブランチ</td>
           <td style="text-align: left">個人 ~ 小規模</td>
       </tr>
       <tr>
@@ -371,12 +371,12 @@ local   [main] branch ----------|------------- |----------------------&gt;
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 現在`master`ブランチに居ることを確認して</span>
 </span></span><span class="line"><span class="cl">$ git branch
 </span></span><span class="line"><span class="cl">* master
-</span></span><span class="line"><span class="cl">$ git cheackout -b feature/edit_hoge
+</span></span><span class="line"><span class="cl">$ git checkout -b feature/edit_hoge
 </span></span></code></pre></div></li>
 <li>
 <p>ie.</p>
 <ul>
-<li><code>feature/{任意}}</code> ブランチ名を切り出す。</li>
+<li><code>feature/{任意}</code> ブランチ名を切り出す。</li>
 <li>わざわざ明記しなくとも動く。ただ、このように明示的にしていることで開発にかかる他の方に迷惑を被ることを回避できる。</li>
 </ul>
 </li>
@@ -418,6 +418,87 @@ local -[main] branch ------------------------&gt;
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ git checkout -b feature_B
 </span></span></code></pre></div></li>
 </ol>
+<h3 id="枝を覗くか引き寄せるかfetch-vs-pull">枝を覗くか、引き寄せるか（fetch vs pull）<a class="anchor" aria-hidden="true" href="#枝を覗くか引き寄せるかfetch-vs-pull"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p>リモートの状態を取ってくる際の2つのコマンド。<code>git pull</code> ≒ <code>git fetch</code> + <code>git merge</code>（または <code>git rebase</code>）。</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">コマンド</th>
+          <th style="text-align: left">やること</th>
+          <th style="text-align: left">作業ブランチへの影響</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>git fetch</code></td>
+          <td style="text-align: left">リモートの最新情報を<strong>取ってくるだけ</strong></td>
+          <td style="text-align: left">なし</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git pull</code></td>
+          <td style="text-align: left"><code>fetch</code> した上で現在のブランチへマージ／リベース</td>
+          <td style="text-align: left">あり（ファイルが更新される）</td>
+      </tr>
+  </tbody>
+</table>
+<pre tabindex="0"><code>remote -[main] branch -----C---D----------------------&gt;
+                                      ↑/fetch  ↑/pull
+local  -[main] branch ----B-----------|---------|----&gt;
+                                      |         └→ 取り込んで merge/rebase
+                                      └→ origin/main の参照だけ更新
+</code></pre><ul>
+<li>「他人のブランチを覗くだけ」「リモートの状態を知りたいだけ」 → <code>fetch</code></li>
+<li>「自分のブランチを最新に追いつかせたい」 → <code>pull</code></li>
+</ul>
+<h4 id="git-pull-origin-でも他人のリモートブランチは取れている"><code>git pull origin</code> でも他人のリモートブランチは取れている<a class="anchor" aria-hidden="true" href="#git-pull-origin-でも他人のリモートブランチは取れている"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<p><code>git pull origin</code> を実行すると、内部では <code>git fetch origin</code>（= デフォルト refspec <code>+refs/heads/*:refs/remotes/origin/*</code> により<strong>全リモートブランチを取得</strong>）が走り、そのあとに現在のブランチへマージされる。</p>
+<p>つまり「pull したのに <code>git branch -r</code> に新ブランチが出てこない」場合は、<strong>pull した後にリモートで新ブランチが push された</strong>タイミングの問題である可能性が高い。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># もう一度 fetch すれば最新化される</span>
+</span></span><span class="line"><span class="cl">$ git fetch origin --prune
+</span></span><span class="line"><span class="cl">$ git branch -r <span class="p">|</span> grep &lt;ブランチ名&gt;
+</span></span></code></pre></div><h4 id="pull-で-rebase-したい場合">pull で rebase したい場合<a class="anchor" aria-hidden="true" href="#pull-で-rebase-したい場合"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<p><code>--rebase</code> を付けると、② が <code>merge</code> ではなく <code>rebase</code> になる。マージコミットを残さず履歴を一直線に保ちたい人向け。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 単発</span>
+</span></span><span class="line"><span class="cl">$ git pull --rebase origin main
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># このリポジトリだけデフォルト化</span>
+</span></span><span class="line"><span class="cl">$ git config pull.rebase <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 全リポジトリでデフォルト化</span>
+</span></span><span class="line"><span class="cl">$ git config --global pull.rebase <span class="nb">true</span>
+</span></span></code></pre></div><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">式</th>
+          <th style="text-align: left">意味</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>git pull</code></td>
+          <td style="text-align: left"><code>git fetch</code> + <code>git merge</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>git pull --rebase</code></td>
+          <td style="text-align: left"><code>git fetch</code> + <code>git rebase</code></td>
+      </tr>
+  </tbody>
+</table>
+<h4 id="--prune-で残骸を剪定タイトル回収"><code>--prune</code> で残骸を剪定（タイトル回収）<a class="anchor" aria-hidden="true" href="#--prune-で残骸を剪定タイトル回収"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<p><code>--prune</code> をつけると、<strong>リモートで削除されたブランチをローカルの追跡からも消してくれる</strong>。<code>git branch -r</code> に居残る残骸の剪定。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 一度だけ</span>
+</span></span><span class="line"><span class="cl">$ git fetch --prune
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 常に --prune するようグローバル設定（推奨）</span>
+</span></span><span class="line"><span class="cl">$ git config --global fetch.prune <span class="nb">true</span>
+</span></span></code></pre></div><ul>
+<li>cf.
+<ul>
+<li><a href="https://git-scm.com/docs/git-fetch">git-fetch</a> git-scm</li>
+<li><a href="https://git-scm.com/docs/git-pull">git-pull</a> git-scm</li>
+</ul>
+</li>
+</ul>
 <h3 id="他の人の枝を手元にも">他の人の枝を手元にも<a class="anchor" aria-hidden="true" href="#他の人の枝を手元にも"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 <pre tabindex="0"><code># 
 remote    -[main]-------------------------✨---------------------&gt;
@@ -442,36 +523,77 @@ remote    -[main]-------------------------✨---------------------&gt;
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 変更を加え、コミット＆プッシュ</span>
 </span></span><span class="line"><span class="cl">$ git add .
 </span></span><span class="line"><span class="cl">$ git commit -m <span class="s2">&#34;プルリクエストのための変更&#34;</span>
-</span></span><span class="line"><span class="cl">$ git push origin feature
+</span></span><span class="line"><span class="cl">$ git push origin feature_A
 </span></span></code></pre></div></li>
 </ol>
 <h3 id="枝から枝を">枝から枝を<a class="anchor" aria-hidden="true" href="#枝から枝を"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 <pre tabindex="0"><code># main/master branch に merge されていない 他の人の branch に対してプルリクエストを作成したい。
 
 local -[main] branch ------------------------------------------&gt;
-            └-&gt; Aさん[faeture_A] branch -----------------------&gt;
+            └-&gt; Aさん[feature_A] branch -----------------------&gt;
                                └-&gt; Bさん[feature_B] branch -┘
 </code></pre><ol>
 <li>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 他の人のブランチの最新の変更を取得するためにリモートリポジトリからフェッチ</span>
-</span></span><span class="line"><span class="cl">$ git fetch origin &lt;その他の人のブランチ名&gt;
+</span></span><span class="line"><span class="cl"><span class="c1"># （実は git fetch origin だけで全リモートブランチが取れるため、ブランチ指定は省略可）</span>
+</span></span><span class="line"><span class="cl">$ git fetch origin
 </span></span></code></pre></div></li>
 <li>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 他の人のブランチをローカルに持ってくるために、チェックアウト</span>
 </span></span><span class="line"><span class="cl">$ git checkout -b &lt;新しいブランチ名&gt; origin/&lt;その他の人のブランチ名&gt;
 </span></span></code></pre></div></li>
 <li>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 変更を加え、コミット＆プッシュee</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 変更を加え、コミット＆プッシュ</span>
 </span></span><span class="line"><span class="cl">$ git add .
 </span></span><span class="line"><span class="cl">$ git commit -m <span class="s2">&#34;プルリクエストのための変更&#34;</span>
 </span></span><span class="line"><span class="cl">$ git push origin &lt;新しいブランチ名&gt;
 </span></span></code></pre></div></li>
 </ol>
 <h3 id="枝から枝を名前変更">枝から枝を（名前変更）<a class="anchor" aria-hidden="true" href="#枝から枝を名前変更"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
-<pre tabindex="0"><code># branch名を[feature_B] → [feature_C] に変えたい
+
+<div class="markdown-alert markdown-alert-tip">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>
+        Tip
+        
+    </p>
+    <p><strong>まだ push していない</strong>なら <code>git branch -m &lt;new&gt;</code> 1 発で終わる。リモートに何も出ていないので後片付けも要らない。
+下記の 4 ステップは <strong>既に push 済み</strong>のブランチ名を変えたい時の手順。</p>
+</div>
+
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">状況</th>
+          <th style="text-align: left">手数</th>
+          <th style="text-align: left">やること</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">push 前</td>
+          <td style="text-align: left">1 ステップ</td>
+          <td style="text-align: left"><code>git branch -m &lt;new&gt;</code> だけ</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">push 済み</td>
+          <td style="text-align: left">4 ステップ</td>
+          <td style="text-align: left">リネーム → 新名 push → 旧名 削除 → <code>fetch --prune</code></td>
+      </tr>
+  </tbody>
+</table>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># push 前（ローカルだけで完結）</span>
+</span></span><span class="line"><span class="cl">$ git branch --show-current
+</span></span><span class="line"><span class="cl">feature_B
+</span></span><span class="line"><span class="cl">$ git branch -m feature_C        <span class="c1"># 名前変更</span>
+</span></span><span class="line"><span class="cl">$ git branch --show-current
+</span></span><span class="line"><span class="cl">feature_C
+</span></span><span class="line"><span class="cl"><span class="c1"># → そのまま開発を続行して、初回 push 時に新名で push -u すれば OK</span>
+</span></span></code></pre></div><pre tabindex="0"><code># branch名を[feature_B] → [feature_C] に変えたい（push 済みの場合）
 
 local -[main] branch -------------------------------------------------&gt;
-            └-&gt; Aさん[faeture_A] branch ------------------------------&gt;
+            └-&gt; Aさん[feature_A] branch ------------------------------&gt;
                 └-&gt; Bさん[feature_B] branch -&gt; [feature_C] branch ----&gt;
 </code></pre><ol>
 <li>
@@ -491,15 +613,15 @@ local -[main] branch -------------------------------------------------&gt;
 <li>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 古いブランチ名はリモートから削除（後片付け）</span>
 </span></span><span class="line"><span class="cl">$ git push origin --delete feature_B
-</span></span><span class="line"><span class="cl"><span class="c1"># 他の開発者への通知</span>
-</span></span><span class="line"><span class="cl">$ git fetch origin
+</span></span><span class="line"><span class="cl"><span class="c1"># 自分のローカルの追跡ブランチからも消す（他の開発者は各自 git fetch --prune が必要）</span>
+</span></span><span class="line"><span class="cl">$ git fetch origin --prune
 </span></span></code></pre></div></li>
 </ol>
 <h3 id="大きく育った枝を剪定">大きく育った枝を剪定<a class="anchor" aria-hidden="true" href="#大きく育った枝を剪定"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 <pre tabindex="0"><code># [feature_A] の修正ファイル数が膨大になり分割して、切り出しor並び替えしたい
 
 -[main] branch -------------------------------------------&gt;
-      └-&gt; Aさん[faeture_A] branch　                 | | |
+      └-&gt; Aさん[feature_A] branch　                 | | |
                         |/rebase                   | | |
                         └-&gt; [new-branch-1] branch -┘ | |
                         └-&gt; [new-branch-2] branch ---|-┘
@@ -577,13 +699,84 @@ local -[main] branch -------------------------------------------------&gt;
 </ul>
 </li>
 </ol>
+<h3 id="枝先を束ねるsquash--force-with-lease">枝先を束ねる（squash &amp; force-with-lease）<a class="anchor" aria-hidden="true" href="#枝先を束ねるsquash--force-with-lease"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p>開発中は意味論単位で <code>commit</code> / <code>push</code> を繰り返し、PR 提出前に <code>rebase -i</code> でコミットを束ねる運用。レビュアーが「最終的に何が変わるか」だけ見れば済むようになる。</p>
+<pre tabindex="0"><code>基本運用：意味論単位で commit → push を反復
+
+local  [feature/hoge-0000] ---E1---E2---E3---E4--------&gt;
+                               ↓    ↓    ↓    ↓
+                              push push push push
+remote [feature/hoge-0000] ---E1---E2---E3---E4--------&gt;
+</code></pre><pre tabindex="0"><code>PR整理：rebase -i origin/main でスカッシュ → force-with-lease で上書き
+
+main:    A---B---C---D
+              \
+feature:       E1---E2---E3---E4   ← 整理前（4コミット）
+
+                  ↓ git rebase -i origin/main（squash で1本に）
+
+main:    A---B---C---D
+                      \
+feature:               E&#39;           ← 1コミットに圧縮（新ID）
+
+                  ↓ git push --force-with-lease origin feature/hoge-0000
+
+remote [feature/hoge-0000] ---E&#39;--------&gt;   ← リモートを上書き
+</code></pre><ol>
+<li>開発中（意味論単位で何度でも）
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ git add &lt;file&gt;
+</span></span><span class="line"><span class="cl">$ git commit -m <span class="s2">&#34;WIP: パーサーの分岐追加&#34;</span>
+</span></span><span class="line"><span class="cl">$ git push origin feature/hoge-0000
+</span></span></code></pre></div></li>
+<li>PR 提出前にコミットを束ねる（<code>origin/main</code> 起点で safe）
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ git fetch origin
+</span></span><span class="line"><span class="cl">$ git rebase -i origin/main
+</span></span><span class="line"><span class="cl"><span class="c1">#   → エディタで squash / fixup を選んでコミットを統合</span>
+</span></span></code></pre></div></li>
+<li>リモートを上書き（他人の push を踏まないよう <code>--force-with-lease</code>）
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ git push --force-with-lease origin feature/hoge-0000
+</span></span></code></pre></div></li>
+</ol>
+<h4 id="この運用のチェックポイント">この運用のチェックポイント<a class="anchor" aria-hidden="true" href="#この運用のチェックポイント"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<ul>
+<li>
+<p><strong><code>rebase -i main</code></strong> よりも <strong><code>rebase -i origin/main</code></strong> が安全</p>
+<ul>
+<li>ローカル <code>main</code> が古いと、古い基点で rebase してしまい、後で再 rebase が必要になる</li>
+</ul>
+</li>
+<li>
+<p><strong><code>--force-with-lease</code></strong> は <strong><code>--force</code></strong> より安全</p>
+<ul>
+<li>リモートが自分の知っている状態と一致する時だけ上書きする</li>
+<li>他人が同じブランチに push していたら拒否される（事故防止）</li>
+</ul>
+</li>
+<li>
+<p><strong>レビュー開始後の force push</strong> には注意</p>
+<ul>
+<li>レビュアーが「前回見たコミットからの差分」を追えなくなる</li>
+<li>その場合は普通に <code>commit</code> / <code>push</code> を続け、最終マージで GitHub の <strong>Squash merge</strong> を使う選択肢もある</li>
+</ul>
+</li>
+<li>
+<p>スカッシュ後のコミットメッセージは PR タイトル相当に整える（後でログを遡る人のため）</p>
+</li>
+<li>
+<p>cf.</p>
+<ul>
+<li><a href="https://git-scm.com/docs/git-rebase">git-rebase</a> git-scm</li>
+<li><a href="https://git-scm.com/docs/git-push">git-push</a> git-scm</li>
+</ul>
+</li>
+</ul>
 <h3 id="古くなった枝を最新に">古くなった枝を最新に<a class="anchor" aria-hidden="true" href="#古くなった枝を最新に"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 <pre tabindex="0"><code>remote -[main] branch -----------------------------------------&gt;
                                            |/pull       |/pull
 local  -[main] branch ---------------------|------------|------&gt;
              |                             |            |
              |                             ↓/merge      ↓/rebase
-             └&gt; Aさん[faeture_A] branch ---✨-----------✨------&gt;
+             └&gt; Aさん[feature_A] branch ---✨-----------✨------&gt;
 </code></pre><p><strong>[Merge] 簡単かつ安全（でも履歴汚ねぇ&hellip;）</strong></p>
 <ol>
 <li>最新のmain（またはdevelop）ブランチを取得
@@ -643,7 +836,7 @@ local  -[main] branch ---------------------|------------|------&gt;
 <h3 id="gpg-署名付きコミット">GPG (署名付きコミット)<a class="anchor" aria-hidden="true" href="#gpg-署名付きコミット"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 <pre tabindex="0"><code>                                      　↑/commit :GPG 「わいやで」
 -[main] branch　------------------------|----------------&gt;
-      └&gt; Aさん[faeture_A] branch -------┘
+      └&gt; Aさん[feature_A] branch -------┘
 </code></pre><ul>
 <li>GitのGPGは、Gitにおいてコミットやタグなどの操作に署名を付けるための仕組み。</li>
 <li>GPG（GNU Privacy Guard）は、デジタル署名や暗号化を行うためのツール。</li>
@@ -786,8 +979,8 @@ local  -[main] branch ---------------------|------------|------&gt;
 </span></span><span class="line"><span class="cl">$ ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 </span></span></code></pre></div></li>
 <li>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 施錠しにGitHubへ</span>
-</span></span><span class="line"><span class="cl">$ ~/.ssh/id_ed25519.pub &gt; pbcopy
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 施錠しにGitHubへ（公開鍵をクリップボードへコピー）</span>
+</span></span><span class="line"><span class="cl">$ pbcopy &lt; ~/.ssh/id_ed25519.pub
 </span></span></code></pre></div><ul>
 <li>GitHub
 <ul>
@@ -1035,7 +1228,128 @@ develop で修正コミット F を作ったけど、D や E はまだ本番に�
 </code></pre><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 修正の F だけ main に持ってくる</span>
 </span></span><span class="line"><span class="cl">git checkout main
 </span></span><span class="line"><span class="cl">git cherry-pick F
-</span></span></code></pre></div></article>
+</span></span></code></pre></div><h3 id="不要なら自然に-gc-される孤立コミット">不要なら自然に GC される（孤立コミット）<a class="anchor" aria-hidden="true" href="#不要なら自然に-gc-される孤立コミット"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p>ブランチを差し替え/作り直しする過程で、どのブランチ・タグからも参照されなくなったコミットは「孤立コミット (dangling / unreachable commits)」と呼ばれる。明示的に削除しなくても、Git が GC（garbage collection）で自動的に整理してくれる。</p>
+<pre tabindex="0"><code># どのブランチからも参照されなくなったコミット
+[main] ----A----B----C---------------&gt;
+                  └─ X ─ Y ─ Z   ← 参照を失った orphan
+                                  reflog のみが保持
+</code></pre><h4 id="gc-のタイミング">GC のタイミング<a class="anchor" aria-hidden="true" href="#gc-のタイミング"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<p>Git は以下の条件で <code>git gc</code> (garbage collection) を実行する。</p>
+<ol>
+<li><strong>自動 GC</strong>: 多くの Git コマンド（<code>commit</code>, <code>merge</code>, <code>fetch</code> 等）の後に裏で <code>gc --auto</code> が走り、ゴミが溜まると自動実行</li>
+<li><strong>reflog 期限切れ</strong>: デフォルトで <strong>到達不能なコミットは 30 日後</strong>、到達可能なコミットは 90 日後に reflog から削除（<code>gc.reflogExpireUnreachable</code> / <code>gc.reflogExpire</code>）</li>
+<li><strong>手動実行</strong>: <code>git gc --prune=now</code> で即時削除</li>
+</ol>
+<p>GC が走ると、reflog からも参照されなくなった孤立コミットは <code>.git/objects/</code> から物理削除される。</p>
+<h4 id="つまり">つまり<a class="anchor" aria-hidden="true" href="#つまり"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<ul>
+<li>今すぐ消えるわけではなく、<strong>約 30 日かけて自動的に整理される</strong></li>
+<li>それまでは <code>git reflog</code> や直接 SHA 指定（<code>git show &lt;sha&gt;</code>）で復旧可能</li>
+<li>ユーザーが何もしなくても、Git が勝手に掃除してくれるので <strong>明示的な削除作業は不要</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 孤立コミットを確認</span>
+</span></span><span class="line"><span class="cl">$ git fsck --lost-found
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># reflog の期限設定を確認</span>
+</span></span><span class="line"><span class="cl">$ git config --get gc.reflogExpireUnreachable  <span class="c1"># default: 30 days</span>
+</span></span><span class="line"><span class="cl">$ git config --get gc.reflogExpire             <span class="c1"># default: 90 days</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 即時削除（強制）</span>
+</span></span><span class="line"><span class="cl">$ git gc --prune<span class="o">=</span>now
+</span></span></code></pre></div><h3 id="剪定中に置き忘れた札indexlock">剪定中に置き忘れた札（index.lock）<a class="anchor" aria-hidden="true" href="#剪定中に置き忘れた札indexlock"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p>git が書き込み操作（<code>commit</code>, <code>add</code>, <code>checkout</code>, <code>rebase</code> 等）を始めると <code>.git/index.lock</code> を作って排他制御する。正常終了時には自動で消えるが、エディタを Ctrl-C で殺した、ターミナルが落ちた、IDE/Vim プラグインが途中で止まった等で<strong>書き込みが中断されると lock ファイルが残骸として居残る</strong>。次に git を叩いた瞬間にこれが牙を剥く。</p>
+<pre tabindex="0"><code>.git/
+├── index            ← 本体（ステージング情報）
+└── index.lock       ← 書き込み中フラグ。残ったままだと git が全部拒否
+</code></pre><pre tabindex="0"><code>fatal: Unable to create &#39;.../.git/index.lock&#39;: File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by &#39;git commit&#39;. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+</code></pre><h4 id="削除前に本当に-stale-かを確認する">削除前に「本当に stale か」を確認する<a class="anchor" aria-hidden="true" href="#削除前に本当に-stale-かを確認する"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<p>エラー文言通り <code>rm</code> するだけで直るが、<strong>現役の git プロセスが掴んでいる lock を消すとインデックス破損のリスク</strong>がある。削除前に以下 3 点を確認する。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 1. lock ファイルの素性確認（タイムスタンプとサイズ）</span>
+</span></span><span class="line"><span class="cl">$ ls -la .git/index.lock
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> user  staff  <span class="m">0</span> May <span class="m">20</span> 09:21 .git/index.lock
+</span></span><span class="line"><span class="cl"><span class="c1">#                          ↑ 0 byte           ↑ 30分前 → stale 濃厚</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 2. このリポジトリを掴んでいる git プロセスが居ないか</span>
+</span></span><span class="line"><span class="cl">$ ps aux <span class="p">|</span> grep -i git <span class="p">|</span> grep -v grep
+</span></span><span class="line"><span class="cl"><span class="c1">#   → エディタ・IDE 由来の長期プロセス、別タブの rebase 等が走っていないか確認</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#   （statusline の `git status --porcelain` のような read-only は無関係）</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 3. 念のためエディタ・IDE 側で git 操作が止まっていないかも見る</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#   （VSCode の Source Control パネル、Vim の fugitive、JetBrains の VCS 等）</span>
+</span></span></code></pre></div><h4 id="削除して復帰">削除して復帰<a class="anchor" aria-hidden="true" href="#削除して復帰"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ rm .git/index.lock
+</span></span><span class="line"><span class="cl">$ git status   <span class="c1"># 普通に動けば復旧完了</span>
+</span></span></code></pre></div>
+<div class="markdown-alert markdown-alert-warning">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>
+        Warning
+        
+    </p>
+    <p><code>~/.gitconfig</code> などで <code>core.preloadIndex</code> や独自ラッパーを設定している環境では、再発する場合がある。再発が頻発するなら、エディタの git 統合プラグイン（Vim の copilot/fugitive、VSCode 拡張など）が裏で <code>git add</code> を打っていないかを疑う。</p>
+</div>
+
+<h4 id="兄弟-lock-も覚えておく">兄弟 lock も覚えておく<a class="anchor" aria-hidden="true" href="#兄弟-lock-も覚えておく"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<p><code>index.lock</code> 以外にも、同じ仕組みで書き込み中に作られる lock が複数ある。<strong>いずれも同じ要領で <code>ls -la</code> → プロセス確認 → <code>rm</code> で復帰可能</strong>。</p>
+<table>
+  <thead>
+      <tr>
+          <th>Lock</th>
+          <th>何の操作で作られる</th>
+          <th>残った時の症状</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>.git/index.lock</code></td>
+          <td><code>add</code>, <code>commit</code>, <code>checkout</code>, <code>rebase</code>, <code>merge</code> 等の index 書き換え全般</td>
+          <td>ほぼ全ての git 操作がブロック</td>
+      </tr>
+      <tr>
+          <td><code>.git/HEAD.lock</code></td>
+          <td><code>checkout</code>, <code>reset</code>, <code>commit</code> 等の HEAD 更新</td>
+          <td>ブランチ切替・コミット不可</td>
+      </tr>
+      <tr>
+          <td><code>.git/refs/heads/&lt;branch&gt;.lock</code></td>
+          <td>ブランチ ref 更新（<code>branch -f</code>, <code>push</code> 等）</td>
+          <td>該当ブランチの更新不可</td>
+      </tr>
+      <tr>
+          <td><code>.git/packed-refs.lock</code></td>
+          <td><code>pack-refs</code>（GC 中等）</td>
+          <td>ref 操作系がブロック</td>
+      </tr>
+      <tr>
+          <td><code>.git/config.lock</code></td>
+          <td><code>git config</code> の書き換え</td>
+          <td>設定変更不可</td>
+      </tr>
+      <tr>
+          <td><code>.git/shallow.lock</code></td>
+          <td>shallow clone の深度変更</td>
+          <td><code>fetch --deepen</code> 等が失敗</td>
+      </tr>
+  </tbody>
+</table>
+<ul>
+<li>cf.
+<ul>
+<li><a href="https://git-scm.com/docs/git-add">git-add — Why does the index get locked?</a> git-scm</li>
+<li><a href="https://qiita.com/awn_/items/d4b9e34a2b3e7ce4c12f"><code>git</code>の<code>.lock</code>ファイルを削除して操作を再開する</a> Qiita</li>
+<li><a href="https://stackoverflow.com/questions/6536420/git-after-stash-pop-fatal-unable-to-create-myrepo-git-index-lock-file-ex">fatal: Unable to create &lsquo;&hellip;/.git/index.lock&rsquo;: File exists</a> Stack Overflow</li>
+</ul>
+</li>
+</ul>
+</article>
         </div>
         </div>
         </div>
