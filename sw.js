@@ -1,5 +1,5 @@
 // ビルド時のタイムスタンプでキャッシュバージョンを自動更新
-const CACHE_VERSION = 'v-1780071556';
+const CACHE_VERSION = 'v-1780071808';
 const CACHE_NAME = `til-blog-${CACHE_VERSION}`;
 
 // キャッシュするリソース（HTMLファイルを除く静的アセットのみ）
