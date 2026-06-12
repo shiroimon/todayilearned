@@ -1,0 +1,10 @@
+.css-truncate.post-title-truncate {
+    max-width: min(410px, calc(100vw - 80px));
+}
+
+.pinned-item-list-item .repo {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
