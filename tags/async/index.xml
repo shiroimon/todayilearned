@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Async on Today I Learned | KitHub</title>
+    <link>http://localhost:1313/tags/async/</link>
+    <description>Recent content in Async on Today I Learned | KitHub</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 12 Jun 2026 17:40:37 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/async/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Engineering] Why a Data Engineer Should Understand Threads &amp; Async</title>
+      <link>http://localhost:1313/post/engineering_fundamentals_thread_async/</link>
+      <pubDate>Fri, 12 Jun 2026 17:40:37 +0900</pubDate>
+      <guid>http://localhost:1313/post/engineering_fundamentals_thread_async/</guid>
+      <description>🧵 処理の流れが見える。Airflow の同時実行、BigQuery の非同期ジョブ、dbt の thread 数 — 並列にまつわる勘どころ。</description>
+    </item>
+  </channel>
+</rss>

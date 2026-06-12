@@ -16,8 +16,8 @@
     
     <meta name="theme-color" content="#1e2327">
 
-    <link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/gist.css"><link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/markdown-alert.css">
-    <script type="text/javascript" src="https://shiroimon.kithub.f5.si/js/gist-dark-mode.js"></script>
+    <link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/gist.css"><link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/markdown-alert.css"><link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/code-copy.css"><link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/link-card.css">
+    <script type="text/javascript" src="https://shiroimon.kithub.f5.si/js/gist-dark-mode.js"></script><script type="text/javascript" src="https://shiroimon.kithub.f5.si/js/code-copy.js"></script>
     
 
     
@@ -47,8 +47,7 @@
   content="🐙 Understanding and implementing Argo projects and workflows." />
 <meta name="twitter:site" content="https://shiroimon.kithub.f5.si/" />
 <meta name="twitter:creator" content="shiroimon" />
-<meta name="twitter:image"
-  content="https://shiroimon.kithub.f5.si/">
+<meta name="twitter:image" content="https://shiroimon.kithub.f5.si/images/avatar.png">
 
 
 <meta property="og:type" content="article" />
@@ -57,8 +56,7 @@
   content="🐙 Understanding and implementing Argo projects and workflows." />
 <meta property="og:url" content="https://shiroimon.kithub.f5.si/post/argo_workflows_catchup/" />
 <meta property="og:site_name" content="[Argo Workflows] Catchup" />
-<meta property="og:image"
-  content="https://shiroimon.kithub.f5.si/">
+<meta property="og:image" content="https://shiroimon.kithub.f5.si/images/avatar.png">
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
 
@@ -322,10 +320,14 @@ if ('serviceWorker' in navigator) {
         
         <div class="Box-body px-5 pb-5" style="z-index: 1">
             <article class="markdown-body entry-content container-lg"><!-- Icon Badge -->
-<p><img src="https://img.shields.io/badge/-argo-EF7B4D.svg?logo=argo&amp;style=flat&amp;color=F0F8FF" alt="Argo">
-<img src="https://img.shields.io/badge/-YAML-CB171E.svg?logo=yaml&amp;style=flat&amp;color=F0F8FF&amp;logoColor=CB171E" alt="YAML">
-<img src="https://img.shields.io/badge/-GKE-326CE5.svg?logo=kubernetes&amp;style=flat&amp;color=F0F8FF" alt="GKE"></p>
-<p><a href=""><img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F42829%2F1626a739-4b42-ae80-39ce-b3dc2e1766d3.png?ixlib=rb-4.0.0&amp;auto=format&amp;gif-q=60&amp;q=75&amp;w=1400&amp;fit=max&amp;s=1c381708161a997aed22955fff017af5" alt="img"></a></p>
+<p><img src="https://img.shields.io/badge/-argo-EF7B4D.svg?logo=argo&amp;style=flat&amp;color=F0F8FF" alt="Argo" loading="lazy" decoding="async">
+
+<img src="https://img.shields.io/badge/-YAML-CB171E.svg?logo=yaml&amp;style=flat&amp;color=F0F8FF&amp;logoColor=CB171E" alt="YAML" loading="lazy" decoding="async">
+
+<img src="https://img.shields.io/badge/-GKE-326CE5.svg?logo=kubernetes&amp;style=flat&amp;color=F0F8FF" alt="GKE" loading="lazy" decoding="async">
+</p>
+<p><a href=""><img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F42829%2F1626a739-4b42-ae80-39ce-b3dc2e1766d3.png?ixlib=rb-4.0.0&amp;auto=format&amp;gif-q=60&amp;q=75&amp;w=1400&amp;fit=max&amp;s=1c381708161a997aed22955fff017af5" alt="img" loading="lazy" decoding="async">
+</a></p>
 <h2 id="why">Why<a class="anchor" aria-hidden="true" href="#why"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
 <p><code>SSIA</code></p>
 <h2 id="what">What<a class="anchor" aria-hidden="true" href="#what"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
@@ -366,7 +368,8 @@ Tektonのトリガーで受けた git push の イベントから、Argo CDに�
   <summary>Argo Workflows</summary>
   <p></p>
   <ul>
-<li><a href="https://github.com/argoproj/argo-workflows"><img src="https://argo-workflows.readthedocs.io/en/latest/assets/screenshot.png" alt="img"></a></li>
+<li><a href="https://github.com/argoproj/argo-workflows"><img src="https://argo-workflows.readthedocs.io/en/latest/assets/screenshot.png" alt="img" loading="lazy" decoding="async">
+</a></li>
 <li>Kubernetesクラスター上でワークフローを定義・実行できるオープンソースのシステム。（ワークフローは、複数のタスクが順序や依存関係に基づいて実行されるプロセスのこと）</li>
 <li>各タスクは<strong>Pod</strong>（Kubernetes上のコンテナ）として実行されるため、分散処理が簡単に実現でき、大規模なデータ処理や複雑な計算フローにも対応可能。</li>
 <li>メリット

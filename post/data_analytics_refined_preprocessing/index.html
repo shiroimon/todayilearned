@@ -16,8 +16,8 @@
     
     <meta name="theme-color" content="#1e2327">
 
-    <link rel="stylesheet" href="http://localhost:1313/css/gist.css"><link rel="stylesheet" href="http://localhost:1313/css/markdown-alert.css">
-    <script type="text/javascript" src="http://localhost:1313/js/gist-dark-mode.js"></script>
+    <link rel="stylesheet" href="http://localhost:1313/css/gist.css"><link rel="stylesheet" href="http://localhost:1313/css/markdown-alert.css"><link rel="stylesheet" href="http://localhost:1313/css/code-copy.css"><link rel="stylesheet" href="http://localhost:1313/css/link-card.css">
+    <script type="text/javascript" src="http://localhost:1313/js/gist-dark-mode.js"></script><script type="text/javascript" src="http://localhost:1313/js/code-copy.js"></script>
     
 
     
@@ -47,8 +47,7 @@
   content="🔍🐻‍❄️ [改訂新版]前処理大全実践テクニックを読んでみる(SQL ed./Polars ed.)" />
 <meta name="twitter:site" content="http://localhost:1313/" />
 <meta name="twitter:creator" content="shiro" />
-<meta name="twitter:image"
-  content="http://localhost:1313/">
+<meta name="twitter:image" content="http://localhost:1313/images/avatar.png">
 
 
 <meta property="og:type" content="article" />
@@ -57,8 +56,7 @@
   content="🔍🐻‍❄️ [改訂新版]前処理大全実践テクニックを読んでみる(SQL ed./Polars ed.)" />
 <meta property="og:url" content="http://localhost:1313/post/data_analytics_refined_preprocessing/" />
 <meta property="og:site_name" content="[Data Analytics] Refined Preprocessing" />
-<meta property="og:image"
-  content="http://localhost:1313/">
+<meta property="og:image" content="http://localhost:1313/images/avatar.png">
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
 
@@ -311,8 +309,10 @@ if ('serviceWorker' in navigator) {
         
         <div class="Box-body px-5 pb-5" style="z-index: 1">
             <article class="markdown-body entry-content container-lg"><!-- Icon Badge -->
-<p><img src="https://img.shields.io/badge/-BigQuery-669DF6.svg?logo=googlebigquery&amp;style=flat&amp;color=F0F8FF" alt="BigQuery">
-<img src="https://img.shields.io/badge/-Polars-CD792C.svg?logo=polars&amp;style=flat&amp;color=F0F8FF&amp;logoColor=CD792C" alt="Polars"></p>
+<p><img src="https://img.shields.io/badge/-BigQuery-669DF6.svg?logo=googlebigquery&amp;style=flat&amp;color=F0F8FF" alt="BigQuery" loading="lazy" decoding="async">
+
+<img src="https://img.shields.io/badge/-Polars-CD792C.svg?logo=polars&amp;style=flat&amp;color=F0F8FF&amp;logoColor=CD792C" alt="Polars" loading="lazy" decoding="async">
+</p>
 <h2 id="前処理の基礎知識">前処理の基礎知識<a class="anchor" aria-hidden="true" href="#前処理の基礎知識"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
 <h2 id="データの構造を対象とした前処理">データの構造を対象とした前処理<a class="anchor" aria-hidden="true" href="#データの構造を対象とした前処理"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
 <h2 id="データの内容を対象とした前処理">データの内容を対象とした前処理<a class="anchor" aria-hidden="true" href="#データの内容を対象とした前処理"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>

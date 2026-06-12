@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="application/javascript" src='https://shiroimon.kithub.f5.si/js/theme-mode.js'></script>
+    <link rel="stylesheet" href='https://shiroimon.kithub.f5.si/css/frameworks.min.css' />
+    <link rel="stylesheet" href='https://shiroimon.kithub.f5.si/css/github.min.css' />
+    <link rel="stylesheet" href='https://shiroimon.kithub.f5.si/css/github-style.css' />
+    <link rel="stylesheet" href='https://shiroimon.kithub.f5.si/css/light.css' />
+    <link rel="stylesheet" href='https://shiroimon.kithub.f5.si/css/dark.css' />
+    <link rel="stylesheet" href='https://shiroimon.kithub.f5.si/css/syntax.css' />
+    <title>[Engineering] Fundamentals &amp; System Design Roadmap - Today I Learned | KitHub</title>
+    
+    <link rel="icon" type="image/x-icon" href='../../images/github-mark.png'>
+    
+    <meta name="theme-color" content="#1e2327">
+
+    <link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/gist.css"><link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/markdown-alert.css"><link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/code-copy.css"><link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/link-card.css">
+    <script type="text/javascript" src="https://shiroimon.kithub.f5.si/js/gist-dark-mode.js"></script><script type="text/javascript" src="https://shiroimon.kithub.f5.si/js/code-copy.js"></script>
+    
+
+    
+    <meta name="description"
+  content="🧱 Five fundamentals worth deeply understanding, plus a roadmap for learning system design from zero." />
+<meta name="keywords"
+  content='blog' />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://shiroimon.kithub.f5.si/post/engineer_fundamentals_and_systemdesign_roadmap/" />
+
+
+<link rel="manifest" href="../../manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Today I Learned | KitHub">
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="[Engineering] Fundamentals &amp; System Design Roadmap - Today I Learned | KitHub" />
+<meta name="twitter:description"
+  content="🧱 Five fundamentals worth deeply understanding, plus a roadmap for learning system design from zero." />
+<meta name="twitter:site" content="https://shiroimon.kithub.f5.si/" />
+<meta name="twitter:creator" content="shiroimon" />
+<meta name="twitter:image" content="https://shiroimon.kithub.f5.si/images/avatar.png">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="[Engineering] Fundamentals &amp; System Design Roadmap - Today I Learned | KitHub">
+<meta property="og:description"
+  content="🧱 Five fundamentals worth deeply understanding, plus a roadmap for learning system design from zero." />
+<meta property="og:url" content="https://shiroimon.kithub.f5.si/post/engineer_fundamentals_and_systemdesign_roadmap/" />
+<meta property="og:site_name" content="[Engineering] Fundamentals &amp; System Design Roadmap" />
+<meta property="og:image" content="https://shiroimon.kithub.f5.si/images/avatar.png">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2026-06-12 17:30:29 &#43;0900 JST" />
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then((registration) => {
+        console.log('[PWA] Service Worker registered:', registration.scope);
+
+        
+        registration.addEventListener('updatefound', () => {
+          const newWorker = registration.installing;
+          console.log('[PWA] New Service Worker found, updating...');
+
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'activated') {
+              console.log('[PWA] New Service Worker activated');
+              
+              if (navigator.serviceWorker.controller) {
+                window.location.reload();
+              }
+            }
+          });
+        });
+
+        
+        setInterval(() => {
+          registration.update();
+        }, 60 * 60 * 1000);
+      })
+      .catch((error) => {
+        console.error('[PWA] Service Worker registration failed:', error);
+      });
+  });
+}
+</script>
+
+</head>
+
+
+<body>
+  <div style="position: relative">
+  <header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on">
+    <div class="Header-item mobile-none" style="margin-top: -4px; margin-bottom: -4px;">
+      <a class="Header-link" href="https://shiroimon.kithub.f5.si/">
+        <img class="octicon" height="32" width="32" src="../../images/github-mark-white.png">
+      </a>
+    </div>
+    <div class="Header-item d-md-none">
+      <button class="Header-link btn-link js-details-target" type="button"
+        onclick="document.querySelector('#header-search').style.display = document.querySelector('#header-search').style.display == 'none'? 'block': 'none'">
+        <svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" version="1.1" width="24">
+          <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div style="display: none;" id="header-search"
+      class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
+      <div
+        class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to">
+        <div class="position-relative">
+          
+          <form target="_blank" id="search-form" action="" accept-charset="UTF-8" method="get"
+            autocomplete="off">
+            <label
+              class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center">
+              <input type="text"
+                class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+                name="q" value="" placeholder="Search" autocomplete="off">
+            </label>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
+      <a class="Header-link " href="https://shiroimon.kithub.f5.si/">
+        <img class="octicon octicon-mark-github v-align-middle" height="32" width="32" src="../../images/github-mark-white.png">
+      </a>
+    </div>
+    <div class="Header-item" style="margin-right: 0;">
+      <a href="javascript:void(0)" class="Header-link no-select" onclick="switchTheme()">
+        <svg style="fill: var(--color-profile-color-modes-toggle-moon);" class="no-select" viewBox="0 0 16 16"
+          version="1.1" width="16" height="16">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M4.52208 7.71754C7.5782 7.71754 10.0557 5.24006 10.0557 2.18394C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961C9.95801 1.07727 10.3495 0.771159 10.6474 0.99992C12.1153 2.12716 13.0615 3.89999 13.0615 5.89383C13.0615 9.29958 10.3006 12.0605 6.89485 12.0605C3.95334 12.0605 1.49286 10.001 0.876728 7.24527C0.794841 6.87902 1.23668 6.65289 1.55321 6.85451C2.41106 7.40095 3.4296 7.71754 4.52208 7.71754Z">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </header>
+</div>
+
+  <div id="search-result" class="container-lg px-3 new-discussion-timeline" style="display: none;">
+</div>
+
+  
+<div class="application-main">
+  <div>
+<main>
+    
+    <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
+    <div class="px-0">
+    <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+    <div class="flex-auto min-width-0 width-fit mr-3">
+    <div class="d-flex">
+        
+        <div class="d-none d-md-block">
+            <a class="avatar mr-2 flex-shrink-0" href="https://shiroimon.kithub.f5.si/">
+                <img class=" avatar-user"
+                  src="../../images/avatar.png"
+                  width="32"
+                  height="32">
+            </a>
+        </div>
+        
+        <div class="d-flex flex-column">
+            
+            <h1 class="break-word f3 text-normal mb-md-0 mb-1">
+                <span class="author"><a href="https://shiroimon.kithub.f5.si/"></a></span>
+                <span class="path-divider">/</span>
+                <strong class="css-truncate css-truncate-target mr-1" style="max-width: 410px"><a href="https://shiroimon.kithub.f5.si/post/engineer_fundamentals_and_systemdesign_roadmap/">[Engineering] Fundamentals &amp; System Design Roadmap</a></strong>
+            </h1>
+            
+            <div class="note m-0">
+                Created <relative-time datetime="Fri, 12 Jun 2026 17:30:29 &#43;0900" class="no-wrap">Fri, 12 Jun 2026 17:30:29 &#43;0900</relative-time>
+                
+                <span class="path-divider">|</span>
+                Modified <relative-time datetime="Fri, 12 Jun 2026 17:30:29 &#43;0900" class="no-wrap">Fri, 12 Jun 2026 17:30:29 &#43;0900</relative-time>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    
+    <div class="container-lg px-3 new-discussion-timeline">
+    <div class="repository-content gist-content">
+    <div>
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+        <div id="file-pytest" class="file my-2">
+        
+        <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
+        <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+
+            
+            <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+            <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
+                <svg aria-hidden="true" viewBox="0 0 16 16" class="octicon octicon-list-unordered" height="16" width="16">
+                    <path fill-rule="evenodd"
+                        d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z">
+                    </path>
+                </svg>
+            </summary>
+            <details-menu class="SelectMenu" id="toc-details" style="display: none;">
+                <div class="SelectMenu-modal rounded-3 mt-1" style="max-height: 340px;">
+                    <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list"></div>
+                </div>
+            </details-menu>
+            6819 Words
+            <span class="path-divider">|</span>
+            7 min
+            </div>
+
+            
+            <div class="file-actions flex-order-2 pt-0">
+                
+                <div class="d-none d-md-flex">
+                    
+                    
+                    
+                    <a class="muted-link mr-3" href='../../tags/tcp/ip'>
+                        <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                            </path>
+                        </svg>
+                        TCP/IP
+                    </a>
+                    
+                    
+                    
+                    <a class="muted-link mr-3" href='../../tags/dns'>
+                        <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                            </path>
+                        </svg>
+                        DNS
+                    </a>
+                    
+                    
+                    
+                    <a class="muted-link mr-3" href='../../tags/caching'>
+                        <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                            </path>
+                        </svg>
+                        Caching
+                    </a>
+                    
+                    
+                    
+                    <a class="muted-link mr-3" href='../../tags/concurrency'>
+                        <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                            </path>
+                        </svg>
+                        Concurrency
+                    </a>
+                    
+                    
+                    
+                    <a class="muted-link mr-3" href='../../tags/memory'>
+                        <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                            </path>
+                        </svg>
+                        Memory
+                    </a>
+                    
+                    
+                    
+                </div>
+                
+            </div>
+        </div>
+        </div>
+
+        
+        
+        
+        
+
+        
+        <div class="Box-body px-5 pb-5" style="z-index: 1">
+            <article class="markdown-body entry-content container-lg"><!-- Icon Badge -->
+<h2 id="why">Why<a class="anchor" aria-hidden="true" href="#why"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">エンジニアが「ちゃんと理解してると強い技術」5選<br><br>・「TCP/IPの仕組み」 → 通信エラーに強くなる<br>・「DNS」 → 名前解決で詰まらない<br>・「キャッシュ」 → パフォーマンス理解が進む<br>・「スレッド/非同期」 → 処理の流れが見える<br>・「メモリ管理」 → 謎の挙動に強くなる</p>&mdash; 🐢みどりがめ🐢 (@sa04ru18kiti) <a href="https://x.com/sa04ru18kiti/status/2063532915237986738?ref_src=twsrc%5Etfw">June 7, 2026</a></blockquote>
+<script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
+
+
+<p>エンジニアとして「広く・深く」を区別する地図が欲しいと思っていた。<br>
+基礎の動作原理を押さえると障害一次切り分けが速くなり、システムデザインの語彙を持つと設計判断の解像度が上がる。</p>
+<h2 id="what">What<a class="anchor" aria-hidden="true" href="#what"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+
+<div class="markdown-alert markdown-alert-note">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>
+        Note
+        
+    </p>
+    <p>データエンジニア目線で「これを理解」</p>
+</div>
+
+<table>
+  <thead>
+      <tr>
+          <th>技術</th>
+          <th>効いてくる場面（データエンジニア目線）</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><a href="#tcpip--%E9%80%9A%E4%BF%A1%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%AB%E5%BC%B7%E3%81%8F%E3%81%AA%E3%82%8B">TCP/IP</a></td>
+          <td>通信エラー（タイムアウト・再送・切断）の切り分け：<code>bq load</code> の <code>Connection reset</code> / Composer の <code>HttpOperator</code> リトライ判断 / VPC-SC の egress 議論</td>
+      </tr>
+      <tr>
+          <td><a href="#dns--%E5%90%8D%E5%89%8D%E8%A7%A3%E6%B1%BA%E3%81%A7%E8%A9%B0%E3%81%BE%E3%82%89%E3%81%AA%E3%81%84">DNS</a></td>
+          <td>名前解決失敗・TTL 起因の障害：private endpoint への解決経路 / マイグレ前の TTL 短縮 / 「自分の環境だけ動く」の切り分け</td>
+      </tr>
+      <tr>
+          <td><a href="#caching--%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%E7%90%86%E8%A7%A3%E3%81%8C%E9%80%B2%E3%82%80">キャッシュ</a></td>
+          <td>パフォーマンスと整合性のトレードオフ：Looker クエリキャッシュ / PDT / BQ 24h キャッシュの層を切り分けてトリアージ</td>
+      </tr>
+      <tr>
+          <td><a href="#threads--async--%E5%87%A6%E7%90%86%E3%81%AE%E6%B5%81%E3%82%8C%E3%81%8C%E8%A6%8B%E3%81%88%E3%82%8B">スレッド / 非同期</a></td>
+          <td>並行処理・デッドロック・<code>await</code> の意味：Airflow の <code>parallelism</code> / BQ ジョブの <code>client.query()</code> と <code>job.result()</code> / dbt <code>threads</code> 調整</td>
+      </tr>
+      <tr>
+          <td><a href="#memory--%E8%AC%8E%E3%81%AE%E6%8C%99%E5%8B%95%E3%81%AB%E5%BC%B7%E3%81%8F%E3%81%AA%E3%82%8B">メモリ管理</a></td>
+          <td>リーク・GC・謎の OOM：BQ <code>Resources exceeded</code> の SQL リライト / pandas の <code>dtype</code> &amp; <code>chunksize</code> / worker OOM</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="tcpip--通信エラーに強くなる">TCP/IP — 通信エラーに強くなる<a class="anchor" aria-hidden="true" href="#tcpip--通信エラーに強くなる"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>データエンジニアは BigQuery、GCS、S3、Looker API、Composer のタスクなど、<strong>ほぼ全部「ネットワーク越し」に動かしている</strong>。</p>
+<ul>
+<li>「<code>Connection reset by peer</code> で DAG が落ちた」</li>
+<li>「<code>bq load</code> が途中で <code>503</code> を返した」</li>
+<li>「Looker のクエリだけ妙にタイムアウトする」</li>
+</ul>
+<p>これらが「ネットワークのどの層で何が起きたのか」を読めるかどうかで、復旧スピードが何倍も変わる。</p>
+<h3 id="tcpip-の超ざっくり地図">TCP/IP の超ざっくり地図<a class="anchor" aria-hidden="true" href="#tcpip-の超ざっくり地図"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<table>
+  <thead>
+      <tr>
+          <th>レイヤ</th>
+          <th>役割</th>
+          <th>データエンジニアが触る場面</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>アプリ層（HTTP/gRPC）</td>
+          <td>何を送るか</td>
+          <td><code>bq</code> CLI、<code>gcloud</code>、REST API、Looker API</td>
+      </tr>
+      <tr>
+          <td>トランスポート層（TCP）</td>
+          <td>確実に届ける</td>
+          <td>コネクション確立、再送、輻輳制御</td>
+      </tr>
+      <tr>
+          <td>インターネット層（IP）</td>
+          <td>どこへ届けるか</td>
+          <td>ルーティング、サブネット、VPC</td>
+      </tr>
+      <tr>
+          <td>リンク層</td>
+          <td>物理 / L2</td>
+          <td>ほぼ触らない</td>
+      </tr>
+  </tbody>
+</table>
+
+<div class="markdown-alert markdown-alert-tip">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>
+        Tip
+        
+    </p>
+    <p>エラーメッセージが「どの層」のものかを当てると原因の範囲が一気に絞れる。</p>
+</div>
+
+<h3 id="tcp-の挙動で知っておくべき4つ">TCP の挙動で知っておくべき4つ<a class="anchor" aria-hidden="true" href="#tcp-の挙動で知っておくべき4つ"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<h4 id="1-3-way-handshake接続を張る">(1) 3-way handshake（接続を張る）<a class="anchor" aria-hidden="true" href="#1-3-way-handshake接続を張る"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">sequenceDiagram
+    participant C as Client
+    participant S as Server
+    C-&gt;&gt;S: SYN
+    S-&gt;&gt;C: SYN-ACK
+    C-&gt;&gt;S: ACK
+    Note over C,S: Connection established
+</code></pre><ul>
+<li><code>SYN</code> → <code>SYN-ACK</code> → <code>ACK</code> の 3 回で接続を確立する</li>
+<li>ここで失敗すると <code>Connection refused</code>（相手プロセスが居ない）/ <code>timeout</code>（そもそも到達しない）</li>
+</ul>
+<h4 id="2-再送ロスっても粘る">(2) 再送（ロスっても粘る）<a class="anchor" aria-hidden="true" href="#2-再送ロスっても粘る"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<ul>
+<li>パケットが落ちると TCP は勝手に再送してくれる</li>
+<li>だから「ネットワーク不調＝必ず即エラー」ではなく、<strong>遅いまま動き続ける</strong>ことがある</li>
+</ul>
+<h4 id="3-コネクション切断">(3) コネクション切断<a class="anchor" aria-hidden="true" href="#3-コネクション切断"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<ul>
+<li>正常終了は <code>FIN</code>、異常終了は <code>RST</code></li>
+<li><code>Connection reset by peer</code> ＝相手側が <code>RST</code> を投げてきた、と読める</li>
+</ul>
+<h4 id="4-タイムアウト">(4) タイムアウト<a class="anchor" aria-hidden="true" href="#4-タイムアウト"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<ul>
+<li>TCP のタイムアウトとアプリ側（HTTP クライアント、<code>bq</code> CLI 等）のタイムアウトは別物</li>
+<li>アプリ側のタイムアウトのほうが短いことが多く、<strong>先に切るのはアプリ側</strong></li>
+</ul>
+<h3 id="tcpip-あるある症状の読み方">TCP/IP あるある（症状の読み方）<a class="anchor" aria-hidden="true" href="#tcpip-あるある症状の読み方"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<table>
+  <thead>
+      <tr>
+          <th>症状</th>
+          <th>TCP/IP 視点での読み</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>Connection refused</code></td>
+          <td>相手プロセス未起動 or ポート間違い。サービス疎通から確認</td>
+      </tr>
+      <tr>
+          <td><code>i/o timeout</code> / <code>connect timeout</code></td>
+          <td>到達はできていない疑い。Firewall / VPC-SC / NAT を確認</td>
+      </tr>
+      <tr>
+          <td><code>Connection reset by peer</code></td>
+          <td>相手が途中で切った。LB の idle timeout、サーバ側 OOM 等</td>
+      </tr>
+      <tr>
+          <td><code>503 Service Unavailable</code></td>
+          <td>到達はできた。アプリ層の問題（負荷、デプロイ中、レート制限）</td>
+      </tr>
+      <tr>
+          <td><code>bq load</code> が途中で失敗</td>
+          <td>リトライで救えるケース多い。冪等性を担保した上で retry policy を設定</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="デバッグの最小ツールキット">デバッグの最小ツールキット<a class="anchor" aria-hidden="true" href="#デバッグの最小ツールキット"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 名前解決＋疎通確認</span>
+</span></span><span class="line"><span class="cl">ping bigquery.googleapis.com           <span class="c1"># ICMP（FW で塞がれていると無反応）</span>
+</span></span><span class="line"><span class="cl">nc -vz bigquery.googleapis.com <span class="m">443</span>     <span class="c1"># TCP の到達確認だけ</span>
+</span></span><span class="line"><span class="cl">curl -v https://bigquery.googleapis.com  <span class="c1"># アプリ層まで貫通</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># どこで詰まっているかの切り分け</span>
+</span></span><span class="line"><span class="cl">traceroute bigquery.googleapis.com     <span class="c1"># 経路の可視化</span>
+</span></span></code></pre></div>
+<div class="markdown-alert markdown-alert-tip">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>
+        Tip
+        
+    </p>
+    <p>切り分けは「内 → 外」「下層 → 上層」の順で。<code>nc</code> で TCP 通れば下層は OK、と一段ずつ確定する。</p>
+</div>
+
+<h3 id="効きどころ">効きどころ<a class="anchor" aria-hidden="true" href="#効きどころ"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<ul>
+<li><strong>Composer (Airflow) の <code>HttpOperator</code> が時々落ちる</strong> → リトライポリシーと exponential backoff を設定する妥当性を判断できる</li>
+<li><strong>BigQuery への <code>bq load</code> で <code>Connection reset</code></strong> → サーバ側の問題かネットワークかを切り分けて、retry で吸えるか判断できる</li>
+<li><strong>VPC-SC で外部 API が叩けない</strong> → IP 層の到達性問題と理解できれば、egress 設計の議論に乗れる</li>
+</ul>
+<hr>
+<h2 id="dns--名前解決で詰まらない">DNS — 名前解決で詰まらない<a class="anchor" aria-hidden="true" href="#dns--名前解決で詰まらない"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>データエンジニアの仕事は、ほぼ全てが「ドメイン名で何かを叩く」。</p>
+<ul>
+<li><code>bigquery.googleapis.com</code></li>
+<li><code>looker.example.com</code></li>
+<li>社内 GitLab、社内 Airflow、社内 BI</li>
+</ul>
+<p>このどれかで「<strong>名前解決できなくて止まる</strong>」事故が起きるとき、DNS の基本が分かっていれば一次切り分けが 5 分で終わる。逆に分からないと、「とりあえず再起動」「DNS キャッシュをクリア」を闇雲にやることになる。</p>
+<h3 id="dns-は何をしているか1行">DNS は何をしているか（1行）<a class="anchor" aria-hidden="true" href="#dns-は何をしているか1行"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+
+<div class="markdown-alert markdown-alert-note">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>
+        Note
+        
+    </p>
+    <p><strong>ドメイン名 → IP アドレス</strong>の変換表を、世界中の DNS サーバが分担して答える仕組み。</p>
+</div>
+
+<h3 id="解決のステップクライアント目線">解決のステップ（クライアント目線）<a class="anchor" aria-hidden="true" href="#解決のステップクライアント目線"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart LR
+    A[アプリ / OS] --&gt; B{ローカルキャッシュ}
+    B --&gt;|hit| Z[IP 取得]
+    B --&gt;|miss| C{/etc/hosts}
+    C --&gt;|hit| Z
+    C --&gt;|miss| D[リゾルバ&lt;br/&gt;名前解決の代行サーバ&lt;br/&gt;社内DNS / 8.8.8.8 等]
+    D --&gt; E[ルート DNS]
+    E --&gt; F[TLD DNS]
+    F --&gt; G[権威 DNS]
+    G --&gt;|IP + TTL| D
+    D --&gt; Z
+</code></pre><ol>
+<li><strong>ローカルキャッシュ</strong>を見る（OS / ブラウザ / アプリ）</li>
+<li><strong><code>/etc/hosts</code></strong> を見る（手動マッピング）</li>
+<li><strong>リゾルバ</strong>（名前解決の代行サーバ：OS 設定の DNS サーバ、社内 DNS、<code>8.8.8.8</code> 等）に問い合わせる</li>
+<li>リゾルバは <strong>ルート → TLD → 権威 DNS</strong> とたどって IP を取り、TTL 付きでクライアントに返す</li>
+</ol>
+
+<div class="markdown-alert markdown-alert-tip">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>
+        Tip
+        
+    </p>
+    <p><strong>どのステップで止まったか</strong>を切り分けるのが、DNS 障害対応の本質。</p>
+</div>
+
+<h3 id="知っておくべき5項目">知っておくべき5項目<a class="anchor" aria-hidden="true" href="#知っておくべき5項目"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<h4 id="1-ttlキャッシュの寿命">(1) TTL（キャッシュの寿命）<a class="anchor" aria-hidden="true" href="#1-ttlキャッシュの寿命"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<ul>
+<li>DNS レコードには <code>TTL</code> がある（例: 300 秒）</li>
+<li>レコードを切り替えても、<strong>TTL の間は古い IP を見続けるクライアントがいる</strong></li>
+<li>「移行したのに半分だけ古い方を見ている」は大体これ</li>
+</ul>
+<h4 id="2-a--aaaa--cname-の違い">(2) <code>A</code> / <code>AAAA</code> / <code>CNAME</code> の違い<a class="anchor" aria-hidden="true" href="#2-a--aaaa--cname-の違い"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<ul>
+<li><code>A</code> = IPv4、<code>AAAA</code> = IPv6、<code>CNAME</code> = 別名（ドメイン → ドメイン）</li>
+<li>BI ツールやプロキシ越しで <code>CNAME</code> 経由になっていると、解決チェーンが伸びる分だけ詰まりポイントが増える</li>
+</ul>
+<h4 id="3-private-dns--cloud-dns">(3) Private DNS / Cloud DNS<a class="anchor" aria-hidden="true" href="#3-private-dns--cloud-dns"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<ul>
+<li>VPC 内では「外向き DNS」と別に「VPC 内専用の private zone」がある</li>
+<li>BigQuery を private endpoint で叩く構成だと、<code>bigquery.googleapis.com</code> を <strong>private IP に解決</strong>させる private zone が前提</li>
+</ul>
+<h4 id="4-etchosts">(4) <code>/etc/hosts</code><a class="anchor" aria-hidden="true" href="#4-etchosts"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<ul>
+<li>手元でだけ動く一時マッピング</li>
+<li>「自分の環境だけ動く / 動かない」の犯人になりがち。優先順位は <strong>hosts &gt; DNS</strong></li>
+</ul>
+<h4 id="5-ネガティブキャッシュ">(5) ネガティブキャッシュ<a class="anchor" aria-hidden="true" href="#5-ネガティブキャッシュ"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<ul>
+<li>「存在しない」も DNS は短期キャッシュする</li>
+<li>作りたて直後の名前を叩いて NXDOMAIN を引くと、しばらく失敗が残ることがある</li>
+</ul>
+<h3 id="dns-あるある症状の読み方">DNS あるある（症状の読み方）<a class="anchor" aria-hidden="true" href="#dns-あるある症状の読み方"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<table>
+  <thead>
+      <tr>
+          <th>症状</th>
+          <th>DNS 視点での読み</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>自分の端末だけ社内 Looker に繋がらない</td>
+          <td>リゾルバ設定 / VPN 経由の private DNS を確認</td>
+      </tr>
+      <tr>
+          <td><code>getaddrinfo: Name or service not known</code></td>
+          <td>名前解決そのものに失敗。typo、リゾルバ、ネットワーク到達のどれか</td>
+      </tr>
+      <tr>
+          <td>切り替え後も一部のジョブだけ古い接続先を見る</td>
+          <td>TTL 内に張ったコネクションが生きている / クライアントキャッシュ</td>
+      </tr>
+      <tr>
+          <td>VPC-SC 配下で BigQuery が叩けない</td>
+          <td>private endpoint への解決経路が無い疑い</td>
+      </tr>
+      <tr>
+          <td>自宅は OK・オフィスは NG</td>
+          <td>ネットワークごとに違うリゾルバを使っていて、片方の zone に未登録</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="デバッグの最小ツールキット-1">デバッグの最小ツールキット<a class="anchor" aria-hidden="true" href="#デバッグの最小ツールキット-1"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 何をどう解決しているか</span>
+</span></span><span class="line"><span class="cl">dig bigquery.googleapis.com           <span class="c1"># A レコード</span>
+</span></span><span class="line"><span class="cl">dig bigquery.googleapis.com +trace    <span class="c1"># ルートからの解決経路</span>
+</span></span><span class="line"><span class="cl">dig bigquery.googleapis.com @8.8.8.8  <span class="c1"># 特定リゾルバに問い合わせ</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 軽量代替</span>
+</span></span><span class="line"><span class="cl">nslookup bigquery.googleapis.com
+</span></span><span class="line"><span class="cl">host bigquery.googleapis.com
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 自分の端末が使っているリゾルバ</span>
+</span></span><span class="line"><span class="cl">scutil --dns <span class="p">|</span> head -30   <span class="c1"># macOS</span>
+</span></span></code></pre></div>
+<div class="markdown-alert markdown-alert-tip">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>
+        Tip
+        
+    </p>
+    <p>「自分のリゾルバで引けるか」「Google のパブリック DNS でも引けるか」を比較するだけで、<strong>問題が手元か / 社内 DNS か / 権威側か</strong>の3分割ができる。</p>
+</div>
+
+<h3 id="効きどころ-1">効きどころ<a class="anchor" aria-hidden="true" href="#効きどころ-1"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<ul>
+<li><strong>VPC-SC や private endpoint の議論で、何が解決されて何が解決されないか</strong>を会話できる</li>
+<li><strong>マイグレーション時の TTL を意識</strong>し、リリース前に短くしておく提案ができる</li>
+<li><strong>「自分の環境だけ動く」問題</strong>で、<code>hosts</code> / 社内 DNS / VPN の切り分けを即座にやれる</li>
+</ul>
+<hr>
+<h2 id="caching--パフォーマンス理解が進む">Caching — パフォーマンス理解が進む<a class="anchor" aria-hidden="true" href="#caching--パフォーマンス理解が進む"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>データエンジニアの世界では「キャッシュ」が <strong>5 つくらいのレイヤに重なって存在する</strong>。</p>
+<ul>
+<li>「データ直したのにダッシュボードが古いまま」</li>
+<li>「同じクエリなのに今日は爆速 / 明日は遅い」</li>
+<li>「BQ コストが急に増えた」</li>
+</ul>
+<p>これらは大体「<strong>どのキャッシュが効いて / どのキャッシュが切れたか</strong>」を読み違えているのが原因。レイヤを地図化しておくと、即座に当たりがつく。</p>
+<h3 id="キャッシュの本質1行">キャッシュの本質（1行）<a class="anchor" aria-hidden="true" href="#キャッシュの本質1行"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+
+<div class="markdown-alert markdown-alert-note">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>
+        Note
+        
+    </p>
+    <p><strong>計算 or 取得を 1 回で済ませて、結果を「速い場所」に置いておく</strong>。</p>
+</div>
+
+<p>トレードオフは常に同じ：</p>
+<ul>
+<li>✅ 速い、安い</li>
+<li>❌ 古くなる（stale）、整合性が崩れる</li>
+</ul>
+<h3 id="データ基盤で出会うキャッシュレイヤ">データ基盤で出会うキャッシュレイヤ<a class="anchor" aria-hidden="true" href="#データ基盤で出会うキャッシュレイヤ"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<table>
+  <thead>
+      <tr>
+          <th>レイヤ</th>
+          <th>主体</th>
+          <th>キャッシュの中身</th>
+          <th>失効の引き金</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>BigQuery クエリキャッシュ</td>
+          <td>BQ</td>
+          <td>24h まで同一クエリ結果を返す</td>
+          <td>クエリ文字列/参照テーブルの変更</td>
+      </tr>
+      <tr>
+          <td>BigQuery Materialized View</td>
+          <td>BQ</td>
+          <td>集計済みデータ</td>
+          <td>自動 / 手動リフレッシュ</td>
+      </tr>
+      <tr>
+          <td>Dataform incremental</td>
+          <td>Dataform</td>
+          <td>既存テーブルに差分追加</td>
+          <td><code>--full-refresh</code> で再構築</td>
+      </tr>
+      <tr>
+          <td>Looker クエリキャッシュ</td>
+          <td>Looker</td>
+          <td>LookML クエリ結果</td>
+          <td>Datagroup の <code>max_cache_age</code> 経過</td>
+      </tr>
+      <tr>
+          <td>Looker PDT</td>
+          <td>Looker</td>
+          <td>物理テーブルとして永続化</td>
+          <td>Datagroup or <code>persist_for</code> 期限</td>
+      </tr>
+      <tr>
+          <td>BI / ブラウザ</td>
+          <td>ブラウザ</td>
+          <td>ダッシュボード描画結果</td>
+          <td>リロード（強制リロード）</td>
+      </tr>
+      <tr>
+          <td>CDN</td>
+          <td>CloudFront 等</td>
+          <td>静的アセット</td>
+          <td>TTL 経過 / invalidation</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="caching-あるある症状の読み方">Caching あるある（症状の読み方）<a class="anchor" aria-hidden="true" href="#caching-あるある症状の読み方"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<table>
+  <thead>
+      <tr>
+          <th>症状</th>
+          <th>怪しいキャッシュ</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>ETL は走ったのにダッシュボードが古い</td>
+          <td>Looker クエリキャッシュ or PDT</td>
+      </tr>
+      <tr>
+          <td>同じクエリで料金 0 円が続いた</td>
+          <td>BigQuery クエリキャッシュ（24h）</td>
+      </tr>
+      <tr>
+          <td>PDT がエラーで存在しない</td>
+          <td>Datagroup 未トリガー（PDT がビルドされていない）</td>
+      </tr>
+      <tr>
+          <td>一部ユーザーだけ古い画面</td>
+          <td>ブラウザ / CDN キャッシュ</td>
+      </tr>
+      <tr>
+          <td>直したはずなのに古い結果</td>
+          <td>テストで使った中間テーブルがキャッシュされていた</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="looker-のキャッシュ三段論法">Looker のキャッシュ三段論法<a class="anchor" aria-hidden="true" href="#looker-のキャッシュ三段論法"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p>Looker は <strong>クエリキャッシュ + PDT + Datagroup</strong> が絡むので特に混乱しやすい。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart LR
+    U[ユーザー操作] --&gt; Q{クエリキャッシュ&lt;br/&gt;max_cache_age}
+    Q --&gt;|hit| R[結果返却]
+    Q --&gt;|miss| P{PDT&lt;br/&gt;datagroup_trigger / persist_for}
+    P --&gt;|hit| R
+    P --&gt;|miss| B[BigQuery クエリ実行]
+    B --&gt; R
+</code></pre>
+<div class="markdown-alert markdown-alert-warning">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>
+        Warning
+        
+    </p>
+    <p>「キャッシュをクリアした」と言われたとき、<strong>どの層をクリアしたか</strong>を確認する習慣をつける。</p>
+</div>
+
+<h3 id="キャッシュとの付き合い方実務指針">キャッシュとの付き合い方（実務指針）<a class="anchor" aria-hidden="true" href="#キャッシュとの付き合い方実務指針"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<ol>
+<li>
+<p><strong>「古さの上限」を決めてから設計する</strong></p>
+<ul>
+<li>BI なら 1 時間遅れまで OK か、リアルタイムが要件か</li>
+<li>古さを許容できれば、コストもレイテンシも大幅に改善する</li>
+</ul>
+</li>
+<li>
+<p><strong>キャッシュを「明示的にクリアできる経路」を必ず用意する</strong></p>
+<ul>
+<li>Looker: Admin → Clear Cache</li>
+<li>BQ: クエリに無害な変更を入れて cache miss させる</li>
+<li>Dataform: <code>--full-refresh</code></li>
+</ul>
+</li>
+<li>
+<p><strong>障害対応では「キャッシュ層をスキップして真実を見る」</strong></p>
+<ul>
+<li>BQ なら <strong><code>-job_id</code> で実際のクエリログ</strong>を確認</li>
+<li>Looker なら SQL Runner で直接叩く（PDT 経由しない）</li>
+</ul>
+</li>
+<li>
+<p><strong>「速くなった！」を喜ぶ前にキャッシュ起因を疑う</strong></p>
+<ul>
+<li>クエリキャッシュが効いているだけ、ということは多い</li>
+<li>計測は cold / warm 両方で</li>
+</ul>
+</li>
+</ol>
+<h3 id="効きどころ-2">効きどころ<a class="anchor" aria-hidden="true" href="#効きどころ-2"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<ul>
+<li><strong>QA 環境で「直したのに反映されない」事故</strong>を即トリアージできる</li>
+<li><strong>PDT 未ビルドのワークアラウンド</strong>（<code>persist_for</code> 切替）を理解した上で提案できる</li>
+<li><strong>コスト急増の真因</strong>（キャッシュが切れて毎回 BQ にヒットしている等）を当てられる</li>
+</ul>
+<hr>
+<h2 id="threads--async--処理の流れが見える">Threads &amp; Async — 処理の流れが見える<a class="anchor" aria-hidden="true" href="#threads--async--処理の流れが見える"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>データエンジニアは「並列」を毎日触っているのに、<strong>実装の中身は意外と曖昧</strong>にしたまま動かしていることが多い。</p>
+<ul>
+<li>Airflow の <code>parallelism</code> / <code>max_active_runs</code> をどう決めるか</li>
+<li>BigQuery のジョブは「投げて待つ」非同期。<code>.result()</code> の前後で何が起きているか</li>
+<li>dbt の <code>threads</code> を上げたら速くなるけど、上げすぎると詰まる</li>
+<li>Python スクリプトで <code>requests</code> を並列化したい</li>
+</ul>
+<p>これらを <strong>「スレッド」「プロセス」「非同期」のどれで解いているか</strong>を区別できると、設計の解像度が一段上がる。</p>
+<h3 id="並列の-3-形態超ざっくり">並列の 3 形態（超ざっくり）<a class="anchor" aria-hidden="true" href="#並列の-3-形態超ざっくり"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<table>
+  <thead>
+      <tr>
+          <th>形態</th>
+          <th>同時性</th>
+          <th>向いている処理</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>マルチプロセス</td>
+          <td>真の並列（CPU コア数まで）</td>
+          <td>CPU バウンド（重い計算、前処理）</td>
+      </tr>
+      <tr>
+          <td>マルチスレッド</td>
+          <td>OS が時分割（Python は GIL あり）</td>
+          <td>I/O バウンド（API、DB、ファイル）</td>
+      </tr>
+      <tr>
+          <td>非同期 (async/await)</td>
+          <td>シングルスレッド + 協調的切替</td>
+          <td>大量の I/O（HTTP, DB）</td>
+      </tr>
+  </tbody>
+</table>
+
+<div class="markdown-alert markdown-alert-note">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>
+        Note
+        
+    </p>
+    <p>Python のデータエンジニアが触るのは、<strong>ほぼ I/O バウンド</strong>。だから「スレッド」or「非同期」が中心。</p>
+</div>
+
+<h3 id="同期-vs-非同期1枚絵">同期 vs 非同期（1枚絵）<a class="anchor" aria-hidden="true" href="#同期-vs-非同期1枚絵"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">gantt
+    title 同期 vs 非同期（時間軸）
+    dateFormat  X
+    axisFormat  %s
+    section 同期
+    A 投げる    :a1, 0, 1
+    A 待つ      :a2, after a1, 2
+    B 投げる    :a3, after a2, 1
+    B 待つ      :a4, after a3, 2
+    C 投げる    :a5, after a4, 1
+    C 待つ      :a6, after a5, 2
+    section 非同期
+    A 投げる    :b1, 0, 1
+    B 投げる    :b2, after b1, 1
+    C 投げる    :b3, after b2, 1
+    A,B,C まとめて待つ :b4, after b3, 2
+</code></pre><p>データエンジニアが触るほぼ全ての API（BigQuery、GCS、HTTP）は <strong>「投げる」と「待つ」を分けられる非同期 I/F</strong> を持っている。</p>
+<h3 id="bigquery-を例に">BigQuery を例に<a class="anchor" aria-hidden="true" href="#bigquery-を例に"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">google.cloud</span> <span class="kn">import</span> <span class="n">bigquery</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">client</span> <span class="o">=</span> <span class="n">bigquery</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 1. ジョブを投げる（非同期 / すぐ返る）</span>
+</span></span><span class="line"><span class="cl"><span class="n">job</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&#34;SELECT COUNT(*) FROM `proj.ds.tbl`&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">job_id</span><span class="p">,</span> <span class="n">job</span><span class="o">.</span><span class="n">state</span><span class="p">)</span>   <span class="c1"># &#39;RUNNING&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 2. ここで他の仕事を進められる</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 3. 結果が要るタイミングで待つ</span>
+</span></span><span class="line"><span class="cl"><span class="n">rows</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>             <span class="c1"># ここでブロック</span>
+</span></span></code></pre></div>
+<div class="markdown-alert markdown-alert-tip">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>
+        Tip
+        
+    </p>
+    <p>「<code>client.query()</code> ＝ジョブ投入」「<code>job.result()</code> ＝待ち」。これを意識すると、<strong>複数クエリを同時投入 → まとめて待つ</strong>設計に切り替えられる。</p>
+</div>
+
+<h3 id="airflow--composer-の並列パラメータ">Airflow / Composer の並列パラメータ<a class="anchor" aria-hidden="true" href="#airflow--composer-の並列パラメータ"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p>Airflow には「並列度の蛇口」が階層的にある。<strong>どれを上げ下げしているか</strong>を意識する。</p>
+<table>
+  <thead>
+      <tr>
+          <th>パラメータ</th>
+          <th>スコープ</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>parallelism</code></td>
+          <td>クラスタ全体で同時実行できるタスク数</td>
+      </tr>
+      <tr>
+          <td><code>dag_concurrency</code></td>
+          <td>1 DAG 内で同時実行できるタスク数</td>
+      </tr>
+      <tr>
+          <td><code>max_active_runs</code></td>
+          <td>同じ DAG で同時に走れる run の数</td>
+      </tr>
+      <tr>
+          <td><code>pool</code></td>
+          <td>共有リソース（外部 DB 等）を奪い合う粒度の制御</td>
+      </tr>
+      <tr>
+          <td><code>task_concurrency</code></td>
+          <td>1 タスク種が同時に走れる数</td>
+      </tr>
+  </tbody>
+</table>
+
+<div class="markdown-alert markdown-alert-tip">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>
+        Tip
+        
+    </p>
+    <p>「タスクが詰まっている」ときは、上から順に「<strong>どこで詰まっているか</strong>」を当てる。</p>
+</div>
+
+<h3 id="dbt-の-threads">dbt の <code>threads</code><a class="anchor" aria-hidden="true" href="#dbt-の-threads"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<ul>
+<li>dbt は <strong>依存グラフを並列に解いていく</strong></li>
+<li><code>threads</code> は DWH に <strong>同時投入する接続数</strong></li>
+<li>上げると速いが、DWH 側のスロット / コネクション枠を奪うので、<strong>他のジョブを詰まらせる</strong>ことがある</li>
+</ul>
+
+<div class="markdown-alert markdown-alert-warning">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>
+        Warning
+        
+    </p>
+    <p>「dbt が早くなった = 他のクエリが遅くなる」ことがある。BigQuery なら slot 競合、Snowflake なら warehouse 同時実行に注意。</p>
+</div>
+
+<h3 id="並列で起きがちな事故">並列で起きがちな事故<a class="anchor" aria-hidden="true" href="#並列で起きがちな事故"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<table>
+  <thead>
+      <tr>
+          <th>事故</th>
+          <th>原因</th>
+          <th>対処</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>同じテーブルに同時 INSERT</td>
+          <td>並列度を上げすぎ</td>
+          <td>パーティション分割 / シリアライズ</td>
+      </tr>
+      <tr>
+          <td>API レート制限に引っかかる</td>
+          <td>同時リクエスト過多</td>
+          <td>バックオフ + 並列度の上限制御</td>
+      </tr>
+      <tr>
+          <td>デッドロック</td>
+          <td>複数リソースを違う順序で取得</td>
+          <td>取得順を統一</td>
+      </tr>
+      <tr>
+          <td>メモリ枯渇</td>
+          <td>並列ごとにバッファが積み上がる</td>
+          <td>バッチサイズを下げる</td>
+      </tr>
+      <tr>
+          <td>ロギングが混線</td>
+          <td>複数スレッドが同じ stdout</td>
+          <td>スレッド ID をログに含める</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="効きどころ-3">効きどころ<a class="anchor" aria-hidden="true" href="#効きどころ-3"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<ul>
+<li><strong>Composer の DAG 設計</strong>で、「直列で書くべきか / 並列で書くべきか」を根拠を持って判断できる</li>
+<li><strong>BQ ジョブを Python から大量投入</strong>するときに、<code>job.result()</code> の位置を最適化して全体時間を短縮できる</li>
+<li><strong>dbt の <code>threads</code> 調整</strong>で、速度と他ジョブへの影響を天秤にかけられる</li>
+</ul>
+<hr>
+<h2 id="memory--謎の挙動に強くなる">Memory — 謎の挙動に強くなる<a class="anchor" aria-hidden="true" href="#memory--謎の挙動に強くなる"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>データを扱う以上、メモリは <strong>「いつも触っているのに、見えないリソース」</strong>。</p>
+<ul>
+<li>BigQuery が <code>Resources exceeded during query execution</code> を返す</li>
+<li>pandas で <code>MemoryError</code> / <code>Killed</code>（OOM）が出る</li>
+<li>Composer の worker が突然死して DAG が unstable になる</li>
+<li>Looker の Explore で「メモリ上限を超えました」が出る</li>
+</ul>
+<p>これらの「謎の挙動」は、<strong>メモリの使われ方の基礎モデル</strong>を持っていれば、原因の当たりをほぼ即座につけられる。</p>
+<h3 id="メモリの超ざっくりモデル">メモリの超ざっくりモデル<a class="anchor" aria-hidden="true" href="#メモリの超ざっくりモデル"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<table>
+  <thead>
+      <tr>
+          <th>領域</th>
+          <th>何が入る</th>
+          <th>増え方</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>スタック</td>
+          <td>関数呼び出し / ローカル変数</td>
+          <td>浅い / 深いで決まる</td>
+      </tr>
+      <tr>
+          <td>ヒープ</td>
+          <td>動的に確保したデータ（DataFrame、配列等）</td>
+          <td>自分で <code>del</code> するか GC 任せ</td>
+      </tr>
+      <tr>
+          <td>ページキャッシュ (OS)</td>
+          <td>ファイル I/O のキャッシュ</td>
+          <td>OS が管理</td>
+      </tr>
+  </tbody>
+</table>
+
+<div class="markdown-alert markdown-alert-note">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>
+        Note
+        
+    </p>
+    <p>データエンジニアが詰まるのは <strong>ほぼ「ヒープに積み上がりすぎ」</strong>。</p>
+</div>
+
+<h3 id="gcガベージコレクションの前提">GC（ガベージコレクション）の前提<a class="anchor" aria-hidden="true" href="#gcガベージコレクションの前提"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<ul>
+<li>Python / Java / Go は GC 付き</li>
+<li>GC は「<strong>もう参照されていない</strong>オブジェクトを掃除する」</li>
+<li>だから <strong>「参照が残っている限り解放されない」</strong></li>
+<li>pandas で「巨大な中間 DataFrame をローカル変数に残したまま次の処理」はメモリリーク的に見える</li>
+</ul>
+<h3 id="データ基盤あるある--症状とメモリ視点">データ基盤あるある — 症状とメモリ視点<a class="anchor" aria-hidden="true" href="#データ基盤あるある--症状とメモリ視点"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<h4 id="a-bigquery-resources-exceeded">(a) BigQuery <code>Resources exceeded</code><a class="anchor" aria-hidden="true" href="#a-bigquery-resources-exceeded"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<ul>
+<li><strong>原因</strong>: 単一ワーカーのメモリ上限超過。よくあるのは…
+<ul>
+<li><code>ORDER BY</code> を巨大データに掛けた（全件をワーカーに集約）</li>
+<li><code>WINDOW</code> 関数の partition が広すぎる</li>
+<li><code>ARRAY_AGG</code>/<code>STRING_AGG</code> で巨大配列を作った</li>
+</ul>
+</li>
+<li><strong>対処</strong>: <code>PARTITION BY</code> を細かく / <code>APPROX_TOP_COUNT</code> 等の近似関数 / <code>LIMIT</code> をプッシュダウン</li>
+</ul>
+<h4 id="b-pandas--polars-の-oom">(b) pandas / Polars の OOM<a class="anchor" aria-hidden="true" href="#b-pandas--polars-の-oom"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<ul>
+<li><strong>原因</strong>: ファイル全量を <code>read_csv</code> で 1 枚の DataFrame に</li>
+<li><strong>対処</strong>:
+<ul>
+<li><code>chunksize</code> でストリーム処理</li>
+<li><code>dtype</code> を明示（<code>object</code> → <code>category</code>、<code>int64</code> → <code>int32</code>）</li>
+<li>そもそも <strong>BigQuery で処理しきって、必要な分だけ pandas に持ってくる</strong></li>
+</ul>
+</li>
+</ul>
+<h4 id="c-composer--airflow-worker-oom">(c) Composer / Airflow worker OOM<a class="anchor" aria-hidden="true" href="#c-composer--airflow-worker-oom"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<ul>
+<li><strong>原因</strong>: タスク内で巨大データを Python に展開（<code>BigQueryHook.get_pandas_df</code> の全件取得など）</li>
+<li><strong>対処</strong>: 処理を BQ 側に寄せる / 結果セットの上限を設ける / worker のマシンタイプを上げる</li>
+</ul>
+<h4 id="d-looker-explore-メモリ超過">(d) Looker Explore メモリ超過<a class="anchor" aria-hidden="true" href="#d-looker-explore-メモリ超過"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<ul>
+<li><strong>原因</strong>: 結果セットが Looker サーバのメモリに乗らない</li>
+<li><strong>対処</strong>: フィルタを必須化する / row limit / PDT 化して事前集計</li>
+</ul>
+<h3 id="デバッグの最小ツールキット-2">デバッグの最小ツールキット<a class="anchor" aria-hidden="true" href="#デバッグの最小ツールキット-2"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># プロセス単位のメモリ</span>
+</span></span><span class="line"><span class="cl">ps aux <span class="p">|</span> sort -rk6 <span class="p">|</span> head -5     <span class="c1"># RSS でソート上位</span>
+</span></span><span class="line"><span class="cl">top                              <span class="c1"># リアルタイム</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># OS の状況</span>
+</span></span><span class="line"><span class="cl">free -h                          <span class="c1"># 全体メモリ（Linux）</span>
+</span></span><span class="line"><span class="cl">vm_stat                          <span class="c1"># macOS</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Python ローカル</span>
+</span></span><span class="line"><span class="cl">python -m memory_profiler script.py   <span class="c1"># 行ごとのメモリ</span>
+</span></span><span class="line"><span class="cl">tracemalloc                          <span class="c1"># ヒープのスナップショット</span>
+</span></span></code></pre></div><p>BigQuery 側は <strong>Query Plan</strong> と <strong>ジョブメタデータ</strong>を見る。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bq show --format<span class="o">=</span>prettyjson -j &lt;JOB_ID&gt;   <span class="c1"># slot 消費・shuffle 量</span>
+</span></span></code></pre></div><h3 id="設計指針-5箇条">設計指針 5箇条<a class="anchor" aria-hidden="true" href="#設計指針-5箇条"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<ol>
+<li><strong>重い処理は DWH（BigQuery）に寄せる</strong>
+<ul>
+<li>クライアント（pandas / Python）に全件持ってこない</li>
+</ul>
+</li>
+<li><strong>ストリーミング or バッチで「メモリに乗る粒度」を保つ</strong>
+<ul>
+<li><code>chunksize</code>、<code>for chunk in ...</code></li>
+</ul>
+</li>
+<li><strong><code>ORDER BY</code> / <code>WINDOW</code> を巨大データにいきなり掛けない</strong>
+<ul>
+<li>先に絞る / partition で分割</li>
+</ul>
+</li>
+<li><strong>dtype を意識する</strong>
+<ul>
+<li>1 億行で <code>int64</code> → <code>int32</code> だけで半減</li>
+</ul>
+</li>
+<li><strong>メモリは可視化する</strong>
+<ul>
+<li>「動いたから OK」ではなく「ピーク使用量はいくつか」を見る</li>
+</ul>
+</li>
+</ol>
+<h3 id="効きどころ-4">効きどころ<a class="anchor" aria-hidden="true" href="#効きどころ-4"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<ul>
+<li><strong><code>Resources exceeded</code> の根本対処</strong>で、<code>ORDER BY</code> の前に絞れる SQL に書き換えられる</li>
+<li><strong>pandas OOM</strong> で、「マシンを大きくする」前に「dtype と chunk」を提案できる</li>
+<li><strong>Composer の不安定さ</strong>を見たとき、worker のメモリプレッシャーを疑える</li>
+</ul>
+<h2 id="ref">Ref.<a class="anchor" aria-hidden="true" href="#ref"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<ul>
+<li><a href="https://github.com/donnemartin/system-design-primer">System Design Primer</a></li>
+<li><a href="https://hpbn.co/">High Performance Browser Networking — Ilya Grigorik</a></li>
+<li><a href="https://cloud.google.com/network-tiers/docs/overview">Google Cloud — Network Service Tiers Overview</a></li>
+<li><a href="https://wizardzines.com/zines/dns/">Julia Evans — How DNS works</a></li>
+<li><a href="https://cloud.google.com/dns/docs/overview">Google Cloud DNS Overview</a></li>
+<li><a href="https://cloud.google.com/bigquery/docs/cached-results">BigQuery — Query cache documentation</a></li>
+<li><a href="https://cloud.google.com/looker/docs/caching-and-datagroups">Looker — Caching queries and rebuilding PDTs</a></li>
+<li><a href="https://docs.python.org/3/library/concurrent.futures.html">Python — <code>concurrent.futures</code> documentation</a></li>
+<li><a href="https://airflow.apache.org/docs/apache-airflow/stable/administration-and-deployment/scheduler.html">Apache Airflow — Tasks Concurrency</a></li>
+<li><a href="https://cloud.google.com/bigquery/docs/troubleshoot-resource-errors">BigQuery — Troubleshoot query memory errors</a></li>
+<li><a href="https://pandas.pydata.org/docs/user_guide/scale.html">pandas — Scaling to large datasets</a></li>
+</ul>
+</article>
+        </div>
+        </div>
+        </div>
+    </div>
+        
+        
+        
+    </div>
+    </div>
+</main>
+</div>
+
+<script type="application/javascript" src='https://shiroimon.kithub.f5.si/js/toc.js'></script>
+<link rel="stylesheet" href='https://shiroimon.kithub.f5.si/css/toc.css' />
+
+
+<script
+    src='https://shiroimon.kithub.f5.si/js/syntax-highlight-title.js'
+    crossorigin="anonymous"
+    type="application/javascript">
+</script>
+<link rel="stylesheet" href="../../css/syntax-highlight-title.css">
+
+
+
+
+
+
+
+<script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js" crossorigin="anonymous"></script>
+<script>
+
+
+(function () {
+    function transformMermaidCodeBlocks() {
+        var codeBlocks = document.querySelectorAll('pre > code.language-mermaid, code.language-mermaid');
+        codeBlocks.forEach(function (code) {
+            var pre = code.parentElement && code.parentElement.tagName.toLowerCase() === 'pre' ? code.parentElement : code;
+            var container = document.createElement('div');
+            container.className = 'mermaid';
+            container.textContent = code.textContent;
+            pre.replaceWith(container);
+        });
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', transformMermaidCodeBlocks);
+    } else {
+        transformMermaidCodeBlocks();
+    }
+    
+    if (window.mermaid) {
+        window.mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+    }
+})();
+</script>
+
+
+
+
+  
+  
+  
+  
+  
+  
+    
+  
+<div id="gitalk-container" class="gitalk-container"></div>
+<link rel="stylesheet" href='https://shiroimon.kithub.f5.si/css/gitalk.css'>
+<script src='https://shiroimon.kithub.f5.si/js/gitalk.min.js'></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'Ov23limCcfAvRdvUJ1de',
+    clientSecret: '08c9365618f3a7434fe608970e757bba3d2369bc',
+    repo: 'todayilearned',
+    owner: 'shiroimon',
+    admin: "shiroimon",
+    labels: ["gitalk"],
+    perPage:  10 ,
+    pagerDirection: 'last',
+    createIssueManually:  false ,
+    distractionFreeMode:  false ,
+    id: 'fea67e72275b128fdf3b0fac2eae2cfd'
+  });
+  gitalk.render('gitalk-container');
+</script>
+
+
+
+</div>
+
+  <div class="footer container-xl width-full p-responsive">
+  <div
+    class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between flex-sm-items-center pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mr-lg-4" href="https://shiroimon.kithub.f5.si/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24">
+        <path fill-rule="evenodd"
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+        </path>
+      </svg>
+    </a>
+    <ul class="list-style-none d-flex flex-wrap col-12 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+      
+      <li class="mr-3 mr-lg-0">Theme by <a href='https://github.com/MeiK2333/github-style'>github-style</a></li>
+      
+      <li class="mr-3 mr-lg-0">GitHub and the Invertocat logo are trademarks of <a href="https://github.com/">GitHub, Inc.</a></li>
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+
+
+</div>
+
+</body>
+
+<script type="application/javascript" src="https://shiroimon.kithub.f5.si/js/github-style.js"></script>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+<script type="application/javascript" src='https://shiroimon.kithub.f5.si/js/search.js'></script>
+
+
+
+</html>

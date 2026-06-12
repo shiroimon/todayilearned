@@ -1,0 +1,39 @@
+/* リンクカード（Qiita / Zenn 等の記事埋め込み用の汎用カード） */
+.link-card {
+    display: block;
+    margin: 1em 0;
+    padding: 12px 16px;
+    border: 1px solid var(--color-border-default, #d0d7de);
+    border-radius: 6px;
+    text-decoration: none;
+    color: inherit;
+    background-color: var(--color-canvas-subtle, #f6f8fa);
+    transition: background-color 0.15s, border-color 0.15s;
+}
+
+.link-card:hover {
+    background-color: var(--color-canvas-default, #ffffff);
+    border-color: var(--color-border-muted, #afb8c1);
+    text-decoration: none;
+}
+
+.link-card-title {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 4px;
+    color: var(--color-fg-default, #1f2328);
+}
+
+.link-card-meta {
+    font-size: 13px;
+    color: var(--color-fg-muted, #656d76);
+    margin-bottom: 6px;
+}
+
+.link-card-host {
+    font-size: 12px;
+    color: var(--color-fg-muted, #656d76);
+    display: flex;
+    align-items: center;
+}

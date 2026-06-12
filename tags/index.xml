@@ -6,8 +6,43 @@
     <description>Recent content in Tags on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Apr 2026 19:14:55 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2026 17:30:29 +0900</lastBuildDate>
     <atom:link href="https://shiroimon.kithub.f5.si/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Caching</title>
+      <link>https://shiroimon.kithub.f5.si/tags/caching/</link>
+      <pubDate>Fri, 12 Jun 2026 17:30:29 +0900</pubDate>
+      <guid>https://shiroimon.kithub.f5.si/tags/caching/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Concurrency</title>
+      <link>https://shiroimon.kithub.f5.si/tags/concurrency/</link>
+      <pubDate>Fri, 12 Jun 2026 17:30:29 +0900</pubDate>
+      <guid>https://shiroimon.kithub.f5.si/tags/concurrency/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DNS</title>
+      <link>https://shiroimon.kithub.f5.si/tags/dns/</link>
+      <pubDate>Fri, 12 Jun 2026 17:30:29 +0900</pubDate>
+      <guid>https://shiroimon.kithub.f5.si/tags/dns/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Memory</title>
+      <link>https://shiroimon.kithub.f5.si/tags/memory/</link>
+      <pubDate>Fri, 12 Jun 2026 17:30:29 +0900</pubDate>
+      <guid>https://shiroimon.kithub.f5.si/tags/memory/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TCP/IP</title>
+      <link>https://shiroimon.kithub.f5.si/tags/tcp/ip/</link>
+      <pubDate>Fri, 12 Jun 2026 17:30:29 +0900</pubDate>
+      <guid>https://shiroimon.kithub.f5.si/tags/tcp/ip/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Anthropic</title>
       <link>https://shiroimon.kithub.f5.si/tags/anthropic/</link>

@@ -16,8 +16,8 @@
     
     <meta name="theme-color" content="#1e2327">
 
-    <link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/gist.css"><link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/markdown-alert.css">
-    <script type="text/javascript" src="https://shiroimon.kithub.f5.si/js/gist-dark-mode.js"></script>
+    <link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/gist.css"><link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/markdown-alert.css"><link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/code-copy.css"><link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/link-card.css">
+    <script type="text/javascript" src="https://shiroimon.kithub.f5.si/js/gist-dark-mode.js"></script><script type="text/javascript" src="https://shiroimon.kithub.f5.si/js/code-copy.js"></script>
     
 
     
@@ -47,8 +47,7 @@
   content="🔍 Tried using SQL to learn the basics of data science." />
 <meta name="twitter:site" content="https://shiroimon.kithub.f5.si/" />
 <meta name="twitter:creator" content="shiro" />
-<meta name="twitter:image"
-  content="https://shiroimon.kithub.f5.si/">
+<meta name="twitter:image" content="https://shiroimon.kithub.f5.si/images/avatar.png">
 
 
 <meta property="og:type" content="article" />
@@ -57,8 +56,7 @@
   content="🔍 Tried using SQL to learn the basics of data science." />
 <meta property="og:url" content="https://shiroimon.kithub.f5.si/post/bigquery_structured_data_processing_100/" />
 <meta property="og:site_name" content="[BigQuery] Structured data processing 100&#39;s" />
-<meta property="og:image"
-  content="https://shiroimon.kithub.f5.si/">
+<meta property="og:image" content="https://shiroimon.kithub.f5.si/images/avatar.png">
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
 
@@ -289,10 +287,13 @@ if ('serviceWorker' in navigator) {
         
         <div class="Box-body px-5 pb-5" style="z-index: 1">
             <article class="markdown-body entry-content container-lg"><!-- Icon Badge -->
-<p><img src="https://img.shields.io/badge/-BigQuery-669DF6.svg?logo=googlebigquery&amp;style=flat&amp;color=F0F8FF" alt="BigQuery">
-<img src="https://img.shields.io/badge/-PostgreSQL-4169E1.svg?logo=postgresql&amp;style=flat&amp;color=F0F8FF&amp;logoColor=4169E1" alt="PostgreSQL"></p>
+<p><img src="https://img.shields.io/badge/-BigQuery-669DF6.svg?logo=googlebigquery&amp;style=flat&amp;color=F0F8FF" alt="BigQuery" loading="lazy" decoding="async">
+
+<img src="https://img.shields.io/badge/-PostgreSQL-4169E1.svg?logo=postgresql&amp;style=flat&amp;color=F0F8FF&amp;logoColor=4169E1" alt="PostgreSQL" loading="lazy" decoding="async">
+</p>
 <!-- Image -->
-<p><img src="https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2020/09/gcp-eyecatch-bigquery_1200x630.png" alt="BigQuery"></p>
+<p><img src="https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2020/09/gcp-eyecatch-bigquery_1200x630.png" alt="BigQuery" loading="lazy" decoding="async">
+</p>
 <h2 id="データサイエンス100本ノック構造化データ加工編">「データサイエンス100本ノック（構造化データ加工編）」<a class="anchor" aria-hidden="true" href="#データサイエンス100本ノック構造化データ加工編"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
 <pre><code>数年前に遊んだノックを再校兼ねて...⚾️
 当時のものだからクエリがいけてないけど良しなに
@@ -308,7 +309,8 @@ if ('serviceWorker' in navigator) {
 </li>
 <li>構築イメージ
 <ul>
-<li><img src="https://user.pr-automation.jp/simg/1731/39499/700_277_202006151645535ee727319bac0.JPG" alt="img"></li>
+<li><img src="https://user.pr-automation.jp/simg/1731/39499/700_277_202006151645535ee727319bac0.JPG" alt="img" loading="lazy" decoding="async">
+</li>
 <li>cf. <a href="https://digitalpr.jp/r/39499">Digital PR Platform</a></li>
 </ul>
 </li>
@@ -372,7 +374,8 @@ if ('serviceWorker' in navigator) {
 </span></span></span><span class="line"><span class="cl"><span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">reco</span><span class="w"> </span><span class="k">desc</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="p">;</span><span class="w">
-</span></span></span></code></pre></div><p><img src="https://i.gyazo.com/efee5ae5565e1299e43fe26507b6d738.png" alt="img"></p>
+</span></span></span></code></pre></div><p><img src="https://i.gyazo.com/efee5ae5565e1299e43fe26507b6d738.png" alt="img" loading="lazy" decoding="async">
+</p>
   <p></p>
 </details>
 </li>

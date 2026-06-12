@@ -16,8 +16,8 @@
     
     <meta name="theme-color" content="#1e2327">
 
-    <link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/gist.css"><link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/markdown-alert.css">
-    <script type="text/javascript" src="https://shiroimon.kithub.f5.si/js/gist-dark-mode.js"></script>
+    <link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/gist.css"><link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/markdown-alert.css"><link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/code-copy.css"><link rel="stylesheet" href="https://shiroimon.kithub.f5.si/css/link-card.css">
+    <script type="text/javascript" src="https://shiroimon.kithub.f5.si/js/gist-dark-mode.js"></script><script type="text/javascript" src="https://shiroimon.kithub.f5.si/js/code-copy.js"></script>
     
 
     
@@ -47,8 +47,7 @@
   content="🔍 Re-summarizeing the trajectory I learned as an introductory." />
 <meta name="twitter:site" content="https://shiroimon.kithub.f5.si/" />
 <meta name="twitter:creator" content="shiro" />
-<meta name="twitter:image"
-  content="https://shiroimon.kithub.f5.si/">
+<meta name="twitter:image" content="https://shiroimon.kithub.f5.si/images/avatar.png">
 
 
 <meta property="og:type" content="article" />
@@ -57,8 +56,7 @@
   content="🔍 Re-summarizeing the trajectory I learned as an introductory." />
 <meta property="og:url" content="https://shiroimon.kithub.f5.si/post/bigquery_data_analysis_catchup/" />
 <meta property="og:site_name" content="[BigQuery] Data analyize catchup" />
-<meta property="og:image"
-  content="https://shiroimon.kithub.f5.si/">
+<meta property="og:image" content="https://shiroimon.kithub.f5.si/images/avatar.png">
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
 
@@ -311,15 +309,18 @@ if ('serviceWorker' in navigator) {
         
         <div class="Box-body px-5 pb-5" style="z-index: 1">
             <article class="markdown-body entry-content container-lg"><!-- Icon Badge -->
-<p><img src="https://img.shields.io/badge/-BigQuery-669DF6.svg?logo=googlebigquery&amp;style=flat&amp;color=F0F8FF" alt="BigQuery"></p>
+<p><img src="https://img.shields.io/badge/-BigQuery-669DF6.svg?logo=googlebigquery&amp;style=flat&amp;color=F0F8FF" alt="BigQuery" loading="lazy" decoding="async">
+</p>
 <!-- Image -->
-<p><img src="https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2020/09/gcp-eyecatch-bigquery_1200x630.png" alt="BigQuery"></p>
+<p><img src="https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2020/09/gcp-eyecatch-bigquery_1200x630.png" alt="BigQuery" loading="lazy" decoding="async">
+</p>
 <h2 id="why">Why<a class="anchor" aria-hidden="true" href="#why"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
 <p><code>SSIA</code></p>
 <h2 id="what">What<a class="anchor" aria-hidden="true" href="#what"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
 <h3 id="udemy講座">Udemy講座<a class="anchor" aria-hidden="true" href="#udemy講座"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 <ul>
-<li><img src="https://img-c.udemycdn.com/course/240x135/2394060_adbb_4.jpg" alt="img"></li>
+<li><img src="https://img-c.udemycdn.com/course/240x135/2394060_adbb_4.jpg" alt="img" loading="lazy" decoding="async">
+</li>
 <li><a href="https://www.udemy.com/share/102kOc3@Jm55eXaV2GdLXwnNAoEOPHhXUleiQK0EG6JQboecG715rn2_tpL6jBbg8kL1nsqw/">BigQuery で学ぶ非エンジニアのための SQL データ分析入門</a> Udemy</li>
 <li><details>
   <summary>当時の所感: 2021-09-10</summary>
@@ -381,7 +382,8 @@ BigQueryは無料枠もあるが、処理に応じて従量課金型。
 <li>SQL生みの親
 
 <blockquote>
-    <p><img src="https://i.gyazo.com/98a9bea92ecc5c16284d732b6e14e958.png" alt="img"></p>
+    <p><img src="https://i.gyazo.com/98a9bea92ecc5c16284d732b6e14e958.png" alt="img" loading="lazy" decoding="async">
+</p>
 <p>SQL（Structured Query Language：構造化された検索言語）の略で、古くはIBM社が1970年台に開発していたデータベース管理システムの制御用の言語、SEQUEL（Structured English Query Language）が元になっている。</p>
 <p>cf. <a href="https://slidetodoc.com/the-relational-model-content-based-on-chapter-3-2/">The Relational Model Content based on Chapter 3</a> SlideToDoc</p>
 
@@ -426,7 +428,8 @@ BigQueryは無料枠もあるが、処理に応じて従量課金型。
 <li>
 <p>BigQuery環境構築</p>
 <ul>
-<li><img src="https://i.gyazo.com/edac850c69d81a2eccfa28c349bd5e09.png" alt="project"></li>
+<li><img src="https://i.gyazo.com/edac850c69d81a2eccfa28c349bd5e09.png" alt="project" loading="lazy" decoding="async">
+</li>
 </ul>
 </li>
 </ul>
@@ -435,7 +438,8 @@ BigQueryは無料枠もあるが、処理に応じて従量課金型。
 <ul>
 <li><a href="https://cloud.google.com/bigquery/">https://cloud.google.com/bigquery/</a></li>
 <li>完成イメージとしては以下のような図。</li>
-<li><img src="https://i.gyazo.com/4ad2aaf572a3e100a4dc2aa008df32e4.png" alt="finaly">
+<li><img src="https://i.gyazo.com/4ad2aaf572a3e100a4dc2aa008df32e4.png" alt="finaly" loading="lazy" decoding="async">
+
 <pre tabindex="0"><code>外枠にプロジェクトがあり、その中にデータセットがあり、更にその中に各テーブル（Excelでいうタブ）がある。
 入れ子（ネスト）構造。
 </code></pre></li>
@@ -443,17 +447,20 @@ BigQueryは無料枠もあるが、処理に応じて従量課金型。
 </li>
 <li>プロジェクトを作成
 <ul>
-<li><img src="https://i.gyazo.com/98551e2f0aea93e9506d6d018c2ace9f.png" alt="make project"></li>
+<li><img src="https://i.gyazo.com/98551e2f0aea93e9506d6d018c2ace9f.png" alt="make project" loading="lazy" decoding="async">
+</li>
 </ul>
 </li>
 <li>データセットを作成
 <ul>
-<li><img src="https://i.gyazo.com/592db3e492533ab6c672ee8ac172720a.png" alt="make_ds"></li>
+<li><img src="https://i.gyazo.com/592db3e492533ab6c672ee8ac172720a.png" alt="make_ds" loading="lazy" decoding="async">
+</li>
 </ul>
 </li>
 <li>テーブルを作成
 <ul>
-<li><img src="https://i.gyazo.com/a321a6ed34a70f197338198ec69ddcd5.png" alt="make_table"></li>
+<li><img src="https://i.gyazo.com/a321a6ed34a70f197338198ec69ddcd5.png" alt="make_table" loading="lazy" decoding="async">
+</li>
 </ul>
 </li>
 </ol>
@@ -2325,7 +2332,8 @@ MIN()  : パーテションの中の最小値を返す
   <h3 id="-er図">| ER図<a class="anchor" aria-hidden="true" href="#-er図"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 <pre><code>ER図（Entity-Relations）: テーブル同士の関係性を表した図表
 </code></pre>
-<p><img src="https://i.gyazo.com/14de2286b6d4ee7163677735cc745f61.png" alt="img"></p>
+<p><img src="https://i.gyazo.com/14de2286b6d4ee7163677735cc745f61.png" alt="img" loading="lazy" decoding="async">
+</p>
 <pre tabindex="0"><code>そもそも、DBが複数のテーブルを持っているのは?
 ∵ カスタマイズ性、メンテナンス性を高めることが重視されているため。
 </code></pre><h3 id="-キーの種類">| キーの種類<a class="anchor" aria-hidden="true" href="#-キーの種類"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
@@ -3208,7 +3216,8 @@ MIN()  : パーテションの中の最小値を返す
 </code></pre><h3 id="-union---和集合">| UNION - 和集合<a class="anchor" aria-hidden="true" href="#-union---和集合"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 
 <blockquote>
-    <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Venn_A_union_B.png/220px-Venn_A_union_B.png" alt="img"></p>
+    <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Venn_A_union_B.png/220px-Venn_A_union_B.png" alt="img" loading="lazy" decoding="async">
+</p>
 <ul>
 <li>Cf. <a href="https://ja.wikipedia.org/wiki/%E5%92%8C%E9%9B%86%E5%90%88">和集合 - Wikipedia</a></li>
 </ul>
@@ -3309,7 +3318,8 @@ MIN()  : パーテションの中の最小値を返す
 </span></span></span></code></pre></div><h3 id="-intersect---積集合">| INTERSECT - 積集合<a class="anchor" aria-hidden="true" href="#-intersect---積集合"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 
 <blockquote>
-    <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Interseccion.svg/250px-Interseccion.svg.png" alt="img"></p>
+    <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Interseccion.svg/250px-Interseccion.svg.png" alt="img" loading="lazy" decoding="async">
+</p>
 <ul>
 <li>Cf. <a href="https://ja.wikipedia.org/wiki/%E5%85%B1%E9%80%9A%E9%83%A8%E5%88%86_(%E6%95%B0%E5%AD%A6)">共通部分（数学） - Wikipedia</a></li>
 <li>Cf. <a href="https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%BB%E3%83%A2%E3%83%AB%E3%82%AC%E3%83%B3%E3%81%AE%E6%B3%95%E5%89%87">ド・モルガンの法則 - Wikipedia</a></li>
@@ -3353,7 +3363,8 @@ MIN()  : パーテションの中の最小値を返す
 </span></span></span></code></pre></div><h3 id="-except---差集合">| EXCEPT - 差集合<a class="anchor" aria-hidden="true" href="#-except---差集合"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 
 <blockquote>
-    <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Venn0100.svg/220px-Venn0100.svg.png" alt="img"></p>
+    <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Venn0100.svg/220px-Venn0100.svg.png" alt="img" loading="lazy" decoding="async">
+</p>
 <ul>
 <li>Cf. <a href="https://ja.wikipedia.org/wiki/%E5%B7%AE%E9%9B%86%E5%90%88">差集合 - Wikipedia</a></li>
 </ul>
@@ -3419,18 +3430,21 @@ MIN()  : パーテションの中の最小値を返す
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="o">`</span><span class="n">prj</span><span class="o">-</span><span class="n">test3</span><span class="p">.</span><span class="n">bq_sample</span><span class="p">.</span><span class="n">products_master</span><span class="o">`</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">pm</span><span class="w"> </span><span class="k">USING</span><span class="p">(</span><span class="n">product_id</span><span class="p">);</span><span class="w">
 </span></span></span></code></pre></div><ol>
 <li>ビューの保存（作成）
-<img src="https://i.gyazo.com/1df5f397b46f95b369f57ad92b592957.png" alt="img"></li>
+<img src="https://i.gyazo.com/1df5f397b46f95b369f57ad92b592957.png" alt="img" loading="lazy" decoding="async">
+</li>
 </ol>
 <pre tabindex="0"><code>記載したSQLを保存のメニューバーから、「ビューを保存」を選択。
 </code></pre><ol start="2">
 <li>保存名設定
-<img src="https://i.gyazo.com/e6c369473d2b6c0fc020e836c003e587.png" alt="img"></li>
+<img src="https://i.gyazo.com/e6c369473d2b6c0fc020e836c003e587.png" alt="img" loading="lazy" decoding="async">
+</li>
 </ol>
 <pre tabindex="0"><code>保存先や、テーブル名を設定。
 （ここでは、`joined_sp_pm`とする。）
 </code></pre><ol start="3">
 <li>ビューの確認
-<img src="https://i.gyazo.com/b8ac13d91a7b5ec9798445272955f62e.png" alt="img"></li>
+<img src="https://i.gyazo.com/b8ac13d91a7b5ec9798445272955f62e.png" alt="img" loading="lazy" decoding="async">
+</li>
 </ol>
 <pre tabindex="0"><code>左側のプロジェクト一覧から、ドリルダウンしていくと、指定したビューが作成されている。
 </code></pre><ol start="4">
@@ -4199,7 +4213,8 @@ customersテーブルを利用して、都道府県と平均年齢（小数点�
 <details>
   <summary></summary>
   <p></p>
-  <p><img src="https://i.gyazo.com/625fcf38f301105c0dbc76da5b9951ff.png" alt="Google DataPortal"></p>
+  <p><img src="https://i.gyazo.com/625fcf38f301105c0dbc76da5b9951ff.png" alt="Google DataPortal" loading="lazy" decoding="async">
+</p>
 <p>これまでのsectionで学んできたデータを、</p>
 <p>テーブルデータとしてではなく視覚的に伝えやすくする方法が可視化です。</p>
 <ol>
@@ -4221,13 +4236,15 @@ customersテーブルを利用して、都道府県と平均年齢（小数点�
 </span></span></span><span class="line"><span class="cl"><span class="p">;</span><span class="w">
 </span></span></span></code></pre></div><ol start="2">
 <li>BigQuery上で、求めたいデータを抽出する。
-<img src="https://i.gyazo.com/d672afedd1bcc9c0678bbba6ff5bb9dd.png" alt="biqquery_editer"></li>
+<img src="https://i.gyazo.com/d672afedd1bcc9c0678bbba6ff5bb9dd.png" alt="biqquery_editer" loading="lazy" decoding="async">
+</li>
 </ol>
 <pre tabindex="0"><code>表示画面の上部のナビゲーションから、「データを探索」をプルダウン。
 そのまま、データポータルへ遷移。
 </code></pre><ol start="3">
 <li>Google DataPortal
-<img src="https://i.gyazo.com/625fcf38f301105c0dbc76da5b9951ff.png" alt="Google DataPortal"></li>
+<img src="https://i.gyazo.com/625fcf38f301105c0dbc76da5b9951ff.png" alt="Google DataPortal" loading="lazy" decoding="async">
+</li>
 </ol>
 <pre tabindex="0"><code>よかったら以下にリンクを貼っておきますので、覗いてみてください。
 こんな感じにお洒落になりました。
