@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gist on Today I Learned | KitHub</title>
+    <link>http://localhost:1313/tags/gist/</link>
+    <description>Recent content in Gist on Today I Learned | KitHub</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 Jun 2026 13:13:07 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/gist/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Security] ワンタイム共有ツールという選択肢</title>
+      <link>http://localhost:1313/post/other/onetime_secret_share_tools/</link>
+      <pubDate>Sun, 14 Jun 2026 13:13:07 +0900</pubDate>
+      <guid>http://localhost:1313/post/other/onetime_secret_share_tools/</guid>
+      <description>🔐 Secret Gist は private ではない。一時共有には 1ty.me 等のワンタイムシークレットを</description>
+    </item>
+  </channel>
+</rss>
