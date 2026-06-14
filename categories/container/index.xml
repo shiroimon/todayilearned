@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Container on Today I Learned | KitHub</title>
-    <link>https://shiroimon.kithub.f5.si/categories/container/</link>
+    <link>https://shiroimon.github.io/todayilearned/categories/container/</link>
     <description>Recent content in Container on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 05 Apr 2026 20:20:10 +0900</lastBuildDate>
-    <atom:link href="https://shiroimon.kithub.f5.si/categories/container/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://shiroimon.github.io/todayilearned/categories/container/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Docker] Commands memorandum</title>
-      <link>https://shiroimon.kithub.f5.si/post/docker_commands_memorandum/</link>
+      <link>https://shiroimon.github.io/todayilearned/post/docker_commands_memorandum/</link>
       <pubDate>Wed, 21 Aug 2024 00:00:34 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/docker_commands_memorandum/</guid>
+      <guid>https://shiroimon.github.io/todayilearned/post/docker_commands_memorandum/</guid>
       <description>🐳 Deepen my understanding of Docker&amp;rsquo;s basic commands and mechanisms.</description>
     </item>
   </channel>

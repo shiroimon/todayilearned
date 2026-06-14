@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AI on Today I Learned | KitHub</title>
-    <link>https://shiroimon.kithub.f5.si/categories/ai/</link>
+    <link>https://shiroimon.github.io/todayilearned/categories/ai/</link>
     <description>Recent content in AI on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 20 Mar 2026 18:03:13 +0900</lastBuildDate>
-    <atom:link href="https://shiroimon.kithub.f5.si/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://shiroimon.github.io/todayilearned/categories/ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Claude Code] Miscellaneous &lt;雑記&gt;</title>
-      <link>https://shiroimon.kithub.f5.si/post/claude_code_usage_miscellaneous/</link>
+      <link>https://shiroimon.github.io/todayilearned/post/claude_code_usage_miscellaneous/</link>
       <pubDate>Wed, 07 Jan 2026 11:56:35 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/claude_code_usage_miscellaneous/</guid>
+      <guid>https://shiroimon.github.io/todayilearned/post/claude_code_usage_miscellaneous/</guid>
       <description>💥 How to use various features of Claude Code, including Slash Commands, Skills, Commands, Agents, Hooks, and more. Tips and best practices for maximizing your productivity with Claude Code.</description>
     </item>
     <item>
       <title>[CodexCLI] Catchup</title>
-      <link>https://shiroimon.kithub.f5.si/post/codexcli_catchup/</link>
+      <link>https://shiroimon.github.io/todayilearned/post/codexcli_catchup/</link>
       <pubDate>Fri, 10 Oct 2025 16:13:19 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/codexcli_catchup/</guid>
+      <guid>https://shiroimon.github.io/todayilearned/post/codexcli_catchup/</guid>
       <description>🧠 The rise of CloudCode from OpenAI has finally come out.</description>
     </item>
     <item>
       <title>[BigQuery] Machine Learning</title>
-      <link>https://shiroimon.kithub.f5.si/post/bigquery_about_machine_learning/</link>
+      <link>https://shiroimon.github.io/todayilearned/post/bigquery_about_machine_learning/</link>
       <pubDate>Fri, 14 Mar 2025 17:31:44 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/bigquery_about_machine_learning/</guid>
+      <guid>https://shiroimon.github.io/todayilearned/post/bigquery_about_machine_learning/</guid>
       <description>🔍 Completed within DWH, allowing modeling and analysis through queries</description>
     </item>
   </channel>

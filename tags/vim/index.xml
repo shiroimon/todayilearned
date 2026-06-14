@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vim on Today I Learned | KitHub</title>
-    <link>https://shiroimon.kithub.f5.si/tags/vim/</link>
+    <link>https://shiroimon.github.io/todayilearned/tags/vim/</link>
     <description>Recent content in Vim on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 20 Mar 2026 18:03:13 +0900</lastBuildDate>
-    <atom:link href="https://shiroimon.kithub.f5.si/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://shiroimon.github.io/todayilearned/tags/vim/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Vim] CSV Control</title>
-      <link>https://shiroimon.kithub.f5.si/post/vim_csv_control/</link>
+      <link>https://shiroimon.github.io/todayilearned/post/vim_csv_control/</link>
       <pubDate>Thu, 26 Dec 2024 21:27:07 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/vim_csv_control/</guid>
+      <guid>https://shiroimon.github.io/todayilearned/post/vim_csv_control/</guid>
       <description>✅ God&amp;rsquo;s tool that lets you edit CSVs like Excel in Vim.</description>
     </item>
     <item>
       <title>[Vim] Building plugin</title>
-      <link>https://shiroimon.kithub.f5.si/post/vim_building_plugin/</link>
+      <link>https://shiroimon.github.io/todayilearned/post/vim_building_plugin/</link>
       <pubDate>Wed, 11 Sep 2024 19:39:49 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/vim_building_plugin/</guid>
+      <guid>https://shiroimon.github.io/todayilearned/post/vim_building_plugin/</guid>
       <description>✅ Once I gain a deeper understanding, what may be able to develop general-purpose automated tools.</description>
     </item>
     <item>
       <title>[Vim] Commands memorandum</title>
-      <link>https://shiroimon.kithub.f5.si/post/vim_commands_memorandum/</link>
+      <link>https://shiroimon.github.io/todayilearned/post/vim_commands_memorandum/</link>
       <pubDate>Sat, 17 Aug 2024 01:02:03 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/vim_commands_memorandum/</guid>
+      <guid>https://shiroimon.github.io/todayilearned/post/vim_commands_memorandum/</guid>
       <description>✅ A list of vim commands for the TextEditor tool, along with various tips.</description>
     </item>
   </channel>

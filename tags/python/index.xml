@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on Today I Learned | KitHub</title>
-    <link>https://shiroimon.kithub.f5.si/tags/python/</link>
+    <link>https://shiroimon.github.io/todayilearned/tags/python/</link>
     <description>Recent content in Python on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 02 Apr 2025 16:57:14 +0900</lastBuildDate>
-    <atom:link href="https://shiroimon.kithub.f5.si/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://shiroimon.github.io/todayilearned/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[dbt] Seeking out basic understanding</title>
-      <link>https://shiroimon.kithub.f5.si/post/dbt_seeking_basic_understanding/</link>
+      <link>https://shiroimon.github.io/todayilearned/post/dbt_seeking_basic_understanding/</link>
       <pubDate>Tue, 30 Jul 2024 02:30:55 +0900</pubDate>
-      <guid>https://shiroimon.kithub.f5.si/post/dbt_seeking_basic_understanding/</guid>
+      <guid>https://shiroimon.github.io/todayilearned/post/dbt_seeking_basic_understanding/</guid>
       <description>✴️ Wanna deepen my understanding by using my hands and referring to reference books.</description>
     </item>
   </channel>
