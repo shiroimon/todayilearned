@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DataLake on Today I Learned | KitHub</title>
-    <link>https://shiroimon.github.io/todayilearned/tags/datalake/</link>
+    <link>https://kithub.f5.si/tags/datalake/</link>
     <description>Recent content in DataLake on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 04 Apr 2026 00:04:48 +0900</lastBuildDate>
-    <atom:link href="https://shiroimon.github.io/todayilearned/tags/datalake/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kithub.f5.si/tags/datalake/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[BigQuery] (Various) Data Transfer</title>
-      <link>https://shiroimon.github.io/todayilearned/post/bigquery_about_various_data_transfer/</link>
+      <link>https://kithub.f5.si/post/bigquery_about_various_data_transfer/</link>
       <pubDate>Thu, 03 Apr 2025 11:11:44 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/post/bigquery_about_various_data_transfer/</guid>
+      <guid>https://kithub.f5.si/post/bigquery_about_various_data_transfer/</guid>
       <description>🔍 Find out various data transfer methods starting from BigQuery.</description>
     </item>
   </channel>

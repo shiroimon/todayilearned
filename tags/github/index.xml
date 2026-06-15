@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>GitHub on Today I Learned | KitHub</title>
-    <link>https://shiroimon.github.io/todayilearned/tags/github/</link>
+    <link>https://kithub.f5.si/tags/github/</link>
     <description>Recent content in GitHub on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 09 Apr 2026 22:51:13 +0900</lastBuildDate>
-    <atom:link href="https://shiroimon.github.io/todayilearned/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kithub.f5.si/tags/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[GitHub] Wana be join OSS</title>
-      <link>https://shiroimon.github.io/todayilearned/post/github_oss_wana_be_join/</link>
+      <link>https://kithub.f5.si/post/github_oss_wana_be_join/</link>
       <pubDate>Thu, 21 Nov 2024 12:06:08 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/post/github_oss_wana_be_join/</guid>
+      <guid>https://kithub.f5.si/post/github_oss_wana_be_join/</guid>
       <description>📍 About etiquette and the meaning of licenses when paticipating in OSS.</description>
     </item>
     <item>
       <title>[Git] Branches pruning</title>
-      <link>https://shiroimon.github.io/todayilearned/post/github_branches_pruning/</link>
+      <link>https://kithub.f5.si/post/github_branches_pruning/</link>
       <pubDate>Tue, 24 Sep 2024 18:08:08 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/post/github_branches_pruning/</guid>
+      <guid>https://kithub.f5.si/post/github_branches_pruning/</guid>
       <description>📍When developing on GitHub, I often switch branches, just like pruning.</description>
     </item>
     <item>
       <title>[English] Abbreviations</title>
-      <link>https://shiroimon.github.io/todayilearned/post/other/english_abbreviations/</link>
+      <link>https://kithub.f5.si/post/other/english_abbreviations/</link>
       <pubDate>Tue, 30 Jul 2024 12:48:55 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/post/other/english_abbreviations/</guid>
+      <guid>https://kithub.f5.si/post/other/english_abbreviations/</guid>
       <description>🗽 About abbreviations. They also appear in business and professional situations.</description>
     </item>
     <item>
       <title>[GitHub] This &amp; That</title>
-      <link>https://shiroimon.github.io/todayilearned/post/github_this_and_that/</link>
+      <link>https://kithub.f5.si/post/github_this_and_that/</link>
       <pubDate>Wed, 24 Jul 2024 15:08:13 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/post/github_this_and_that/</guid>
+      <guid>https://kithub.f5.si/post/github_this_and_that/</guid>
       <description>📍 Various things to make your GitHub life more enjoyable.</description>
     </item>
   </channel>

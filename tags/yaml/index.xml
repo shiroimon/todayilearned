@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>YAML on Today I Learned | KitHub</title>
-    <link>https://shiroimon.github.io/todayilearned/tags/yaml/</link>
+    <link>https://kithub.f5.si/tags/yaml/</link>
     <description>Recent content in YAML on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 05 Apr 2026 20:20:10 +0900</lastBuildDate>
-    <atom:link href="https://shiroimon.github.io/todayilearned/tags/yaml/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kithub.f5.si/tags/yaml/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Looker] This and That</title>
-      <link>https://shiroimon.github.io/todayilearned/post/looker_this_and_that/</link>
+      <link>https://kithub.f5.si/post/looker_this_and_that/</link>
       <pubDate>Tue, 02 Dec 2025 16:39:00 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/post/looker_this_and_that/</guid>
+      <guid>https://kithub.f5.si/post/looker_this_and_that/</guid>
       <description>🫧 How to use Google&amp;rsquo;s SaaS about BI.</description>
     </item>
     <item>
       <title>[YAML] Catchup</title>
-      <link>https://shiroimon.github.io/todayilearned/post/yaml_catchup/</link>
+      <link>https://kithub.f5.si/post/yaml_catchup/</link>
       <pubDate>Tue, 17 Dec 2024 22:39:48 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/post/yaml_catchup/</guid>
+      <guid>https://kithub.f5.si/post/yaml_catchup/</guid>
       <description>❗️Understand Yaml, the configuratio file familiar to DevOps.</description>
     </item>
     <item>
       <title>[Kubernetes] Catchup</title>
-      <link>https://shiroimon.github.io/todayilearned/post/kubernetes_catchup/</link>
+      <link>https://kithub.f5.si/post/kubernetes_catchup/</link>
       <pubDate>Mon, 18 Nov 2024 13:29:33 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/post/kubernetes_catchup/</guid>
+      <guid>https://kithub.f5.si/post/kubernetes_catchup/</guid>
       <description>⚓️ About container orchestration tecnology.</description>
     </item>
     <item>
       <title>[Argo Workflows] Catchup</title>
-      <link>https://shiroimon.github.io/todayilearned/post/argo_workflows_catchup/</link>
+      <link>https://kithub.f5.si/post/argo_workflows_catchup/</link>
       <pubDate>Mon, 09 Sep 2024 12:40:59 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/post/argo_workflows_catchup/</guid>
+      <guid>https://kithub.f5.si/post/argo_workflows_catchup/</guid>
       <description>🐙 Understanding and implementing Argo projects and workflows.</description>
     </item>
     <item>
       <title>[Docker] Commands memorandum</title>
-      <link>https://shiroimon.github.io/todayilearned/post/docker_commands_memorandum/</link>
+      <link>https://kithub.f5.si/post/docker_commands_memorandum/</link>
       <pubDate>Wed, 21 Aug 2024 00:00:34 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/post/docker_commands_memorandum/</guid>
+      <guid>https://kithub.f5.si/post/docker_commands_memorandum/</guid>
       <description>🐳 Deepen my understanding of Docker&amp;rsquo;s basic commands and mechanisms.</description>
     </item>
     <item>
       <title>[dbt] Seeking out basic understanding</title>
-      <link>https://shiroimon.github.io/todayilearned/post/dbt_seeking_basic_understanding/</link>
+      <link>https://kithub.f5.si/post/dbt_seeking_basic_understanding/</link>
       <pubDate>Tue, 30 Jul 2024 02:30:55 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/post/dbt_seeking_basic_understanding/</guid>
+      <guid>https://kithub.f5.si/post/dbt_seeking_basic_understanding/</guid>
       <description>✴️ Wanna deepen my understanding by using my hands and referring to reference books.</description>
     </item>
   </channel>

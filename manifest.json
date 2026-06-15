@@ -2,21 +2,21 @@
   "name": "Today I Learned | KitHub",
   "short_name": "TIL",
   "description": "What one learned / knew that day.",
-  "start_url": "/todayilearned/",
-  "scope": "/todayilearned/",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#1e2327",
   "theme_color": "#1e2327",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/todayilearned/images/icons/pwa-icon-192.png",
+      "src": "/images/icons/pwa-icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/todayilearned/images/icons/pwa-icon-512.png",
+      "src": "/images/icons/pwa-icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
@@ -30,10 +30,10 @@
       "name": "Latest Posts",
       "short_name": "Posts",
       "description": "View latest blog posts",
-      "url": "/todayilearned/post/",
+      "url": "/post/",
       "icons": [
         {
-          "src": "/todayilearned/images/icons/pwa-icon-192.png",
+          "src": "/images/icons/pwa-icon-192.png",
           "sizes": "192x192"
         }
       ]

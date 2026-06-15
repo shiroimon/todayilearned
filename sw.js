@@ -1,19 +1,19 @@
 // ビルド時のタイムスタンプでキャッシュバージョンを自動更新
-const CACHE_VERSION = 'v-1781424300';
+const CACHE_VERSION = 'v-1781491502';
 const CACHE_NAME = `til-blog-${CACHE_VERSION}`;
 
 // キャッシュするリソース（HTMLファイルを除く静的アセットのみ）
 const STATIC_CACHE_URLS = [
-  '/todayilearned/css/frameworks.min.css',
-  '/todayilearned/css/github.min.css',
-  '/todayilearned/css/github-style.css',
-  '/todayilearned/css/light.css',
-  '/todayilearned/css/dark.css',
-  '/todayilearned/css/syntax.css',
-  '/todayilearned/js/theme-mode.js',
-  '/todayilearned/images/icons/pwa-icon-192.png',
-  '/todayilearned/images/icons/pwa-icon-512.png',
-  '/todayilearned/offline.html'
+  '/css/frameworks.min.css',
+  '/css/github.min.css',
+  '/css/github-style.css',
+  '/css/light.css',
+  '/css/dark.css',
+  '/css/syntax.css',
+  '/js/theme-mode.js',
+  '/images/icons/pwa-icon-192.png',
+  '/images/icons/pwa-icon-512.png',
+  '/offline.html'
 ];
 
 // インストール時にリソースをキャッシュ
@@ -68,8 +68,8 @@ self.addEventListener('fetch', (event) => {
   const isHTMLDocument =
     request.destination === 'document' ||
     url.pathname.endsWith('.html') ||
-    url.pathname === '/todayilearned/' ||
-    (!url.pathname.includes('.') && !url.pathname.startsWith('/todayilearned/css') && !url.pathname.startsWith('/todayilearned/js') && !url.pathname.startsWith('/todayilearned/images'));
+    url.pathname === '/' ||
+    (!url.pathname.includes('.') && !url.pathname.startsWith('/css') && !url.pathname.startsWith('/js') && !url.pathname.startsWith('/images'));
 
   if (isHTMLDocument) {
     event.respondWith(
@@ -89,7 +89,7 @@ self.addEventListener('fetch', (event) => {
               return cachedResponse;
             }
             // キャッシュもない場合はオフラインページ
-            return caches.match('/todayilearned/offline.html');
+            return caches.match('/offline.html');
           });
         })
     );

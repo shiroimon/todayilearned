@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Terminal on Today I Learned | KitHub</title>
-    <link>https://shiroimon.github.io/todayilearned/tags/terminal/</link>
+    <link>https://kithub.f5.si/tags/terminal/</link>
     <description>Recent content in Terminal on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 02 Apr 2025 16:57:14 +0900</lastBuildDate>
-    <atom:link href="https://shiroimon.github.io/todayilearned/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kithub.f5.si/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[WezTerm] Setup</title>
-      <link>https://shiroimon.github.io/todayilearned/post/wezterm_setup/</link>
+      <link>https://kithub.f5.si/post/wezterm_setup/</link>
       <pubDate>Thu, 24 Oct 2024 10:40:32 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/post/wezterm_setup/</guid>
+      <guid>https://kithub.f5.si/post/wezterm_setup/</guid>
       <description>🟣 Would like to use the most powerful terminal that rumored on the street.</description>
     </item>
   </channel>

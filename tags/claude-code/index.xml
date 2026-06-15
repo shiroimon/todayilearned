@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Claude Code on Today I Learned | KitHub</title>
-    <link>https://shiroimon.github.io/todayilearned/tags/claude-code/</link>
+    <link>https://kithub.f5.si/tags/claude-code/</link>
     <description>Recent content in Claude Code on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 20 Mar 2026 18:03:13 +0900</lastBuildDate>
-    <atom:link href="https://shiroimon.github.io/todayilearned/tags/claude-code/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kithub.f5.si/tags/claude-code/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Claude Code] Miscellaneous &lt;雑記&gt;</title>
-      <link>https://shiroimon.github.io/todayilearned/post/claude_code_usage_miscellaneous/</link>
+      <link>https://kithub.f5.si/post/claude_code_usage_miscellaneous/</link>
       <pubDate>Wed, 07 Jan 2026 11:56:35 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/post/claude_code_usage_miscellaneous/</guid>
+      <guid>https://kithub.f5.si/post/claude_code_usage_miscellaneous/</guid>
       <description>💥 How to use various features of Claude Code, including Slash Commands, Skills, Commands, Agents, Hooks, and more. Tips and best practices for maximizing your productivity with Claude Code.</description>
     </item>
   </channel>

@@ -2,115 +2,115 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Today I Learned | KitHub</title>
-    <link>https://shiroimon.github.io/todayilearned/categories/</link>
+    <link>https://kithub.f5.si/categories/</link>
     <description>Recent content in Categories on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 12 Jun 2026 21:26:04 +0900</lastBuildDate>
-    <atom:link href="https://shiroimon.github.io/todayilearned/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kithub.f5.si/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Data Engineer</title>
-      <link>https://shiroimon.github.io/todayilearned/categories/data-engineer/</link>
+      <link>https://kithub.f5.si/categories/data-engineer/</link>
       <pubDate>Fri, 12 Jun 2026 17:30:29 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/categories/data-engineer/</guid>
+      <guid>https://kithub.f5.si/categories/data-engineer/</guid>
       <description></description>
     </item>
     <item>
       <title>Engineering</title>
-      <link>https://shiroimon.github.io/todayilearned/categories/engineering/</link>
+      <link>https://kithub.f5.si/categories/engineering/</link>
       <pubDate>Fri, 12 Jun 2026 17:30:29 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/categories/engineering/</guid>
+      <guid>https://kithub.f5.si/categories/engineering/</guid>
       <description></description>
     </item>
     <item>
       <title>AI</title>
-      <link>https://shiroimon.github.io/todayilearned/categories/ai/</link>
+      <link>https://kithub.f5.si/categories/ai/</link>
       <pubDate>Wed, 07 Jan 2026 11:56:35 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/categories/ai/</guid>
+      <guid>https://kithub.f5.si/categories/ai/</guid>
       <description></description>
     </item>
     <item>
       <title>BI</title>
-      <link>https://shiroimon.github.io/todayilearned/categories/bi/</link>
+      <link>https://kithub.f5.si/categories/bi/</link>
       <pubDate>Tue, 02 Dec 2025 16:39:00 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/categories/bi/</guid>
+      <guid>https://kithub.f5.si/categories/bi/</guid>
       <description></description>
     </item>
     <item>
       <title>Google</title>
-      <link>https://shiroimon.github.io/todayilearned/categories/google/</link>
+      <link>https://kithub.f5.si/categories/google/</link>
       <pubDate>Tue, 02 Dec 2025 16:39:00 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/categories/google/</guid>
+      <guid>https://kithub.f5.si/categories/google/</guid>
       <description></description>
     </item>
     <item>
       <title>Infrastructure</title>
-      <link>https://shiroimon.github.io/todayilearned/categories/infrastructure/</link>
+      <link>https://kithub.f5.si/categories/infrastructure/</link>
       <pubDate>Mon, 01 Sep 2025 21:43:34 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/categories/infrastructure/</guid>
+      <guid>https://kithub.f5.si/categories/infrastructure/</guid>
       <description></description>
     </item>
     <item>
       <title>Data Reliability Engineer</title>
-      <link>https://shiroimon.github.io/todayilearned/categories/data-reliability-engineer/</link>
+      <link>https://kithub.f5.si/categories/data-reliability-engineer/</link>
       <pubDate>Thu, 03 Apr 2025 11:11:44 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/categories/data-reliability-engineer/</guid>
+      <guid>https://kithub.f5.si/categories/data-reliability-engineer/</guid>
       <description></description>
     </item>
     <item>
       <title>Data Analytics Engineer</title>
-      <link>https://shiroimon.github.io/todayilearned/categories/data-analytics-engineer/</link>
+      <link>https://kithub.f5.si/categories/data-analytics-engineer/</link>
       <pubDate>Fri, 14 Mar 2025 17:31:44 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/categories/data-analytics-engineer/</guid>
+      <guid>https://kithub.f5.si/categories/data-analytics-engineer/</guid>
       <description></description>
     </item>
     <item>
       <title>Know-How</title>
-      <link>https://shiroimon.github.io/todayilearned/categories/know-how/</link>
+      <link>https://kithub.f5.si/categories/know-how/</link>
       <pubDate>Mon, 03 Mar 2025 22:23:20 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/categories/know-how/</guid>
+      <guid>https://kithub.f5.si/categories/know-how/</guid>
       <description></description>
     </item>
     <item>
       <title>Hands-On</title>
-      <link>https://shiroimon.github.io/todayilearned/categories/hands-on/</link>
+      <link>https://kithub.f5.si/categories/hands-on/</link>
       <pubDate>Tue, 17 Dec 2024 22:39:48 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/categories/hands-on/</guid>
+      <guid>https://kithub.f5.si/categories/hands-on/</guid>
       <description></description>
     </item>
     <item>
       <title>Udemy</title>
-      <link>https://shiroimon.github.io/todayilearned/categories/udemy/</link>
+      <link>https://kithub.f5.si/categories/udemy/</link>
       <pubDate>Tue, 17 Dec 2024 22:39:48 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/categories/udemy/</guid>
+      <guid>https://kithub.f5.si/categories/udemy/</guid>
       <description></description>
     </item>
     <item>
       <title>Hobby</title>
-      <link>https://shiroimon.github.io/todayilearned/categories/hobby/</link>
+      <link>https://kithub.f5.si/categories/hobby/</link>
       <pubDate>Tue, 01 Oct 2024 15:10:50 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/categories/hobby/</guid>
+      <guid>https://kithub.f5.si/categories/hobby/</guid>
       <description></description>
     </item>
     <item>
       <title>Data Pipline</title>
-      <link>https://shiroimon.github.io/todayilearned/categories/data-pipline/</link>
+      <link>https://kithub.f5.si/categories/data-pipline/</link>
       <pubDate>Mon, 09 Sep 2024 12:40:59 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/categories/data-pipline/</guid>
+      <guid>https://kithub.f5.si/categories/data-pipline/</guid>
       <description></description>
     </item>
     <item>
       <title>Container</title>
-      <link>https://shiroimon.github.io/todayilearned/categories/container/</link>
+      <link>https://kithub.f5.si/categories/container/</link>
       <pubDate>Wed, 21 Aug 2024 00:00:34 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/categories/container/</guid>
+      <guid>https://kithub.f5.si/categories/container/</guid>
       <description></description>
     </item>
     <item>
       <title>Freelance</title>
-      <link>https://shiroimon.github.io/todayilearned/categories/freelance/</link>
+      <link>https://kithub.f5.si/categories/freelance/</link>
       <pubDate>Fri, 16 Aug 2024 18:41:57 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/categories/freelance/</guid>
+      <guid>https://kithub.f5.si/categories/freelance/</guid>
       <description></description>
     </item>
   </channel>

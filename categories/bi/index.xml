@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>BI on Today I Learned | KitHub</title>
-    <link>https://shiroimon.github.io/todayilearned/categories/bi/</link>
+    <link>https://kithub.f5.si/categories/bi/</link>
     <description>Recent content in BI on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 04 Apr 2026 00:04:48 +0900</lastBuildDate>
-    <atom:link href="https://shiroimon.github.io/todayilearned/categories/bi/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kithub.f5.si/categories/bi/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Looker] This and That</title>
-      <link>https://shiroimon.github.io/todayilearned/post/looker_this_and_that/</link>
+      <link>https://kithub.f5.si/post/looker_this_and_that/</link>
       <pubDate>Tue, 02 Dec 2025 16:39:00 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/post/looker_this_and_that/</guid>
+      <guid>https://kithub.f5.si/post/looker_this_and_that/</guid>
       <description>🫧 How to use Google&amp;rsquo;s SaaS about BI.</description>
     </item>
     <item>
       <title>[Tableau] This and That</title>
-      <link>https://shiroimon.github.io/todayilearned/post/tableau_this_and_that/</link>
+      <link>https://kithub.f5.si/post/tableau_this_and_that/</link>
       <pubDate>Mon, 02 Jun 2025 14:46:08 +0900</pubDate>
-      <guid>https://shiroimon.github.io/todayilearned/post/tableau_this_and_that/</guid>
+      <guid>https://kithub.f5.si/post/tableau_this_and_that/</guid>
       <description>✨A little while ago, I&amp;rsquo;ll be writing about my studies as an introduction to Tableau</description>
     </item>
   </channel>
