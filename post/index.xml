@@ -6,20 +6,27 @@
     <description>Recent content in Posts on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 12 Jun 2026 21:26:04 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jun 2026 23:32:44 +0900</lastBuildDate>
     <atom:link href="https://kithub.f5.si/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>[Engineering] Fundamental</title>
+      <title>[Mermaid] Capabilities Cheatsheet</title>
+      <link>https://kithub.f5.si/post/mermaid_capabilities/</link>
+      <pubDate>Fri, 19 Jun 2026 23:32:44 +0900</pubDate>
+      <guid>https://kithub.f5.si/post/mermaid_capabilities/</guid>
+      <description>🧜‍♀️ Diagrams as Code in Markdown</description>
+    </item>
+    <item>
+      <title>[Engineering] Fundamentals &amp; System Design Roadmap</title>
       <link>https://kithub.f5.si/post/engineering_fundamentals/</link>
       <pubDate>Fri, 12 Jun 2026 17:30:29 +0900</pubDate>
       <guid>https://kithub.f5.si/post/engineering_fundamentals/</guid>
-      <description>🧱 Five fundamentals worth deeply understanding.</description>
+      <description>🧱 Five fundamentals worth deeply understanding, plus a roadmap for learning system design from zero.</description>
     </item>
     <item>
       <title>[Claude Code] Miscellaneous &lt;雑記&gt;</title>
-      <link>https://kithub.f5.si/post/claude_code_usage_miscellaneous/</link>
+      <link>https://kithub.f5.si/post/claudecode_usage_miscellaneous/</link>
       <pubDate>Wed, 07 Jan 2026 11:56:35 +0900</pubDate>
-      <guid>https://kithub.f5.si/post/claude_code_usage_miscellaneous/</guid>
+      <guid>https://kithub.f5.si/post/claudecode_usage_miscellaneous/</guid>
       <description>💥 How to use various features of Claude Code, including Slash Commands, Skills, Commands, Agents, Hooks, and more. Tips and best practices for maximizing your productivity with Claude Code.</description>
     </item>
     <item>

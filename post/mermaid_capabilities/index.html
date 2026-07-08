@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="application/javascript" src='https://kithub.f5.si/js/theme-mode.js'></script>
+    <link rel="stylesheet" href='https://kithub.f5.si/css/frameworks.min.css' />
+    <link rel="stylesheet" href='https://kithub.f5.si/css/github.min.css' />
+    <link rel="stylesheet" href='https://kithub.f5.si/css/github-style.css' />
+    <link rel="stylesheet" href='https://kithub.f5.si/css/light.css' />
+    <link rel="stylesheet" href='https://kithub.f5.si/css/dark.css' />
+    <link rel="stylesheet" href='https://kithub.f5.si/css/syntax.css' />
+    <title>[Mermaid] Capabilities Cheatsheet - Today I Learned | KitHub</title>
+    
+    <link rel="icon" type="image/x-icon" href='../../images/github-mark.png'>
+    
+    <meta name="theme-color" content="#1e2327">
+
+    <link rel="stylesheet" href="https://kithub.f5.si/css/gist.css"><link rel="stylesheet" href="https://kithub.f5.si/css/markdown-alert.css"><link rel="stylesheet" href="https://kithub.f5.si/css/code-copy.css"><link rel="stylesheet" href="https://kithub.f5.si/css/link-card.css"><link rel="stylesheet" href="https://kithub.f5.si/css/post-title.css">
+    <script type="text/javascript" src="https://kithub.f5.si/js/gist-dark-mode.js"></script><script type="text/javascript" src="https://kithub.f5.si/js/code-copy.js"></script>
+    
+
+    
+    <meta name="description"
+  content="🧜‍♀️ Diagrams as Code in Markdown" />
+<meta name="keywords"
+  content='blog' />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://kithub.f5.si/post/mermaid_capabilities/" />
+
+
+<link rel="manifest" href="../../manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Today I Learned | KitHub">
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="[Mermaid] Capabilities Cheatsheet - Today I Learned | KitHub" />
+<meta name="twitter:description"
+  content="🧜‍♀️ Diagrams as Code in Markdown" />
+<meta name="twitter:site" content="https://kithub.f5.si/" />
+<meta name="twitter:creator" content="shiroimon" />
+<meta name="twitter:image" content="https://kithub.f5.si/images/avatar.png">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="[Mermaid] Capabilities Cheatsheet - Today I Learned | KitHub">
+<meta property="og:description"
+  content="🧜‍♀️ Diagrams as Code in Markdown" />
+<meta property="og:url" content="https://kithub.f5.si/post/mermaid_capabilities/" />
+<meta property="og:site_name" content="[Mermaid] Capabilities Cheatsheet" />
+<meta property="og:image" content="https://kithub.f5.si/images/avatar.png">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2026-06-19 23:32:44 &#43;0900 JST" />
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('\/sw.js', { scope: '\/' })
+      .then((registration) => {
+        console.log('[PWA] Service Worker registered:', registration.scope);
+
+        
+        registration.addEventListener('updatefound', () => {
+          const newWorker = registration.installing;
+          console.log('[PWA] New Service Worker found, updating...');
+
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'activated') {
+              console.log('[PWA] New Service Worker activated');
+              
+              if (navigator.serviceWorker.controller) {
+                window.location.reload();
+              }
+            }
+          });
+        });
+
+        
+        setInterval(() => {
+          registration.update();
+        }, 60 * 60 * 1000);
+      })
+      .catch((error) => {
+        console.error('[PWA] Service Worker registration failed:', error);
+      });
+  });
+}
+</script>
+
+</head>
+
+
+<body>
+  <div style="position: relative">
+  <header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on">
+    <div class="Header-item mobile-none" style="margin-top: -4px; margin-bottom: -4px;">
+      <a class="Header-link" href="https://kithub.f5.si/">
+        <img class="octicon" height="32" width="32" src="../../images/github-mark-white.png">
+      </a>
+    </div>
+    <div class="Header-item d-md-none">
+      <button class="Header-link btn-link js-details-target" type="button"
+        onclick="document.querySelector('#header-search').style.display = document.querySelector('#header-search').style.display == 'none'? 'block': 'none'">
+        <svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" version="1.1" width="24">
+          <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div style="display: none;" id="header-search"
+      class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
+      <div
+        class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to">
+        <div class="position-relative">
+          
+          <form target="_blank" id="search-form" action="" accept-charset="UTF-8" method="get"
+            autocomplete="off">
+            <label
+              class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center">
+              <input type="text"
+                class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+                name="q" value="" placeholder="Search" autocomplete="off">
+            </label>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
+      <a class="Header-link " href="https://kithub.f5.si/">
+        <img class="octicon octicon-mark-github v-align-middle" height="32" width="32" src="../../images/github-mark-white.png">
+      </a>
+    </div>
+    <div class="Header-item" style="margin-right: 0;">
+      <a href="javascript:void(0)" class="Header-link no-select" onclick="switchTheme()">
+        <svg style="fill: var(--color-profile-color-modes-toggle-moon);" class="no-select" viewBox="0 0 16 16"
+          version="1.1" width="16" height="16">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M4.52208 7.71754C7.5782 7.71754 10.0557 5.24006 10.0557 2.18394C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961C9.95801 1.07727 10.3495 0.771159 10.6474 0.99992C12.1153 2.12716 13.0615 3.89999 13.0615 5.89383C13.0615 9.29958 10.3006 12.0605 6.89485 12.0605C3.95334 12.0605 1.49286 10.001 0.876728 7.24527C0.794841 6.87902 1.23668 6.65289 1.55321 6.85451C2.41106 7.40095 3.4296 7.71754 4.52208 7.71754Z">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </header>
+</div>
+
+  <div id="search-result" class="container-lg px-3 new-discussion-timeline" style="display: none;">
+</div>
+
+  
+<div class="application-main">
+  <div>
+<main>
+    
+    <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
+    <div class="px-0">
+    <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+    <div class="flex-auto min-width-0 width-fit mr-3">
+    <div class="d-flex">
+        
+        <div class="d-none d-md-block">
+            <a class="avatar mr-2 flex-shrink-0" href="https://kithub.f5.si/">
+                <img class=" avatar-user"
+                  src="../../images/avatar.png"
+                  width="32"
+                  height="32">
+            </a>
+        </div>
+        
+        <div class="d-flex flex-column">
+            
+            <h1 class="break-word f3 text-normal mb-md-0 mb-1">
+                <span class="author"><a href="https://kithub.f5.si/"></a></span>
+                <span class="path-divider">/</span>
+                <strong class="mr-1"><a href="https://kithub.f5.si/post/mermaid_capabilities/">[Mermaid] Capabilities Cheatsheet</a></strong>
+            </h1>
+            
+            <div class="note m-0">
+                Created <relative-time datetime="Fri, 19 Jun 2026 23:32:44 &#43;0900" class="no-wrap">Fri, 19 Jun 2026 23:32:44 &#43;0900</relative-time>
+                
+                <span class="path-divider">|</span>
+                Modified <relative-time datetime="Fri, 19 Jun 2026 23:32:44 &#43;0900" class="no-wrap">Fri, 19 Jun 2026 23:32:44 &#43;0900</relative-time>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    
+    <div class="container-lg px-3 new-discussion-timeline">
+    <div class="repository-content gist-content">
+    <div>
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+        <div id="file-pytest" class="file my-2">
+        
+        <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
+        <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+
+            
+            <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+            <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
+                <svg aria-hidden="true" viewBox="0 0 16 16" class="octicon octicon-list-unordered" height="16" width="16">
+                    <path fill-rule="evenodd"
+                        d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z">
+                    </path>
+                </svg>
+            </summary>
+            <details-menu class="SelectMenu" id="toc-details" style="display: none;">
+                <div class="SelectMenu-modal rounded-3 mt-1" style="max-height: 340px;">
+                    <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list"></div>
+                </div>
+            </details-menu>
+            2945 Words
+            <span class="path-divider">|</span>
+            5 min
+            </div>
+
+            
+            <div class="file-actions flex-order-2 pt-0">
+                
+                <div class="d-none d-md-flex">
+                    
+                    
+                    
+                    <a class="muted-link mr-3" href='../../tags/mermaid'>
+                        <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                            </path>
+                        </svg>
+                        Mermaid
+                    </a>
+                    
+                    
+                    
+                    <a class="muted-link mr-3" href='../../tags/markdown'>
+                        <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                            </path>
+                        </svg>
+                        Markdown
+                    </a>
+                    
+                    
+                    
+                    <a class="muted-link mr-3" href='../../tags/diagram'>
+                        <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                            </path>
+                        </svg>
+                        Diagram
+                    </a>
+                    
+                    
+                    
+                    <a class="muted-link mr-3" href='../../tags/documentation'>
+                        <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                            </path>
+                        </svg>
+                        Documentation
+                    </a>
+                    
+                    
+                    
+                </div>
+                
+            </div>
+        </div>
+        </div>
+
+        
+        
+        
+        
+
+        
+        <div class="Box-body px-5 pb-5" style="z-index: 1">
+            <article class="markdown-body entry-content container-lg"><!-- Icon Badge -->
+<p><img src="https://img.shields.io/badge/-Mermaid-FF3670.svg?logo=Mermaid&amp;style=flat&amp;color=F0F8FF&amp;logoColor=FF3670" alt="Mermaid" loading="lazy" decoding="async">
+ <img src="https://img.shields.io/badge/-Markdown-000.svg?logo=markdown&amp;style=flat&amp;color=F0F8FF&amp;logoColor=000" alt="Markdown" loading="lazy" decoding="async">
+</p>
+<h2 id="why">Why<a class="anchor" aria-hidden="true" href="#why"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>README や設計ドキュメントで図を埋め込みたいとき、画像ファイルを生成して貼るのは面倒。
+Mermaid なら <strong>Markdown のコードブロック</strong>として書けて、GitHub / GitLab / Notion / Hugo などが標準でレンダリングしてくれる。差分も取りやすい。</p>
+<h2 id="what">What<a class="anchor" aria-hidden="true" href="#what"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<ul>
+<li>Official <a href="https://mermaid.js.org/">https://mermaid.js.org/</a></li>
+<li>Live Editor <a href="https://mermaid.live/edit">https://mermaid.live/edit</a></li>
+<li>
+
+<div>
+    <div class="github-card" data-github="mermaid-js/mermaid" data-theme="default"></div>
+    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+</div>
+
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl"><span class="s">```mermaid
+</span></span></span><span class="line"><span class="cl">&lt;diagramType&gt;
+</span></span><span class="line"><span class="cl">    ...定義...
+</span></span><span class="line"><span class="cl"><span class="s">```</span>
+</span></span></code></pre></div><p><code>&lt;diagramType&gt;</code> の部分で何の図を描くかが決まる。以下、よく使う / 知っておくと便利な図の種類をまとめる。</p>
+<hr>
+<h2 id="フローチャート-flowchart">フローチャート (<code>flowchart</code>)<a class="anchor" aria-hidden="true" href="#フローチャート-flowchart"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>処理の流れ・分岐を表現する一番ベーシックな図。<code>graph</code> でも書けるが、新しい構文は <code>flowchart</code>。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart LR
+    A[開始] --&gt; B{条件分岐}
+    B --&gt;|Yes| C[処理1]
+    B --&gt;|No| D[処理2]
+    C --&gt; E[終了]
+    D --&gt; E
+</code></pre><ul>
+<li>方向指定: <code>TB</code> (上→下) / <code>BT</code> / <code>LR</code> (左→右) / <code>RL</code></li>
+<li>ノード形状: <code>[]</code> 矩形 / <code>()</code> 角丸 / <code>{}</code> ひし形(条件) / <code>(())</code> 円 / <code>[[]]</code> サブルーチン</li>
+<li>矢印: <code>--&gt;</code> / <code>---</code> (線のみ) / <code>-.-&gt;</code> (点線) / <code>==&gt;</code> (太線)</li>
+</ul>
+<hr>
+<h2 id="シーケンス図-sequencediagram">シーケンス図 (<code>sequenceDiagram</code>)<a class="anchor" aria-hidden="true" href="#シーケンス図-sequencediagram"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>API 呼び出しやプロトコルの <strong>時系列</strong>を表現する。3-way handshake や OAuth フローを書くのに最適。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">sequenceDiagram
+    participant C as Client
+    participant S as Server
+    C-&gt;&gt;S: SYN
+    S-&gt;&gt;C: SYN-ACK
+    C-&gt;&gt;S: ACK
+    Note over C,S: Connection established
+</code></pre><ul>
+<li><code>-&gt;&gt;</code> 同期メッセージ / <code>--&gt;&gt;</code> 応答 / <code>-x</code> 失敗</li>
+<li><code>Note over A,B: ...</code> 注記</li>
+<li><code>loop</code> / <code>alt</code> / <code>opt</code> で繰り返し・分岐も書ける</li>
+</ul>
+<hr>
+<h2 id="er-図-erdiagram">ER 図 (<code>erDiagram</code>)<a class="anchor" aria-hidden="true" href="#er-図-erdiagram"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>データベースのテーブル関係を可視化。BigQuery / RDBMS 問わずスキーマ設計の議論で使える。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">erDiagram
+    USER ||--o{ POST : writes
+    USER {
+        int id PK
+        string name
+        string email
+    }
+    POST ||--o{ COMMENT : has
+    POST {
+        int id PK
+        string title
+        text body
+        int user_id FK
+    }
+    COMMENT {
+        int id PK
+        text body
+        int post_id FK
+    }
+</code></pre><ul>
+<li>カーディナリティ記法
+<ul>
+<li><code>||--||</code> 1対1</li>
+<li><code>||--o{</code> 1対多</li>
+<li><code>}o--o{</code> 多対多</li>
+</ul>
+</li>
+<li>属性に <code>PK</code> / <code>FK</code> を付けられる</li>
+</ul>
+<hr>
+<h2 id="クラス図-classdiagram">クラス図 (<code>classDiagram</code>)<a class="anchor" aria-hidden="true" href="#クラス図-classdiagram"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>OOP のクラス設計。Go の interface 関係なども近似的に書ける。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">classDiagram
+    class Animal {
+        +String name
+        +int age
+        +speak() void
+    }
+    class Dog {
+        +String breed
+        +bark() void
+    }
+    Animal &lt;|-- Dog
+</code></pre><ul>
+<li><code>&lt;|--</code> 継承 / <code>*--</code> コンポジション / <code>o--</code> 集約 / <code>--&gt;</code> 関連</li>
+</ul>
+<hr>
+<h2 id="ステート図-statediagram-v2">ステート図 (<code>stateDiagram-v2</code>)<a class="anchor" aria-hidden="true" href="#ステート図-statediagram-v2"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>状態遷移。ワークフローエンジン (Argo / Airflow) のジョブ状態や、UI の画面遷移を書くのに便利。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">stateDiagram-v2
+    [*] --&gt; Pending
+    Pending --&gt; Running: 実行開始
+    Running --&gt; Succeeded: 完了
+    Running --&gt; Failed: エラー
+    Failed --&gt; Running: リトライ
+    Succeeded --&gt; [*]
+    Failed --&gt; [*]
+</code></pre><ul>
+<li><code>[*]</code> が開始 / 終了</li>
+<li>ネストした状態 (<code>state X { ... }</code>) も書ける</li>
+</ul>
+<hr>
+<h2 id="ガントチャート-gantt">ガントチャート (<code>gantt</code>)<a class="anchor" aria-hidden="true" href="#ガントチャート-gantt"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>プロジェクトのスケジュール。マイルストーン管理。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">gantt
+    title リリーススケジュール
+    dateFormat  YYYY-MM-DD
+    section 設計
+    要件定義           :a1, 2026-06-01, 7d
+    基本設計           :a2, after a1, 10d
+    section 実装
+    バックエンド       :b1, after a2, 14d
+    フロントエンド     :b2, after a2, 14d
+    section テスト
+    結合テスト         :c1, after b1, 7d
+</code></pre><hr>
+<h2 id="git-グラフ-gitgraph">Git グラフ (<code>gitGraph</code>)<a class="anchor" aria-hidden="true" href="#git-グラフ-gitgraph"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>ブランチ戦略の説明やレビューで威力を発揮。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">gitGraph
+    commit id: &#34;初回コミット&#34;
+    branch feature/login
+    commit id: &#34;ログイン画面実装&#34;
+    commit id: &#34;バリデーション追加&#34;
+    checkout main
+    merge feature/login id: &#34;PR #1 マージ&#34;
+    branch feature/dashboard
+    commit id: &#34;ダッシュボード実装&#34;
+    checkout main
+    merge feature/dashboard id: &#34;PR #2 マージ&#34;
+</code></pre><hr>
+<h2 id="円グラフ-pie">円グラフ (<code>pie</code>)<a class="anchor" aria-hidden="true" href="#円グラフ-pie"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>比率の可視化。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">pie title 工数配分
+    &#34;実装&#34; : 45
+    &#34;レビュー&#34; : 20
+    &#34;ミーティング&#34; : 25
+    &#34;その他&#34; : 10
+</code></pre><hr>
+<h2 id="マインドマップ-mindmap">マインドマップ (<code>mindmap</code>)<a class="anchor" aria-hidden="true" href="#マインドマップ-mindmap"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>アイデア整理。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">mindmap
+  root((Mermaid))
+    Flowchart
+      LR / TB
+      条件分岐
+    Sequence
+      API
+      Auth
+    ER
+      DB設計
+    Git
+      ブランチ戦略
+</code></pre><hr>
+<h2 id="タイムライン-timeline">タイムライン (<code>timeline</code>)<a class="anchor" aria-hidden="true" href="#タイムライン-timeline"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>年表・歴史。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">timeline
+    title 主要 Web 技術の登場
+    1991 : WWW
+    1995 : JavaScript
+    2008 : Node.js
+    2013 : React
+    2014 : Kubernetes
+</code></pre><hr>
+<h2 id="c4-図-c4context">C4 図 (<code>C4Context</code>)<a class="anchor" aria-hidden="true" href="#c4-図-c4context"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>ソフトウェアアーキテクチャ記述 (C4 model)。Context / Container / Component / Code の4階層。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">C4Context
+    title システム全体構成
+    Person(user, &#34;ユーザー&#34;)
+    System(webapp, &#34;Web アプリ&#34;)
+    System_Ext(api, &#34;外部 API&#34;)
+    Rel(user, webapp, &#34;利用&#34;)
+    Rel(webapp, api, &#34;呼び出し&#34;)
+</code></pre><hr>
+<h2 id="サンキー図-sankey-beta">サンキー図 (<code>sankey-beta</code>)<a class="anchor" aria-hidden="true" href="#サンキー図-sankey-beta"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>フロー量の可視化。データ移動・予算配分。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">sankey-beta
+    Source A,Target X,10
+    Source A,Target Y,5
+    Source B,Target X,8
+</code></pre><hr>
+<h2 id="棒グラフ--折れ線グラフ-xychart-beta">棒グラフ / 折れ線グラフ (<code>xychart-beta</code>)<a class="anchor" aria-hidden="true" href="#棒グラフ--折れ線グラフ-xychart-beta"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>v10.6+ で追加された XY Chart。<strong>棒グラフと折れ線を同じ図に重ねられる</strong>ので、売上＋目標線のような表現が得意。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">xychart-beta
+    title &#34;月別売上&#34;
+    x-axis [Jan, Feb, Mar, Apr, May, Jun]
+    y-axis &#34;売上 (万円)&#34; 0 --&gt; 100
+    bar [30, 45, 60, 55, 80, 95]
+    line [30, 45, 60, 55, 80, 95]
+</code></pre><p>折れ線だけ:</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">xychart-beta
+    title &#34;アクセス数推移&#34;
+    x-axis [Mon, Tue, Wed, Thu, Fri]
+    y-axis &#34;PV&#34; 0 --&gt; 1000
+    line [400, 550, 700, 650, 900]
+</code></pre><ul>
+<li><code>bar [...]</code> 棒グラフ / <code>line [...]</code> 折れ線</li>
+<li>同じ図に両方並べると重なって描画される</li>
+<li><code>xychart-beta horizontal</code> で横棒に</li>
+<li>y軸の範囲は <code>y-axis &quot;ラベル&quot; 0 --&gt; 100</code></li>
+</ul>
+<hr>
+<h2 id="象限図-quadrantchart">象限図 (<code>quadrantChart</code>)<a class="anchor" aria-hidden="true" href="#象限図-quadrantchart"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>2軸マトリクス。<strong>重要度 × 緊急度</strong> や <strong>影響度 × 実装コスト</strong> のような優先度マッピングに。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">quadrantChart
+    title 施策の優先度
+    x-axis 低コスト --&gt; 高コスト
+    y-axis 低インパクト --&gt; 高インパクト
+    quadrant-1 即やる
+    quadrant-2 計画的に
+    quadrant-3 後回し
+    quadrant-4 やらない
+    施策A: [0.3, 0.8]
+    施策B: [0.7, 0.7]
+    施策C: [0.2, 0.3]
+    施策D: [0.8, 0.2]
+</code></pre><hr>
+<h2 id="レーダーチャート-radar-beta">レーダーチャート (<code>radar-beta</code>)<a class="anchor" aria-hidden="true" href="#レーダーチャート-radar-beta"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>v11+ で追加。スキルマップやスペック比較。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">radar-beta
+    title チームスキル
+    axis A[&#34;コーディング&#34;], B[&#34;設計&#34;], C[&#34;レビュー&#34;], D[&#34;DevOps&#34;], E[&#34;ドキュメント&#34;]
+    curve a[&#34;メンバー1&#34;]{4, 5, 3, 2, 4}
+    curve b[&#34;メンバー2&#34;]{3, 3, 4, 5, 3}
+</code></pre><hr>
+
+<div class="markdown-alert markdown-alert-note">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>
+        Note
+        
+    </p>
+    <p><code>xychart-beta</code> / <code>radar-beta</code> は <strong>beta</strong> 扱い。GitHub の Markdown レンダラはバージョンが古くて未サポートのことがある。表示崩れたら <a href="https://mermaid.live/edit">Live Editor</a> で確認するのが速い。</p>
+</div>
+
+<hr>
+<h2 id="ユーザージャーニー-journey">ユーザージャーニー (<code>journey</code>)<a class="anchor" aria-hidden="true" href="#ユーザージャーニー-journey"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>UX の議論で「どこで詰まるか」を可視化。スコアは 1-5（5 が最高）。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">journey
+    title ECサイトの購入体験
+    section 商品探索
+      検索: 4: User
+      商品比較: 3: User
+    section 購入
+      カート追加: 5: User
+      決済入力: 2: User
+      購入完了: 4: User
+    section 配送
+      配送通知受信: 5: User, System
+      受け取り: 5: User
+</code></pre><hr>
+<h2 id="要件定義図-requirementdiagram">要件定義図 (<code>requirementDiagram</code>)<a class="anchor" aria-hidden="true" href="#要件定義図-requirementdiagram"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>SysML 由来。要件間の依存関係・トレーサビリティ。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">requirementDiagram
+    requirement auth_req {
+        id: 1
+        text: ユーザーは認証されなければならない
+        risk: high
+        verifymethod: test
+    }
+    functionalRequirement login_req {
+        id: 1.1
+        text: ログイン画面を提供する
+        risk: medium
+        verifymethod: demonstration
+    }
+    element login_ui {
+        type: UI
+    }
+    login_req - satisfies -&gt; auth_req
+    login_ui - satisfies -&gt; login_req
+</code></pre><hr>
+<h2 id="ブロック図-block-beta">ブロック図 (<code>block-beta</code>)<a class="anchor" aria-hidden="true" href="#ブロック図-block-beta"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>自由配置のシステム構成図。<code>flowchart</code> より柔軟にレイアウトできる。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">block-beta
+    columns 3
+    A[&#34;Frontend&#34;] B[&#34;API Gateway&#34;] C[&#34;Backend&#34;]
+    D[&#34;CDN&#34;] E[&#34;Auth Service&#34;] F[&#34;DB&#34;]
+    A --&gt; B
+    B --&gt; C
+    C --&gt; F
+    B --&gt; E
+</code></pre><hr>
+<h2 id="アーキテクチャ図-architecture-beta">アーキテクチャ図 (<code>architecture-beta</code>)<a class="anchor" aria-hidden="true" href="#アーキテクチャ図-architecture-beta"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>クラウド構成図。<strong>GCP / AWS / k8s のアイコン</strong>を埋め込める。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">architecture-beta
+    group api(cloud)[API]
+
+    service db(database)[Database] in api
+    service disk1(disk)[Storage] in api
+    service disk2(disk)[Storage] in api
+    service server(server)[Server] in api
+
+    db:L -- R:server
+    disk1:T -- B:server
+    disk2:T -- B:db
+</code></pre><ul>
+<li><code>group</code> でグルーピング</li>
+<li><code>service xxx(icon)[Label]</code> でサービス配置</li>
+<li>アイコンは <code>cloud</code> / <code>database</code> / <code>server</code> / <code>disk</code> / <code>internet</code> などビルトイン</li>
+</ul>
+<hr>
+<h2 id="パケット図-packet-beta">パケット図 (<code>packet-beta</code>)<a class="anchor" aria-hidden="true" href="#パケット図-packet-beta"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>ネットワークパケットのヘッダ構造。TCP / UDP の説明資料に。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">packet-beta
+    0-15: &#34;Source Port&#34;
+    16-31: &#34;Destination Port&#34;
+    32-63: &#34;Sequence Number&#34;
+    64-95: &#34;Acknowledgment Number&#34;
+    96-99: &#34;Data Offset&#34;
+    100-105: &#34;Reserved&#34;
+    106: &#34;URG&#34;
+    107: &#34;ACK&#34;
+    108: &#34;PSH&#34;
+    109: &#34;RST&#34;
+    110: &#34;SYN&#34;
+    111: &#34;FIN&#34;
+    112-127: &#34;Window&#34;
+    128-143: &#34;Checksum&#34;
+    144-159: &#34;Urgent Pointer&#34;
+</code></pre><hr>
+<h2 id="カンバンボード-kanban">カンバンボード (<code>kanban</code>)<a class="anchor" aria-hidden="true" href="#カンバンボード-kanban"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>v11+ 追加。タスクの状態をカンバン形式で。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">kanban
+    Todo
+        要件整理[要件整理]
+        設計レビュー[設計レビュー]
+    In Progress
+        API実装[API実装]
+        テスト追加[テスト追加]
+    Done
+        環境構築[環境構築]
+        スキーマ定義[スキーマ定義]
+</code></pre><hr>
+<h2 id="ツリーマップ-treemap-beta">ツリーマップ (<code>treemap-beta</code>)<a class="anchor" aria-hidden="true" href="#ツリーマップ-treemap-beta"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>v11.4+ 追加。階層データを面積で表現。ストレージ使用量や予算配分に。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">treemap-beta
+&#34;Engineering&#34;
+    &#34;Backend&#34;: 40
+    &#34;Frontend&#34;: 30
+    &#34;Infra&#34;: 20
+&#34;Sales&#34;
+    &#34;Inside&#34;: 15
+    &#34;Field&#34;: 25
+&#34;Marketing&#34;: 10
+</code></pre><hr>
+<h2 id="zenuml-zenuml">ZenUML (<code>zenuml</code>)<a class="anchor" aria-hidden="true" href="#zenuml-zenuml"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>シーケンス図の代替記法。<strong>プログラム的な書き方</strong>でシーケンスを描ける。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">zenuml
+    title Login Flow
+    User -&gt; Browser: クリック
+    Browser -&gt; Server.login() {
+        DB.query() {
+            return user
+        }
+        return token
+    }
+    Browser -&gt; User: ログイン完了
+</code></pre><p>通常の <code>sequenceDiagram</code> と比べて、メソッド呼び出しの<strong>ネスト構造</strong>が表現しやすい。</p>
+<hr>
+<h2 id="使えるところ">使えるところ<a class="anchor" aria-hidden="true" href="#使えるところ"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<table>
+  <thead>
+      <tr>
+          <th>プラットフォーム</th>
+          <th>サポート状況</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>GitHub Markdown (README, Issue, PR)</td>
+          <td>✅ ネイティブサポート</td>
+      </tr>
+      <tr>
+          <td>GitLab Markdown</td>
+          <td>✅ ネイティブサポート</td>
+      </tr>
+      <tr>
+          <td>Notion</td>
+          <td>✅ コードブロック言語に <code>mermaid</code></td>
+      </tr>
+      <tr>
+          <td>Hugo (本ブログ)</td>
+          <td>✅ テーマ次第 (本ブログは対応)</td>
+      </tr>
+      <tr>
+          <td>VS Code</td>
+          <td>拡張機能 <code>Markdown Preview Mermaid Support</code></td>
+      </tr>
+      <tr>
+          <td>Obsidian</td>
+          <td>✅ ネイティブサポート</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="tips">Tips<a class="anchor" aria-hidden="true" href="#tips"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<ul>
+<li><strong>長くなる前にレイアウト方向を変える</strong> — 横長になったら <code>flowchart TB</code>、縦長になったら <code>flowchart LR</code></li>
+<li><strong>ラベルに改行を入れる</strong> — <code>&lt;br/&gt;</code> で改行できる</li>
+<li><strong>絵文字を使ってラベルを目立たせる</strong> — <code>[&quot;🐧 Linux&quot;]</code> のように</li>
+<li><strong>Live Editor で確認してから貼る</strong> — <a href="https://mermaid.live/edit">https://mermaid.live/edit</a> が一番速い</li>
+<li><strong>複雑になりすぎたら分割</strong> — 1つの図に詰め込まず、責務ごとに分ける</li>
+</ul>
+<h2 id="ref">Ref.<a class="anchor" aria-hidden="true" href="#ref"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<ul>
+<li><a href="https://mermaid.js.org/">Mermaid 公式ドキュメント</a></li>
+<li><a href="https://mermaid.live/edit">Mermaid Live Editor</a></li>
+<li><a href="https://zenn.dev/yuriemori/articles/e097dbd950df86">mermaidでフローチャートを描く</a> Zenn</li>
+<li><a href="https://zenn.dev/iharuoru/articles/630ae2e4d7230d">MermaidでAWSアーキテクチャ図を描いてみた！</a> Zenn</li>
+<li><a href="https://www.publickey1.jp/blog/22/githubmarkdownmermaid.html">GitHub、Markdown構文でフローチャートやクラス図、ガントチャートなどのダイアグラムを表示できる「Mermaid」をサポート開始</a></li>
+</ul>
+</article>
+        </div>
+        </div>
+        </div>
+    </div>
+        
+        
+        
+        <div class="Box mt-3 position-relative">
+        <div class="Box-body px-5 pb-5">
+            <article class="markdown-body entry-content container-lg">
+                <h2>See Also</h2>
+                <ul class="mt-2">
+                    
+                    <li class="p-1">
+                        <div>
+                            <a href="../../post/slack_writing_etiquette/">[Slack] Writing etiquette</a>
+                            <time datetime="2024-07-23 18:17" class="no-wrap text-small ml-1">(2024-07-23 18:17)</time>
+                        </div>
+                        <div class="text-small text-gray mb-1 mt-1">Learn writing etiquette using Slack&#39;s unique notation.</div>
+                    </li>
+                    
+                </ul>
+            </article>
+        </div>
+        </div>
+        
+    </div>
+    </div>
+</main>
+</div>
+
+<script type="application/javascript" src='https://kithub.f5.si/js/toc.js'></script>
+<link rel="stylesheet" href='https://kithub.f5.si/css/toc.css' />
+
+
+<script
+    src='https://kithub.f5.si/js/syntax-highlight-title.js'
+    crossorigin="anonymous"
+    type="application/javascript">
+</script>
+<link rel="stylesheet" href="../../css/syntax-highlight-title.css">
+
+
+
+
+
+
+
+<script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js" crossorigin="anonymous"></script>
+<script>
+
+
+(function () {
+    function transformMermaidCodeBlocks() {
+        var codeBlocks = document.querySelectorAll('pre > code.language-mermaid, code.language-mermaid');
+        codeBlocks.forEach(function (code) {
+            var pre = code.parentElement && code.parentElement.tagName.toLowerCase() === 'pre' ? code.parentElement : code;
+            var container = document.createElement('div');
+            container.className = 'mermaid';
+            container.textContent = code.textContent;
+            pre.replaceWith(container);
+        });
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', transformMermaidCodeBlocks);
+    } else {
+        transformMermaidCodeBlocks();
+    }
+    
+    if (window.mermaid) {
+        window.mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+    }
+})();
+</script>
+
+
+
+
+  
+  
+  
+  
+  
+  
+    
+  
+<div id="gitalk-container" class="gitalk-container"></div>
+<link rel="stylesheet" href='https://kithub.f5.si/css/gitalk.css'>
+<script src='https://kithub.f5.si/js/gitalk.min.js'></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'Ov23limCcfAvRdvUJ1de',
+    clientSecret: '08c9365618f3a7434fe608970e757bba3d2369bc',
+    repo: 'todayilearned',
+    owner: 'shiroimon',
+    admin: "shiroimon",
+    labels: ["gitalk"],
+    perPage:  10 ,
+    pagerDirection: 'last',
+    createIssueManually:  false ,
+    distractionFreeMode:  false ,
+    id: 'b69862a21ec2dadff9ed98f29f6f393a'
+  });
+  gitalk.render('gitalk-container');
+</script>
+
+
+
+</div>
+
+  <div class="footer container-xl width-full p-responsive">
+  <div
+    class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between flex-sm-items-center pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mr-lg-4" href="https://kithub.f5.si/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24">
+        <path fill-rule="evenodd"
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+        </path>
+      </svg>
+    </a>
+    <ul class="list-style-none d-flex flex-wrap col-12 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+      
+      <li class="mr-3 mr-lg-0">Theme by <a href='https://github.com/MeiK2333/github-style'>github-style</a></li>
+      
+      <li class="mr-3 mr-lg-0">GitHub and the Invertocat logo are trademarks of <a href="https://github.com/">GitHub, Inc.</a></li>
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+
+
+</div>
+
+</body>
+
+<script type="application/javascript" src="https://kithub.f5.si/js/github-style.js"></script>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+<script type="application/javascript" src='https://kithub.f5.si/js/search.js'></script>
+
+
+
+</html>

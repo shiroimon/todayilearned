@@ -6,8 +6,36 @@
     <description>Recent content in Tags on Today I Learned | KitHub</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 12 Jun 2026 21:26:04 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jun 2026 23:32:44 +0900</lastBuildDate>
     <atom:link href="https://kithub.f5.si/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Diagram</title>
+      <link>https://kithub.f5.si/tags/diagram/</link>
+      <pubDate>Fri, 19 Jun 2026 23:32:44 +0900</pubDate>
+      <guid>https://kithub.f5.si/tags/diagram/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Documentation</title>
+      <link>https://kithub.f5.si/tags/documentation/</link>
+      <pubDate>Fri, 19 Jun 2026 23:32:44 +0900</pubDate>
+      <guid>https://kithub.f5.si/tags/documentation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Markdown</title>
+      <link>https://kithub.f5.si/tags/markdown/</link>
+      <pubDate>Fri, 19 Jun 2026 23:32:44 +0900</pubDate>
+      <guid>https://kithub.f5.si/tags/markdown/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mermaid</title>
+      <link>https://kithub.f5.si/tags/mermaid/</link>
+      <pubDate>Fri, 19 Jun 2026 23:32:44 +0900</pubDate>
+      <guid>https://kithub.f5.si/tags/mermaid/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Caching</title>
       <link>https://kithub.f5.si/tags/caching/</link>
@@ -447,13 +475,6 @@
       <link>https://kithub.f5.si/tags/gfm/</link>
       <pubDate>Tue, 23 Jul 2024 18:17:17 +0900</pubDate>
       <guid>https://kithub.f5.si/tags/gfm/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Markdown</title>
-      <link>https://kithub.f5.si/tags/markdown/</link>
-      <pubDate>Tue, 23 Jul 2024 18:17:17 +0900</pubDate>
-      <guid>https://kithub.f5.si/tags/markdown/</guid>
       <description></description>
     </item>
   </channel>
