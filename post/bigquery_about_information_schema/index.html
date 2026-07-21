@@ -389,40 +389,40 @@ if ('serviceWorker' in navigator) {
 └─────────────────────────────────────────────────────────────┘
 </code></pre><p>スコープの違い:</p>
 <table>
-  <thead>
-      <tr>
-          <th>level</th>
-          <th>INFORMATION_SCHEMA</th>
-          <th>i.e.</th>
-          <th>roles/permission</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>データセットレベル</td>
-          <td><code>TABLES</code>, <code>COLUMNS</code>, <code>VIEWS</code>, <code>TABLE_STORAGE</code>, <code>JOBS</code></td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>個人レベル</td>
-          <td><code>JOBS_BY_USER</code></td>
-          <td><strong>単一プロジェクト内で実行ユーザーの</strong>ジョブ情報のみ（180日間データ保持）</td>
-          <td><code>bigquery.jobs.list</code></td>
-      </tr>
-      <tr>
-          <td>プロジェクトレベル</td>
-          <td><code>JOBS_BY_PROJECT</code></td>
-          <td><strong>単一プロジェクト内の全ての</strong>ジョブ情報のみ（180日間データ保持）</td>
-          <td><code>bigquery.jobs.listALL</code></td>
-      </tr>
-      <tr>
-          <td>組織レベル</td>
-          <td><code>JOBS_BY_ORGANIZATION</code></td>
-          <td><strong>組織全体の</strong>ジョブ情報（複数プロジェクトを含む）（180日間データ保持）</td>
-          <td><code>bigquery.jobs.listALL</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>level</th>
+					<th>INFORMATION_SCHEMA</th>
+					<th>i.e.</th>
+					<th>roles/permission</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>データセットレベル</td>
+					<td><code>TABLES</code>, <code>COLUMNS</code>, <code>VIEWS</code>, <code>TABLE_STORAGE</code>, <code>JOBS</code></td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>個人レベル</td>
+					<td><code>JOBS_BY_USER</code></td>
+					<td><strong>単一プロジェクト内で実行ユーザーの</strong>ジョブ情報のみ（180日間データ保持）</td>
+					<td><code>bigquery.jobs.list</code></td>
+			</tr>
+			<tr>
+					<td>プロジェクトレベル</td>
+					<td><code>JOBS_BY_PROJECT</code></td>
+					<td><strong>単一プロジェクト内の全ての</strong>ジョブ情報のみ（180日間データ保持）</td>
+					<td><code>bigquery.jobs.listALL</code></td>
+			</tr>
+			<tr>
+					<td>組織レベル</td>
+					<td><code>JOBS_BY_ORGANIZATION</code></td>
+					<td><strong>組織全体の</strong>ジョブ情報（複数プロジェクトを含む）（180日間データ保持）</td>
+					<td><code>bigquery.jobs.listALL</code></td>
+			</tr>
+	</tbody>
 </table>
 <ul>
 <li>rore/ :<a href="https://cloud.google.com/iam/docs/understanding-roles#bigquery.resourceViewer">roles/bigquery.resourceViewer</a></li>

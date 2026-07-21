@@ -391,35 +391,35 @@ if ('serviceWorker' in navigator) {
 </ul>
 <p>コスト比較の目安：</p>
 <table>
-  <thead>
-      <tr>
-          <th>サービス</th>
-          <th>コスト特性</th>
-          <th>適したワークロード</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Cloud Functions</td>
-          <td>実行時間とメモリ使用量に比例</td>
-          <td>軽量で頻度の高いイベント処理</td>
-      </tr>
-      <tr>
-          <td>Cloud Run</td>
-          <td>リクエスト数とCPU使用時間</td>
-          <td>中規模HTTPサービス/バッチ</td>
-      </tr>
-      <tr>
-          <td>Dataproc</td>
-          <td>クラスタ規模と実行時間</td>
-          <td>大規模データ(TB～PB級)処理バッチ</td>
-      </tr>
-      <tr>
-          <td>Cloud Composer</td>
-          <td>固定費+環境規模</td>
-          <td>ワークフローオーケストレーション</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>サービス</th>
+					<th>コスト特性</th>
+					<th>適したワークロード</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Cloud Functions</td>
+					<td>実行時間とメモリ使用量に比例</td>
+					<td>軽量で頻度の高いイベント処理</td>
+			</tr>
+			<tr>
+					<td>Cloud Run</td>
+					<td>リクエスト数とCPU使用時間</td>
+					<td>中規模HTTPサービス/バッチ</td>
+			</tr>
+			<tr>
+					<td>Dataproc</td>
+					<td>クラスタ規模と実行時間</td>
+					<td>大規模データ(TB～PB級)処理バッチ</td>
+			</tr>
+			<tr>
+					<td>Cloud Composer</td>
+					<td>固定費+環境規模</td>
+					<td>ワークフローオーケストレーション</td>
+			</tr>
+	</tbody>
 </table>
 <p>Composer + Cloud Run + Dataproc：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="c1"># Cloud ComposerでのDataprocオペレーター使用例</span>
@@ -675,54 +675,54 @@ JSON part</p>
   
 <blockquote>
     <table>
-  <thead>
-      <tr>
-          <th style="text-align: left">key</th>
-          <th style="text-align: left">values</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: left"><code>type</code></td>
-          <td style="text-align: left"><code>table</code>:再作成<br> <code>incremental</code>: 差分更新<br> <code>operations</code>:DMLを記述時（INSERT, UPDATE, DELETE文）<br> <code>declaration</code>:リンク元テーブル定義を書く場合<br> <code>assertions</code>:処理の確認を個別fileで記述</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><code>schema</code></td>
-          <td style="text-align: left">スキーマとは、BigQuery データセットを示している</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><code>name</code></td>
-          <td style="text-align: left">出力先テーブル名（未指定の場合、ファイル名が命名される）</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><code>tags</code></td>
-          <td style="text-align: left">dataformの実行単位としてここに書かれたtag単位で実行ができる（e.g. <code>daily</code>, <code>weekly</code>タグは有用）</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><code>description</code></td>
-          <td style="text-align: left">ｽｷｰﾏの説明</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><code>columns</code></td>
-          <td style="text-align: left">ｽｷｰﾏのｶﾗﾑ別説明<br> ※「docs.XXXX」は、<code>includes/docs.js</code>に準備しておくと共通利用ができる</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><code>uniqueKey</code></td>
-          <td style="text-align: left">incremental指定時で、マージ使用するキー<br> ※uniqueになっていないと増分実行時にerror</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><code>bigquery</code></td>
-          <td style="text-align: left">updatePartitionFilter: マージ時の遡及指定ができる</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><code>assertions</code></td>
-          <td style="text-align: left">uniqueKey: ｸｴﾘRun後に一意確認<br>nonNull: ｸｴﾘRun後にNull確認<br> ※テーブルサイズに寄るが処理コストを喰うので原則個別ﾌｧｲﾙにすると吉</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><code>dependencies</code></td>
-          <td style="text-align: left">config ブロックで依存関係を定義	body ブロックの SQL 内で依存関係が定義されてない場合でも依存関係を定義できる</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th style="text-align: left">key</th>
+					<th style="text-align: left">values</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><code>type</code></td>
+					<td style="text-align: left"><code>table</code>:再作成<br> <code>incremental</code>: 差分更新<br> <code>operations</code>:DMLを記述時（INSERT, UPDATE, DELETE文）<br> <code>declaration</code>:リンク元テーブル定義を書く場合<br> <code>assertions</code>:処理の確認を個別fileで記述</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>schema</code></td>
+					<td style="text-align: left">スキーマとは、BigQuery データセットを示している</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>name</code></td>
+					<td style="text-align: left">出力先テーブル名（未指定の場合、ファイル名が命名される）</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>tags</code></td>
+					<td style="text-align: left">dataformの実行単位としてここに書かれたtag単位で実行ができる（e.g. <code>daily</code>, <code>weekly</code>タグは有用）</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>description</code></td>
+					<td style="text-align: left">ｽｷｰﾏの説明</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>columns</code></td>
+					<td style="text-align: left">ｽｷｰﾏのｶﾗﾑ別説明<br> ※「docs.XXXX」は、<code>includes/docs.js</code>に準備しておくと共通利用ができる</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>uniqueKey</code></td>
+					<td style="text-align: left">incremental指定時で、マージ使用するキー<br> ※uniqueになっていないと増分実行時にerror</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>bigquery</code></td>
+					<td style="text-align: left">updatePartitionFilter: マージ時の遡及指定ができる</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>assertions</code></td>
+					<td style="text-align: left">uniqueKey: ｸｴﾘRun後に一意確認<br>nonNull: ｸｴﾘRun後にNull確認<br> ※テーブルサイズに寄るが処理コストを喰うので原則個別ﾌｧｲﾙにすると吉</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>dependencies</code></td>
+					<td style="text-align: left">config ブロックで依存関係を定義	body ブロックの SQL 内で依存関係が定義されてない場合でも依存関係を定義できる</td>
+			</tr>
+	</tbody>
 </table>
 <ul>
 <li>cf. <a href="https://cloud.google.com/dataform/docs/reference/dataform-core-reference#itableconfig">ITableConfig</a> Google Cloud</li>
@@ -745,7 +745,7 @@ JSON part</p>
 </span></span><span class="line"><span class="cl"><span class="nx">select</span> <span class="o">*</span>
 </span></span><span class="line"><span class="cl"><span class="nx">from</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">$</span><span class="p">{</span><span class="nx">project</span><span class="p">}.</span><span class="nx">$</span><span class="p">{</span><span class="nx">dataset</span><span class="p">}.</span><span class="nx">sample_admin_access</span> <span class="nx">a</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">left</span> <span class="nx">join</span>  <span class="nx">$</span><span class="p">{</span><span class="nx">project</span><span class="p">}.</span><span class="nx">$</span><span class="p">{</span><span class="nx">dataset</span><span class="p">}.</span><span class="nx">$</span><span class="p">{</span><span class="nx">table</span><span class="p">}</span> <span class="nx">b</span> <span class="nx">using</span><span class="p">(</span><span class="nx">date</span><span class="p">,</span> <span class="nx">user_id</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">left</span> <span class="nx">join</span>  <span class="nx">$</span><span class="p">{</span><span class="nx">project</span><span class="p">}.</span><span class="nx">$</span><span class="p">{</span><span class="nx">dataset</span><span class="p">}.</span><span class="nx">$</span><span class="p">{</span><span class="nx">table</span><span class="p">}</span> <span class="nx">b</span> <span class="kr">using</span><span class="p">(</span><span class="nx">date</span><span class="p">,</span> <span class="nx">user_id</span><span class="p">)</span>
 </span></span></code></pre></div><h4 id="実行順序">実行順序<a class="anchor" aria-hidden="true" href="#実行順序"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">DWH                           DataMart
 </span></span><span class="line"><span class="cl">[BigQuery] -&gt; [1.Dataform]
@@ -850,66 +850,66 @@ JSON part</p>
   <summary>ETLの「T層」に特化したサービス!最近流行りの「dbt」とのメリデメ</summary>
   <p></p>
   <table>
-  <thead>
-      <tr>
-          <th>\</th>
-          <th>Dataform の<br> メリット</th>
-          <th>Dataform の<br> デメリット</th>
-          <th>dbt の<br> メリット</th>
-          <th>dbt の<br> デメリット</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>統合環境</strong></td>
-          <td>Google Cloud とネイティブ連携（BigQuery, Cloud Storage&hellip;etc）</td>
-          <td>Google Cloud 以外の環境では制約がある</td>
-          <td>マルチクラウド・オンプレ対応可能（BigQuery, Snowflake, Redshift &hellip;etc.）</td>
-          <td>完全なマネージドサービスではないため、自前で環境構築が必要な場合あり</td>
-      </tr>
-      <tr>
-          <td><strong>UI/操作性</strong></td>
-          <td>WebベースのGUIが提供されており、SQL開発が直感的</td>
-          <td>カスタマイズ性が低く、CLIツールが限定的</td>
-          <td>dbt Cloud はGUIを提供、dbt Core はCLIベースで柔軟性が高い</td>
-          <td>dbt Core は学習コストがやや高い（YAML, Jinja テンプレートなど）</td>
-      </tr>
-      <tr>
-          <td><strong>拡張性</strong></td>
-          <td>JavaScript を使ってカスタムロジックを記述可能</td>
-          <td>コミュニティやサードパーティ製パッケージが少ない</td>
-          <td>大規模なコミュニティと豊富なパッケージ（dbt Hub）</td>
-          <td>複雑な設定が必要な場合がある</td>
-      </tr>
-      <tr>
-          <td><strong>テスト＆ドキュメント</strong></td>
-          <td>テスト機能と自動ドキュメント生成をサポート</td>
-          <td>dbt ほど成熟したテストフレームワークではない</td>
-          <td>高度なデータテスト（unique, not_null, relationships など）とドキュメント自動化</td>
-          <td>ドキュメント生成には追加設定が必要な場合がある</td>
-      </tr>
-      <tr>
-          <td><strong>スケジューリング</strong></td>
-          <td>Google Cloud Scheduler や Workflows と連携可能</td>
-          <td>外部ツール（eg. Airflow）との連携が弱い</td>
-          <td>dbt Cloud はスケジューリング機能内蔵、dbt Core はAirflowなどと連携可能</td>
-          <td>dbt Core の場合、別途オーケストレーションツールが必要</td>
-      </tr>
-      <tr>
-          <td><strong>コスト</strong></td>
-          <td>Google Cloud の利用料に含まれる場合があり、コスト管理が容易</td>
-          <td>大規模なプロジェクトでは課金が高くなる可能性</td>
-          <td>オープンソース（dbt Core）は無料、dbt Cloud は従量課金</td>
-          <td>dbt Cloud は利用量に応じてコストが増加する可能性&hellip;</td>
-      </tr>
-      <tr>
-          <td><strong>学習リソース</strong></td>
-          <td>Google のドキュメントが充実</td>
-          <td>日本語含むコミュニティが小さい</td>
-          <td>豊富なチュートリアル、ブログ、動画（日本語リソースも増加中）</td>
-          <td>初心者にはややとっつきにくい</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>\</th>
+					<th>Dataform の<br> メリット</th>
+					<th>Dataform の<br> デメリット</th>
+					<th>dbt の<br> メリット</th>
+					<th>dbt の<br> デメリット</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>統合環境</strong></td>
+					<td>Google Cloud とネイティブ連携（BigQuery, Cloud Storage&hellip;etc）</td>
+					<td>Google Cloud 以外の環境では制約がある</td>
+					<td>マルチクラウド・オンプレ対応可能（BigQuery, Snowflake, Redshift &hellip;etc.）</td>
+					<td>完全なマネージドサービスではないため、自前で環境構築が必要な場合あり</td>
+			</tr>
+			<tr>
+					<td><strong>UI/操作性</strong></td>
+					<td>WebベースのGUIが提供されており、SQL開発が直感的</td>
+					<td>カスタマイズ性が低く、CLIツールが限定的</td>
+					<td>dbt Cloud はGUIを提供、dbt Core はCLIベースで柔軟性が高い</td>
+					<td>dbt Core は学習コストがやや高い（YAML, Jinja テンプレートなど）</td>
+			</tr>
+			<tr>
+					<td><strong>拡張性</strong></td>
+					<td>JavaScript を使ってカスタムロジックを記述可能</td>
+					<td>コミュニティやサードパーティ製パッケージが少ない</td>
+					<td>大規模なコミュニティと豊富なパッケージ（dbt Hub）</td>
+					<td>複雑な設定が必要な場合がある</td>
+			</tr>
+			<tr>
+					<td><strong>テスト＆ドキュメント</strong></td>
+					<td>テスト機能と自動ドキュメント生成をサポート</td>
+					<td>dbt ほど成熟したテストフレームワークではない</td>
+					<td>高度なデータテスト（unique, not_null, relationships など）とドキュメント自動化</td>
+					<td>ドキュメント生成には追加設定が必要な場合がある</td>
+			</tr>
+			<tr>
+					<td><strong>スケジューリング</strong></td>
+					<td>Google Cloud Scheduler や Workflows と連携可能</td>
+					<td>外部ツール（eg. Airflow）との連携が弱い</td>
+					<td>dbt Cloud はスケジューリング機能内蔵、dbt Core はAirflowなどと連携可能</td>
+					<td>dbt Core の場合、別途オーケストレーションツールが必要</td>
+			</tr>
+			<tr>
+					<td><strong>コスト</strong></td>
+					<td>Google Cloud の利用料に含まれる場合があり、コスト管理が容易</td>
+					<td>大規模なプロジェクトでは課金が高くなる可能性</td>
+					<td>オープンソース（dbt Core）は無料、dbt Cloud は従量課金</td>
+					<td>dbt Cloud は利用量に応じてコストが増加する可能性&hellip;</td>
+			</tr>
+			<tr>
+					<td><strong>学習リソース</strong></td>
+					<td>Google のドキュメントが充実</td>
+					<td>日本語含むコミュニティが小さい</td>
+					<td>豊富なチュートリアル、ブログ、動画（日本語リソースも増加中）</td>
+					<td>初心者にはややとっつきにくい</td>
+			</tr>
+	</tbody>
 </table>
 <p>Ref.</p>
 <ul>

@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Connected Sheets on Today I Learned | KitHub</title>
-    <link>https://kithub.f5.si/tags/connected-sheets/</link>
-    <description>Recent content in Connected Sheets on Today I Learned | KitHub</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 22 May 2025 10:10:12 +0900</lastBuildDate>
-    <atom:link href="https://kithub.f5.si/tags/connected-sheets/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>[Google Sheets] Used in functions</title>
-      <link>https://kithub.f5.si/post/google_sheets_used_functions/</link>
-      <pubDate>Tue, 22 Oct 2024 12:56:22 +0900</pubDate>
-      <guid>https://kithub.f5.si/post/google_sheets_used_functions/</guid>
-      <description>📗 Make a memorandum of what you used with the most powerful free tool that anyone can use.</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Connected Sheets on Today I Learned | KitHub</title>
+		<link>https://kithub.f5.si/tags/connected-sheets/</link>
+		<description>Recent content in Connected Sheets on Today I Learned | KitHub</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 22 May 2025 10:10:12 +0900</lastBuildDate>
+		
+			<atom:link href="https://kithub.f5.si/tags/connected-sheets/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>[Google Sheets] Used in functions</title>
+				<link>https://kithub.f5.si/post/google_sheets_used_functions/</link>
+				<pubDate>Tue, 22 Oct 2024 12:56:22 +0900</pubDate>
+				<guid>https://kithub.f5.si/post/google_sheets_used_functions/</guid>
+				<description>📗 Make a memorandum of what you used with the most powerful free tool that anyone can use.</description>
+			</item>
+	</channel>
 </rss>

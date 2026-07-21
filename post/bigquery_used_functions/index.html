@@ -361,70 +361,70 @@ if ('serviceWorker' in navigator) {
 </span></span></span><span class="line"><span class="cl"><span class="k">ROLLBACK</span><span class="p">;</span><span class="w">
 </span></span></span></code></pre></div><h3 id="-句clauses">|| 句（Clauses）<a class="anchor" aria-hidden="true" href="#-句clauses"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 <table>
-  <thead>
-      <tr>
-          <th>句</th>
-          <th>説明</th>
-          <th>使用例</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>WITH (CTE)</td>
-          <td>共通テーブル</td>
-          <td><code>WITH temp AS (SELECT ...) SELECT ;</code></td>
-      </tr>
-      <tr>
-          <td>SELECT</td>
-          <td>取得する列を指定</td>
-          <td><code>SELECT column1, column2</code></td>
-      </tr>
-      <tr>
-          <td>FROM</td>
-          <td>データソースを指定</td>
-          <td><code>FROM table_name</code></td>
-      </tr>
-      <tr>
-          <td>JOIN</td>
-          <td>テーブル結合</td>
-          <td><code>JOIN departments ON dept_id</code></td>
-      </tr>
-      <tr>
-          <td>WHERE</td>
-          <td>行のフィルタ条件</td>
-          <td><code>WHERE age &gt; 20</code></td>
-      </tr>
-      <tr>
-          <td>QUALIFY</td>
-          <td>WINDOW関数の共通化</td>
-          <td><code>QUALYFY w AS (PARTITION BY ... )</code></td>
-      </tr>
-      <tr>
-          <td>GROUP BY</td>
-          <td>グループ化</td>
-          <td><code>GROUP BY department</code></td>
-      </tr>
-      <tr>
-          <td>HAVING</td>
-          <td>グループ化後のフィルタ</td>
-          <td><code>HAVING COUNT(*) &gt; 5</code></td>
-      </tr>
-      <tr>
-          <td>ORDER BY</td>
-          <td>ソート順指定</td>
-          <td><code>ORDER BY name ASC</code></td>
-      </tr>
-      <tr>
-          <td>LIMIT/OFFSET</td>
-          <td>結果の制限</td>
-          <td><code>LIMIT 10 OFFSET 5</code></td>
-      </tr>
-      <tr>
-          <td>UNION</td>
-          <td>結果の結合</td>
-          <td><code>SELECT ... UNION SELECT ...</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>句</th>
+					<th>説明</th>
+					<th>使用例</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>WITH (CTE)</td>
+					<td>共通テーブル</td>
+					<td><code>WITH temp AS (SELECT ...) SELECT ;</code></td>
+			</tr>
+			<tr>
+					<td>SELECT</td>
+					<td>取得する列を指定</td>
+					<td><code>SELECT column1, column2</code></td>
+			</tr>
+			<tr>
+					<td>FROM</td>
+					<td>データソースを指定</td>
+					<td><code>FROM table_name</code></td>
+			</tr>
+			<tr>
+					<td>JOIN</td>
+					<td>テーブル結合</td>
+					<td><code>JOIN departments ON dept_id</code></td>
+			</tr>
+			<tr>
+					<td>WHERE</td>
+					<td>行のフィルタ条件</td>
+					<td><code>WHERE age &gt; 20</code></td>
+			</tr>
+			<tr>
+					<td>QUALIFY</td>
+					<td>WINDOW関数の共通化</td>
+					<td><code>QUALYFY w AS (PARTITION BY ... )</code></td>
+			</tr>
+			<tr>
+					<td>GROUP BY</td>
+					<td>グループ化</td>
+					<td><code>GROUP BY department</code></td>
+			</tr>
+			<tr>
+					<td>HAVING</td>
+					<td>グループ化後のフィルタ</td>
+					<td><code>HAVING COUNT(*) &gt; 5</code></td>
+			</tr>
+			<tr>
+					<td>ORDER BY</td>
+					<td>ソート順指定</td>
+					<td><code>ORDER BY name ASC</code></td>
+			</tr>
+			<tr>
+					<td>LIMIT/OFFSET</td>
+					<td>結果の制限</td>
+					<td><code>LIMIT 10 OFFSET 5</code></td>
+			</tr>
+			<tr>
+					<td>UNION</td>
+					<td>結果の結合</td>
+					<td><code>SELECT ... UNION SELECT ...</code></td>
+			</tr>
+	</tbody>
 </table>
 <p>※ 実行順序と記述順序が異なる。（テーブルでは記述順にしてある）</p>
 <h3 id="-式expressions">|| 式（Expressions）<a class="anchor" aria-hidden="true" href="#-式expressions"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>

@@ -597,40 +597,40 @@ dbtプロダクトへの貢献を目的に活動をしています。
 <p><strong>[Step3] ✴️ dbt モデル作成（様々なモデル：マテリアライゼーション編）</strong></p>
 <p><a href="https://docs.getdbt.com/docs/build/materializations">Materializations</a> dbt</p>
 <table>
-  <thead>
-      <tr>
-          <th style="text-align: center">種類</th>
-          <th style="text-align: left">モデル</th>
-          <th style="text-align: center">データ規模</th>
-          <th style="text-align: left">説明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center"><code>view</code></td>
-          <td style="text-align: left">Viewで作成</td>
-          <td style="text-align: center">-</td>
-          <td style="text-align: left"><code>未指定だとデフォ</code>。高速モデル構築（データ移動が発生しないから）。 でも <strong>view &lt; table</strong> でクエリが遅い。初期構築に向いている。</td>
-      </tr>
-      <tr>
-          <td style="text-align: center"><code>table</code></td>
-          <td style="text-align: left">Tableで作成</td>
-          <td style="text-align: center">小規模</td>
-          <td style="text-align: left">実行(<code>$ dbt run</code>)の度にデータ入れ直す. その為小規模データに向いている（大規模データだと都度入れ直しはコストや処理時間面で問題）。参照回数の多い、アドホックな分析や集計後のモデリングに適している( <strong>view &lt; tablea</strong> でクエリ速い為)</td>
-      </tr>
-      <tr>
-          <td style="text-align: center"><code>incremental</code></td>
-          <td style="text-align: left">Tableで作成</td>
-          <td style="text-align: center">大規模</td>
-          <td style="text-align: left">実行(<code>$ dbt run</code>)の度にデータ入れ直す(新しいデータをInsertまたはUpdateで反映)。<strong>table &lt; incremental</strong>で速い。ただし、差分反映するための設定を追加で行う必要があり面倒。</td>
-      </tr>
-      <tr>
-          <td style="text-align: center"><code>ephemeral</code></td>
-          <td style="text-align: left"><strong>CTE</strong> 変換</td>
-          <td style="text-align: center">-</td>
-          <td style="text-align: left">DWH上では構築されず, ephemeralモデルは他のモデルから参照可. 再利用可能なモデルを作る場合に有効.</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th style="text-align: center">種類</th>
+					<th style="text-align: left">モデル</th>
+					<th style="text-align: center">データ規模</th>
+					<th style="text-align: left">説明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: center"><code>view</code></td>
+					<td style="text-align: left">Viewで作成</td>
+					<td style="text-align: center">-</td>
+					<td style="text-align: left"><code>未指定だとデフォ</code>。高速モデル構築（データ移動が発生しないから）。 でも <strong>view &lt; table</strong> でクエリが遅い。初期構築に向いている。</td>
+			</tr>
+			<tr>
+					<td style="text-align: center"><code>table</code></td>
+					<td style="text-align: left">Tableで作成</td>
+					<td style="text-align: center">小規模</td>
+					<td style="text-align: left">実行(<code>$ dbt run</code>)の度にデータ入れ直す. その為小規模データに向いている（大規模データだと都度入れ直しはコストや処理時間面で問題）。参照回数の多い、アドホックな分析や集計後のモデリングに適している( <strong>view &lt; tablea</strong> でクエリ速い為)</td>
+			</tr>
+			<tr>
+					<td style="text-align: center"><code>incremental</code></td>
+					<td style="text-align: left">Tableで作成</td>
+					<td style="text-align: center">大規模</td>
+					<td style="text-align: left">実行(<code>$ dbt run</code>)の度にデータ入れ直す(新しいデータをInsertまたはUpdateで反映)。<strong>table &lt; incremental</strong>で速い。ただし、差分反映するための設定を追加で行う必要があり面倒。</td>
+			</tr>
+			<tr>
+					<td style="text-align: center"><code>ephemeral</code></td>
+					<td style="text-align: left"><strong>CTE</strong> 変換</td>
+					<td style="text-align: center">-</td>
+					<td style="text-align: left">DWH上では構築されず, ephemeralモデルは他のモデルから参照可. 再利用可能なモデルを作る場合に有効.</td>
+			</tr>
+	</tbody>
 </table>
 <ul>
 <li>速い順：<code>view &lt; table &lt; incremental</code></li>
@@ -781,35 +781,35 @@ cf. <a href="https://docs.getdbt.com/docs/build/project-variables">Project varia
 </span></span></span></code></pre></div><p>cf. <a href="https://docs.getdbt.com/reference/model-properties">Model properties</a> dbt</p>
 <h5 id="2-1-dbt-が用意してくれているテスト">2-1. dbt が用意してくれているテスト<a class="anchor" aria-hidden="true" href="#2-1-dbt-が用意してくれているテスト"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h5>
 <table>
-  <thead>
-      <tr>
-          <th style="text-align: left">ﾃｽﾄ項目</th>
-          <th style="text-align: left">指定されたｶﾗﾑに対して</th>
-          <th style="text-align: left">query</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: left"><code>- unique</code></td>
-          <td style="text-align: left">データが全てユニーク値であることをﾃｽﾄ</td>
-          <td style="text-align: left">distinct</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><code>- not_null</code></td>
-          <td style="text-align: left">null を含まないことをﾃｽﾄ</td>
-          <td style="text-align: left">is not null</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><code>- accepted_values</code></td>
-          <td style="text-align: left">指定された値以外を含まないことをﾃｽﾄ</td>
-          <td style="text-align: left">not in</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><code>- relationships</code></td>
-          <td style="text-align: left">「to:」 に指定されたモデルの field に指定されたカラムに含まれていることをﾃｽﾄ</td>
-          <td style="text-align: left">exsits</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th style="text-align: left">ﾃｽﾄ項目</th>
+					<th style="text-align: left">指定されたｶﾗﾑに対して</th>
+					<th style="text-align: left">query</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><code>- unique</code></td>
+					<td style="text-align: left">データが全てユニーク値であることをﾃｽﾄ</td>
+					<td style="text-align: left">distinct</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>- not_null</code></td>
+					<td style="text-align: left">null を含まないことをﾃｽﾄ</td>
+					<td style="text-align: left">is not null</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>- accepted_values</code></td>
+					<td style="text-align: left">指定された値以外を含まないことをﾃｽﾄ</td>
+					<td style="text-align: left">not in</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>- relationships</code></td>
+					<td style="text-align: left">「to:」 に指定されたモデルの field に指定されたカラムに含まれていることをﾃｽﾄ</td>
+					<td style="text-align: left">exsits</td>
+			</tr>
+	</tbody>
 </table>
 <h5 id="2-2-独自に組み込めるテストcostumgeneric">2-2. 独自に組み込めるテスト(CostumGeneric)<a class="anchor" aria-hidden="true" href="#2-2-独自に組み込めるテストcostumgeneric"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h5>
 <ol>
