@@ -21,6 +21,20 @@
 				<description>🔍 Memos using CLI operations for each job type.</description>
 			</item>
 			<item>
+				<title>[BigQuery] (Various) Data Transfer</title>
+				<link>https://kithub.f5.si/post/bigquery_about_various_data_transfer/</link>
+				<pubDate>Thu, 03 Apr 2025 11:11:44 +0900</pubDate>
+				<guid>https://kithub.f5.si/post/bigquery_about_various_data_transfer/</guid>
+				<description>🔍 Find out various data transfer methods starting from BigQuery.</description>
+			</item>
+			<item>
+				<title>[BigQuery] INFORMATION_SCHEMA</title>
+				<link>https://kithub.f5.si/post/bigquery_about_information_schema/</link>
+				<pubDate>Thu, 06 Mar 2025 17:39:31 +0900</pubDate>
+				<guid>https://kithub.f5.si/post/bigquery_about_information_schema/</guid>
+				<description>🔍 It&amp;rsquo;s not good to know about data governance.</description>
+			</item>
+			<item>
 				<title>[Terraform] Catchup</title>
 				<link>https://kithub.f5.si/post/terraform_catchup/</link>
 				<pubDate>Thu, 20 Feb 2025 18:49:06 +0900</pubDate>
@@ -54,6 +68,13 @@
 				<pubDate>Wed, 21 Aug 2024 00:00:34 +0900</pubDate>
 				<guid>https://kithub.f5.si/post/docker_commands_memorandum/</guid>
 				<description>🐳 Deepen my understanding of Docker&amp;rsquo;s basic commands and mechanisms.</description>
+			</item>
+			<item>
+				<title>[BigQuery] Billing</title>
+				<link>https://kithub.f5.si/post/bigquery_billing_how_works/</link>
+				<pubDate>Fri, 16 Aug 2024 20:35:07 +0900</pubDate>
+				<guid>https://kithub.f5.si/post/bigquery_billing_how_works/</guid>
+				<description>🔍 Summarize billing mechanism, fee structure, and money-saving tips.</description>
 			</item>
 			<item>
 				<title>[Terraform] Trying to build the environment</title>

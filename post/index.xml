@@ -21,10 +21,17 @@
 				<description>🧜‍♀️ Diagrams as Code in Markdown</description>
 			</item>
 			<item>
-				<title>[Engineering] Fundamentals &amp; System Design Roadmap</title>
+				<title>[Data Engineering] Fundamentals &amp; System Design Roadmap</title>
 				<link>https://kithub.f5.si/post/data_engineering_fundamentals/</link>
 				<pubDate>Fri, 12 Jun 2026 17:30:29 +0900</pubDate>
 				<guid>https://kithub.f5.si/post/data_engineering_fundamentals/</guid>
+				<description>🧱 Five fundamentals worth deeply understanding, plus a roadmap for learning system design from zero.</description>
+			</item>
+			<item>
+				<title>[Engineering] Fundamentals &amp; System Design Roadmap</title>
+				<link>https://kithub.f5.si/post/engineering_fundamentals/</link>
+				<pubDate>Fri, 12 Jun 2026 17:30:29 +0900</pubDate>
+				<guid>https://kithub.f5.si/post/engineering_fundamentals/</guid>
 				<description>🧱 Five fundamentals worth deeply understanding, plus a roadmap for learning system design from zero.</description>
 			</item>
 			<item>
