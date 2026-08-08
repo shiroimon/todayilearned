@@ -14,17 +14,24 @@
 		
 			<atom:link href="https://kithub.f5.si/categories/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>Data Engineer</title>
-				<link>https://kithub.f5.si/categories/data-engineer/</link>
-				<pubDate>Fri, 12 Jun 2026 17:30:29 +0900</pubDate>
-				<guid>https://kithub.f5.si/categories/data-engineer/</guid>
+				<title>Dev Tools</title>
+				<link>https://kithub.f5.si/categories/dev-tools/</link>
+				<pubDate>Fri, 19 Jun 2026 23:32:44 +0900</pubDate>
+				<guid>https://kithub.f5.si/categories/dev-tools/</guid>
 				<description></description>
 			</item>
 			<item>
-				<title>Engineering</title>
-				<link>https://kithub.f5.si/categories/engineering/</link>
+				<title>Career</title>
+				<link>https://kithub.f5.si/categories/career/</link>
 				<pubDate>Fri, 12 Jun 2026 17:30:29 +0900</pubDate>
-				<guid>https://kithub.f5.si/categories/engineering/</guid>
+				<guid>https://kithub.f5.si/categories/career/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Data Engineering</title>
+				<link>https://kithub.f5.si/categories/data-engineering/</link>
+				<pubDate>Fri, 12 Jun 2026 17:30:29 +0900</pubDate>
+				<guid>https://kithub.f5.si/categories/data-engineering/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -35,10 +42,10 @@
 				<description></description>
 			</item>
 			<item>
-				<title>BI</title>
-				<link>https://kithub.f5.si/categories/bi/</link>
+				<title>Data Analytics</title>
+				<link>https://kithub.f5.si/categories/data-analytics/</link>
 				<pubDate>Tue, 02 Dec 2025 16:39:00 +0900</pubDate>
-				<guid>https://kithub.f5.si/categories/bi/</guid>
+				<guid>https://kithub.f5.si/categories/data-analytics/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -56,66 +63,24 @@
 				<description></description>
 			</item>
 			<item>
-				<title>Data Reliability Engineer</title>
-				<link>https://kithub.f5.si/categories/data-reliability-engineer/</link>
-				<pubDate>Thu, 03 Apr 2025 11:11:44 +0900</pubDate>
-				<guid>https://kithub.f5.si/categories/data-reliability-engineer/</guid>
+				<title>Workstation</title>
+				<link>https://kithub.f5.si/categories/workstation/</link>
+				<pubDate>Tue, 28 Jan 2025 00:50:32 +0900</pubDate>
+				<guid>https://kithub.f5.si/categories/workstation/</guid>
 				<description></description>
 			</item>
 			<item>
-				<title>Data Analytics Engineer</title>
-				<link>https://kithub.f5.si/categories/data-analytics-engineer/</link>
-				<pubDate>Fri, 14 Mar 2025 17:31:44 +0900</pubDate>
-				<guid>https://kithub.f5.si/categories/data-analytics-engineer/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Know-How</title>
-				<link>https://kithub.f5.si/categories/know-how/</link>
-				<pubDate>Mon, 03 Mar 2025 22:23:20 +0900</pubDate>
-				<guid>https://kithub.f5.si/categories/know-how/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Hands-On</title>
-				<link>https://kithub.f5.si/categories/hands-on/</link>
-				<pubDate>Tue, 17 Dec 2024 22:39:48 +0900</pubDate>
-				<guid>https://kithub.f5.si/categories/hands-on/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Udemy</title>
-				<link>https://kithub.f5.si/categories/udemy/</link>
-				<pubDate>Tue, 17 Dec 2024 22:39:48 +0900</pubDate>
-				<guid>https://kithub.f5.si/categories/udemy/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Hobby</title>
-				<link>https://kithub.f5.si/categories/hobby/</link>
+				<title>Life</title>
+				<link>https://kithub.f5.si/categories/life/</link>
 				<pubDate>Tue, 01 Oct 2024 15:10:50 +0900</pubDate>
-				<guid>https://kithub.f5.si/categories/hobby/</guid>
+				<guid>https://kithub.f5.si/categories/life/</guid>
 				<description></description>
 			</item>
 			<item>
-				<title>Data Pipline</title>
-				<link>https://kithub.f5.si/categories/data-pipline/</link>
-				<pubDate>Mon, 09 Sep 2024 12:40:59 +0900</pubDate>
-				<guid>https://kithub.f5.si/categories/data-pipline/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Container</title>
-				<link>https://kithub.f5.si/categories/container/</link>
-				<pubDate>Wed, 21 Aug 2024 00:00:34 +0900</pubDate>
-				<guid>https://kithub.f5.si/categories/container/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Freelance</title>
-				<link>https://kithub.f5.si/categories/freelance/</link>
-				<pubDate>Fri, 16 Aug 2024 18:41:57 +0900</pubDate>
-				<guid>https://kithub.f5.si/categories/freelance/</guid>
+				<title>Learning</title>
+				<link>https://kithub.f5.si/categories/learning/</link>
+				<pubDate>Tue, 30 Jul 2024 12:48:55 +0900</pubDate>
+				<guid>https://kithub.f5.si/categories/learning/</guid>
 				<description></description>
 			</item>
 	</channel>

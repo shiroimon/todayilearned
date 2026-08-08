@@ -5,6 +5,12 @@
     <loc>https://kithub.f5.si/post/mermaid_capabilities/</loc>
     <lastmod>2026-07-11T17:08:43+09:00</lastmod>
   </url><url>
+    <loc>https://kithub.f5.si/categories/</loc>
+    <lastmod>2026-07-26T22:51:55+09:00</lastmod>
+  </url><url>
+    <loc>https://kithub.f5.si/categories/dev-tools/</loc>
+    <lastmod>2026-07-11T17:08:43+09:00</lastmod>
+  </url><url>
     <loc>https://kithub.f5.si/tags/diagram/</loc>
     <lastmod>2026-07-11T17:08:43+09:00</lastmod>
   </url><url>
@@ -24,30 +30,24 @@
     <lastmod>2026-07-26T22:51:55+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/</loc>
-    <lastmod>2026-07-26T22:51:55+09:00</lastmod>
+    <lastmod>2026-07-30T22:04:15+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/post/data_engineering_fundamentals/</loc>
     <lastmod>2026-07-26T22:51:55+09:00</lastmod>
   </url><url>
-    <loc>https://kithub.f5.si/post/engineering_fundamentals/</loc>
-    <lastmod>2026-06-12T21:26:04+09:00</lastmod>
-  </url><url>
     <loc>https://kithub.f5.si/tags/caching/</loc>
     <lastmod>2026-07-26T22:51:55+09:00</lastmod>
   </url><url>
-    <loc>https://kithub.f5.si/categories/</loc>
+    <loc>https://kithub.f5.si/categories/career/</loc>
     <lastmod>2026-07-26T22:51:55+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/tags/concurrency/</loc>
     <lastmod>2026-07-26T22:51:55+09:00</lastmod>
   </url><url>
-    <loc>https://kithub.f5.si/categories/data-engineer/</loc>
+    <loc>https://kithub.f5.si/categories/data-engineering/</loc>
     <lastmod>2026-07-26T22:51:55+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/tags/dns/</loc>
-    <lastmod>2026-07-26T22:51:55+09:00</lastmod>
-  </url><url>
-    <loc>https://kithub.f5.si/categories/engineering/</loc>
     <lastmod>2026-07-26T22:51:55+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/tags/memory/</loc>
@@ -55,9 +55,6 @@
   </url><url>
     <loc>https://kithub.f5.si/tags/tcp/ip/</loc>
     <lastmod>2026-07-26T22:51:55+09:00</lastmod>
-  </url><url>
-    <loc>https://kithub.f5.si/post/claude_code_usage_miscellaneous/</loc>
-    <lastmod>2026-03-20T18:03:13+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/post/claudecode_usage_miscellaneous/</loc>
     <lastmod>2026-07-11T17:08:43+09:00</lastmod>
@@ -74,7 +71,7 @@
     <loc>https://kithub.f5.si/post/looker_this_and_that/</loc>
     <lastmod>2026-04-04T00:04:48+09:00</lastmod>
   </url><url>
-    <loc>https://kithub.f5.si/categories/bi/</loc>
+    <loc>https://kithub.f5.si/categories/data-analytics/</loc>
     <lastmod>2026-04-04T00:04:48+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/categories/google/</loc>
@@ -131,9 +128,6 @@
     <loc>https://kithub.f5.si/post/bigquery_about_various_data_transfer/</loc>
     <lastmod>2026-04-04T00:04:48+09:00</lastmod>
   </url><url>
-    <loc>https://kithub.f5.si/categories/data-reliability-engineer/</loc>
-    <lastmod>2026-04-04T00:04:48+09:00</lastmod>
-  </url><url>
     <loc>https://kithub.f5.si/tags/datalake/</loc>
     <lastmod>2026-04-04T00:04:48+09:00</lastmod>
   </url><url>
@@ -152,16 +146,13 @@
     <loc>https://kithub.f5.si/tags/bqml/</loc>
     <lastmod>2025-09-07T03:25:03+09:00</lastmod>
   </url><url>
-    <loc>https://kithub.f5.si/categories/data-analytics-engineer/</loc>
-    <lastmod>2026-03-20T18:03:13+09:00</lastmod>
-  </url><url>
     <loc>https://kithub.f5.si/post/bigquery_about_information_schema/</loc>
     <lastmod>2025-09-07T03:25:03+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/post/bigquery_data_analysis_on_preparation/</loc>
     <lastmod>2025-09-16T17:22:31+09:00</lastmod>
   </url><url>
-    <loc>https://kithub.f5.si/categories/know-how/</loc>
+    <loc>https://kithub.f5.si/tags/know-how/</loc>
     <lastmod>2026-04-09T22:51:13+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/post/terraform_catchup/</loc>
@@ -179,6 +170,9 @@
     <loc>https://kithub.f5.si/tags/macos/</loc>
     <lastmod>2026-04-10T19:14:55+09:00</lastmod>
   </url><url>
+    <loc>https://kithub.f5.si/categories/workstation/</loc>
+    <lastmod>2026-04-10T19:14:55+09:00</lastmod>
+  </url><url>
     <loc>https://kithub.f5.si/post/google_cloud_tools_memorandum/</loc>
     <lastmod>2025-09-07T03:25:03+09:00</lastmod>
   </url><url>
@@ -194,7 +188,7 @@
     <loc>https://kithub.f5.si/post/yaml_catchup/</loc>
     <lastmod>2026-04-05T19:12:29+09:00</lastmod>
   </url><url>
-    <loc>https://kithub.f5.si/categories/hands-on/</loc>
+    <loc>https://kithub.f5.si/tags/hands-on/</loc>
     <lastmod>2026-04-05T20:20:10+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/tags/json/</loc>
@@ -203,7 +197,7 @@
     <loc>https://kithub.f5.si/tags/toml/</loc>
     <lastmod>2026-04-05T19:12:29+09:00</lastmod>
   </url><url>
-    <loc>https://kithub.f5.si/categories/udemy/</loc>
+    <loc>https://kithub.f5.si/tags/udemy/</loc>
     <lastmod>2026-04-05T19:12:29+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/tags/xml/</loc>
@@ -272,7 +266,7 @@
     <loc>https://kithub.f5.si/post/other/boc_lyric_analysis/</loc>
     <lastmod>2026-02-17T19:18:16+09:00</lastmod>
   </url><url>
-    <loc>https://kithub.f5.si/categories/hobby/</loc>
+    <loc>https://kithub.f5.si/categories/life/</loc>
     <lastmod>2026-02-17T19:18:16+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/post/other/macos_unix_is_ancestor/</loc>
@@ -305,9 +299,6 @@
     <loc>https://kithub.f5.si/tags/dag/</loc>
     <lastmod>2025-09-07T03:25:03+09:00</lastmod>
   </url><url>
-    <loc>https://kithub.f5.si/categories/data-pipline/</loc>
-    <lastmod>2025-11-27T16:02:24+09:00</lastmod>
-  </url><url>
     <loc>https://kithub.f5.si/post/bigquery_used_functions/</loc>
     <lastmod>2025-09-06T21:55:02+09:00</lastmod>
   </url><url>
@@ -326,9 +317,6 @@
     <loc>https://kithub.f5.si/post/docker_commands_memorandum/</loc>
     <lastmod>2026-04-05T20:20:10+09:00</lastmod>
   </url><url>
-    <loc>https://kithub.f5.si/categories/container/</loc>
-    <lastmod>2026-04-05T20:20:10+09:00</lastmod>
-  </url><url>
     <loc>https://kithub.f5.si/post/vim_commands_memorandum/</loc>
     <lastmod>2026-03-20T18:03:13+09:00</lastmod>
   </url><url>
@@ -342,9 +330,6 @@
     <lastmod>2025-09-07T03:25:03+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/post/other/freelance_how_to_jisui/</loc>
-    <lastmod>2025-09-07T03:25:03+09:00</lastmod>
-  </url><url>
-    <loc>https://kithub.f5.si/categories/freelance/</loc>
     <lastmod>2025-09-07T03:25:03+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/tags/notebooklm/</loc>
@@ -363,6 +348,9 @@
     <lastmod>2026-04-09T22:51:13+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/tags/english/</loc>
+    <lastmod>2026-04-09T22:51:13+09:00</lastmod>
+  </url><url>
+    <loc>https://kithub.f5.si/categories/learning/</loc>
     <lastmod>2026-04-09T22:51:13+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/tags/slack/</loc>
@@ -396,9 +384,9 @@
     <lastmod>2025-05-19T15:43:15+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/readme/</loc>
-    <lastmod>2026-04-12T17:08:07+09:00</lastmod>
+    <lastmod>2026-07-30T22:04:15+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/aboutme/</loc>
-    <lastmod>2026-05-30T01:23:49+09:00</lastmod>
+    <lastmod>2026-07-30T22:04:15+09:00</lastmod>
   </url>
 </urlset>
