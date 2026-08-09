@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Data Governance on Today I Learned | KitHub</title>
+		<link>http://localhost:1313/categories/data-governance/</link>
+		<description>Recent content in Data Governance on Today I Learned | KitHub</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 09 Aug 2026 16:29:55 +0900</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/categories/data-governance/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>[Data Governance] Personal Data Taxonomy &lt;個人情報 / 仮名加工情報 / 匿名加工情報 / 統計情報&gt;</title>
+				<link>http://localhost:1313/post/data_governance_personal_data_taxonomy/</link>
+				<pubDate>Sun, 09 Aug 2026 16:29:55 +0900</pubDate>
+				<guid>http://localhost:1313/post/data_governance_personal_data_taxonomy/</guid>
+				<description>🔐 データ基盤で毎回迷う「このテーブル出していいの？」を、個人情報保護法の4つの箱で切り分ける。</description>
+			</item>
+	</channel>
+</rss>

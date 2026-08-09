@@ -1,0 +1,16 @@
+/* giscus のコメント欄。記事本文と同じ幅・余白に揃える */
+.giscus {
+    margin: 10px auto;
+    max-width: 840px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+/* iframe はデフォルトで幅 100% だが、読み込み前の高さが 0 だと
+   フッターが一瞬跳ね上がるため最低高さを確保する */
+.giscus-frame {
+    width: 100%;
+    min-height: 148px;
+    border: none;
+    color-scheme: normal;
+}

@@ -47,6 +47,16 @@
 
     // html要素のdata-color-mode属性変更を監視
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-color-mode'] });
-    // body以下のDOM追加を監視（Gist動的読み込み対応）
-    observer.observe(document.body, { childList: true, subtree: true });
+
+    // body以下のDOM追加を監視（Gist動的読み込み対応）。
+    // このスクリプトはhead内で読み込まれるためdocument.bodyがまだ無く、
+    // 直接observeするとTypeErrorで以降の処理が止まる。
+    function observeBody() {
+        observer.observe(document.body, { childList: true, subtree: true });
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', observeBody);
+    } else {
+        observeBody();
+    }
 })();

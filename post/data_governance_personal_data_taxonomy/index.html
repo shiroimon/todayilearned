@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="application/javascript" src='http://localhost:1313/js/theme-mode.js'></script>
+    <link rel="stylesheet" href='http://localhost:1313/css/frameworks.min.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/github.min.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/github-style.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/light.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/dark.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/syntax.css' />
+    <title>[Data Governance] Personal Data Taxonomy &lt;個人情報 / 仮名加工情報 / 匿名加工情報 / 統計情報&gt; - Today I Learned | KitHub</title>
+    
+    <link rel="icon" type="image/x-icon" href='../../images/github-mark.png'>
+    
+    <meta name="theme-color" content="#1e2327">
+
+    <link rel="stylesheet" href="http://localhost:1313/css/gist.css"><link rel="stylesheet" href="http://localhost:1313/css/markdown-alert.css"><link rel="stylesheet" href="http://localhost:1313/css/code-copy.css"><link rel="stylesheet" href="http://localhost:1313/css/link-card.css"><link rel="stylesheet" href="http://localhost:1313/css/post-title.css">
+    <script type="text/javascript" src="http://localhost:1313/js/gist-dark-mode.js"></script><script type="text/javascript" src="http://localhost:1313/js/code-copy.js"></script>
+    
+
+    
+    <meta name="description"
+  content="🔐 データ基盤で毎回迷う「このテーブル出していいの？」を、個人情報保護法の4つの箱で切り分ける。" />
+<meta name="keywords"
+  content='blog' />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="http://localhost:1313/post/data_governance_personal_data_taxonomy/" />
+
+
+<link rel="manifest" href="../../manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Today I Learned | KitHub">
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/apple-touch-icon.png">
+
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="[Data Governance] Personal Data Taxonomy &lt;個人情報 / 仮名加工情報 / 匿名加工情報 / 統計情報&gt; - Today I Learned | KitHub" />
+<meta name="twitter:description"
+  content="🔐 データ基盤で毎回迷う「このテーブル出していいの？」を、個人情報保護法の4つの箱で切り分ける。" />
+<meta name="twitter:site" content="http://localhost:1313/" />
+<meta name="twitter:creator" content="shiroimon" />
+<meta name="twitter:image" content="http://localhost:1313/images/og-base_hu_bc3f3ac991ae12d.png">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="[Data Governance] Personal Data Taxonomy &lt;個人情報 / 仮名加工情報 / 匿名加工情報 / 統計情報&gt; - Today I Learned | KitHub">
+<meta property="og:description"
+  content="🔐 データ基盤で毎回迷う「このテーブル出していいの？」を、個人情報保護法の4つの箱で切り分ける。" />
+<meta property="og:url" content="http://localhost:1313/post/data_governance_personal_data_taxonomy/" />
+<meta property="og:site_name" content="Today I Learned | KitHub" />
+<meta property="og:image" content="http://localhost:1313/images/og-base_hu_bc3f3ac991ae12d.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta property="article:published_time" content="2026-08-09 16:29:55 &#43;0900 JST" />
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('\/sw.js', { scope: '\/' })
+      .then((registration) => {
+        console.log('[PWA] Service Worker registered:', registration.scope);
+
+        
+        registration.addEventListener('updatefound', () => {
+          const newWorker = registration.installing;
+          console.log('[PWA] New Service Worker found, updating...');
+
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'activated') {
+              console.log('[PWA] New Service Worker activated');
+              
+              if (navigator.serviceWorker.controller) {
+                window.location.reload();
+              }
+            }
+          });
+        });
+
+        
+        setInterval(() => {
+          registration.update();
+        }, 60 * 60 * 1000);
+      })
+      .catch((error) => {
+        console.error('[PWA] Service Worker registration failed:', error);
+      });
+  });
+}
+</script>
+
+</head>
+
+
+<body>
+  <div style="position: relative">
+  <header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on">
+    <div class="Header-item mobile-none" style="margin-top: -4px; margin-bottom: -4px;">
+      <a class="Header-link" href="http://localhost:1313/">
+        <img class="octicon" height="32" width="32" src="../../images/github-mark-white.png">
+      </a>
+    </div>
+    <div class="Header-item d-md-none">
+      <button class="Header-link btn-link js-details-target" type="button"
+        onclick="document.querySelector('#header-search').style.display = document.querySelector('#header-search').style.display == 'none'? 'block': 'none'">
+        <svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" version="1.1" width="24">
+          <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div style="display: none;" id="header-search"
+      class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
+      <div
+        class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to">
+        <div class="position-relative">
+          
+          <form target="_blank" id="search-form" action="" accept-charset="UTF-8" method="get"
+            autocomplete="off">
+            <label
+              class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center">
+              <input type="text"
+                class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+                name="q" value="" placeholder="Search" autocomplete="off">
+            </label>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
+      <a class="Header-link " href="http://localhost:1313/">
+        <img class="octicon octicon-mark-github v-align-middle" height="32" width="32" src="../../images/github-mark-white.png">
+      </a>
+    </div>
+    <div class="Header-item" style="margin-right: 0;">
+      <a href="javascript:void(0)" class="Header-link no-select" onclick="switchTheme()">
+        <svg style="fill: var(--color-profile-color-modes-toggle-moon);" class="no-select" viewBox="0 0 16 16"
+          version="1.1" width="16" height="16">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M4.52208 7.71754C7.5782 7.71754 10.0557 5.24006 10.0557 2.18394C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961C9.95801 1.07727 10.3495 0.771159 10.6474 0.99992C12.1153 2.12716 13.0615 3.89999 13.0615 5.89383C13.0615 9.29958 10.3006 12.0605 6.89485 12.0605C3.95334 12.0605 1.49286 10.001 0.876728 7.24527C0.794841 6.87902 1.23668 6.65289 1.55321 6.85451C2.41106 7.40095 3.4296 7.71754 4.52208 7.71754Z">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </header>
+</div>
+
+  <div id="search-result" class="container-lg px-3 new-discussion-timeline" style="display: none;">
+</div>
+
+  
+<div class="application-main">
+  <div>
+<main>
+    
+    <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
+    <div class="px-0">
+    <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+    <div class="flex-auto min-width-0 width-fit mr-3">
+    <div class="d-flex">
+        
+        <div class="d-none d-md-block">
+            <a class="avatar mr-2 flex-shrink-0" href="http://localhost:1313/">
+                <img class=" avatar-user"
+                  src="../../images/avatar.png"
+                  width="32"
+                  height="32">
+            </a>
+        </div>
+        
+        <div class="d-flex flex-column">
+            
+            <h1 class="break-word f3 text-normal mb-md-0 mb-1">
+                <span class="author"><a href="http://localhost:1313/"></a></span>
+                <span class="path-divider">/</span>
+                <strong class="mr-1"><a href="http://localhost:1313/post/data_governance_personal_data_taxonomy/">[Data Governance] Personal Data Taxonomy &lt;個人情報 / 仮名加工情報 / 匿名加工情報 / 統計情報&gt;</a></strong>
+            </h1>
+            
+            <div class="note m-0">
+                Created <relative-time datetime="Sun, 09 Aug 2026 16:29:55 &#43;0900" class="no-wrap">Sun, 09 Aug 2026 16:29:55 &#43;0900</relative-time>
+                
+                <span class="path-divider">|</span>
+                Modified <relative-time datetime="Sun, 09 Aug 2026 16:29:55 &#43;0900" class="no-wrap">Sun, 09 Aug 2026 16:29:55 &#43;0900</relative-time>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    
+    <div class="container-lg px-3 new-discussion-timeline">
+    <div class="repository-content gist-content">
+    <div>
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+        <div id="file-pytest" class="file my-2">
+        
+        <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
+        <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+
+            
+            <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+            <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
+                <svg aria-hidden="true" viewBox="0 0 16 16" class="octicon octicon-list-unordered" height="16" width="16">
+                    <path fill-rule="evenodd"
+                        d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z">
+                    </path>
+                </svg>
+            </summary>
+            <details-menu class="SelectMenu" id="toc-details" style="display: none;">
+                <div class="SelectMenu-modal rounded-3 mt-1" style="max-height: 340px;">
+                    <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list"></div>
+                </div>
+            </details-menu>
+            8040 Words
+            <span class="path-divider">|</span>
+            5 min
+            </div>
+
+            
+            <div class="file-actions flex-order-2 pt-0">
+                
+                <div class="d-none d-md-flex">
+                    
+                    
+                    
+                    <a class="muted-link mr-3" href='../../tags/google-cloud'>
+                        <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                            </path>
+                        </svg>
+                        Google Cloud
+                    </a>
+                    
+                    
+                    
+                    <a class="muted-link mr-3" href='../../tags/bigquery'>
+                        <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                            </path>
+                        </svg>
+                        BigQuery
+                    </a>
+                    
+                    
+                    
+                    <a class="muted-link mr-3" href='../../tags/dbt'>
+                        <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                            </path>
+                        </svg>
+                        dbt
+                    </a>
+                    
+                    
+                    
+                    <a class="muted-link mr-3" href='../../tags/dataform'>
+                        <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                            </path>
+                        </svg>
+                        Dataform
+                    </a>
+                    
+                    
+                    
+                </div>
+                
+            </div>
+        </div>
+        </div>
+
+        
+        
+        
+        
+
+        
+        <div class="Box-body px-5 pb-5" style="z-index: 1">
+            <article class="markdown-body entry-content container-lg"><!-- Icon Badge -->
+<h2 id="why">Why<a class="anchor" aria-hidden="true" href="#why"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>データ基盤を触っていると、判断が必要な瞬間が定期的にやってくる。。
+昨今あまりにセンシティブ故に、データの出方を間違えると「一発OUT！！！」になりかねない。</p>
+<ul>
+<li>「この <code>users</code> テーブル、分析チームの dataset にコピーしていい？」</li>
+<li>「アクセスログ、当初は障害調査目的で溜めてたけど、レコメンドの学習データに使い回していい？」</li>
+<li>「委託先ベンダに <code>user_id</code> をハッシュ化して渡せば、個人情報じゃないから自由？」</li>
+<li>「集計してマートにすれば、もう個人情報保護法の話は関係ない？」</li>
+</ul>
+<p>これらは全部「そのデータが法律上どの箱に入っているか」で答えが変わる。<br>
+そして<strong>箱が決まると、テーブル分割・dataset 分離・IAM・Policy Tag・保持期間・データカタログのラベルまで一気に決まる</strong>。
+逆に箱を曖昧にしたまま基盤を作ると、後から「この列だけ抜きたい」が地獄になる。</p>
+
+<div class="markdown-alert markdown-alert-note">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>
+        Note
+        
+    </p>
+    <p>個人情報保護法（令和3年改正 / 2022年4月1日全面施行）ベースの整理。<br>
+法的助言ではないので、実際の判断は必ず法務とガイドライン原文を突き合わせて行うこと。怖いね</p>
+</div>
+
+<h2 id="what">What<a class="anchor" aria-hidden="true" href="#what"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<h3 id="tldr--4つの箱">TL;DR — 4つの箱<a class="anchor" aria-hidden="true" href="#tldr--4つの箱"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">箱</th>
+					<th style="text-align: left">ひとことで</th>
+					<th style="text-align: left">法的な位置づけ</th>
+					<th style="text-align: left">復元</th>
+					<th style="text-align: left">第三者提供</th>
+					<th style="text-align: left">主な用途</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><strong>個人情報</strong></td>
+					<td style="text-align: left">誰の情報か分かる</td>
+					<td style="text-align: left">個人情報（法2条1項）</td>
+					<td style="text-align: left">—</td>
+					<td style="text-align: left">原則 本人同意</td>
+					<td style="text-align: left">本来業務・本人への提供</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>仮名加工情報</strong></td>
+					<td style="text-align: left">単体では分からないが、照合すれば戻せる</td>
+					<td style="text-align: left">独自カテゴリ（法2条5項・41条/42条）</td>
+					<td style="text-align: left">可能</td>
+					<td style="text-align: left">❌ 原則不可（委託・共同利用のみ）</td>
+					<td style="text-align: left"><strong>社内</strong>分析・AI学習</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>匿名加工情報</strong></td>
+					<td style="text-align: left">誰の情報か戻せない</td>
+					<td style="text-align: left">個人情報ではない（法2条6項・43〜46条）</td>
+					<td style="text-align: left">不可</td>
+					<td style="text-align: left">⭕️ 同意不要（公表・明示が条件）</td>
+					<td style="text-align: left"><strong>社外</strong>提供・データ流通</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>統計情報</strong></td>
+					<td style="text-align: left">もはや個人単位ですらない</td>
+					<td style="text-align: left"><strong>法の対象外</strong></td>
+					<td style="text-align: left">不可</td>
+					<td style="text-align: left">⭕️ 自由</td>
+					<td style="text-align: left">BI・ダッシュボード・レポート</td>
+			</tr>
+	</tbody>
+</table>
+<p>覚え方はシンプルに、</p>
+<ul>
+<li><strong>仮名</strong> ＝ <strong>社内</strong>で使う。戻せる。だから外に出せない</li>
+<li><strong>匿名</strong> ＝ <strong>社外</strong>に出せる。戻せない。だから加工基準が厳しい</li>
+<li><strong>統計</strong> ＝ そもそも個人の話じゃない。法の外</li>
+</ul>
+<h3 id="ベン図で位置関係を掴む">ベン図で位置関係を掴む<a class="anchor" aria-hidden="true" href="#ベン図で位置関係を掴む"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p>まずこの図が一番効く。</p>
+<p><img src="https://storialaw.jp/wp-new/wp-content/uploads/2021/05/b3719e4e9e65776222808d701c83397d.png" alt="個人情報・仮名加工情報・匿名加工情報のベン図" loading="lazy" decoding="async">
+</p>
+
+<blockquote>
+    <p>出典: <a href="https://storialaw.jp/blog/7760">STORIA法律事務所「仮名加工情報を利用したAI開発は可能か」</a></p>
+
+</blockquote>
+
+<p>この図の読み方で、押さえるべきポイントが3つある。</p>
+<h4 id="1-個人情報と仮名加工情報は重なる包含ではない">(1) 個人情報と仮名加工情報は「重なる」（包含ではない）<a class="anchor" aria-hidden="true" href="#1-個人情報と仮名加工情報は重なる包含ではない"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<p>ここが一番誤解されやすい。仮名加工情報は個人情報の<strong>部分集合ではない</strong>。重なりの正体は<strong>容易照合性</strong>。</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">状態</th>
+					<th style="text-align: left">該当</th>
+					<th style="text-align: left">適用条文</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">元データ・対応表を自社で保持</td>
+					<td style="text-align: left"><strong>個人情報である</strong>仮名加工情報</td>
+					<td style="text-align: left">法41条</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">元データ・対応表を削除／持たない</td>
+					<td style="text-align: left"><strong>個人情報でない</strong>仮名加工情報</td>
+					<td style="text-align: left">法42条</td>
+			</tr>
+	</tbody>
+</table>
+<p>つまり「仮名加工したから個人情報じゃなくなる」は<strong>間違い</strong>。対応表を握っている限り、それは個人情報でもある。</p>
+<h4 id="2-匿名加工情報は個人情報の外にある">(2) 匿名加工情報は個人情報の外にある<a class="anchor" aria-hidden="true" href="#2-匿名加工情報は個人情報の外にある"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<p>円が離れているのは「照合しても戻せない」から。<br>
+その代わり、後述するとおり加工基準が5要件と厳しく、公表義務までセットで付いてくる。</p>
+<h4 id="3-余白は個人関連情報">(3) 余白は「個人関連情報」<a class="anchor" aria-hidden="true" href="#3-余白は個人関連情報"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<p>外枠は「生存する個人に関する情報」。3つの円のどこにも入らない余白が<strong>個人関連情報</strong>（法2条7項）で、定義がそのまま「個人情報・仮名加工情報・匿名加工情報のいずれにも該当しないもの」になっている。Cookie ID、広告 ID、閲覧履歴などがここ。</p>
+
+<div class="markdown-alert markdown-alert-important">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>
+        Important
+        
+    </p>
+    <p>個人関連情報は、<strong>提供先が個人データとして取得することが想定される</strong>場合、提供元は本人同意の確認が必要（法31条）。<br>
+CDP や広告連携で ID を外部に飛ばす構成は、ほぼ確実にここを踏む。</p>
+</div>
+
+<p>そして<strong>統計情報はこの外枠のさらに外</strong>にいる。ガイドライン通則編 2-8 が「統計情報は、特定の個人との対応関係が排斥されている限りにおいては『個人に関する情報』に該当するものではないため、個人関連情報にも該当しない」と明記している。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">「生存する個人に関する情報」の内側
+</span></span><span class="line"><span class="cl">├── 個人情報
+</span></span><span class="line"><span class="cl">│   ├── 仮名加工情報でない個人情報              …… 通常の個人データ
+</span></span><span class="line"><span class="cl">│   └── 個人情報である仮名加工情報              …… 法41条
+</span></span><span class="line"><span class="cl">├── 個人情報でない仮名加工情報                  …… 法42条
+</span></span><span class="line"><span class="cl">├── 匿名加工情報                                …… 法43〜46条
+</span></span><span class="line"><span class="cl">└── 上記いずれにも該当しない残り = 個人関連情報 …… 法31条
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">「生存する個人に関する情報」の外側
+</span></span><span class="line"><span class="cl">└── 統計情報 ……………………………… 法の対象外
+</span></span></code></pre></div><hr>
+<h2 id="個人情報">個人情報<a class="anchor" aria-hidden="true" href="#個人情報"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<h3 id="定義法2条1項">定義（法2条1項）<a class="anchor" aria-hidden="true" href="#定義法2条1項"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">号</th>
+					<th style="text-align: left">内容</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><strong>1号</strong></td>
+					<td style="text-align: left">氏名・生年月日その他の記述等により特定の個人を識別できるもの<br><strong>他の情報と容易に照合でき、それにより識別できるものを含む</strong>（＝ 容易照合性）</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>2号</strong></td>
+					<td style="text-align: left">個人識別符号（法2条2項）が含まれるもの</td>
+			</tr>
+	</tbody>
+</table>
+<p>個人識別符号の例: マイナンバー、運転免許証番号、パスポート番号、基礎年金番号、顔認証データ、指紋・虹彩・声紋データ。</p>
+<h3 id="データエンジニアが効かせるべきポイント">データエンジニアが効かせるべきポイント<a class="anchor" aria-hidden="true" href="#データエンジニアが効かせるべきポイント"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p><strong>1号カッコ書きの「容易照合性」が全て。</strong> ここを外すと設計が崩れる。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">-- ❌ 「氏名を含まないから個人情報ではない」は成立しない
+</span></span></span><span class="line"><span class="cl"><span class="c1">-- events テーブルに user_id しかなくても…
+</span></span></span><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="n">user_id</span><span class="p">,</span><span class="w"> </span><span class="n">event_name</span><span class="p">,</span><span class="w"> </span><span class="n">ts</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">analytics</span><span class="p">.</span><span class="n">events</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">-- …同じ事業者内に users テーブルがあり、join 一発で氏名に到達できるなら
+</span></span></span><span class="line"><span class="cl"><span class="c1">--   events.user_id も「個人情報」として扱う必要がある
+</span></span></span><span class="line"><span class="cl"><span class="k">select</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">e</span><span class="p">.</span><span class="n">user_id</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">full_name</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">from</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">analytics</span><span class="p">.</span><span class="n">events</span><span class="w"> </span><span class="n">e</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">join</span><span class="w"> </span><span class="n">core</span><span class="p">.</span><span class="n">users</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">user_id</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></div>
+<div class="markdown-alert markdown-alert-warning">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>
+        Warning
+        
+    </p>
+    <p><strong>dataset / project を分けただけでは容易照合性は切れない。</strong><br>
+「同一事業者内で通常の業務における一般的な方法で照合できるか」で判断されるため、IAM で塞いでいない別 dataset に置き換えただけでは論拠が弱い。切りたいなら<strong>対応表の物理的分離 ＋ IAM 分離 ＋ 運用ルール</strong>をセットで用意する。</p>
+</div>
+
+<h3 id="派生カテゴリも押さえる">派生カテゴリも押さえる<a class="anchor" aria-hidden="true" href="#派生カテゴリも押さえる"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">用語</th>
+					<th style="text-align: left">定義</th>
+					<th style="text-align: left">実務インパクト</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><strong>個人データ</strong></td>
+					<td style="text-align: left">個人情報データベース等を構成する個人情報</td>
+					<td style="text-align: left">安全管理措置・第三者提供規制の主対象</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>保有個人データ</strong></td>
+					<td style="text-align: left">事業者が開示・訂正・削除の権限を持つ個人データ</td>
+					<td style="text-align: left">開示等請求（法33条〜）の対象 → <strong>削除フローが必要</strong></td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>要配慮個人情報</strong></td>
+					<td style="text-align: left">病歴、健診結果、障害、犯罪歴等（法2条3項）</td>
+					<td style="text-align: left"><strong>取得時に原則 本人同意</strong>。オプトアウト提供も不可</td>
+			</tr>
+	</tbody>
+</table>
+
+<div class="markdown-alert markdown-alert-tip">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>
+        Tip
+        
+    </p>
+    <p>「要配慮個人情報を含むか」はテーブル単位ではなく<strong>列単位</strong>のメタデータで持つ。dbt なら <code>meta</code> に書いて、ドキュメントとアクセス制御の両方から参照できる形にしておくのが楽。</p>
+</div>
+
+<hr>
+<h2 id="仮名加工情報">仮名加工情報<a class="anchor" aria-hidden="true" href="#仮名加工情報"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<h3 id="定義法2条5項">定義（法2条5項）<a class="anchor" aria-hidden="true" href="#定義法2条5項"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+
+<blockquote>
+    <p>他の情報と照合しない限り、特定の個人を識別することができないように加工した個人に関する情報</p>
+
+</blockquote>
+
+<p>令和2年改正で新設。<strong>個人情報と匿名加工情報の中間</strong>に位置するカテゴリ。</p>
+<h3 id="加工基準は3つだけ規則31条">加工基準は3つだけ（規則31条）<a class="anchor" aria-hidden="true" href="#加工基準は3つだけ規則31条"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">号</th>
+					<th style="text-align: left">加工内容</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><strong>1号</strong></td>
+					<td style="text-align: left">特定の個人を識別できる記述等の全部または一部を削除／置換</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>2号</strong></td>
+					<td style="text-align: left">個人識別符号の<strong>全部</strong>を削除／置換</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>3号</strong></td>
+					<td style="text-align: left">不正利用により<strong>財産的被害が生じるおそれ</strong>のある記述等を削除／置換<br>（クレジットカード番号、口座番号など）</td>
+			</tr>
+	</tbody>
+</table>
+<p>匿名加工情報の5要件と比べると圧倒的に軽い。<strong>「特異な記述の削除」が要らない</strong>のが決定的で、外れ値・レアケースを保った高精度な分析ができる。</p>
+<h3 id="何が緩むか法41条9項の適用除外">何が緩むか（法41条9項の適用除外）<a class="anchor" aria-hidden="true" href="#何が緩むか法41条9項の適用除外"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">緩む義務</th>
+					<th style="text-align: left">条文</th>
+					<th style="text-align: left">データ基盤へのインパクト</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><strong>利用目的の変更制限</strong></td>
+					<td style="text-align: left">法17条2項</td>
+					<td style="text-align: left">🔥 <strong>当初目的と関連性のない目的への転用が可能</strong></td>
+			</tr>
+			<tr>
+					<td style="text-align: left">漏えい等の報告・本人通知</td>
+					<td style="text-align: left">法26条</td>
+					<td style="text-align: left">インシデント時の報告義務が外れる（安全管理措置義務は残る）</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">開示・訂正・利用停止等の請求対応</td>
+					<td style="text-align: left">法32〜39条</td>
+					<td style="text-align: left">開示請求対応フロー・物理削除フローの対象外</td>
+			</tr>
+	</tbody>
+</table>
+<p>最大の価値は1つ目。<strong>「障害調査目的で取得したログを、後から機械学習の学習データにする」が本人同意なしで可能になる</strong>。これはデータ基盤の設計自由度を大きく変える。</p>
+<h3 id="何が禁止されるか法41条38項--42条">何が禁止されるか（法41条3〜8項 / 42条）<a class="anchor" aria-hidden="true" href="#何が禁止されるか法41条38項--42条"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">禁止／義務</th>
+					<th style="text-align: left">内容</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">❌ <strong>第三者提供</strong></td>
+					<td style="text-align: left">原則不可。<strong>委託・共同利用・事業承継のみ例外</strong></td>
+			</tr>
+			<tr>
+					<td style="text-align: left">❌ <strong>識別目的の照合</strong></td>
+					<td style="text-align: left">本人を特定する目的で他の情報と突き合わせるのは禁止</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">❌ <strong>本人への連絡・接触</strong></td>
+					<td style="text-align: left">DM 送信、電話、ターゲティング配信等はアウト</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">⚠️ 削除情報等の安全管理措置</td>
+					<td style="text-align: left">対応表・削除した情報の安全管理（法41条2項・規則32条）</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">⚠️ 利用目的の達成に必要な範囲</td>
+					<td style="text-align: left">変更は自由だが、設定した目的の範囲は守る</td>
+			</tr>
+	</tbody>
+</table>
+
+<div class="markdown-alert markdown-alert-caution">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M4.47.22A.749.749 0 0 1 5 0h6c.199 0 .389.079.53.22l4.25 4.25c.141.14.22.331.22.53v6a.749.749 0 0 1-.22.53l-4.25 4.25A.749.749 0 0 1 11 16H5a.749.749 0 0 1-.53-.22L.22 11.53A.749.749 0 0 1 0 11V5c0-.199.079-.389.22-.53Zm.84 1.28L1.5 5.31v5.38l3.81 3.81h5.38l3.81-3.81V5.31L10.69 1.5ZM8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4Zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>
+        Caution
+        
+    </p>
+    <p><strong>「仮名加工情報として扱う」と決めた瞬間、上記の義務がセットで付いてくる。</strong><br>
+ハッシュ化して規制が消えるわけではなく、「規制の中身が別のものに差し替わる」だけ。DM 配信の母集団に使う予定があるなら、そもそも仮名加工情報にしてはいけない。</p>
+</div>
+
+<h3 id="実装イメージ">実装イメージ<a class="anchor" aria-hidden="true" href="#実装イメージ"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">-- ① 対応表は別プロジェクト・別 IAM に隔離する（ここが 法41条2項 の安全管理措置）
+</span></span></span><span class="line"><span class="cl"><span class="k">create</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="k">replace</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="o">`</span><span class="n">prj</span><span class="o">-</span><span class="n">pii</span><span class="o">-</span><span class="n">vault</span><span class="p">.</span><span class="n">mapping</span><span class="p">.</span><span class="n">user_pseudonym</span><span class="o">`</span><span class="w"> </span><span class="k">as</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">select</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">user_id</span><span class="w">                                               </span><span class="c1">-- 元の識別子
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">,</span><span class="w"> </span><span class="n">to_hex</span><span class="p">(</span><span class="n">sha256</span><span class="p">(</span><span class="n">concat</span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="w"> </span><span class="o">@</span><span class="n">salt</span><span class="p">)))</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">pseudo_id</span><span class="w"> </span><span class="c1">-- salt は secret manager から
+</span></span></span><span class="line"><span class="cl"><span class="k">from</span><span class="w"> </span><span class="o">`</span><span class="n">prj</span><span class="o">-</span><span class="n">core</span><span class="p">.</span><span class="n">core</span><span class="p">.</span><span class="n">users</span><span class="o">`</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">-- ② 分析側には pseudo_id しか流さない
+</span></span></span><span class="line"><span class="cl"><span class="k">create</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="k">replace</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="o">`</span><span class="n">prj</span><span class="o">-</span><span class="n">analytics</span><span class="p">.</span><span class="n">pseudo</span><span class="p">.</span><span class="n">events</span><span class="o">`</span><span class="w"> </span><span class="k">as</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">select</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">m</span><span class="p">.</span><span class="n">pseudo_id</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">event_name</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">ts</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">age</span><span class="w">  </span><span class="c1">-- 「特異な記述」の削除は不要 → 119歳もそのまま保持できる
+</span></span></span><span class="line"><span class="cl"><span class="k">from</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">`</span><span class="n">prj</span><span class="o">-</span><span class="n">core</span><span class="p">.</span><span class="n">core</span><span class="p">.</span><span class="n">events</span><span class="o">`</span><span class="w"> </span><span class="n">e</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">join</span><span class="w"> </span><span class="o">`</span><span class="n">prj</span><span class="o">-</span><span class="n">pii</span><span class="o">-</span><span class="n">vault</span><span class="p">.</span><span class="n">mapping</span><span class="p">.</span><span class="n">user_pseudonym</span><span class="o">`</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">user_id</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">-- 規則31条3号: カード番号など財産的被害リスクのある列は select に含めない
+</span></span></span></code></pre></div><ul>
+<li><code>prj-pii-vault</code> へのアクセス権を持つ<strong>人</strong>がいないのが理想（バッチのサービスアカウントのみ）</li>
+<li>ただし自社が対応表を保持している以上、これは**「個人情報である仮名加工情報」（法41条）**である点を忘れない</li>
+<li>対応表を削除して初めて法42条側に移る</li>
+</ul>
+<hr>
+<h2 id="匿名加工情報">匿名加工情報<a class="anchor" aria-hidden="true" href="#匿名加工情報"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<h3 id="定義法2条6項">定義（法2条6項）<a class="anchor" aria-hidden="true" href="#定義法2条6項"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+
+<blockquote>
+    <p>特定の個人を識別することができないように個人情報を加工して得られる個人に関する情報であって、当該個人情報を復元することができないようにしたもの</p>
+
+</blockquote>
+
+<p>平成27年改正で新設。<strong>社外へのデータ流通を前提</strong>とした制度。</p>
+<h3 id="加工基準は5要件規則34条">加工基準は5要件（規則34条）<a class="anchor" aria-hidden="true" href="#加工基準は5要件規則34条"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">号</th>
+					<th style="text-align: left">加工内容</th>
+					<th style="text-align: left">例</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><strong>1号</strong></td>
+					<td style="text-align: left">特定の個人を識別できる記述等の削除</td>
+					<td style="text-align: left">氏名、詳細な住所、生年月日</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>2号</strong></td>
+					<td style="text-align: left">個人識別符号の全部削除</td>
+					<td style="text-align: left">マイナンバー、免許証番号</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>3号</strong></td>
+					<td style="text-align: left">情報を相互に連結する符号の削除</td>
+					<td style="text-align: left">内部管理用の会員 ID、<code>user_id</code></td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>4号</strong></td>
+					<td style="text-align: left">🔥 <strong>特異な記述等の削除</strong></td>
+					<td style="text-align: left">「119歳」「年収3億円」「症例が極めて稀な病名」</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>5号</strong></td>
+					<td style="text-align: left">データベースの性質を踏まえたその他の措置</td>
+					<td style="text-align: left">全国平均と大きく乖離する地域データの削除など</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="加工前後のイメージ">加工前後のイメージ<a class="anchor" aria-hidden="true" href="#加工前後のイメージ"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">項目</th>
+					<th style="text-align: left">加工前</th>
+					<th style="text-align: left">加工後</th>
+					<th style="text-align: left">手法</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">氏名</td>
+					<td style="text-align: left">愛江 素雄</td>
+					<td style="text-align: left">（削除）</td>
+					<td style="text-align: left">削除</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">住所</td>
+					<td style="text-align: left">東京都 ISO区 プロ2丁目 27001-2</td>
+					<td style="text-align: left">東京都</td>
+					<td style="text-align: left">一般化</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">年齢</td>
+					<td style="text-align: left">31歳</td>
+					<td style="text-align: left">30代</td>
+					<td style="text-align: left">一般化（ビニング）</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">年収</td>
+					<td style="text-align: left">475万円</td>
+					<td style="text-align: left">450万円〜500万円</td>
+					<td style="text-align: left">一般化（レンジ化）</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">職場</td>
+					<td style="text-align: left">ISOプロ書店</td>
+					<td style="text-align: left">小売店</td>
+					<td style="text-align: left">一般化（カテゴリ化）</td>
+			</tr>
+	</tbody>
+</table>
+
+<blockquote>
+    <p>参考: <a href="https://activation-service.jp/iso/terms/1958">ISOプロ「匿名加工情報とは」</a></p>
+
+</blockquote>
+
+<h3 id="付いてくる義務法4346条">付いてくる義務（法43〜46条）<a class="anchor" aria-hidden="true" href="#付いてくる義務法4346条"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">義務</th>
+					<th style="text-align: left">条文</th>
+					<th style="text-align: left">備考</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">加工基準に従った作成</td>
+					<td style="text-align: left">法43条1項・規則34条</td>
+					<td style="text-align: left">5要件すべて</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">加工方法等情報の安全管理措置</td>
+					<td style="text-align: left">法43条2項・規則35条</td>
+					<td style="text-align: left">「どう加工したか」の情報自体を守る</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>作成時の項目公表</strong></td>
+					<td style="text-align: left">法43条3項・規則36条</td>
+					<td style="text-align: left">含まれる個人に関する情報の項目を公表</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>第三者提供時の公表＋提供先への明示</strong></td>
+					<td style="text-align: left">法43条4項・規則37条</td>
+					<td style="text-align: left">匿名加工情報であることを明示する義務</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>識別行為の禁止</strong></td>
+					<td style="text-align: left">法43条5項・法45条</td>
+					<td style="text-align: left">提供元も提供先も、本人特定を試みてはならない</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">安全管理措置等</td>
+					<td style="text-align: left">法43条6項・法46条</td>
+					<td style="text-align: left">努力義務</td>
+			</tr>
+	</tbody>
+</table>
+
+<div class="markdown-alert markdown-alert-warning">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>
+        Warning
+        
+    </p>
+    <p>「匿名加工情報にすれば自由に売れる」ではない。<strong>公表義務・明示義務・識別行為禁止</strong>が付いてくるので、パイプラインの外側に<strong>運用プロセス</strong>（公表ページの更新、契約書への明示条項）を作る必要がある。</p>
+</div>
+
+<h3 id="実務での難しさ">実務での難しさ<a class="anchor" aria-hidden="true" href="#実務での難しさ"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p>4号の「特異な記述」に<strong>明確な閾値がない</strong>のが最大の壁。マーケティング分析では外れ値こそが示唆を持つことも多く、消すと分析価値が落ちる。</p>
+<ul>
+<li><strong>k-匿名性</strong>: 同じ属性の組み合わせが k 件以上になるよう一般化する（k=2, 5, 10 など）</li>
+<li><strong>l-多様性 / t-近似性</strong>: センシティブ属性の偏りにも配慮する拡張</li>
+</ul>
+
+<div class="markdown-alert markdown-alert-tip">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>
+        Tip
+        
+    </p>
+    <p>ここが厳しいからこそ、<strong>社内利用なら匿名加工情報ではなく仮名加工情報を選ぶ</strong>のが定石。<br>
+「社外に出す必要があるか？」を先に判定するのが設計の分岐点。</p>
+</div>
+
+<hr>
+<h2 id="統計情報">統計情報<a class="anchor" aria-hidden="true" href="#統計情報"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<h3 id="位置づけ">位置づけ<a class="anchor" aria-hidden="true" href="#位置づけ"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p><strong>個人情報保護法の適用対象外</strong>。「個人情報でない」だけでなく、そもそも**「個人に関する情報」ですらない**。</p>
+<ul>
+<li>ガイドライン通則編 2-8: 「統計情報は、特定の個人との対応関係が排斥されている限りにおいては『個人に関する情報』に該当するものではない」</li>
+<li>Q&amp;A 1-17 付近: 複数人の情報から共通要素に係る項目を抽出し、同じ分類ごとに集計して得られる情報</li>
+</ul>
+
+<div class="markdown-alert markdown-alert-note">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>
+        Note
+        
+    </p>
+    <p>「特定の個人との対応関係が排斥されている限りにおいては」という条件節が本体。ここを満たさない集計は統計情報ではない。</p>
+</div>
+
+<h3 id="落とし穴--集計しても安全とは限らない">落とし穴 — 集計しても安全とは限らない<a class="anchor" aria-hidden="true" href="#落とし穴--集計しても安全とは限らない"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">-- ⚠️ 集計しているが、n=1 のセルが「その個人の情報」を露出させる
+</span></span></span><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="n">prefecture</span><span class="p">,</span><span class="w"> </span><span class="n">disease_name</span><span class="p">,</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="k">avg</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">avg_salary</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">from</span><span class="w"> </span><span class="n">patients</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">prefecture</span><span class="p">,</span><span class="w"> </span><span class="n">disease_name</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">-- → 「鳥取県 × 特定の希少疾患 × n=1」で個人が特定でき、
+</span></span></span><span class="line"><span class="cl"><span class="c1">--    その人の年収まで avg() 経由で露出する（＝ 差分攻撃の入口）
+</span></span></span></code></pre></div><p>対策の定番は3つ。</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">対策</th>
+					<th style="text-align: left">内容</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><strong>セル抑制（small cell）</strong></td>
+					<td style="text-align: left"><code>having count(*) &gt;= k</code> で小セルを落とす</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>粒度の一般化</strong></td>
+					<td style="text-align: left">都道府県 → 地方ブロック、日次 → 月次</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>差分プライバシー</strong></td>
+					<td style="text-align: left">ノイズを付与して個体の寄与を隠す</td>
+			</tr>
+	</tbody>
+</table>
+<p>BigQuery は差分プライバシーを SQL でネイティブに書ける。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">differential_privacy</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">options</span><span class="w"> </span><span class="p">(</span><span class="n">epsilon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">delta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="mi">01</span><span class="p">,</span><span class="w"> </span><span class="n">privacy_unit_column</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">user_id</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">prefecture</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">,</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">contribution_bounds_per_group</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">))</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">n</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">from</span><span class="w"> </span><span class="o">`</span><span class="n">prj</span><span class="o">-</span><span class="n">analytics</span><span class="p">.</span><span class="n">core</span><span class="p">.</span><span class="n">patients</span><span class="o">`</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">prefecture</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></div><table>
+	<thead>
+			<tr>
+					<th style="text-align: left">オプション</th>
+					<th style="text-align: left">意味</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><code>privacy_unit_column</code></td>
+					<td style="text-align: left">保護対象エンティティの一意識別子（＝ 個人）</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>epsilon</code></td>
+					<td style="text-align: left">プライバシー予算。小さいほど強い保護 ＝ ノイズ大</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>delta</code></td>
+					<td style="text-align: left">保護が破れる確率の上限</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>contribution_bounds_per_group</code></td>
+					<td style="text-align: left">1人がグループへ寄与できる上限（クリッピング）</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>max_groups_contributed</code></td>
+					<td style="text-align: left">1人が寄与できるグループ数の上限</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="委託と統計情報">委託と統計情報<a class="anchor" aria-hidden="true" href="#委託と統計情報"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p>委託先が委託元から預かった個人データを統計情報に加工する論点は Q&amp;A 7-36 付近で整理されている。ざっくり言うと<strong>委託された業務の範囲内</strong>であれば可能で、統計情報化した後の情報は法の規制を受けない。<br>
+ただし「複数の委託元のデータを混ぜる」「委託先が自社目的で使う」は委託の範囲を超えやすいので、<strong>契約に何を書いたか</strong>で決まる。</p>
+
+<div class="markdown-alert markdown-alert-important">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>
+        Important
+        
+    </p>
+    <p>Q&amp;A の番号は改訂で動く。判断時は個人情報保護委員会のサイトで最新:wq版を引くこと。</p>
+</div>
+
+<hr>
+<h2 id="判断フロー">判断フロー<a class="anchor" aria-hidden="true" href="#判断フロー"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart TD
+    A[&#34;この列 / このテーブルは何？&#34;] --&gt; B{&#34;個人単位のレコード？&#34;}
+    B -- &#34;いいえ（集計値のみ）&#34; --&gt; S[&#34;統計情報&lt;br&gt;法の対象外&lt;br&gt;⚠️ 小セル抑制を忘れず&#34;]
+    B -- &#34;はい&#34; --&gt; C{&#34;氏名・個人識別符号あり？&lt;br&gt;or 社内の他テーブルと&lt;br&gt;容易に照合できる？&#34;}
+    C -- &#34;はい&#34; --&gt; D[&#34;個人情報&lt;br&gt;本人同意 / 利用目的の縛りあり&#34;]
+    C -- &#34;いいえ&#34; --&gt; E{&#34;社外に出す必要がある？&#34;}
+    E -- &#34;はい（提供・販売）&#34; --&gt; F[&#34;匿名加工情報を狙う&lt;br&gt;規則34条 5要件 ＋ 公表義務&#34;]
+    E -- &#34;いいえ（社内分析 / AI学習）&#34; --&gt; G[&#34;仮名加工情報を狙う&lt;br&gt;規則31条 3要件&#34;]
+    G --&gt; H{&#34;対応表・元データを&lt;br&gt;自社で保持する？&#34;}
+    H -- &#34;はい&#34; --&gt; I[&#34;個人情報である仮名加工情報&lt;br&gt;法41条&#34;]
+    H -- &#34;いいえ&#34; --&gt; J[&#34;個人情報でない仮名加工情報&lt;br&gt;法42条&#34;]
+    D --&gt; K{&#34;Cookie / 広告ID など&lt;br&gt;単体では識別できない情報を&lt;br&gt;外部提供する？&#34;}
+    K -- &#34;はい&#34; --&gt; L[&#34;個人関連情報&lt;br&gt;法31条: 提供先での取得を想定した同意確認&#34;]
+</code></pre><hr>
+<h2 id="データ基盤への落とし込み">データ基盤への落とし込み<a class="anchor" aria-hidden="true" href="#データ基盤への落とし込み"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<h3 id="レイヤ設計">レイヤ設計<a class="anchor" aria-hidden="true" href="#レイヤ設計"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p>法的カテゴリを<strong>そのままレイヤ境界にする</strong>のが、結局いちばん壊れにくい。</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">レイヤ</th>
+					<th style="text-align: left">法的カテゴリ</th>
+					<th style="text-align: left">配置</th>
+					<th style="text-align: left">アクセス権</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><code>raw</code> / <code>core</code></td>
+					<td style="text-align: left">個人情報</td>
+					<td style="text-align: left"><code>prj-core</code></td>
+					<td style="text-align: left">業務システム連携のみ</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>mapping</code></td>
+					<td style="text-align: left">対応表（要保護）</td>
+					<td style="text-align: left"><code>prj-pii-vault</code>（<strong>単独プロジェクト</strong>）</td>
+					<td style="text-align: left">サービスアカウントのみ</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>pseudo</code></td>
+					<td style="text-align: left">仮名加工情報</td>
+					<td style="text-align: left"><code>prj-analytics</code></td>
+					<td style="text-align: left">分析チーム</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>anon</code></td>
+					<td style="text-align: left">匿名加工情報</td>
+					<td style="text-align: left"><code>prj-share</code></td>
+					<td style="text-align: left">外部提供パイプライン</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>mart</code></td>
+					<td style="text-align: left">統計情報</td>
+					<td style="text-align: left"><code>prj-bi</code></td>
+					<td style="text-align: left">全社</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="bigquery-の道具">BigQuery の道具<a class="anchor" aria-hidden="true" href="#bigquery-の道具"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">目的</th>
+					<th style="text-align: left">機能</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">列単位のアクセス制御</td>
+					<td style="text-align: left"><strong>Policy Tag</strong>（列レベルセキュリティ）</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">列の値を隠す（権限で切替）</td>
+					<td style="text-align: left"><strong>Dynamic Data Masking</strong>（Policy Tag ＋ データポリシー）</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">行単位の絞り込み</td>
+					<td style="text-align: left"><strong>Row-level security</strong>（<code>create row access policy</code>）</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">元テーブル権限なしで集計を見せる</td>
+					<td style="text-align: left"><strong>Authorized View / Authorized Dataset</strong></td>
+			</tr>
+			<tr>
+					<td style="text-align: left">統計情報のノイズ付与</td>
+					<td style="text-align: left"><code>select with differential_privacy</code></td>
+			</tr>
+			<tr>
+					<td style="text-align: left">保持期間の強制</td>
+					<td style="text-align: left">テーブル / パーティションの <code>expiration</code></td>
+			</tr>
+	</tbody>
+</table>
+<p>マスキングルールは9種類あり、複数該当する場合の<strong>優先順位</strong>が決まっている。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">カスタムルーチン(UDF) &gt; ランダムハッシュ &gt; SHA-256ハッシュ &gt; メールマスク
+</span></span><span class="line"><span class="cl">  &gt; 最後の4文字 &gt; 最初の4文字 &gt; 日付年マスク &gt; デフォルト値 &gt; 無効化(null)
+</span></span></code></pre></div><table>
+	<thead>
+			<tr>
+					<th style="text-align: left">ルール</th>
+					<th style="text-align: left">挙動</th>
+					<th style="text-align: left">JOIN 可否</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">SHA-256 ハッシュ</td>
+					<td style="text-align: left">決定論的にハッシュ化</td>
+					<td style="text-align: left">⭕️ 可能</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">ランダムハッシュ</td>
+					<td style="text-align: left">クエリごとに結果が変わる</td>
+					<td style="text-align: left">同一クエリ内のみ</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">メールマスク</td>
+					<td style="text-align: left"><code>abc123@gmail.com</code> → <code>XXXXX@gmail.com</code></td>
+					<td style="text-align: left">❌</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">最初 / 最後の4文字</td>
+					<td style="text-align: left">4文字だけ残して <code>XXXXX</code>（4文字以下なら SHA-256）</td>
+					<td style="text-align: left">❌</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">日付年マスク</td>
+					<td style="text-align: left"><code>2030-07-17</code> → <code>2030-01-01</code></td>
+					<td style="text-align: left">❌</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">デフォルト値</td>
+					<td style="text-align: left">型ごとの既定値（<code>&quot;&quot;</code>, <code>0</code>, <code>1970-01-01 00:00:00 UTC</code>）</td>
+					<td style="text-align: left">❌</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">無効化</td>
+					<td style="text-align: left"><code>null</code> に置換（型情報も隠す）</td>
+					<td style="text-align: left">❌</td>
+			</tr>
+	</tbody>
+</table>
+<p>必要な IAM ロール:</p>
+<ul>
+<li>マスク済みデータの閲覧: <strong>BigQuery Masked Reader</strong>（<code>roles/bigquerydatapolicy.maskedReader</code>）</li>
+<li>データポリシー管理: BigQuery Data Policy Admin</li>
+<li>ポリシータグ管理: Data Catalog Policy Tag Admin</li>
+</ul>
+
+<div class="markdown-alert markdown-alert-tip">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>
+        Tip
+        
+    </p>
+    <p><strong>決定論的 SHA-256 マスキングは便利だが「マスキングしたから仮名加工情報」ではない。</strong><br>
+マスキングは<em>見せ方</em>の制御で、元テーブルには生データが残っている。法的カテゴリを変えたいなら、加工結果を<strong>別テーブルとして物理的に作る</strong>必要がある。</p>
+</div>
+
+<h3 id="dbt-での持ち方">dbt での持ち方<a class="anchor" aria-hidden="true" href="#dbt-での持ち方"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">models</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">pseudo_events</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">config</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;pseudonymized&#34;</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">meta</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">privacy_class</span><span class="p">:</span><span class="w"> </span><span class="l">pseudonymized     </span><span class="w"> </span><span class="c"># personal | pseudonymized | anonymized | statistical</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">legal_basis</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;法41条（個人情報である仮名加工情報）&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">mapping_table</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;prj-pii-vault.mapping.user_pseudonym&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">columns</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">pseudo_id</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">meta</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">pii</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;sha256(user_id + salt)。対応表は prj-pii-vault に隔離&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">age</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">meta</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">pii</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;規則31条では特異な記述の削除は不要なので生値を保持&#34;</span><span class="w">
+</span></span></span></code></pre></div><ul>
+<li><code>privacy_class</code> を<strong>必須メタデータ</strong>にして、CI で未設定モデルを落とす</li>
+<li><code>exposures</code> を書いておくと「この仮名加工情報がどのダッシュボードに流れているか」＝ <strong>目的外利用の検知</strong>に使える</li>
+</ul>
+<hr>
+<h2 id="よくある誤解">よくある誤解<a class="anchor" aria-hidden="true" href="#よくある誤解"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">誤解</th>
+					<th style="text-align: left">実際</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">ハッシュ化すれば個人情報ではなくなる</td>
+					<td style="text-align: left">対応表・元データを持つ限り<strong>容易照合性あり ＝ 個人情報</strong>。法41条が適用される</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">仮名加工情報なら第三者提供できる</td>
+					<td style="text-align: left">❌ 原則不可。<strong>委託・共同利用・事業承継のみ</strong></td>
+			</tr>
+			<tr>
+					<td style="text-align: left">匿名加工情報にすれば自由に使える</td>
+					<td style="text-align: left">加工5要件 ＋ <strong>作成時の公表・提供時の明示・識別行為禁止</strong>が付いてくる</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">仮名加工情報は漏えい報告義務がないから安全</td>
+					<td style="text-align: left">報告義務は外れるが<strong>安全管理措置義務は残る</strong>。事故が許されるわけではない</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">集計してマートにすれば法の話は終わり</td>
+					<td style="text-align: left">n=1 セルなど<strong>対応関係が排斥されていない集計は統計情報ではない</strong></td>
+			</tr>
+			<tr>
+					<td style="text-align: left">dataset を分ければ照合性は切れる</td>
+					<td style="text-align: left">「同一事業者内で一般的な方法で照合できるか」で判断。<strong>IAM と運用まで含めて</strong>分離する</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">匿名加工情報は仮名加工情報の上位互換</td>
+					<td style="text-align: left">目的が違う。社内分析なら<strong>仮名加工情報のほうが有用性が高く加工も軽い</strong></td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="gdpr-との対応に注意">GDPR との対応に注意<a class="anchor" aria-hidden="true" href="#gdpr-との対応に注意"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">日本</th>
+					<th style="text-align: left">近い英語</th>
+					<th style="text-align: left">GDPR での扱い</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">個人情報</td>
+					<td style="text-align: left">Personal Information / Personal Data</td>
+					<td style="text-align: left">personal data</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">仮名加工情報</td>
+					<td style="text-align: left">Pseudonymously Processed Information</td>
+					<td style="text-align: left">pseudonymised data は<strong>依然 personal data</strong>（GDPR Art.4(5), Recital 26）</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">匿名加工情報</td>
+					<td style="text-align: left">Anonymously Processed Information</td>
+					<td style="text-align: left">anonymous data に近いが、GDPR の anonymisation は<strong>より厳格</strong></td>
+			</tr>
+			<tr>
+					<td style="text-align: left">統計情報</td>
+					<td style="text-align: left">Statistical / Aggregate Data</td>
+					<td style="text-align: left">対象外</td>
+			</tr>
+	</tbody>
+</table>
+
+<div class="markdown-alert markdown-alert-caution">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M4.47.22A.749.749 0 0 1 5 0h6c.199 0 .389.079.53.22l4.25 4.25c.141.14.22.331.22.53v6a.749.749 0 0 1-.22.53l-4.25 4.25A.749.749 0 0 1 11 16H5a.749.749 0 0 1-.53-.22L.22 11.53A.749.749 0 0 1 0 11V5c0-.199.079-.389.22-.53Zm.84 1.28L1.5 5.31v5.38l3.81 3.81h5.38l3.81-3.81V5.31L10.69 1.5ZM8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4Zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>
+        Caution
+        
+    </p>
+    <p><strong>「pseudonymised だから GDPR の対象外」は通らない。</strong><br>
+日本法には「個人情報でない仮名加工情報」（法42条）というカテゴリが存在するが、GDPR に対応する概念はない。<br>
+クロスボーダー案件では<strong>日本法の箱と GDPR の箱を別々に判定する</strong>。</p>
+</div>
+
+<h2 id="条文番号の新旧対応">条文番号の新旧対応<a class="anchor" aria-hidden="true" href="#条文番号の新旧対応"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>参考記事の多くは令和3年改正前（2022年3月まで）の条番号で書かれている。読み替え表を持っておくと混乱しない。</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">内容</th>
+					<th style="text-align: left">旧番号（〜2022/03）</th>
+					<th style="text-align: left">現行（2022/04〜）</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">仮名加工情報の定義</td>
+					<td style="text-align: left">法2条9項</td>
+					<td style="text-align: left"><strong>法2条5項</strong></td>
+			</tr>
+			<tr>
+					<td style="text-align: left">仮名加工情報の取扱い</td>
+					<td style="text-align: left">法35条の2</td>
+					<td style="text-align: left"><strong>法41条</strong></td>
+			</tr>
+			<tr>
+					<td style="text-align: left">仮名加工情報（非個人情報）</td>
+					<td style="text-align: left">法35条の3</td>
+					<td style="text-align: left"><strong>法42条</strong></td>
+			</tr>
+			<tr>
+					<td style="text-align: left">匿名加工情報の作成等</td>
+					<td style="text-align: left">法36条</td>
+					<td style="text-align: left"><strong>法43条</strong></td>
+			</tr>
+			<tr>
+					<td style="text-align: left">利用目的の変更</td>
+					<td style="text-align: left">法15条2項</td>
+					<td style="text-align: left"><strong>法17条2項</strong></td>
+			</tr>
+			<tr>
+					<td style="text-align: left">漏えい等の報告</td>
+					<td style="text-align: left">法22条の2</td>
+					<td style="text-align: left"><strong>法26条</strong></td>
+			</tr>
+			<tr>
+					<td style="text-align: left">第三者提供の制限</td>
+					<td style="text-align: left">法23条</td>
+					<td style="text-align: left"><strong>法27条</strong></td>
+			</tr>
+			<tr>
+					<td style="text-align: left">開示等の請求</td>
+					<td style="text-align: left">法27〜34条</td>
+					<td style="text-align: left"><strong>法32〜39条</strong></td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="ref">Ref.<a class="anchor" aria-hidden="true" href="#ref"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p><strong>一次情報（個人情報保護委員会）</strong></p>
+<ul>
+<li><a href="https://www.ppc.go.jp/personalinfo/legal/guidelines_tsusoku/">ガイドライン（通則編）</a></li>
+<li><a href="https://www.ppc.go.jp/personalinfo/legal/guidelines_anonymous/">ガイドライン（仮名加工情報・匿名加工情報編）</a></li>
+<li><a href="https://www.ppc.go.jp/personalinfo/faq/APPI_QA/">ガイドラインに関する Q&amp;A</a></li>
+</ul>
+<p><strong>解説記事</strong></p>
+<ul>
+<li><a href="https://privtech.co.jp/blog/law/comparison-anonymization-pseudonymisation.html">PrivacyTech - 匿名加工情報と仮名加工情報の比較</a></li>
+<li><a href="https://storialaw.jp/blog/7760">STORIA法律事務所 - 仮名加工情報を利用したAI開発は可能か（ベン図の出典）</a></li>
+<li><a href="https://www.jipdec.or.jp/library/report/20220701.html">JIPDEC - 改正個人情報保護法と仮名加工情報・匿名加工情報</a></li>
+<li><a href="https://activation-service.jp/iso/terms/1958">ISOプロ - 匿名加工情報とは（加工前後の例）</a></li>
+<li><a href="https://nakamitsu-blog.site/category17/entry145.html">なかみつ - 個人情報 / 仮名加工情報 / 匿名加工情報の覚え方</a></li>
+</ul>
+<p><strong>BigQuery</strong></p>
+<ul>
+<li><a href="https://cloud.google.com/bigquery/docs/differential-privacy">Differential privacy</a></li>
+<li><a href="https://cloud.google.com/bigquery/docs/column-data-masking-intro">Data masking の概要</a></li>
+<li><a href="https://cloud.google.com/bigquery/docs/column-level-security-intro">列レベルのアクセス制御（Policy Tag）</a></li>
+<li><a href="https://cloud.google.com/bigquery/docs/row-level-security-intro">行レベルのセキュリティ</a></li>
+</ul>
+</article>
+        </div>
+        </div>
+        </div>
+    </div>
+        
+        
+        
+        <div class="Box mt-3 position-relative">
+        <div class="Box-body px-5 pb-5">
+            <article class="markdown-body entry-content container-lg">
+                <h2>See Also</h2>
+                <ul class="mt-2">
+                    
+                    <li class="p-1">
+                        <div>
+                            <a href="../../post/bigquery_about_various_data_transfer/">[BigQuery] (Various) Data Transfer</a>
+                            <time datetime="2025-04-03 11:11" class="no-wrap text-small ml-1">(2025-04-03 11:11)</time>
+                        </div>
+                        <div class="text-small text-gray mb-1 mt-1">Find out various data transfer methods starting from BigQuery.</div>
+                    </li>
+                    
+                    <li class="p-1">
+                        <div>
+                            <a href="../../post/data_engineer_scope_past_and_future/">[Data Engineer] Scope — Past and Future in the AI Era</a>
+                            <time datetime="2026-08-08 17:00" class="no-wrap text-small ml-1">(2026-08-08 17:00)</time>
+                        </div>
+                        <div class="text-small text-gray mb-1 mt-1">AI に溶ける領域と残る領域。データエンジニアの守備範囲を「これまで」と「これから」で棚卸しする。</div>
+                    </li>
+                    
+                    <li class="p-1">
+                        <div>
+                            <a href="../../post/bigquery_cli/">[BigQuery] CLI</a>
+                            <time datetime="2025-09-01 21:43" class="no-wrap text-small ml-1">(2025-09-01 21:43)</time>
+                        </div>
+                        <div class="text-small text-gray mb-1 mt-1">Memos using CLI operations for each job type.</div>
+                    </li>
+                    
+                    <li class="p-1">
+                        <div>
+                            <a href="../../post/bigquery_about_information_schema/">[BigQuery] INFORMATION_SCHEMA</a>
+                            <time datetime="2025-03-06 17:39" class="no-wrap text-small ml-1">(2025-03-06 17:39)</time>
+                        </div>
+                        <div class="text-small text-gray mb-1 mt-1">It&#39;s not good to know about data governance.</div>
+                    </li>
+                    
+                    <li class="p-1">
+                        <div>
+                            <a href="../../post/bigquery_billing_how_works/">[BigQuery] Billing</a>
+                            <time datetime="2024-08-16 20:35" class="no-wrap text-small ml-1">(2024-08-16 20:35)</time>
+                        </div>
+                        <div class="text-small text-gray mb-1 mt-1">Summarize billing mechanism, fee structure, and money-saving tips.</div>
+                    </li>
+                    
+                </ul>
+            </article>
+        </div>
+        </div>
+        
+    </div>
+    </div>
+</main>
+</div>
+
+<script type="application/javascript" src='http://localhost:1313/js/toc.js'></script>
+<link rel="stylesheet" href='http://localhost:1313/css/toc.css' />
+
+
+<script
+    src='http://localhost:1313/js/syntax-highlight-title.js'
+    crossorigin="anonymous"
+    type="application/javascript">
+</script>
+<link rel="stylesheet" href="../../css/syntax-highlight-title.css">
+
+
+
+
+
+
+
+<script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js" crossorigin="anonymous"></script>
+<script>
+
+
+(function () {
+    function transformMermaidCodeBlocks() {
+        var codeBlocks = document.querySelectorAll('pre > code.language-mermaid, code.language-mermaid');
+        codeBlocks.forEach(function (code) {
+            var pre = code.parentElement && code.parentElement.tagName.toLowerCase() === 'pre' ? code.parentElement : code;
+            var container = document.createElement('div');
+            container.className = 'mermaid';
+            container.textContent = code.textContent;
+            pre.replaceWith(container);
+        });
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', transformMermaidCodeBlocks);
+    } else {
+        transformMermaidCodeBlocks();
+    }
+    
+    if (window.mermaid) {
+        window.mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+    }
+})();
+</script>
+
+
+
+
+  
+
+  
+  
+<link rel="stylesheet" href='http://localhost:1313/css/giscus.css'>
+<div class="giscus"></div>
+<script>
+  (function () {
+    var origin = 'https://giscus.app';
+
+    function colorMode() {
+      return document.documentElement.getAttribute('data-color-mode') === 'dark' ? 'dark' : 'light';
+    }
+
+    
+    
+    var attrs = {
+      'data-repo': 'shiroimon\/todayilearned',
+      'data-repo-id': 'R_kgDOMSwknw',
+      'data-category': 'Announcements',
+      'data-category-id': 'DIC_kwDOMSwkn84DDAKW',
+      'data-mapping': 'pathname',
+      'data-strict': '0',
+      'data-reactions-enabled': '1',
+      'data-emit-metadata': '0',
+      'data-input-position': 'bottom',
+      'data-lang': 'ja',
+      'data-loading': 'lazy',
+      'data-theme': colorMode()
+    };
+
+    var s = document.createElement('script');
+    s.src = origin + '/client.js';
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    Object.keys(attrs).forEach(function (k) { s.setAttribute(k, attrs[k]); });
+    
+    document.querySelector('.giscus').appendChild(s);
+
+    
+    new MutationObserver(function () {
+      var frame = document.querySelector('iframe.giscus-frame');
+      if (frame) {
+        frame.contentWindow.postMessage({ giscus: { setConfig: { theme: colorMode() } } }, origin);
+      }
+    }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-color-mode'] });
+  })();
+</script>
+  
+
+
+</div>
+
+  <div class="footer container-xl width-full p-responsive">
+  <div
+    class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between flex-sm-items-center pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mr-lg-4" href="http://localhost:1313/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24">
+        <path fill-rule="evenodd"
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+        </path>
+      </svg>
+    </a>
+    <ul class="list-style-none d-flex flex-wrap col-12 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+      
+      <li class="mr-3 mr-lg-0">Theme by <a href='https://github.com/MeiK2333/github-style'>github-style</a></li>
+      
+      <li class="mr-3 mr-lg-0">GitHub and the Invertocat logo are trademarks of <a href="https://github.com/">GitHub, Inc.</a></li>
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+
+
+</div>
+
+</body>
+
+<script type="application/javascript" src="http://localhost:1313/js/github-style.js"></script>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+<script type="application/javascript" src='http://localhost:1313/js/search.js'></script>
+
+
+
+</html>

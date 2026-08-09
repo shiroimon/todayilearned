@@ -41,13 +41,14 @@
 <link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/apple-touch-icon.png">
 
 
-<meta name="twitter:card" content="summary" />
+
+<meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="[Kubernetes] Catchup - Today I Learned | KitHub" />
 <meta name="twitter:description"
   content="⚓️ About container orchestration tecnology." />
 <meta name="twitter:site" content="https://kithub.f5.si/" />
 <meta name="twitter:creator" content="shiro" />
-<meta name="twitter:image" content="https://kithub.f5.si/images/avatar.png">
+<meta name="twitter:image" content="https://kithub.f5.si/images/og-base_hu_4f87cfb4f0e2fe90.png">
 
 
 <meta property="og:type" content="article" />
@@ -55,10 +56,10 @@
 <meta property="og:description"
   content="⚓️ About container orchestration tecnology." />
 <meta property="og:url" content="https://kithub.f5.si/post/kubernetes_catchup/" />
-<meta property="og:site_name" content="[Kubernetes] Catchup" />
-<meta property="og:image" content="https://kithub.f5.si/images/avatar.png">
-<meta property="og:image:width" content="2048">
-<meta property="og:image:height" content="1024">
+<meta property="og:site_name" content="Today I Learned | KitHub" />
+<meta property="og:image" content="https://kithub.f5.si/images/og-base_hu_4f87cfb4f0e2fe90.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 
 <meta property="article:published_time" content="2024-11-18 13:29:33 &#43;0900 JST" />
 
@@ -798,33 +799,54 @@ As a result, pods can be treated much like VMs or hosts (they all have unique IP
 
 
   
-  
-  
-  
-  
-  
-    
-  
-<div id="gitalk-container" class="gitalk-container"></div>
-<link rel="stylesheet" href='https://kithub.f5.si/css/gitalk.css'>
-<script src='https://kithub.f5.si/js/gitalk.min.js'></script>
-<script>
-  const gitalk = new Gitalk({
-    clientID: 'Ov23limCcfAvRdvUJ1de',
-    clientSecret: '08c9365618f3a7434fe608970e757bba3d2369bc',
-    repo: 'todayilearned',
-    owner: 'shiroimon',
-    admin: "shiroimon",
-    labels: ["gitalk"],
-    perPage:  10 ,
-    pagerDirection: 'last',
-    createIssueManually:  false ,
-    distractionFreeMode:  false ,
-    id: '1d3892a1e5f633c88fc1f0396144e799'
-  });
-  gitalk.render('gitalk-container');
-</script>
 
+  
+  
+<link rel="stylesheet" href='https://kithub.f5.si/css/giscus.css'>
+<div class="giscus"></div>
+<script>
+  (function () {
+    var origin = 'https://giscus.app';
+
+    function colorMode() {
+      return document.documentElement.getAttribute('data-color-mode') === 'dark' ? 'dark' : 'light';
+    }
+
+    
+    
+    var attrs = {
+      'data-repo': 'shiroimon\/todayilearned',
+      'data-repo-id': 'R_kgDOMSwknw',
+      'data-category': 'Announcements',
+      'data-category-id': 'DIC_kwDOMSwkn84DDAKW',
+      'data-mapping': 'pathname',
+      'data-strict': '0',
+      'data-reactions-enabled': '1',
+      'data-emit-metadata': '0',
+      'data-input-position': 'bottom',
+      'data-lang': 'ja',
+      'data-loading': 'lazy',
+      'data-theme': colorMode()
+    };
+
+    var s = document.createElement('script');
+    s.src = origin + '/client.js';
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    Object.keys(attrs).forEach(function (k) { s.setAttribute(k, attrs[k]); });
+    
+    document.querySelector('.giscus').appendChild(s);
+
+    
+    new MutationObserver(function () {
+      var frame = document.querySelector('iframe.giscus-frame');
+      if (frame) {
+        frame.contentWindow.postMessage({ giscus: { setConfig: { theme: colorMode() } } }, origin);
+      }
+    }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-color-mode'] });
+  })();
+</script>
+  
 
 
 </div>
