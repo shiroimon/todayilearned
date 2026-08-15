@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="application/javascript" src='https://kithub.f5.si/js/theme-mode.js'></script>
+    <link rel="stylesheet" href='https://kithub.f5.si/css/frameworks.min.css' />
+    <link rel="stylesheet" href='https://kithub.f5.si/css/github.min.css' />
+    <link rel="stylesheet" href='https://kithub.f5.si/css/github-style.css' />
+    <link rel="stylesheet" href='https://kithub.f5.si/css/light.css' />
+    <link rel="stylesheet" href='https://kithub.f5.si/css/dark.css' />
+    <link rel="stylesheet" href='https://kithub.f5.si/css/syntax.css' />
+    <title>[Tableau] Miscellaneous - Today I Learned | KitHub</title>
+    
+    <link rel="icon" type="image/x-icon" href='../../images/github-mark.png'>
+    
+    <meta name="theme-color" content="#1e2327">
+
+    <link rel="stylesheet" href="https://kithub.f5.si/css/gist.css"><link rel="stylesheet" href="https://kithub.f5.si/css/markdown-alert.css"><link rel="stylesheet" href="https://kithub.f5.si/css/code-copy.css"><link rel="stylesheet" href="https://kithub.f5.si/css/link-card.css"><link rel="stylesheet" href="https://kithub.f5.si/css/post-title.css">
+    <script type="text/javascript" src="https://kithub.f5.si/js/gist-dark-mode.js"></script><script type="text/javascript" src="https://kithub.f5.si/js/code-copy.js"></script>
+    
+
+    
+    <meta name="description"
+  content="✨A little while ago, I&rsquo;ll be writing about my studies as an introduction to Tableau" />
+<meta name="keywords"
+  content='blog' />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://kithub.f5.si/post/tableau_miscellaneous/" />
+
+
+<link rel="manifest" href="../../manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Today I Learned | KitHub">
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/apple-touch-icon.png">
+
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="[Tableau] Miscellaneous - Today I Learned | KitHub" />
+<meta name="twitter:description"
+  content="✨A little while ago, I&rsquo;ll be writing about my studies as an introduction to Tableau" />
+<meta name="twitter:site" content="https://kithub.f5.si/" />
+<meta name="twitter:creator" content="shiro" />
+<meta name="twitter:image" content="https://kithub.f5.si/images/og-base_hu_8f819202dd230c0c.png">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="[Tableau] Miscellaneous - Today I Learned | KitHub">
+<meta property="og:description"
+  content="✨A little while ago, I&rsquo;ll be writing about my studies as an introduction to Tableau" />
+<meta property="og:url" content="https://kithub.f5.si/post/tableau_miscellaneous/" />
+<meta property="og:site_name" content="Today I Learned | KitHub" />
+<meta property="og:image" content="https://kithub.f5.si/images/og-base_hu_8f819202dd230c0c.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta property="article:published_time" content="2025-06-02 14:46:08 &#43;0900 JST" />
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('\/sw.js', { scope: '\/' })
+      .then((registration) => {
+        console.log('[PWA] Service Worker registered:', registration.scope);
+
+        
+        registration.addEventListener('updatefound', () => {
+          const newWorker = registration.installing;
+          console.log('[PWA] New Service Worker found, updating...');
+
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'activated') {
+              console.log('[PWA] New Service Worker activated');
+              
+              if (navigator.serviceWorker.controller) {
+                window.location.reload();
+              }
+            }
+          });
+        });
+
+        
+        setInterval(() => {
+          registration.update();
+        }, 60 * 60 * 1000);
+      })
+      .catch((error) => {
+        console.error('[PWA] Service Worker registration failed:', error);
+      });
+  });
+}
+</script>
+
+</head>
+
+
+<body>
+  <div style="position: relative">
+  <header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on">
+    <div class="Header-item mobile-none" style="margin-top: -4px; margin-bottom: -4px;">
+      <a class="Header-link" href="https://kithub.f5.si/">
+        <img class="octicon" height="32" width="32" src="../../images/github-mark-white.png">
+      </a>
+    </div>
+    <div class="Header-item d-md-none">
+      <button class="Header-link btn-link js-details-target" type="button"
+        onclick="document.querySelector('#header-search').style.display = document.querySelector('#header-search').style.display == 'none'? 'block': 'none'">
+        <svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" version="1.1" width="24">
+          <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div style="display: none;" id="header-search"
+      class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
+      <div
+        class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to">
+        <div class="position-relative">
+          
+          <form target="_blank" id="search-form" action="" accept-charset="UTF-8" method="get"
+            autocomplete="off">
+            <label
+              class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center">
+              <input type="text"
+                class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+                name="q" value="" placeholder="Search" autocomplete="off">
+            </label>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
+      <a class="Header-link " href="https://kithub.f5.si/">
+        <img class="octicon octicon-mark-github v-align-middle" height="32" width="32" src="../../images/github-mark-white.png">
+      </a>
+    </div>
+    <div class="Header-item" style="margin-right: 0;">
+      <a href="javascript:void(0)" class="Header-link no-select" onclick="switchTheme()">
+        <svg style="fill: var(--color-profile-color-modes-toggle-moon);" class="no-select" viewBox="0 0 16 16"
+          version="1.1" width="16" height="16">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M4.52208 7.71754C7.5782 7.71754 10.0557 5.24006 10.0557 2.18394C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961C9.95801 1.07727 10.3495 0.771159 10.6474 0.99992C12.1153 2.12716 13.0615 3.89999 13.0615 5.89383C13.0615 9.29958 10.3006 12.0605 6.89485 12.0605C3.95334 12.0605 1.49286 10.001 0.876728 7.24527C0.794841 6.87902 1.23668 6.65289 1.55321 6.85451C2.41106 7.40095 3.4296 7.71754 4.52208 7.71754Z">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </header>
+</div>
+
+  <div id="search-result" class="container-lg px-3 new-discussion-timeline" style="display: none;">
+</div>
+
+  
+<div class="application-main">
+  <div>
+<main>
+    
+    <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
+    <div class="px-0">
+    <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+    <div class="flex-auto min-width-0 width-fit mr-3">
+    <div class="d-flex">
+        
+        <div class="d-none d-md-block">
+            <a class="avatar mr-2 flex-shrink-0" href="https://kithub.f5.si/">
+                <img class=" avatar-user"
+                  src="../../images/avatar.png"
+                  width="32"
+                  height="32">
+            </a>
+        </div>
+        
+        <div class="d-flex flex-column">
+            
+            <h1 class="break-word f3 text-normal mb-md-0 mb-1">
+                <span class="author"><a href="https://kithub.f5.si/"></a></span>
+                <span class="path-divider">/</span>
+                <strong class="mr-1"><a href="https://kithub.f5.si/post/tableau_miscellaneous/">[Tableau] Miscellaneous</a></strong>
+            </h1>
+            
+            <div class="note m-0">
+                Created <relative-time datetime="Mon, 02 Jun 2025 14:46:08 &#43;0900" class="no-wrap">Mon, 02 Jun 2025 14:46:08 &#43;0900</relative-time>
+                
+                <span class="path-divider">|</span>
+                Modified <relative-time datetime="Mon, 10 Aug 2026 14:24:54 &#43;0900" class="no-wrap">Mon, 10 Aug 2026 14:24:54 &#43;0900</relative-time>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    
+    <div class="container-lg px-3 new-discussion-timeline">
+    <div class="repository-content gist-content">
+    <div>
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+        <div id="file-pytest" class="file my-2">
+        
+        <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
+        <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+
+            
+            <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+            <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
+                <svg aria-hidden="true" viewBox="0 0 16 16" class="octicon octicon-list-unordered" height="16" width="16">
+                    <path fill-rule="evenodd"
+                        d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z">
+                    </path>
+                </svg>
+            </summary>
+            <details-menu class="SelectMenu" id="toc-details" style="display: none;">
+                <div class="SelectMenu-modal rounded-3 mt-1" style="max-height: 340px;">
+                    <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list"></div>
+                </div>
+            </details-menu>
+            1577 Words
+            <span class="path-divider">|</span>
+            2 min
+            </div>
+
+            
+            <div class="file-actions flex-order-2 pt-0">
+                
+                <div class="d-none d-md-flex">
+                    
+                    
+                    
+                    <a class="muted-link mr-3" href='../../tags/tableau'>
+                        <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                            </path>
+                        </svg>
+                        Tableau
+                    </a>
+                    
+                    
+                    
+                </div>
+                
+            </div>
+        </div>
+        </div>
+
+        
+        
+        
+        
+        <div class="flash flash-warn" style="margin: 16px 20px 0; padding: 12px 16px; border: 1px solid rgba(212, 167, 44, 0.4); border-radius: 6px; background-color: rgba(212, 167, 44, 0.1); color: var(--color-text-primary, #24292f);">
+            ⚠ この記事が書かれてから<strong>1年以上</strong>が経過しています。内容が古いのであまり参考にはしないでください。
+        </div>
+        
+
+        
+        <div class="Box-body px-5 pb-5" style="z-index: 1">
+            <article class="markdown-body entry-content container-lg"><!-- Icon Badge -->
+<h2 id="why">Why<a class="anchor" aria-hidden="true" href="#why"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p><code>SSIA</code></p>
+<h2 id="what">What<a class="anchor" aria-hidden="true" href="#what"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<h3 id="tableau-ライセンス">Tableau ライセンス:<a class="anchor" aria-hidden="true" href="#tableau-ライセンス"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<ul>
+<li>Tableauは製品単位ではなく、ライセンス単位で購入できる。</li>
+</ul>
+<table>
+	<thead>
+			<tr>
+					<th>ライセンス名</th>
+					<th>集約</th>
+					<th>加工</th>
+					<th>分析</th>
+					<th>共有</th>
+					<th></th>
+					<th>金額(単/年)<br>[s]Server<br>[o]Online</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>Tableau Creator</code></td>
+					<td>●</td>
+					<td>●</td>
+					<td>●</td>
+					<td>●</td>
+					<td></td>
+					<td>[s/o]¥100,000-</td>
+			</tr>
+			<tr>
+					<td><code>Tableau Explorer</code></td>
+					<td>-</td>
+					<td>●</td>
+					<td>●</td>
+					<td>-</td>
+					<td></td>
+					<td>[s]¥50,000-<br> [o]¥60,000-</td>
+			</tr>
+			<tr>
+					<td><code>Tableau Viewer</code></td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+					<td>●</td>
+					<td></td>
+					<td>[s]¥18,000-<br> [o]¥22,000-</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="tableau-製品">Tableau 製品:<a class="anchor" aria-hidden="true" href="#tableau-製品"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">大別して２つの役割の製品がある
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[◆] データ分析 -----&gt; [◼︎] 結果を共有
+</span></span><span class="line"><span class="cl">    集約                 レポート
+</span></span><span class="line"><span class="cl">    加工                 ダッシュボード
+</span></span><span class="line"><span class="cl">    分析
+</span></span></code></pre></div><table>
+	<thead>
+			<tr>
+					<th>ﾏｰｸ</th>
+					<th>製品名</th>
+					<th>役割</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>◆</td>
+					<td><code>Tableau DeskTop</code><br> <code>Tableau Prep Builder</code></td>
+					<td>集約加工分析<br> - Desktop: 主流製品<br> - Prep Builder: 集約加工に特化(ETL処理に適任)</td>
+			</tr>
+			<tr>
+					<td>◼︎</td>
+					<td><code>Tableau Online</code><br> <code>Tableau Server</code><br>&mdash; <br>addon:<br> -<code>Tableau Prep Conductor</code><br> -<code>Tableau Catalog</code></td>
+					<td>結果共有に利用<br> - Online: Tableau社サーバー流用<br> - Server: 自前でｲﾝｽﾀﾝｽを立ちあげ</td>
+			</tr>
+			<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>◆</td>
+					<td>(無料) Tableau Public</td>
+					<td>ビジネスシーン不向き(∵Tableau社サーバーで全世界公開)</td>
+			</tr>
+			<tr>
+					<td>◼︎</td>
+					<td>(無料) Tableau Reader</td>
+					<td>ファイル閲覧用</td>
+			</tr>
+	</tbody>
+</table>
+<p>環境別製品選定</p>
+
+<blockquote>
+    <table>
+	<thead>
+			<tr>
+					<th>[#]</th>
+					<th>環境/製品</th>
+					<th>規模</th>
+					<th>備考</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>1</td>
+					<td>サーバレス分析<br>-&gt; <code>Tableau Reader</code></td>
+					<td>少人数</td>
+					<td>導入コストや参入障壁低め</td>
+			</tr>
+			<tr>
+					<td>2</td>
+					<td>サーバ利用分析（自前）<br>-&gt; <code>Tableau Server</code></td>
+					<td>-</td>
+					<td>導入コスト高め、しかしカスタマイズ性◎</td>
+			</tr>
+			<tr>
+					<td>3</td>
+					<td>サーバ利用分析（Tableau社）<br>-&gt; <code>Tableau Onlien</code></td>
+					<td>-</td>
+					<td>運用保守なし</td>
+			</tr>
+	</tbody>
+</table>
+
+</blockquote>
+
+<p>cf.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=051QSL1vn8Q">https://www.youtube.com/watch?v=051QSL1vn8Q</a></li>
+</ul>
+<h3 id="tableau-各種機能">Tableau 各種機能:<a class="anchor" aria-hidden="true" href="#tableau-各種機能"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">主要アクション（6つ）
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[ワークシート] -(trigger)-&gt; [1.移動シート]
+</span></span><span class="line"><span class="cl">             -(t)-&gt; [2.移動URL]
+</span></span><span class="line"><span class="cl">             -(t)-&gt; [3.フィルター]
+</span></span><span class="line"><span class="cl">             -(t)-&gt; [4.ハイライト]
+</span></span><span class="line"><span class="cl">             -(t)-&gt; [5.セット]
+</span></span><span class="line"><span class="cl">             -(t)-&gt; [6.パラメータ]
+</span></span></code></pre></div><p>cf.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=3VsOBN3PjZI">https://www.youtube.com/watch?v=3VsOBN3PjZI</a></li>
+</ul>
+<h3 id="tableau-拡張子">Tableau 拡張子:<a class="anchor" aria-hidden="true" href="#tableau-拡張子"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p><img src="https://s3.ap-northeast-1.amazonaws.com/wraptas-prod/atara/e58bc122-4f74-4740-b57d-6f7483c2c76e/f87e1f62fe484d40f018c0ab1589df80.png" alt="cf. ATARA" loading="lazy" decoding="async">
+</p>
+<p><br> <code>.twbx</code> を解凍すると、中に <code>.twb</code> や<code>データファイル</code>が含まれていることを確認できる。
+<br> Tableau Server/Online にアップロードする場合、どちらの形式でも可能だが、<code>.twbx</code> が一般的。</p>
+<p>拡張子の比較</p>
+<table>
+	<thead>
+			<tr>
+					<th>拡張子</th>
+					<th>正式名称</th>
+					<th>内容</th>
+					<th>データの有無</th>
+					<th>ファイル形式</th>
+					<th>主な用途</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>.twb</code></td>
+					<td><strong>Tableau Workbook</strong></td>
+					<td>ワークブックの設計情報（ダッシュボード、計算式、接続設定など）を含む</td>
+					<td>❌ 含まない</td>
+					<td>XML（単一）</td>
+					<td>データソースを別管理する開発用。ファイルサイズが小さい。</td>
+			</tr>
+			<tr>
+					<td><code>.twbx</code></td>
+					<td><strong>Tableau Packaged Workbook</strong></td>
+					<td><code>.twb</code> + ローカルデータ（Excel/CSV等）や画像リソースを<strong>パッケージ化</strong>したファイル</td>
+					<td>✅ 含む</td>
+					<td>ZIP（圧縮）</td>
+					<td>配布用。データソース不要で全てを1ファイルで共有可能（例：Tableau Public）。</td>
+			</tr>
+			<tr>
+					<td><code>.tds</code></td>
+					<td><strong>Tableau Data Source</strong></td>
+					<td>データソースの接続情報（フィールド設定、計算式、接続方法など）を含む</td>
+					<td>❌ 含まない</td>
+					<td>XML（単一）</td>
+					<td>同じデータソースを複数のワークブックで再利用する場合に便利。</td>
+			</tr>
+			<tr>
+					<td><code>.tde</code><br><code>.hyper</code></td>
+					<td><strong>Tableau Data Extract</strong></td>
+					<td>高性能なデータ抽出ファイル（圧縮・最適化されたデータを含む）</td>
+					<td>✅ 含む</td>
+					<td>独自バイナリ</td>
+					<td>大規模データの高速化やオフライン分析用。データ更新には再抽出が必要。</td>
+			</tr>
+	</tbody>
+</table>
+<p>補足説明</p>
+<ul>
+<li><strong><code>.twb</code> vs <code>.twbx</code></strong>
+<ul>
+<li>データを一緒に渡す必要がある場合は <code>.twbx</code>、データソースが別途ある場合は <code>.twb</code> を選択。</li>
+</ul>
+</li>
+<li><strong><code>.tds</code> の利点</strong>
+<ul>
+<li>同じデータソースを複数のワークブックで共有する場合、接続設定を一括管理可能。</li>
+</ul>
+</li>
+<li><strong><code>.tde</code> の特徴</strong>
+<ul>
+<li>データを圧縮・集約するため、パフォーマンス向上に役立つが、更新時は再作成が必要。</li>
+</ul>
+</li>
+</ul>
+<p>勘所</p>
+<ul>
+<li>開発時
+<ul>
+<li>.twb（軽量） + .tds（データソース共通化） + .tde（データ高速化）</li>
+</ul>
+</li>
+<li>配布時
+<ul>
+<li>.twbx（すべてをパッケージ化）</li>
+</ul>
+</li>
+</ul>
+<p>cf.</p>
+<ul>
+<li><a href="https://bi.atara.co.jp/knowledge/tableau_general_20221219_2">【Tableau】ワークブックの構成 .twbと.twbxの違いは？</a> ATARA</li>
+<li><a href="https://dataviz.hatenablog.com/entry/2019/02/21/193433">今さら聞けない Tableau の拡張子とパブリッシュ</a> Hatena</li>
+<li><a href="https://note.com/sana626/n/n0ba8ea2a50c7#da1d4a9e-1053-4c20-950c-2ebc763603a0">Tableauで保存されるtwbxとかtwbって結局なに？</a> note</li>
+<li><a href="https://community.tableau.com/s/question/0D54T00000C5ZbqSAF/whats-the-diff-between-twb-and-twbx">https://community.tableau.com/s/question/0D54T00000C5ZbqSAF/whats-the-diff-between-twb-and-twbx</a></li>
+</ul>
+<h3 id="tableau-ソースコードxml">Tableau ソースコード（XML）：<a class="anchor" aria-hidden="true" href="#tableau-ソースコードxml"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">流れはこんな感じ
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[On-line ] Tableau Server
+</span></span><span class="line"><span class="cl">　  ↓
+</span></span><span class="line"><span class="cl">　  Workbookダウンロード(📁.twbx)
+</span></span><span class="line"><span class="cl">　  ↓
+</span></span><span class="line"><span class="cl">[Off-line] Tableau Desktop
+</span></span><span class="line"><span class="cl">    step1. 書換（📁.twbx → 📁.zip）
+</span></span><span class="line"><span class="cl">    step2. 展開（📁.zip → 📄.twd + 📁...）
+</span></span><span class="line"><span class="cl">    step3. 修正（📄.twd）🈁･:*+.\(( °ω° ))/.:+
+</span></span></code></pre></div><p>コマンド操作</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># ダウンロードしたファイルを確認</span>
+</span></span><span class="line"><span class="cl">% <span class="nb">cd</span> your/tableau_project/
+</span></span><span class="line"><span class="cl">% ls -l
+</span></span><span class="line"><span class="cl">shop_data_tableau_workbook.twbx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># .twbx を .zip にリネーム</span>
+</span></span><span class="line"><span class="cl">% mv shop_data_tableau_workbook.twbx shop_data_tableau_workbook.zip
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># .zip 展開して、展開したファイルを確認</span>
+</span></span><span class="line"><span class="cl">% unzip shop_data_tableau_workbook.zip
+</span></span><span class="line"><span class="cl">% <span class="nb">cd</span> shop_data_tableau_workbook/
+</span></span><span class="line"><span class="cl">% ls -l
+</span></span><span class="line"><span class="cl">data/ shop_data_tableau_workbook.twb
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 閲覧</span>
+</span></span><span class="line"><span class="cl">% cat shop_data_tableau_workbook.twb
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml:(shop_data_tableau_workbook.twb).xml" data-lang="xml:(shop_data_tableau_workbook.twb).xml"><span class="line"><span class="cl"><span class="cp">&lt;?xml version=&#39;1.0&#39; encoding=&#39;utf-8&#39; ?&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- build 20223.22.1005.1835                               --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;workbook</span> <span class="na">source-build=</span><span class="s">&#39;2022.3.0 (20223.22.1005.1835)&#39;</span> <span class="na">source-platform=</span><span class="s">&#39;win&#39;</span> <span class="na">version=</span><span class="s">&#39;18.1&#39;</span> <span class="na">xml:base=</span><span class="s">&#39;http://nbgbs-sk-tbw04u.prod.root.local&#39;</span> <span class="na">xmlns:user=</span><span class="s">&#39;http://www.tableausoftware.com/xml/user&#39;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;document-format-change-manifest&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;_.fcp.AnimationOnByDefault.true...AnimationOnByDefault</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;ISO8601PeriodTypes</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;_.fcp.MarkAnimation.true...MarkAnimation</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;_.fcp.ObjectModelTableType.true...ObjectModelTableType</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;SetMembershipControl</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;SheetIdentifierTracking</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;SortTagCleanup</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;WindowsPersistSimpleIdentifiers</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;WorksheetBackgroundTransparency</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;ZoneBackgroundTransparency</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/document-format-change-manifest&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;repository-location</span> <span class="na">derived-from=</span><span class="s">&#39;http://nbgbs-sk-tbw04u.prod.root.local/t/MY-HOGE/workbooks/Udon__1?rev=5.0&#39;</span> <span class="na">id=</span><span class="s">&#39;Udon__1&#39;</span> <span class="na">path=</span><span class="s">&#39;/t/MY-HOGE/workbooks&#39;</span> <span class="na">revision=</span><span class="s">&#39;5.1&#39;</span> <span class="na">site=</span><span class="s">&#39;MY-HOGE&#39;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;preferences&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">&#39;ui.encoding.shelf.height&#39;</span> <span class="na">value=</span><span class="s">&#39;24&#39;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">&#39;ui.shelf.height&#39;</span> <span class="na">value=</span><span class="s">&#39;26&#39;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/preferences&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;style-theme</span> <span class="na">name=</span><span class="s">&#39;clean&#39;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;style&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;_.fcp.MarkAnimation.true...style-rule</span> <span class="na">element=</span><span class="s">&#39;animation&#39;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;format</span> <span class="na">attr=</span><span class="s">&#39;animation-on&#39;</span> <span class="na">value=</span><span class="s">&#39;ao-off&#39;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/_.fcp.MarkAnimation.true...style-rule&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/style&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;datasources&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{中略}}
+</span></span></code></pre></div><p>cf.</p>
+<ul>
+<li><a href="https://help.tableau.com/current/pro/desktop/ja-jp/save_savework_packagedworkbooks.htm">https://help.tableau.com/current/pro/desktop/ja-jp/save_savework_packagedworkbooks.htm</a></li>
+<li><a href="https://bi.atara.co.jp/knowledge/tableau_general_20221219_2">https://bi.atara.co.jp/knowledge/tableau_general_20221219_2</a></li>
+<li><a href="https://www.gixo.jp/blog/10173/">https://www.gixo.jp/blog/10173/</a></li>
+<li><a href="https://blog.truestar.co.jp/tableau/20201218/40911/">https://blog.truestar.co.jp/tableau/20201218/40911/</a></li>
+</ul>
+<h3 id="tablaeu-勉強">Tablaeu 勉強:<a class="anchor" aria-hidden="true" href="#tablaeu-勉強"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p>cf.</p>
+<ul>
+<li><a href="https://www.tableau.com/ja-jp/learn/training">https://www.tableau.com/ja-jp/learn/training</a></li>
+<li>データ分析&amp;BIチャネル - dviz
+<ul>
+<li><a href="https://www.youtube.com/@dviz_data">https://www.youtube.com/@dviz_data</a></li>
+</ul>
+</li>
+<li>七夜聖りあら(Nayose Reala)
+<ul>
+<li><a href="https://www.youtube.com/@nayosereala">https://www.youtube.com/@nayosereala</a></li>
+</ul>
+</li>
+</ul>
+</article>
+        </div>
+        </div>
+        </div>
+    </div>
+        
+        
+        
+    </div>
+    </div>
+</main>
+</div>
+
+<script type="application/javascript" src='https://kithub.f5.si/js/toc.js'></script>
+<link rel="stylesheet" href='https://kithub.f5.si/css/toc.css' />
+
+
+<script
+    src='https://kithub.f5.si/js/syntax-highlight-title.js'
+    crossorigin="anonymous"
+    type="application/javascript">
+</script>
+<link rel="stylesheet" href="../../css/syntax-highlight-title.css">
+
+
+
+
+
+
+
+<script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js" crossorigin="anonymous"></script>
+<script>
+
+
+(function () {
+    function transformMermaidCodeBlocks() {
+        var codeBlocks = document.querySelectorAll('pre > code.language-mermaid, code.language-mermaid');
+        codeBlocks.forEach(function (code) {
+            var pre = code.parentElement && code.parentElement.tagName.toLowerCase() === 'pre' ? code.parentElement : code;
+            var container = document.createElement('div');
+            container.className = 'mermaid';
+            container.textContent = code.textContent;
+            pre.replaceWith(container);
+        });
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', transformMermaidCodeBlocks);
+    } else {
+        transformMermaidCodeBlocks();
+    }
+    
+    if (window.mermaid) {
+        window.mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+    }
+})();
+</script>
+
+
+
+
+  
+
+  
+  
+<link rel="stylesheet" href='https://kithub.f5.si/css/giscus.css'>
+<div class="giscus"></div>
+<script>
+  (function () {
+    var origin = 'https://giscus.app';
+
+    function colorMode() {
+      return document.documentElement.getAttribute('data-color-mode') === 'dark' ? 'dark' : 'light';
+    }
+
+    
+    
+    var attrs = {
+      'data-repo': 'shiroimon\/todayilearned',
+      'data-repo-id': 'R_kgDOMSwknw',
+      'data-category': 'Announcements',
+      'data-category-id': 'DIC_kwDOMSwkn84DDAKW',
+      'data-mapping': 'pathname',
+      'data-strict': '0',
+      'data-reactions-enabled': '1',
+      'data-emit-metadata': '0',
+      'data-input-position': 'bottom',
+      'data-lang': 'ja',
+      'data-loading': 'lazy',
+      'data-theme': colorMode()
+    };
+
+    var s = document.createElement('script');
+    s.src = origin + '/client.js';
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    Object.keys(attrs).forEach(function (k) { s.setAttribute(k, attrs[k]); });
+    
+    document.querySelector('.giscus').appendChild(s);
+
+    
+    new MutationObserver(function () {
+      var frame = document.querySelector('iframe.giscus-frame');
+      if (frame) {
+        frame.contentWindow.postMessage({ giscus: { setConfig: { theme: colorMode() } } }, origin);
+      }
+    }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-color-mode'] });
+  })();
+</script>
+  
+
+
+</div>
+
+  <div class="footer container-xl width-full p-responsive">
+  <div
+    class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between flex-sm-items-center pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mr-lg-4" href="https://kithub.f5.si/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24">
+        <path fill-rule="evenodd"
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+        </path>
+      </svg>
+    </a>
+    <ul class="list-style-none d-flex flex-wrap col-12 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+      
+      <li class="mr-3 mr-lg-0">Theme by <a href='https://github.com/MeiK2333/github-style'>github-style</a></li>
+      
+      <li class="mr-3 mr-lg-0">GitHub and the Invertocat logo are trademarks of <a href="https://github.com/">GitHub, Inc.</a></li>
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+
+
+</div>
+
+</body>
+
+<script type="application/javascript" src="https://kithub.f5.si/js/github-style.js"></script>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+<script type="application/javascript" src='https://kithub.f5.si/js/search.js'></script>
+
+
+
+</html>

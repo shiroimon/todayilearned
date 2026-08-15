@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Nomad_worker on Today I Learned | KitHub</title>
+		<link>http://localhost:1313/tags/nomad_worker/</link>
+		<description>Recent content in Nomad_worker on Today I Learned | KitHub</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 09 Aug 2026 23:38:32 +0900</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/nomad_worker/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>[Lifestyle] デジタルノマド / ホテル暮らしの実践メモ</title>
+				<link>http://localhost:1313/post/other/digital_nomad_setup/</link>
+				<pubDate>Sun, 14 Jun 2026 14:00:00 +0900</pubDate>
+				<guid>http://localhost:1313/post/other/digital_nomad_setup/</guid>
+				<description>🫏 居住・回線・配達・住民票・経費性。アドレスホッパーが詰まる5つの論点と自分の解</description>
+			</item>
+	</channel>
+</rss>

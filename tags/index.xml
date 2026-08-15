@@ -10,9 +10,30 @@
 		
 		
 		
-			<lastBuildDate>Mon, 10 Aug 2026 11:41:44 +0900</lastBuildDate>
+			<lastBuildDate>Mon, 10 Aug 2026 14:24:54 +0900</lastBuildDate>
 		
 			<atom:link href="https://kithub.f5.si/tags/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>CLI</title>
+				<link>https://kithub.f5.si/tags/cli/</link>
+				<pubDate>Sun, 09 Aug 2026 17:20:00 +0900</pubDate>
+				<guid>https://kithub.f5.si/tags/cli/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Git</title>
+				<link>https://kithub.f5.si/tags/git/</link>
+				<pubDate>Sun, 09 Aug 2026 17:20:00 +0900</pubDate>
+				<guid>https://kithub.f5.si/tags/git/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>GitHub</title>
+				<link>https://kithub.f5.si/tags/github/</link>
+				<pubDate>Sun, 09 Aug 2026 17:20:00 +0900</pubDate>
+				<guid>https://kithub.f5.si/tags/github/</guid>
+				<description></description>
+			</item>
 			<item>
 				<title>Diagram</title>
 				<link>https://kithub.f5.si/tags/diagram/</link>
@@ -154,13 +175,6 @@
 				<description></description>
 			</item>
 			<item>
-				<title>CLI</title>
-				<link>https://kithub.f5.si/tags/cli/</link>
-				<pubDate>Mon, 01 Sep 2025 21:43:34 +0900</pubDate>
-				<guid>https://kithub.f5.si/tags/cli/</guid>
-				<description></description>
-			</item>
-			<item>
 				<title>Google Cloud</title>
 				<link>https://kithub.f5.si/tags/google-cloud/</link>
 				<pubDate>Mon, 01 Sep 2025 21:43:34 +0900</pubDate>
@@ -280,13 +294,6 @@
 				<description></description>
 			</item>
 			<item>
-				<title>GitHub</title>
-				<link>https://kithub.f5.si/tags/github/</link>
-				<pubDate>Thu, 21 Nov 2024 12:06:08 +0900</pubDate>
-				<guid>https://kithub.f5.si/tags/github/</guid>
-				<description></description>
-			</item>
-			<item>
 				<title>OSS</title>
 				<link>https://kithub.f5.si/tags/oss/</link>
 				<pubDate>Thu, 21 Nov 2024 12:06:08 +0900</pubDate>
@@ -368,13 +375,6 @@
 				<link>https://kithub.f5.si/tags/unix/</link>
 				<pubDate>Mon, 30 Sep 2024 23:28:04 +0900</pubDate>
 				<guid>https://kithub.f5.si/tags/unix/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Git</title>
-				<link>https://kithub.f5.si/tags/git/</link>
-				<pubDate>Tue, 24 Sep 2024 18:08:08 +0900</pubDate>
-				<guid>https://kithub.f5.si/tags/git/</guid>
 				<description></description>
 			</item>
 			<item>

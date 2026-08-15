@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Sun, 09 Aug 2026 23:38:32 +0900</lastBuildDate>
+			<lastBuildDate>Mon, 10 Aug 2026 14:24:54 +0900</lastBuildDate>
 		
 			<atom:link href="https://kithub.f5.si/categories/know-how/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>[Git] Commit History Rewriting</title>
+				<link>https://kithub.f5.si/post/github_commit_history_rewriting/</link>
+				<pubDate>Sun, 09 Aug 2026 17:20:00 +0900</pubDate>
+				<guid>https://kithub.f5.si/post/github_commit_history_rewriting/</guid>
+				<description>📍 積んでしまったコミット履歴を後から整える手札のまとめ。&lt;code&gt;--amend&lt;/code&gt; / &lt;code&gt;--fixup&lt;/code&gt; + &lt;code&gt;rebase --autosquash&lt;/code&gt; / &lt;code&gt;rebase -i&lt;/code&gt; の squash を、いつ使うか・事故ったらどう戻すかまで含めて整理する。</description>
+			</item>
 			<item>
 				<title>[BigQuery] Data analysis on preparation</title>
 				<link>https://kithub.f5.si/post/bigquery_data_analysis_on_preparation/</link>
@@ -49,10 +56,10 @@
 				<description>🍏 A little trick to use it like a native laptop application.</description>
 			</item>
 			<item>
-				<title>[GitHub] This &amp; That</title>
-				<link>https://kithub.f5.si/post/github_this_and_that/</link>
+				<title>[GitHub] Miscellaneous</title>
+				<link>https://kithub.f5.si/post/github_miscellaneous/</link>
 				<pubDate>Wed, 24 Jul 2024 15:08:13 +0900</pubDate>
-				<guid>https://kithub.f5.si/post/github_this_and_that/</guid>
+				<guid>https://kithub.f5.si/post/github_miscellaneous/</guid>
 				<description>📍 Various things to make your GitHub life more enjoyable.</description>
 			</item>
 			<item>

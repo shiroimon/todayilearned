@@ -202,7 +202,7 @@ if ('serviceWorker' in navigator) {
                 Created <relative-time datetime="Wed, 07 Jan 2026 11:56:35 &#43;0900" class="no-wrap">Wed, 07 Jan 2026 11:56:35 &#43;0900</relative-time>
                 
                 <span class="path-divider">|</span>
-                Modified <relative-time datetime="Mon, 10 Aug 2026 11:41:44 &#43;0900" class="no-wrap">Mon, 10 Aug 2026 11:41:44 &#43;0900</relative-time>
+                Modified <relative-time datetime="Mon, 10 Aug 2026 11:49:26 &#43;0900" class="no-wrap">Mon, 10 Aug 2026 11:49:26 &#43;0900</relative-time>
                 
             </div>
         </div>
@@ -236,9 +236,9 @@ if ('serviceWorker' in navigator) {
                     <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list"></div>
                 </div>
             </details-menu>
-            5575 Words
+            8542 Words
             <span class="path-divider">|</span>
-            4 min
+            7 min
             </div>
 
             
@@ -303,6 +303,327 @@ if ('serviceWorker' in navigator) {
 <p><code>SSIA</code></p>
 <p>公式 <a href="https://code.claude.com/docs">https://code.claude.com/docs</a></p>
 <h2 id="what">What<a class="anchor" aria-hidden="true" href="#what"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<hr>
+<h3 id="20260815-追記">2026/08/15 追記<a class="anchor" aria-hidden="true" href="#20260815-追記"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<h4 id="branch-fork-subtask-の使い分け"><code>/branch</code> <code>/fork</code> <code>/subtask</code> の使い分け<a class="anchor" aria-hidden="true" href="#branch-fork-subtask-の使い分け"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<p><a href="#ss%E3%82%BB%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E9%81%8B%E7%94%A8">2026/08/10 追記</a> の補足。
+3つとも「<strong>今のコンテキストを持ったまま別の作業を走らせる</strong>」点は同じ。違うのは <em>自分がどこに残るか</em> と <em>結果がどこに返るか</em> の2点だけ。</p>
+<table>
+	<thead>
+			<tr>
+					<th>観点</th>
+					<th><code>/branch</code></th>
+					<th><code>/fork</code></th>
+					<th><code>/subtask</code></th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>自分の居場所</td>
+					<td>分岐先へ移る</td>
+					<td>今の会話に残る</td>
+					<td>今の会話に残る</td>
+			</tr>
+			<tr>
+					<td>相手</td>
+					<td>元の SS が凍結（保存）</td>
+					<td>コピーが background session として走る</td>
+					<td>サブエージェントが走る</td>
+			</tr>
+			<tr>
+					<td>プロセス</td>
+					<td>同じ</td>
+					<td>別</td>
+					<td>同じ</td>
+			</tr>
+			<tr>
+					<td>結果の行き先</td>
+					<td>分岐先の会話にそのまま</td>
+					<td>向こうの会話（自分で見に行く）</td>
+					<td><strong>この会話に返ってくる</strong></td>
+			</tr>
+			<tr>
+					<td>戻る導線</td>
+					<td><code>/resume &lt;元の名前&gt;</code></td>
+					<td>走行中は <code>claude attach &lt;id&gt;</code> <br> / 終了後は <code>/resume</code></td>
+					<td>不要（勝手に返る）</td>
+			</tr>
+			<tr>
+					<td><code>/resume</code> の一覧</td>
+					<td>出る</td>
+					<td>出る（<code>bg</code> 表示）</td>
+					<td>出ない（sidechain）</td>
+			</tr>
+	</tbody>
+</table>
+
+<div class="markdown-alert markdown-alert-tip">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>
+        Tip
+        
+    </p>
+    <p>雑に選ぶなら、</p>
+<pre tabindex="0"><code>セッションをまたいで行き来したい          → /branch
+別トピックを並走させ、自分で取りに行く    → /fork
+結果をこの会話に報告させたい              → /subtask
+</code></pre>
+</div>
+
+<ul>
+<li><code>/branch</code> は公式ドキュメントにも <code>Switches you into the branch and preserves the original, which you can return to with /resume</code> と書かれている。<strong>元に戻ることが前提の機能</strong>。</li>
+<li><code>/fork</code> の background session も <code>/resume</code> の一覧「には」出る（<code>bg</code> 表示）。ただし<strong>走っている間は resume で掴めず</strong>、<code>Session &lt;id&gt; is already running — claude attach &lt;id&gt; to join it</code> と言われる。
+生きている background session に入る導線は agent view（<code>claude agents</code> で一覧 → 選択、または <code>claude attach &lt;id&gt;</code>）。</li>
+<li><code>/subtask &lt;task&gt;</code> は Task tool のサブエージェントだが、<strong>空のコンテキストではなく今の会話を丸ごと引き継ぐ</strong>のが普通の Task tool 委任との差。だから「さっきまで話してた前提」を説明し直さなくていい。</li>
+</ul>
+<h5 id="fork-先の結論はいつ回収するのか"><code>/fork</code> 先の結論はいつ回収するのか<a class="anchor" aria-hidden="true" href="#fork-先の結論はいつ回収するのか"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h5>
+<p><code>/subtask</code> は「終わったら通知が来る」ので考えなくていい。問題は <code>/fork</code> で、<strong>向こうから声はかからない</strong>。回収は自分でタイミングを決める。</p>
+<p>とはいえ投げっぱなしで消えるわけではなく、回収用の CLI が一式ある。<code>/fork</code> した直後に <code>backgrounded &lt;id&gt;</code> と一緒に導線が出る。</p>
+<table>
+	<thead>
+			<tr>
+					<th>コマンド</th>
+					<th>用途</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>claude agents</code></td>
+					<td>走っている background session の一覧（<code>--json</code> もある）</td>
+			</tr>
+			<tr>
+					<td><code>claude logs &lt;id&gt;</code></td>
+					<td><strong>attach せずに</strong>直近の出力だけ覗く</td>
+			</tr>
+			<tr>
+					<td><code>claude attach &lt;id&gt;</code></td>
+					<td>このターミナルで開いて中に入る</td>
+			</tr>
+			<tr>
+					<td><code>claude stop &lt;id&gt;</code></td>
+					<td>止める。会話は残るので後で <code>claude attach &lt;id&gt;</code></td>
+			</tr>
+			<tr>
+					<td><code>claude rm &lt;id&gt;</code></td>
+					<td>worktree ごと削除（<code>stop</code> と違い終了済みにも効く）</td>
+			</tr>
+			<tr>
+					<td><code>claude respawn &lt;id&gt;</code></td>
+					<td>今の Claude バイナリで再起動（<code>--all</code> 可）</td>
+			</tr>
+	</tbody>
+</table>
+<p>回収の実際の運びは3択。</p>
+<pre tabindex="0"><code>様子だけ見たい          → claude logs &lt;id&gt;     ← 一番使う。context を汚さない
+方向を直したい          → claude attach &lt;id&gt;   ← 走行中でも入れる
+終わってから読む        → /resume（picker に bg 表示）
+</code></pre><p><code>claude logs</code> が効くのが大きい。<strong>「気になったら覗く、まだなら放置」が attach なしでできる</strong>ので、回収タイミングを決め打ちしなくていい。</p>
+<p>忘れても致命傷にはならないようになっている。</p>
+<ul>
+<li>終了済みの session に attach しても <code>Session &lt;id&gt; has exited; attach shows the captured output</code> で、<strong>出力は残っている</strong></li>
+<li>走っている bg があるまま親を終わらせようとすると <code>... still running. Run claude agents to see your background sessions.</code> と言われる</li>
+</ul>
+
+<div class="markdown-alert markdown-alert-important">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>
+        Important
+        
+    </p>
+    <p>ただし本命の回収物は会話ではなく<strong>ファイル</strong>。
+<code>/fork</code> 先は同じ作業ディレクトリで走るので、向こうが書いたファイルはこちらから普通に見える。
+<a href="#1-ss-1-task%E3%81%8C%E5%AE%88%E3%82%8C%E3%81%AA%E3%81%84%E3%81%A8%E3%81%8D">「1 SS 1 task」が守れないとき</a> に書いた「SS をまたいで運べるのはファイルだけ」がそのまま当てはまる。
+逆に言えば、<strong>ファイルに落ちない仕事を <code>/fork</code> に投げると回収コストが跳ね上がる</strong>。それは <code>/subtask</code> の担当。</p>
+</div>
+
+<h5 id="resume-の一覧に出てこないもの"><code>/resume</code> の一覧に出てこないもの<a class="anchor" aria-hidden="true" href="#resume-の一覧に出てこないもの"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h5>
+<p>「さっきの会話が picker に出てこない」ときは、たいてい下のどれかで落ちている。</p>
+<table>
+	<thead>
+			<tr>
+					<th>落ちる条件</th>
+					<th>具体例</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>sidechain</td>
+					<td>サブエージェント（Task tool）の会話</td>
+			</tr>
+			<tr>
+					<td>team 所属（<code>teamName</code> あり）</td>
+					<td>Agent Teams の teammate</td>
+			</tr>
+			<tr>
+					<td><code>sessionKind</code> が <code>daemon</code> <code>daemon-worker</code></td>
+					<td>常駐プロセス</td>
+			</tr>
+			<tr>
+					<td><code>/loop</code> で始めた SS</td>
+					<td></td>
+			</tr>
+	</tbody>
+</table>
+<p><code>sessionKind</code> が <code>bg</code>（= <code>/fork</code> の行き先）は<strong>落ちない</strong>ので、一覧には並ぶ。</p>
+<h5 id="fork-の実体"><code>/fork</code> の実体<a class="anchor" aria-hidden="true" href="#fork-の実体"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h5>
+<p><code>CLAUDE_CODE_SESSION_KIND=bg</code> を付けた別プロセスで <code>claude --resume &lt;transcript&gt; --fork-session</code> を起動しているだけ。CLI の <code>--fork-session</code> と地続き。</p>
+<h5 id="agent-view-の有無で-fork-の意味が変わる">agent view の有無で <code>/fork</code> の意味が変わる<a class="anchor" aria-hidden="true" href="#agent-view-の有無で-fork-の意味が変わる"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h5>
+<table>
+	<thead>
+			<tr>
+					<th>agent view</th>
+					<th><code>/fork</code> の挙動</th>
+					<th>引数</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>有効（既定）</td>
+					<td>会話のコピーを background session として起動（<code>/subtask</code> も生える）</td>
+					<td><code>[prompt]</code>（省略可）</td>
+			</tr>
+			<tr>
+					<td>無効</td>
+					<td>会話を引き継いだ background <strong>agent</strong> を spawn（サブエージェント扱い）</td>
+					<td><code>&lt;directive&gt;</code>（必須）</td>
+			</tr>
+	</tbody>
+</table>
+<p>「無効」は <code>CLAUDE_CODE_DISABLE_AGENT_VIEW=1</code> か設定の <code>disableAgentView</code> を入れた状態。
+coordinator session では <code>/fork</code> も <code>/subtask</code> も使えず、<code>Use /branch instead.</code> と案内される。</p>
+
+<div class="markdown-alert markdown-alert-tip">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>
+        Tip
+        
+    </p>
+    <p><strong>無効側の <code>/fork</code> は実質 <code>/subtask</code></strong></p>
+<p>バイナリを覗くと、<code>/fork</code>（agent view 無効版）と <code>/subtask</code> は<strong>同じ関数を呼んで同じ完了メッセージ <code>forked &lt;name&gt; (&lt;id&gt;)</code> を出している</strong>。登録されている description も裏返しの関係になっている。</p>
+<table>
+	<thead>
+			<tr>
+					<th>コマンド</th>
+					<th>description</th>
+					<th>引数</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>/fork</code>（有効時）</td>
+					<td>Copy this conversation into a new background session and keep working here</td>
+					<td><code>[prompt]</code></td>
+			</tr>
+			<tr>
+					<td><code>/fork</code>（無効時）</td>
+					<td>Spawn a background agent that inherits the full conversation</td>
+					<td><code>&lt;directive&gt;</code></td>
+			</tr>
+			<tr>
+					<td><code>/subtask</code></td>
+					<td>Send a subagent off with your full context; its result comes back here</td>
+					<td><code>&lt;task&gt;</code></td>
+			</tr>
+	</tbody>
+</table>
+<p>つまり <strong>agent view を切ると <code>/fork</code> が <code>/subtask</code> に化ける</strong>。
+逆に言えば agent view が有効な既定環境では、<code>/fork</code>（別セッション・返ってこない）と <code>/subtask</code>（サブエージェント・返ってくる）を自分で選ぶ必要がある。
+なお <code>/subtask</code> は最初のターンの前には使えず、<code>Cannot start a subtask before the first conversation turn</code> になる（引き継ぐコンテキストが無いので当然）。</p>
+</div>
+
+
+<div class="markdown-alert markdown-alert-note">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>
+        Note
+        
+    </p>
+    <p>公式ドキュメントに明記されているのは <code>/branch</code> の「元に戻れる」だけ。
+<code>/resume</code> のフィルタ条件・<code>/fork</code> の起動方法・agent view による分岐・<code>/subtask</code> との等価性は v2.1.224 の実装を読んで確認したもの（将来変わりうる）。</p>
+</div>
+
+<h4 id="1-ss-1-taskが守れないとき">「1 SS 1 task」が守れないとき<a class="anchor" aria-hidden="true" href="#1-ss-1-taskが守れないとき"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<p>セッションは 1 タスクにつき 1 つ、とよく言われる（自分もそう勧めている）。ただ実際にやると、</p>
+<ul>
+<li>調査・裏取り（bq / DB を叩く系）</li>
+<li>コード解析</li>
+<li>feature 実装</li>
+</ul>
+<p>このあたりは細分化しても、途中で「やはりこうしたい」「別の着眼点に気づいた」が頻繁に出てきて、1 タスクの輪郭が保たれない。</p>
+<h5 id="切る単位を-task-ではなく成果物にする">切る単位を task ではなく成果物にする<a class="anchor" aria-hidden="true" href="#切る単位を-task-ではなく成果物にする"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h5>
+<p>task は途中で変質するが、<strong>1 個のファイルを書き上げる</strong>は変質しない。
+なので「1 SS 1 task」ではなく「<strong>1 SS 1 成果物</strong>」で切ると、途中で方向が変わっても線が引ける。</p>
+<p>SS をまたいで運べるのはファイルだけ、と割り切るのも同じ話。
+会話ごと持ち越そうとして <code>/branch</code> <code>/fork</code> に手が伸びるが、どちらもコピーなので <strong>context は 1 トークンも減らない</strong>。「引き継ぎつつ減らす」ができるのは <code>/compact</code> だけ。</p>
+<h5 id="3-種類を同じルールで扱わない">3 種類を同じルールで扱わない<a class="anchor" aria-hidden="true" href="#3-種類を同じルールで扱わない"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h5>
+<table>
+	<thead>
+			<tr>
+					<th>種類</th>
+					<th>context の性質</th>
+					<th>切り方</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>調査・裏取り（bq / DB）</td>
+					<td>入力が重く、残す価値は結論だけ</td>
+					<td><strong>使い捨て</strong>。md に書いたら <code>/clear</code></td>
+			</tr>
+			<tr>
+					<td>コード解析</td>
+					<td>読む量は多いが、結論は構造理解</td>
+					<td>使い捨て寄り。理解を書き出せば捨てられる</td>
+			</tr>
+			<tr>
+					<td>feature 実装</td>
+					<td>「今どこまで直したか」の状態を保つ必要がある</td>
+					<td><strong>保持</strong>。分割しにくく、<code>/compact</code> で延命する場所</td>
+			</tr>
+	</tbody>
+</table>
+<p>前 2 つは圧縮率が異常に高い（100k 読んで結論は 20 行）。実装は逆で、圧縮すると壊れる。
+「セッションが重い」の大半は前 2 つなので、そこを使い捨てにするだけで実装用の窓が空く。</p>
+<h5 id="途中のこうしたいは-2-択で捌く">途中の「こうしたい」は 2 択で捌く<a class="anchor" aria-hidden="true" href="#途中のこうしたいは-2-択で捌く"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h5>
+<p>判別は 1 つだけ、<strong>今やっている作業の結論を変えるか</strong>。</p>
+<table>
+	<thead>
+			<tr>
+					<th>今の結論を</th>
+					<th>対処</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>変えない</td>
+					<td>その場で 1 行だけファイルに落として、今の線を終わらせる</td>
+			</tr>
+			<tr>
+					<td>変える</td>
+					<td>分割線が間違っていた証拠。今の線を畳んでそちらへ切り替える</td>
+			</tr>
+	</tbody>
+</table>
+<p>大半は前者。ここで詰まるのは「落とす先が決まっていない」ときで、落とす先が無いから SS の中に留めようとして、結果セッションが太る。落とす先を先に 1 個決めておく（<code>NOTES.md</code> なり <code>.inbox/</code> なり）。</p>
+
+<div class="markdown-alert markdown-alert-note">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>
+        Note
+        
+    </p>
+    <p>調査は「下書き用紙」、実装は「清書中の原稿」。
+下書きは書き終わったら結論だけ写して捨てる紙で、取っておく紙ではない。
+「1 SS 1 task」が苦しいのは、下書きも清書も同じ引き出しに入れようとしているから。</p>
+</div>
+
+<p>事前に細かく分割しても途中で崩れるのは失敗ではなく、調査系は<strong>やってみないと分割線が見えない</strong>性質。
+事前分割より「成果物が 1 個できたら切る」という事後の切り方の方が合う。</p>
 <hr>
 <h3 id="20260810-追記">2026/08/10 追記<a class="anchor" aria-hidden="true" href="#20260810-追記"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 <h4 id="ssセッションの運用">SS（セッション）の運用<a class="anchor" aria-hidden="true" href="#ssセッションの運用"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
@@ -863,6 +1184,9 @@ SS -+--(承認)-[hoge]------&gt; /exit
 </li>
 <li>
 <p><code>/fork</code>    : 今の会話のコピーを background session として起動し、<strong>自分はここに残る</strong>（並走）</p>
+</li>
+<li>
+<p><code>/subtask</code> : 今の会話を引き継いだサブエージェントに投げ、<strong>結果がここに返ってくる</strong>（委任）</p>
 </li>
 <li>
 <p><code>/rename</code>  : セッションに名前を付ける（<code>/resume &lt;name&gt;</code> で呼び出せるようになる）</p>

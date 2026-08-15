@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="application/javascript" src='https://kithub.f5.si/js/theme-mode.js'></script>
+    <link rel="stylesheet" href='https://kithub.f5.si/css/frameworks.min.css' />
+    <link rel="stylesheet" href='https://kithub.f5.si/css/github.min.css' />
+    <link rel="stylesheet" href='https://kithub.f5.si/css/github-style.css' />
+    <link rel="stylesheet" href='https://kithub.f5.si/css/light.css' />
+    <link rel="stylesheet" href='https://kithub.f5.si/css/dark.css' />
+    <link rel="stylesheet" href='https://kithub.f5.si/css/syntax.css' />
+    <title>[GitHub] Miscellaneous - Today I Learned | KitHub</title>
+    
+    <link rel="icon" type="image/x-icon" href='../../images/github-mark.png'>
+    
+    <meta name="theme-color" content="#1e2327">
+
+    <link rel="stylesheet" href="https://kithub.f5.si/css/gist.css"><link rel="stylesheet" href="https://kithub.f5.si/css/markdown-alert.css"><link rel="stylesheet" href="https://kithub.f5.si/css/code-copy.css"><link rel="stylesheet" href="https://kithub.f5.si/css/link-card.css"><link rel="stylesheet" href="https://kithub.f5.si/css/post-title.css">
+    <script type="text/javascript" src="https://kithub.f5.si/js/gist-dark-mode.js"></script><script type="text/javascript" src="https://kithub.f5.si/js/code-copy.js"></script>
+    
+
+    
+    <meta name="description"
+  content="📍 Various things to make your GitHub life more enjoyable." />
+<meta name="keywords"
+  content='blog' />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://kithub.f5.si/post/github_miscellaneous/" />
+
+
+<link rel="manifest" href="../../manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Today I Learned | KitHub">
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/apple-touch-icon.png">
+
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="[GitHub] Miscellaneous - Today I Learned | KitHub" />
+<meta name="twitter:description"
+  content="📍 Various things to make your GitHub life more enjoyable." />
+<meta name="twitter:site" content="https://kithub.f5.si/" />
+<meta name="twitter:creator" content="shiro" />
+<meta name="twitter:image" content="https://kithub.f5.si/images/og-base_hu_ab412e8a9766ea.png">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="[GitHub] Miscellaneous - Today I Learned | KitHub">
+<meta property="og:description"
+  content="📍 Various things to make your GitHub life more enjoyable." />
+<meta property="og:url" content="https://kithub.f5.si/post/github_miscellaneous/" />
+<meta property="og:site_name" content="Today I Learned | KitHub" />
+<meta property="og:image" content="https://kithub.f5.si/images/og-base_hu_ab412e8a9766ea.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta property="article:published_time" content="2024-07-24 15:08:13 &#43;0900 JST" />
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('\/sw.js', { scope: '\/' })
+      .then((registration) => {
+        console.log('[PWA] Service Worker registered:', registration.scope);
+
+        
+        registration.addEventListener('updatefound', () => {
+          const newWorker = registration.installing;
+          console.log('[PWA] New Service Worker found, updating...');
+
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'activated') {
+              console.log('[PWA] New Service Worker activated');
+              
+              if (navigator.serviceWorker.controller) {
+                window.location.reload();
+              }
+            }
+          });
+        });
+
+        
+        setInterval(() => {
+          registration.update();
+        }, 60 * 60 * 1000);
+      })
+      .catch((error) => {
+        console.error('[PWA] Service Worker registration failed:', error);
+      });
+  });
+}
+</script>
+
+</head>
+
+
+<body>
+  <div style="position: relative">
+  <header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on">
+    <div class="Header-item mobile-none" style="margin-top: -4px; margin-bottom: -4px;">
+      <a class="Header-link" href="https://kithub.f5.si/">
+        <img class="octicon" height="32" width="32" src="../../images/github-mark-white.png">
+      </a>
+    </div>
+    <div class="Header-item d-md-none">
+      <button class="Header-link btn-link js-details-target" type="button"
+        onclick="document.querySelector('#header-search').style.display = document.querySelector('#header-search').style.display == 'none'? 'block': 'none'">
+        <svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" version="1.1" width="24">
+          <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div style="display: none;" id="header-search"
+      class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
+      <div
+        class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to">
+        <div class="position-relative">
+          
+          <form target="_blank" id="search-form" action="" accept-charset="UTF-8" method="get"
+            autocomplete="off">
+            <label
+              class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center">
+              <input type="text"
+                class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+                name="q" value="" placeholder="Search" autocomplete="off">
+            </label>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
+      <a class="Header-link " href="https://kithub.f5.si/">
+        <img class="octicon octicon-mark-github v-align-middle" height="32" width="32" src="../../images/github-mark-white.png">
+      </a>
+    </div>
+    <div class="Header-item" style="margin-right: 0;">
+      <a href="javascript:void(0)" class="Header-link no-select" onclick="switchTheme()">
+        <svg style="fill: var(--color-profile-color-modes-toggle-moon);" class="no-select" viewBox="0 0 16 16"
+          version="1.1" width="16" height="16">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M4.52208 7.71754C7.5782 7.71754 10.0557 5.24006 10.0557 2.18394C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961C9.95801 1.07727 10.3495 0.771159 10.6474 0.99992C12.1153 2.12716 13.0615 3.89999 13.0615 5.89383C13.0615 9.29958 10.3006 12.0605 6.89485 12.0605C3.95334 12.0605 1.49286 10.001 0.876728 7.24527C0.794841 6.87902 1.23668 6.65289 1.55321 6.85451C2.41106 7.40095 3.4296 7.71754 4.52208 7.71754Z">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </header>
+</div>
+
+  <div id="search-result" class="container-lg px-3 new-discussion-timeline" style="display: none;">
+</div>
+
+  
+<div class="application-main">
+  <div>
+<main>
+    
+    <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
+    <div class="px-0">
+    <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+    <div class="flex-auto min-width-0 width-fit mr-3">
+    <div class="d-flex">
+        
+        <div class="d-none d-md-block">
+            <a class="avatar mr-2 flex-shrink-0" href="https://kithub.f5.si/">
+                <img class=" avatar-user"
+                  src="../../images/avatar.png"
+                  width="32"
+                  height="32">
+            </a>
+        </div>
+        
+        <div class="d-flex flex-column">
+            
+            <h1 class="break-word f3 text-normal mb-md-0 mb-1">
+                <span class="author"><a href="https://kithub.f5.si/"></a></span>
+                <span class="path-divider">/</span>
+                <strong class="mr-1"><a href="https://kithub.f5.si/post/github_miscellaneous/">[GitHub] Miscellaneous</a></strong>
+            </h1>
+            
+            <div class="note m-0">
+                Created <relative-time datetime="Wed, 24 Jul 2024 15:08:13 &#43;0900" class="no-wrap">Wed, 24 Jul 2024 15:08:13 &#43;0900</relative-time>
+                
+                <span class="path-divider">|</span>
+                Modified <relative-time datetime="Mon, 10 Aug 2026 14:24:54 &#43;0900" class="no-wrap">Mon, 10 Aug 2026 14:24:54 &#43;0900</relative-time>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    
+    <div class="container-lg px-3 new-discussion-timeline">
+    <div class="repository-content gist-content">
+    <div>
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+        <div id="file-pytest" class="file my-2">
+        
+        <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
+        <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+
+            
+            <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+            <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
+                <svg aria-hidden="true" viewBox="0 0 16 16" class="octicon octicon-list-unordered" height="16" width="16">
+                    <path fill-rule="evenodd"
+                        d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z">
+                    </path>
+                </svg>
+            </summary>
+            <details-menu class="SelectMenu" id="toc-details" style="display: none;">
+                <div class="SelectMenu-modal rounded-3 mt-1" style="max-height: 340px;">
+                    <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list"></div>
+                </div>
+            </details-menu>
+            1292 Words
+            <span class="path-divider">|</span>
+            2 min
+            </div>
+
+            
+            <div class="file-actions flex-order-2 pt-0">
+                
+                <div class="d-none d-md-flex">
+                    
+                    
+                    
+                    <a class="muted-link mr-3" href='../../tags/github'>
+                        <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                            </path>
+                        </svg>
+                        GitHub
+                    </a>
+                    
+                    
+                    
+                </div>
+                
+            </div>
+        </div>
+        </div>
+
+        
+        
+        
+        
+        <div class="flash flash-warn" style="margin: 16px 20px 0; padding: 12px 16px; border: 1px solid rgba(212, 167, 44, 0.4); border-radius: 6px; background-color: rgba(212, 167, 44, 0.1); color: var(--color-text-primary, #24292f);">
+            ⚠ この記事が書かれてから<strong>2年以上</strong>が経過しています。内容が古いのであまり参考にはしないでください。
+        </div>
+        
+
+        
+        <div class="Box-body px-5 pb-5" style="z-index: 1">
+            <article class="markdown-body entry-content container-lg"><!-- Icon Badge -->
+<p><img src="https://img.shields.io/badge/-GitHub-181717.svg?logo=github&amp;style=flat&amp;color=F0F8FF&amp;logoColor=181717" alt="GitHub" loading="lazy" decoding="async">
+</p>
+<h2 id="why">Why<a class="anchor" aria-hidden="true" href="#why"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p><code>SSIA</code></p>
+<h2 id="what">What<a class="anchor" aria-hidden="true" href="#what"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<h3 id="github-identicon">[GitHub] Identicon<a class="anchor" aria-hidden="true" href="#github-identicon"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<ul>
+<li>GitHub からの最初の贈り物 (&hellip;emoi XD)</li>
+<li>eg.
+<ul>
+<li><a href="https://github.com/octocat">https://github.com/octocat</a></li>
+<li><img src="https://github.com/identicons/octocat.png" alt="identicon" loading="lazy" decoding="async">
+</li>
+</ul>
+</li>
+<li>ie.
+<ul>
+<li>自分のIdenticonにアクセス</li>
+<li><code>https://github.com/identicons/&lt;username&gt;.png</code></li>
+</ul>
+</li>
+<li>cf.
+<ul>
+<li><a href="https://qiita.com/pira/items/dd4057ef499154968f69">GitHubのIdenticonの生成と取得</a> Qiita</li>
+<li><a href="https://github.blog/news-insights/company-news/identicons/">Identicons!</a> GitHub Blog</li>
+<li><a href="https://en.wikipedia.org/wiki/Identicon">Identicon</a> Wikipedia</li>
+</ul>
+</li>
+</ul>
+<h3 id="github-octocat">[GitHub] Octocat<a class="anchor" aria-hidden="true" href="#github-octocat"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<ul>
+<li><a href="https://github.com/octocat">https://github.com/octocat</a></li>
+<li><a href="https://myoctocat.com/">https://myoctocat.com/</a></li>
+<li>cf. <a href="https://github.blog/jp/2018-10-17-myoctocat/">オリジナルOctocatを作ろう！</a></li>
+</ul>
+<h3 id="github-emoji">[GitHub] emoji<a class="anchor" aria-hidden="true" href="#github-emoji"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+
+
+<div>
+    <div class="github-card" data-github="rickstaa/github-emoji-picker" data-theme="default"></div>
+    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+</div>
+
+
+<!-- https://github.com/rickstaa/github-emoji-picker -->
+<ul>
+<li><a href="https://github-emoji-picker.rickstaa.dev/">https://github-emoji-picker.rickstaa.dev/</a></li>
+</ul>
+
+
+<div>
+    <div class="github-card" data-github="hlaueriksson/github-emoji" data-theme="default"></div>
+    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+</div>
+
+
+<ul>
+<li>eg. <code>:octocat:</code> <code>:atom:</code> <code>:electron:</code></li>
+<li><a href="https://emojipedia.org/github">https://emojipedia.org/github</a></li>
+<li><a href="https://emojis.sh/">https://emojis.sh/</a></li>
+</ul>
+<p>cf.</p>
+<ul>
+<li><a href="https://gist.github.com/abhisekp/55c79a044db092a0077f706abfad12a9">Emojis</a> Gist</li>
+</ul>
+<h3 id="github-dummy-account">[GitHub] Dummy Account<a class="anchor" aria-hidden="true" href="#github-dummy-account"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<ul>
+<li><code>$ git commit </code>をするとコミットログに自分のアドレスが見れてしまう&hellip;</li>
+<li>秘匿性の高いアドレスに変更することができる</li>
+<li>-&gt; <code>USERNAME@users.noreply.github.com</code>
+cf.</li>
+<li><a href="https://docs.github.com/ja/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address">コミットメールアドレスを設定する</a> GitHub Doc</li>
+<li><a href="https://qiita.com/sta/items/982ab68e8220a81d485c">GitHub でダミーのメールアドレスを使用する</a> Qiita</li>
+<li><a href="https://qiita.com/P-man_Brown/items/07ed10d52d3a5d0433e8">【Git】メールアドレスをnoreplyに設定する</a> Qiita</li>
+</ul>
+<h3 id="github-achievements">[GitHub] Achievements<a class="anchor" aria-hidden="true" href="#github-achievements"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqin9pUN82JotT1KHdC4MvanH_uoux770Pzw&amp;s" alt="img" loading="lazy" decoding="async">
+</p>
+<p>cf.</p>
+<ul>
+<li><a href="https://gh-achievement.sagelga.com/">GitHub Achievements Cheatsheet</a></li>
+<li><a href="https://github.com/drknzz/GitHub-Achievements">https://github.com/drknzz/GitHub-Achievements</a></li>
+<li><a href="https://www.reddit.com/r/github/comments/159esrq/how_to_earn_every_github_achievement_complete_list/">How to earn every GitHub Achievement (complete list)</a> Reddit</li>
+<li><a href="https://qiita.com/yoshi389111/items/b8b6e679a1c4cbd1fe0f">GitHubのAchievementsのQuickdrawの取得条件を調べてみた。ついでにAchievements一覧も</a> Qiita</li>
+</ul>
+<h3 id="powerful-readme">[Powerful README]<a class="anchor" aria-hidden="true" href="#powerful-readme"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p>色々おしゃれにしちゃおう。</p>
+<h3 id="offline-event">[Offline Event]<a class="anchor" aria-hidden="true" href="#offline-event"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p>cf.</p>
+<ul>
+<li><a href="https://githubuniverse.com/">GitHub Universe</a> GitHub</li>
+<li><a href="https://qiita.com/magisystem0408/items/de20bebfd891b3c5ba14">GitHub Universe 2023 現地会場!! GitHub カンファレンスレポート at サンフランシスコ</a> Qiitai</li>
+<li><a href="https://aadojo.alterbooth.com/entry/2023/11/10/153134">【週刊オルターブース】『GitHub Universe 2023』現地参加のブログ祭り編</a> 週間オルターブース</li>
+</ul>
+<h3 id="festival">[Festival]<a class="anchor" aria-hidden="true" href="#festival"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p><code>直接的ではないが、GitHubに係るその他のお祭り</code>
+cf.</p>
+<ul>
+<li><a href="https://hacktoberfest.com/">Hacktoberfest</a></li>
+<li><a href="https://medium.com/@fullsour/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9E%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E3%81%8A%E7%A5%AD%E3%82%8A-%E3%83%8F%E3%83%83%E3%82%AF%E3%83%88%E3%83%BC%E3%83%90%E3%83%BC%E3%83%95%E3%82%A7%E3%82%B9%E3%83%88-%E3%81%8C%E9%96%8B%E5%82%AC%E4%B8%AD-af7e7e69ae9e">プログラマのためのお祭り、”ハックトーバーフェスト”が開催中！</a> Medium</li>
+</ul>
+<h3 id="texteditoride">[TextEditor/IDE]<a class="anchor" aria-hidden="true" href="#texteditoride"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<pre tabindex="0"><code>駆け出しエンジニアの時にお世話になった製品 m(_)m
+</code></pre><ul>
+<li><strong>Atom</strong> (GitHub社製 2023/5/4: ｻ終)
+<ul>
+<li>
+
+<div>
+    <div class="github-card" data-github="atom/" data-theme="default"></div>
+    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+</div>
+
+</li>
+<li><a href="https://atom-editor.cc/">https://atom-editor.cc/</a></li>
+</ul>
+</li>
+<li>Community
+<ul>
+<li><a href="https://atom-community.github.io/">https://atom-community.github.io/</a></li>
+<li><a href="https://github.com/atom-community">https://github.com/atom-community</a></li>
+</ul>
+</li>
+<li>cf.
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Atom_(text_editor)">Atom (text editor)</a> Wikipedia</li>
+<li><a href="https://qiita.com/spesnova/items/d3096d062d70e7385e9d">GitHub 製エディタ Atom リファレンス</a> Qiita</li>
+<li><a href="https://www.qbook.jp/column/1365.html">Atomエディタが開発終了へ！ 他のエディタに移行するならどれがオススメか？</a> Qbook</li>
+</ul>
+</li>
+</ul>
+<!--
+ -->
+<ul>
+<li><strong>Pulsar</strong> (融資が開発した<code>Atom</code>後継機)
+<ul>
+<li>
+
+<div>
+    <div class="github-card" data-github="pulsar-edit/" data-theme="default"></div>
+    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+</div>
+
+
+<ul>
+<li><a href="https://pulsar-edit.dev/">https://pulsar-edit.dev/</a></li>
+<li>Package <a href="https://github.com/pulsar-edit/ppm">https://github.com/pulsar-edit/ppm</a></li>
+<li>Install <code>$ brew install --cask pulsar</code></li>
+</ul>
+</li>
+<li>cf.
+<ul>
+<li><a href="https://zenn.dev/cacbahbj/articles/a753aaea7ad82b">Atom後継のPulsarを使う</a> Zenn</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!--
+ -->
+<ul>
+<li><strong>Codespaces</strong> (GitHub Online IDE?)
+<ul>
+<li><img src="https://github.githubassets.com/assets/illo-hero-ide-e7d1755f1083.png?width=998&amp;format=webpll" alt="img" loading="lazy" decoding="async">
+</li>
+<li><a href="https://github.com/features/codespaces">Secure development made simple</a></li>
+<li>IDE <a href="https://github.com/codespaces">https://github.com/codespaces</a></li>
+<li>cf. <a href="https://github.com/features">The tools you need to build what you want.</a> GitHub</li>
+</ul>
+</li>
+</ul>
+<h3 id="dangit-git処方箋">[Dangit, Git!?!（処方箋）]<a class="anchor" aria-hidden="true" href="#dangit-git処方箋"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+
+
+<div>
+    <div class="github-card" data-github="ksylor/ohshitgit" data-theme="default"></div>
+    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+</div>
+
+
+<ul>
+<li><a href="https://dangitgit.com/ja">https://dangitgit.com/ja</a></li>
+<li><a href="https://x.com/jalva_dev/status/1821742876080124039?s=46&amp;t=RSRnjQg5szbGQ19iUHwMlg">https://x.com/jalva_dev/status/1821742876080124039?s=46&amp;t=RSRnjQg5szbGQ19iUHwMlg</a></li>
+</ul>
+<h3 id="レシート">[🧾レシート]<a class="anchor" aria-hidden="true" href="#レシート"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p><a href="https://gitreceipt.vercel.app/">https://gitreceipt.vercel.app/</a></p>
+<h3 id="-mermaid">[🧜‍♀️ Mermaid]<a class="anchor" aria-hidden="true" href="#-mermaid"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p>README.md で図示したいときに！</p>
+<ul>
+<li>Official <a href="https://mermaid.js.org/">https://mermaid.js.org/</a></li>
+<li>Editor <a href="https://mermaid.live/edit">https://mermaid.live/edit</a></li>
+</ul>
+<p>cf.</p>
+<ul>
+<li><a href="https://zenn.dev/iharuoru/articles/630ae2e4d7230d">MermaidでAWSアーキテクチャ図を描いてみた！</a> Zenn</li>
+<li><a href="https://zenn.dev/yuriemori/articles/e097dbd950df86">mermaidでフローチャートを描く</a> Zenn</li>
+<li><a href="https://www.publickey1.jp/blog/22/githubmarkdownmermaid.html">GitHub、Markdown構文でフローチャートやクラス図、ガントチャートなどのダイアグラムを表示できる「Mermaid」をサポート開始</a></li>
+</ul>
+<h3 id="github-markdown">[GitHub Markdown]<a class="anchor" aria-hidden="true" href="#github-markdown"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p><a href="https://www.markdownguide.org/">https://www.markdownguide.org/</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">&gt; [!NOTE]
+</span></span><span class="line"><span class="cl">&gt; Highlights information that users should take into account, even when skimming.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&gt; [!TIP]
+</span></span><span class="line"><span class="cl">&gt; Optional information to help a user be more successful.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&gt; [!IMPORTANT]
+</span></span><span class="line"><span class="cl">&gt; Crucial information necessary for users to succeed.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&gt; [!WARNING]
+</span></span><span class="line"><span class="cl">&gt; Critical content demanding immediate user attention due to potential risks.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&gt; [!CAUTION]
+</span></span><span class="line"><span class="cl">&gt; Negative potential consequences of an action.
+</span></span></code></pre></div><p>cf.</p>
+<ul>
+<li><a href="https://docs.github.com/ja/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/about-writing-and-formatting-on-github">GitHub 上での執筆とフォーマットについて</a> GitHub Doc</li>
+<li><a href="https://github.com/orgs/community/discussions/16925">[Markdown] An option to highlight a &ldquo;Note&rdquo; and &ldquo;Warning&rdquo; using blockquote (Beta) #16925</a> GitHub Repo</li>
+<li><a href="https://qiita.com/Yarakashi_Kikohshi/items/e6802e08921388d8c6e9">GitHub.com の Markdown でアラート記法が増えた話</a> Qiita</li>
+</ul>
+<h3 id="gist">[Gist]<a class="anchor" aria-hidden="true" href="#gist"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<pre tabindex="0"><code>コードスニペット的な
+</code></pre><p>cf.</p>
+<ul>
+<li><a href="https://www.kagoya.jp/howto/it-glossary/develop/githubgist/">【入門】Github Gistとは？概要や基本的な使い方をわかりやすく解説</a></li>
+<li><a href="https://zenn.dev/npakk/articles/96da7b5ebb18c7">gistリポジトリに一発で移動したい</a> Zenn</li>
+</ul>
+<h3 id="github-アカウントお引越し">[GitHub] アカウントお引越し<a class="anchor" aria-hidden="true" href="#github-アカウントお引越し"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p>cf.</p>
+<ul>
+<li><a href="https://31navi.com/github-accounts-tougou">GitHubのアカウントを統合する</a></li>
+<li><a href="https://docs.github.com/ja/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-your-personal-account/managing-multiple-accounts">複数のアカウントの管理</a></li>
+<li><a href="https://docs.github.com/ja/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-your-personal-account/merging-multiple-personal-accounts">複数の個人アカウントのマージ</a></li>
+</ul>
+<h3 id="github-セキュリティ">[GitHub] セキュリティ<a class="anchor" aria-hidden="true" href="#github-セキュリティ"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p>cf.</p>
+<ul>
+<li><a href="https://zenn.dev/kou_pg_0131/articles/github-repo-access">GitHub の削除されたリポジトリや非公開のリポジトリに誰でもアクセスできるの？</a> Zenn</li>
+</ul>
+<h3 id="github-marketplace">[GitHub] Marketplace<a class="anchor" aria-hidden="true" href="#github-marketplace"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+
+<blockquote>
+    <p>Marketplaceとは
+:
+GitHub Marketplaceは、プロジェクト管理からコードレビューまで、開発プロセス全般で使えるツールを販売するウェブサイト。
+cf. <a href="https://japan.cnet.com/article/35101578/">https://japan.cnet.com/article/35101578/</a></p>
+
+</blockquote>
+
+<ul>
+<li>cf.
+<ul>
+<li><a href="https://github.com/marketplace">Marketplace</a></li>
+<li><a href="https://docs.github.com/ja/apps/github-marketplace/github-marketplace-overview/about-github-marketplace-for-apps">アプリの GitHub Marketplace について</a></li>
+<li><a href="https://qiita.com/KaitoMuraoka/items/daf28b31a8755b8022b4">自作GitHub ActionsをGitHub Marketplaceに公開する手順</a> Qiita</li>
+</ul>
+</li>
+</ul>
+<h3 id="github-url置き換えサービス">[GitHub] URL置き換えサービス<a class="anchor" aria-hidden="true" href="#github-url置き換えサービス"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p>GitDiagram</p>
+<ul>
+<li>
+
+<div>
+    <div class="github-card" data-github="ahmedkhaleel2004/gitdiagram" data-theme="default"></div>
+    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+</div>
+
+ <!-- https://github.com/ahmedkhaleel2004/gitdiagram --></li>
+<li><a href="https://gitdiagram.com/">https://gitdiagram.com/</a></li>
+<li>eg.
+<pre tabindex="0"><code>https://github.com/skills/hello-github-actions
+https://gitdiagram.com/skills/hello-github-actions
+</code></pre></li>
+</ul>
+<p>GitIngest</p>
+<ul>
+<li>
+
+<div>
+    <div class="github-card" data-github="coderamp-labs/gitingest" data-theme="default"></div>
+    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+</div>
+
+ <!-- https://github.com/coderamp-labs/gitingest --></li>
+<li><a href="https://gitingest.com/">https://gitingest.com/</a></li>
+<li>eg.
+<pre tabindex="0"><code>https://github.com/skills/hello-github-actions
+https://gitingest.com/skills/hello-github-actions
+</code></pre></li>
+</ul>
+<p>DeepWiki</p>
+<ul>
+<li><a href="https://devin.ai/">https://devin.ai/</a></li>
+<li><a href="https://deepwiki.org/">https://deepwiki.org/</a></li>
+<li>eg.
+<pre tabindex="0"><code>https://github.com/skills/hello-github-actions
+https://deepwiki.com/skills/hello-github-actions
+</code></pre></li>
+<li>個人開発でも同名の似たサービスがある
+<ul>
+<li>
+
+<div>
+    <div class="github-card" data-github="AsyncFuncAI/deepwiki-open" data-theme="default"></div>
+    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+</div>
+
+ <!--https://github.com/AsyncFuncAI/deepwiki-open--></li>
+<li>cf. <a href="https://zenn.dev/iwatagumi/articles/f1787a1221d010">話題のDeepWikiをセルフホスト？Open DeepWikiを試してみた</a> Zenn</li>
+</ul>
+</li>
+</ul>
+<p>Uithub</p>
+<ul>
+<li>ドキュメント自動生成</li>
+<li><a href="https://uithub.com/">https://uithub.com/</a></li>
+<li><a href="https://uithub.com/openapi.html">https://uithub.com/openapi.html</a></li>
+<li>eg.
+<pre tabindex="0"><code>https://github.com/skills/hello-github-actions
+https://uithub.com/skills/hello-github-actions
+</code></pre></li>
+</ul>
+</article>
+        </div>
+        </div>
+        </div>
+    </div>
+        
+        
+        
+    </div>
+    </div>
+</main>
+</div>
+
+<script type="application/javascript" src='https://kithub.f5.si/js/toc.js'></script>
+<link rel="stylesheet" href='https://kithub.f5.si/css/toc.css' />
+
+
+<script
+    src='https://kithub.f5.si/js/syntax-highlight-title.js'
+    crossorigin="anonymous"
+    type="application/javascript">
+</script>
+<link rel="stylesheet" href="../../css/syntax-highlight-title.css">
+
+
+
+
+
+
+
+<script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js" crossorigin="anonymous"></script>
+<script>
+
+
+(function () {
+    function transformMermaidCodeBlocks() {
+        var codeBlocks = document.querySelectorAll('pre > code.language-mermaid, code.language-mermaid');
+        codeBlocks.forEach(function (code) {
+            var pre = code.parentElement && code.parentElement.tagName.toLowerCase() === 'pre' ? code.parentElement : code;
+            var container = document.createElement('div');
+            container.className = 'mermaid';
+            container.textContent = code.textContent;
+            pre.replaceWith(container);
+        });
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', transformMermaidCodeBlocks);
+    } else {
+        transformMermaidCodeBlocks();
+    }
+    
+    if (window.mermaid) {
+        window.mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+    }
+})();
+</script>
+
+
+
+
+  
+
+  
+  
+<link rel="stylesheet" href='https://kithub.f5.si/css/giscus.css'>
+<div class="giscus"></div>
+<script>
+  (function () {
+    var origin = 'https://giscus.app';
+
+    function colorMode() {
+      return document.documentElement.getAttribute('data-color-mode') === 'dark' ? 'dark' : 'light';
+    }
+
+    
+    
+    var attrs = {
+      'data-repo': 'shiroimon\/todayilearned',
+      'data-repo-id': 'R_kgDOMSwknw',
+      'data-category': 'Announcements',
+      'data-category-id': 'DIC_kwDOMSwkn84DDAKW',
+      'data-mapping': 'pathname',
+      'data-strict': '0',
+      'data-reactions-enabled': '1',
+      'data-emit-metadata': '0',
+      'data-input-position': 'bottom',
+      'data-lang': 'ja',
+      'data-loading': 'lazy',
+      'data-theme': colorMode()
+    };
+
+    var s = document.createElement('script');
+    s.src = origin + '/client.js';
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    Object.keys(attrs).forEach(function (k) { s.setAttribute(k, attrs[k]); });
+    
+    document.querySelector('.giscus').appendChild(s);
+
+    
+    new MutationObserver(function () {
+      var frame = document.querySelector('iframe.giscus-frame');
+      if (frame) {
+        frame.contentWindow.postMessage({ giscus: { setConfig: { theme: colorMode() } } }, origin);
+      }
+    }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-color-mode'] });
+  })();
+</script>
+  
+
+
+</div>
+
+  <div class="footer container-xl width-full p-responsive">
+  <div
+    class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between flex-sm-items-center pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mr-lg-4" href="https://kithub.f5.si/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24">
+        <path fill-rule="evenodd"
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+        </path>
+      </svg>
+    </a>
+    <ul class="list-style-none d-flex flex-wrap col-12 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+      
+      <li class="mr-3 mr-lg-0">Theme by <a href='https://github.com/MeiK2333/github-style'>github-style</a></li>
+      
+      <li class="mr-3 mr-lg-0">GitHub and the Invertocat logo are trademarks of <a href="https://github.com/">GitHub, Inc.</a></li>
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+
+
+</div>
+
+</body>
+
+<script type="application/javascript" src="https://kithub.f5.si/js/github-style.js"></script>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+<script type="application/javascript" src='https://kithub.f5.si/js/search.js'></script>
+
+
+
+</html>

@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://kithub.f5.si/post/github_commit_history_rewriting/</loc>
+    <lastmod>2026-08-09T23:38:32+09:00</lastmod>
+  </url><url>
+    <loc>https://kithub.f5.si/categories/</loc>
+    <lastmod>2026-08-10T14:24:54+09:00</lastmod>
+  </url><url>
+    <loc>https://kithub.f5.si/tags/cli/</loc>
+    <lastmod>2026-08-09T23:38:32+09:00</lastmod>
+  </url><url>
+    <loc>https://kithub.f5.si/tags/git/</loc>
+    <lastmod>2026-08-09T23:38:32+09:00</lastmod>
+  </url><url>
+    <loc>https://kithub.f5.si/tags/github/</loc>
+    <lastmod>2026-08-10T14:24:54+09:00</lastmod>
+  </url><url>
+    <loc>https://kithub.f5.si/categories/know-how/</loc>
+    <lastmod>2026-08-10T14:24:54+09:00</lastmod>
+  </url><url>
+    <loc>https://kithub.f5.si/post/</loc>
+    <lastmod>2026-08-10T14:24:54+09:00</lastmod>
+  </url><url>
+    <loc>https://kithub.f5.si/tags/</loc>
+    <lastmod>2026-08-10T14:24:54+09:00</lastmod>
+  </url><url>
+    <loc>https://kithub.f5.si/</loc>
+    <lastmod>2026-08-10T14:24:54+09:00</lastmod>
+  </url><url>
     <loc>https://kithub.f5.si/post/mermaid_capabilities/</loc>
     <lastmod>2026-08-09T23:38:32+09:00</lastmod>
   </url><url>
@@ -17,74 +44,62 @@
     <loc>https://kithub.f5.si/tags/mermaid/</loc>
     <lastmod>2026-08-09T23:38:32+09:00</lastmod>
   </url><url>
-    <loc>https://kithub.f5.si/post/</loc>
-    <lastmod>2026-08-10T11:41:44+09:00</lastmod>
-  </url><url>
-    <loc>https://kithub.f5.si/tags/</loc>
-    <lastmod>2026-08-10T11:41:44+09:00</lastmod>
-  </url><url>
-    <loc>https://kithub.f5.si/</loc>
-    <lastmod>2026-08-10T11:41:44+09:00</lastmod>
-  </url><url>
     <loc>https://kithub.f5.si/post/data_engineering_fundamentals/</loc>
-    <lastmod>2026-08-09T23:38:32+09:00</lastmod>
+    <lastmod>2026-08-10T11:49:26+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/tags/caching/</loc>
-    <lastmod>2026-08-09T23:38:32+09:00</lastmod>
-  </url><url>
-    <loc>https://kithub.f5.si/categories/</loc>
-    <lastmod>2026-08-10T11:41:44+09:00</lastmod>
+    <lastmod>2026-08-10T11:49:26+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/tags/concurrency/</loc>
-    <lastmod>2026-08-09T23:38:32+09:00</lastmod>
+    <lastmod>2026-08-10T11:49:26+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/categories/data-engineer/</loc>
-    <lastmod>2026-08-09T23:38:32+09:00</lastmod>
+    <lastmod>2026-08-10T11:49:26+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/tags/dns/</loc>
-    <lastmod>2026-08-09T23:38:32+09:00</lastmod>
+    <lastmod>2026-08-10T11:49:26+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/tags/memory/</loc>
-    <lastmod>2026-08-09T23:38:32+09:00</lastmod>
+    <lastmod>2026-08-10T11:49:26+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/tags/tcp/ip/</loc>
-    <lastmod>2026-08-09T23:38:32+09:00</lastmod>
+    <lastmod>2026-08-10T11:49:26+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/post/claudecode_miscellaneous/</loc>
-    <lastmod>2026-08-10T11:41:44+09:00</lastmod>
+    <lastmod>2026-08-10T11:49:26+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/categories/ai/</loc>
-    <lastmod>2026-08-10T11:41:44+09:00</lastmod>
+    <lastmod>2026-08-10T11:49:26+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/tags/anthropic/</loc>
-    <lastmod>2026-08-10T11:41:44+09:00</lastmod>
+    <lastmod>2026-08-10T11:49:26+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/tags/claude-code/</loc>
-    <lastmod>2026-08-10T11:41:44+09:00</lastmod>
+    <lastmod>2026-08-10T11:49:26+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/tags/llm/</loc>
-    <lastmod>2026-08-10T11:41:44+09:00</lastmod>
+    <lastmod>2026-08-10T11:49:26+09:00</lastmod>
   </url><url>
-    <loc>https://kithub.f5.si/post/looker_this_and_that/</loc>
-    <lastmod>2026-08-09T23:38:32+09:00</lastmod>
+    <loc>https://kithub.f5.si/post/looker_miscellaneous/</loc>
+    <lastmod>2026-08-10T14:24:54+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/categories/bi/</loc>
-    <lastmod>2026-08-09T23:38:32+09:00</lastmod>
+    <lastmod>2026-08-10T14:24:54+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/categories/google/</loc>
-    <lastmod>2026-08-09T23:38:32+09:00</lastmod>
+    <lastmod>2026-08-10T14:24:54+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/tags/looker/</loc>
-    <lastmod>2026-08-09T23:38:32+09:00</lastmod>
+    <lastmod>2026-08-10T14:24:54+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/tags/lookml/</loc>
-    <lastmod>2026-08-09T23:38:32+09:00</lastmod>
+    <lastmod>2026-08-10T14:24:54+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/tags/sql/</loc>
-    <lastmod>2026-08-09T23:38:32+09:00</lastmod>
+    <lastmod>2026-08-10T14:24:54+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/tags/yaml/</loc>
-    <lastmod>2026-08-09T23:38:32+09:00</lastmod>
+    <lastmod>2026-08-10T14:24:54+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/post/google_app_script_setup/</loc>
     <lastmod>2026-08-09T23:38:32+09:00</lastmod>
@@ -107,20 +122,17 @@
     <loc>https://kithub.f5.si/tags/bigquery/</loc>
     <lastmod>2026-08-09T23:38:32+09:00</lastmod>
   </url><url>
-    <loc>https://kithub.f5.si/tags/cli/</loc>
-    <lastmod>2026-08-09T23:38:32+09:00</lastmod>
-  </url><url>
     <loc>https://kithub.f5.si/tags/google-cloud/</loc>
     <lastmod>2026-08-09T23:38:32+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/categories/infrastructure/</loc>
     <lastmod>2026-08-09T23:38:32+09:00</lastmod>
   </url><url>
-    <loc>https://kithub.f5.si/post/tableau_this_and_that/</loc>
-    <lastmod>2026-08-09T23:38:32+09:00</lastmod>
+    <loc>https://kithub.f5.si/post/tableau_miscellaneous/</loc>
+    <lastmod>2026-08-10T14:24:54+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/tags/tableau/</loc>
-    <lastmod>2026-08-09T23:38:32+09:00</lastmod>
+    <lastmod>2026-08-10T14:24:54+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/post/bigquery_about_various_data_transfer/</loc>
     <lastmod>2026-08-09T23:38:32+09:00</lastmod>
@@ -153,9 +165,6 @@
     <lastmod>2026-08-09T23:38:32+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/post/bigquery_data_analysis_on_preparation/</loc>
-    <lastmod>2026-08-09T23:38:32+09:00</lastmod>
-  </url><url>
-    <loc>https://kithub.f5.si/categories/know-how/</loc>
     <lastmod>2026-08-09T23:38:32+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/post/terraform_catchup/</loc>
@@ -213,9 +222,6 @@
     <lastmod>2026-08-09T23:38:32+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/post/github_oss_wana_be_join/</loc>
-    <lastmod>2026-08-09T23:38:32+09:00</lastmod>
-  </url><url>
-    <loc>https://kithub.f5.si/tags/github/</loc>
     <lastmod>2026-08-09T23:38:32+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/tags/oss/</loc>
@@ -279,9 +285,6 @@
     <lastmod>2026-04-10T19:14:55+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/post/github_branches_pruning/</loc>
-    <lastmod>2026-03-20T18:03:13+09:00</lastmod>
-  </url><url>
-    <loc>https://kithub.f5.si/tags/git/</loc>
     <lastmod>2026-03-20T18:03:13+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/post/vim_building_plugin/</loc>
@@ -377,8 +380,8 @@
     <loc>https://kithub.f5.si/tags/gke/</loc>
     <lastmod>2025-09-07T03:25:03+09:00</lastmod>
   </url><url>
-    <loc>https://kithub.f5.si/post/github_this_and_that/</loc>
-    <lastmod>2025-07-30T20:10:57+09:00</lastmod>
+    <loc>https://kithub.f5.si/post/github_miscellaneous/</loc>
+    <lastmod>2026-08-10T14:24:54+09:00</lastmod>
   </url><url>
     <loc>https://kithub.f5.si/post/slack_writing_etiquette/</loc>
     <lastmod>2026-08-09T23:38:32+09:00</lastmod>
