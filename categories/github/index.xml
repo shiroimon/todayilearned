@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>GitHub on Today I Learned | KitHub</title>
+		<link>https://kithub.f5.si/categories/github/</link>
+		<description>Recent content in GitHub on Today I Learned | KitHub</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 16 Aug 2026 01:39:46 +0900</lastBuildDate>
+		
+			<atom:link href="https://kithub.f5.si/categories/github/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>[Git] Commit History Rewriting</title>
+				<link>https://kithub.f5.si/post/github_commit_history_rewriting/</link>
+				<pubDate>Sun, 09 Aug 2026 17:20:00 +0900</pubDate>
+				<guid>https://kithub.f5.si/post/github_commit_history_rewriting/</guid>
+				<description>📍 積んでしまったコミット履歴を後から整える手札のまとめ。&lt;code&gt;--amend&lt;/code&gt; / &lt;code&gt;--fixup&lt;/code&gt; + &lt;code&gt;rebase --autosquash&lt;/code&gt; / &lt;code&gt;rebase -i&lt;/code&gt; の squash を、いつ使うか・事故ったらどう戻すかまで含めて整理する。</description>
+			</item>
+			<item>
+				<title>[GitHub] Wana be join OSS</title>
+				<link>https://kithub.f5.si/post/github_oss_wana_be_join/</link>
+				<pubDate>Thu, 21 Nov 2024 12:06:08 +0900</pubDate>
+				<guid>https://kithub.f5.si/post/github_oss_wana_be_join/</guid>
+				<description>📍 About etiquette and the meaning of licenses when paticipating in OSS.</description>
+			</item>
+			<item>
+				<title>[Git] Branches pruning</title>
+				<link>https://kithub.f5.si/post/github_branches_pruning/</link>
+				<pubDate>Tue, 24 Sep 2024 18:08:08 +0900</pubDate>
+				<guid>https://kithub.f5.si/post/github_branches_pruning/</guid>
+				<description>📍When developing on GitHub, I often switch branches, just like pruning.</description>
+			</item>
+			<item>
+				<title>[GitHub] Miscellaneous</title>
+				<link>https://kithub.f5.si/post/github_miscellaneous/</link>
+				<pubDate>Wed, 24 Jul 2024 15:08:13 +0900</pubDate>
+				<guid>https://kithub.f5.si/post/github_miscellaneous/</guid>
+				<description>📍 Various things to make your GitHub life more enjoyable.</description>
+			</item>
+	</channel>
+</rss>

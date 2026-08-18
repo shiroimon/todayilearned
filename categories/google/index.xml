@@ -105,11 +105,25 @@
 				<description>🔍 Summarize billing mechanism, fee structure, and money-saving tips.</description>
 			</item>
 			<item>
+				<title>[macOS] Looks like native application</title>
+				<link>https://kithub.f5.si/post/other/macos_looks_like_native_application/</link>
+				<pubDate>Sat, 03 Aug 2024 16:04:18 +0900</pubDate>
+				<guid>https://kithub.f5.si/post/other/macos_looks_like_native_application/</guid>
+				<description>🍏 A little trick to use it like a native laptop application.</description>
+			</item>
+			<item>
 				<title>[BigQuery] Structured data processing 100&#39;s</title>
 				<link>https://kithub.f5.si/post/bigquery_structured_data_processing_100/</link>
 				<pubDate>Fri, 26 Jul 2024 04:23:38 +0900</pubDate>
 				<guid>https://kithub.f5.si/post/bigquery_structured_data_processing_100/</guid>
 				<description>🔍 Tried using SQL to learn the basics of data science.</description>
+			</item>
+			<item>
+				<title>[Terraform] Trying to build the environment</title>
+				<link>https://kithub.f5.si/post/terraform_trying_to_build_the_environment/</link>
+				<pubDate>Fri, 26 Jul 2024 03:42:04 +0900</pubDate>
+				<guid>https://kithub.f5.si/post/terraform_trying_to_build_the_environment/</guid>
+				<description>✝️ I wll try setting up an environment to gain an initial understanding of IaC (Infrastructure as Code) provisioning.</description>
 			</item>
 			<item>
 				<title>[BigQuery] CTEs in data analyisis</title>
