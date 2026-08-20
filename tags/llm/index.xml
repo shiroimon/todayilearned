@@ -14,6 +14,13 @@
 		
 			<atom:link href="https://kithub.f5.si/tags/llm/index.xml" rel="self" type="application/rss+xml" />
 			<item>
+				<title>[Claude Code] Code Review Boundary &lt;AIと人間の境界&gt;</title>
+				<link>https://kithub.f5.si/post/claudecode_code_review_boundary/</link>
+				<pubDate>Wed, 19 Aug 2026 18:00:00 +0900</pubDate>
+				<guid>https://kithub.f5.si/post/claudecode_code_review_boundary/</guid>
+				<description>💥 コードレビューをどこまでAIに任せてどこから人間が持つかを分解して線引き。「コードを読まないでどう責任を持つのか」への答えも。</description>
+			</item>
+			<item>
 				<title>[Claude Code] Miscellaneous &lt;雑記&gt;</title>
 				<link>https://kithub.f5.si/post/claudecode_miscellaneous/</link>
 				<pubDate>Wed, 07 Jan 2026 11:56:35 +0900</pubDate>

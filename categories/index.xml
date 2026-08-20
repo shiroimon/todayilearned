@@ -10,14 +10,21 @@
 		
 		
 		
-			<lastBuildDate>Mon, 17 Aug 2026 10:30:00 +0900</lastBuildDate>
+			<lastBuildDate>Tue, 18 Aug 2026 17:05:30 +0900</lastBuildDate>
 		
 			<atom:link href="https://kithub.f5.si/categories/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>Freelance</title>
-				<link>https://kithub.f5.si/categories/freelance/</link>
-				<pubDate>Mon, 17 Aug 2026 10:30:00 +0900</pubDate>
-				<guid>https://kithub.f5.si/categories/freelance/</guid>
+				<title>AI</title>
+				<link>https://kithub.f5.si/categories/ai/</link>
+				<pubDate>Wed, 19 Aug 2026 18:00:00 +0900</pubDate>
+				<guid>https://kithub.f5.si/categories/ai/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Dev</title>
+				<link>https://kithub.f5.si/categories/dev/</link>
+				<pubDate>Wed, 19 Aug 2026 18:00:00 +0900</pubDate>
+				<guid>https://kithub.f5.si/categories/dev/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -28,17 +35,24 @@
 				<description></description>
 			</item>
 			<item>
-				<title>Dev</title>
-				<link>https://kithub.f5.si/categories/dev/</link>
-				<pubDate>Fri, 19 Jun 2026 23:32:44 +0900</pubDate>
-				<guid>https://kithub.f5.si/categories/dev/</guid>
+				<title>Data Engineer</title>
+				<link>https://kithub.f5.si/categories/data-engineer/</link>
+				<pubDate>Sun, 09 Aug 2026 16:29:55 +0900</pubDate>
+				<guid>https://kithub.f5.si/categories/data-engineer/</guid>
 				<description></description>
 			</item>
 			<item>
-				<title>Data Engineer</title>
-				<link>https://kithub.f5.si/categories/data-engineer/</link>
-				<pubDate>Fri, 12 Jun 2026 17:30:29 +0900</pubDate>
-				<guid>https://kithub.f5.si/categories/data-engineer/</guid>
+				<title>Google</title>
+				<link>https://kithub.f5.si/categories/google/</link>
+				<pubDate>Sun, 09 Aug 2026 16:29:55 +0900</pubDate>
+				<guid>https://kithub.f5.si/categories/google/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Freelance</title>
+				<link>https://kithub.f5.si/categories/freelance/</link>
+				<pubDate>Fri, 17 Jul 2026 10:30:00 +0900</pubDate>
+				<guid>https://kithub.f5.si/categories/freelance/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -49,24 +63,10 @@
 				<description></description>
 			</item>
 			<item>
-				<title>AI</title>
-				<link>https://kithub.f5.si/categories/ai/</link>
-				<pubDate>Wed, 07 Jan 2026 11:56:35 +0900</pubDate>
-				<guid>https://kithub.f5.si/categories/ai/</guid>
-				<description></description>
-			</item>
-			<item>
 				<title>BI</title>
 				<link>https://kithub.f5.si/categories/bi/</link>
 				<pubDate>Tue, 02 Dec 2025 16:39:00 +0900</pubDate>
 				<guid>https://kithub.f5.si/categories/bi/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Google</title>
-				<link>https://kithub.f5.si/categories/google/</link>
-				<pubDate>Tue, 02 Dec 2025 16:39:00 +0900</pubDate>
-				<guid>https://kithub.f5.si/categories/google/</guid>
 				<description></description>
 			</item>
 			<item>

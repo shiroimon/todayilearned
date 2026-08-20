@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Sun, 09 Aug 2026 23:38:32 +0900</lastBuildDate>
+			<lastBuildDate>Tue, 18 Aug 2026 17:05:30 +0900</lastBuildDate>
 		
 			<atom:link href="https://kithub.f5.si/tags/dbt/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>[Data Governance] Personal Data Taxonomy &lt;個人情報 / 仮名加工情報 / 匿名加工情報 / 統計情報&gt;</title>
+				<link>https://kithub.f5.si/post/data_governance_personal_data_taxonomy/</link>
+				<pubDate>Sun, 09 Aug 2026 16:29:55 +0900</pubDate>
+				<guid>https://kithub.f5.si/post/data_governance_personal_data_taxonomy/</guid>
+				<description>🔐 データ基盤で毎回迷う「このテーブル出していいの？」を、個人情報保護法の4つの箱で切り分ける。</description>
+			</item>
 			<item>
 				<title>[BigQuery] (Various) Data Transfer</title>
 				<link>https://kithub.f5.si/post/bigquery_about_various_data_transfer/</link>

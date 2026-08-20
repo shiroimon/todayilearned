@@ -10,7 +10,7 @@
 		
 		
 		
-			<lastBuildDate>Sun, 09 Aug 2026 23:38:32 +0900</lastBuildDate>
+			<lastBuildDate>Tue, 18 Aug 2026 17:05:30 +0900</lastBuildDate>
 		
 			<atom:link href="https://kithub.f5.si/tags/vim/index.xml" rel="self" type="application/rss+xml" />
 			<item>
@@ -19,13 +19,6 @@
 				<pubDate>Thu, 26 Dec 2024 21:27:07 +0900</pubDate>
 				<guid>https://kithub.f5.si/post/vim_csv_control/</guid>
 				<description>✅ God&amp;rsquo;s tool that lets you edit CSVs like Excel in Vim.</description>
-			</item>
-			<item>
-				<title>[Vim] Building plugin</title>
-				<link>https://kithub.f5.si/post/vim_building_plugin/</link>
-				<pubDate>Wed, 11 Sep 2024 19:39:49 +0900</pubDate>
-				<guid>https://kithub.f5.si/post/vim_building_plugin/</guid>
-				<description>✅ Once I gain a deeper understanding, what may be able to develop general-purpose automated tools.</description>
 			</item>
 			<item>
 				<title>[Vim] Commands memorandum</title>

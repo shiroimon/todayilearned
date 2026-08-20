@@ -10,7 +10,7 @@
 		
 		
 		
-			<lastBuildDate>Sun, 16 Aug 2026 01:39:46 +0900</lastBuildDate>
+			<lastBuildDate>Tue, 18 Aug 2026 17:05:30 +0900</lastBuildDate>
 		
 			<atom:link href="https://kithub.f5.si/tags/cli/index.xml" rel="self" type="application/rss+xml" />
 			<item>
@@ -54,13 +54,6 @@
 				<pubDate>Tue, 24 Sep 2024 18:08:08 +0900</pubDate>
 				<guid>https://kithub.f5.si/post/github_branches_pruning/</guid>
 				<description>📍When developing on GitHub, I often switch branches, just like pruning.</description>
-			</item>
-			<item>
-				<title>[Vim] Building plugin</title>
-				<link>https://kithub.f5.si/post/vim_building_plugin/</link>
-				<pubDate>Wed, 11 Sep 2024 19:39:49 +0900</pubDate>
-				<guid>https://kithub.f5.si/post/vim_building_plugin/</guid>
-				<description>✅ Once I gain a deeper understanding, what may be able to develop general-purpose automated tools.</description>
 			</item>
 			<item>
 				<title>[Docker] Commands memorandum</title>

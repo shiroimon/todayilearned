@@ -10,15 +10,15 @@
 		
 		
 		
-			<lastBuildDate>Mon, 17 Aug 2026 10:30:00 +0900</lastBuildDate>
+			<lastBuildDate>Tue, 18 Aug 2026 17:05:30 +0900</lastBuildDate>
 		
 			<atom:link href="https://kithub.f5.si/post/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>[Freelance] Employment vs Sole Proprietorship &lt;制度比較差&gt;</title>
-				<link>https://kithub.f5.si/post/other/freelance_vs_employment_memorandum/</link>
-				<pubDate>Mon, 17 Aug 2026 10:30:00 +0900</pubDate>
-				<guid>https://kithub.f5.si/post/other/freelance_vs_employment_memorandum/</guid>
-				<description>⚖️ 🏛️ 社会保険・税・労働法まわりが正社員と個人事業主でどう変わるかを表で並べた</description>
+				<title>[Claude Code] Code Review Boundary &lt;AIと人間の境界&gt;</title>
+				<link>https://kithub.f5.si/post/claudecode_code_review_boundary/</link>
+				<pubDate>Wed, 19 Aug 2026 18:00:00 +0900</pubDate>
+				<guid>https://kithub.f5.si/post/claudecode_code_review_boundary/</guid>
+				<description>💥 コードレビューをどこまでAIに任せてどこから人間が持つかを分解して線引き。「コードを読まないでどう責任を持つのか」への答えも。</description>
 			</item>
 			<item>
 				<title>[Git] Commit History Rewriting</title>
@@ -26,6 +26,20 @@
 				<pubDate>Sun, 09 Aug 2026 17:20:00 +0900</pubDate>
 				<guid>https://kithub.f5.si/post/github_commit_history_rewriting/</guid>
 				<description>📍 積んでしまったコミット履歴を後から整える手札のまとめ。&lt;code&gt;--amend&lt;/code&gt; / &lt;code&gt;--fixup&lt;/code&gt; + &lt;code&gt;rebase --autosquash&lt;/code&gt; / &lt;code&gt;rebase -i&lt;/code&gt; の squash を、いつ使うか・事故ったらどう戻すかまで含めて整理する。</description>
+			</item>
+			<item>
+				<title>[Data Governance] Personal Data Taxonomy &lt;個人情報 / 仮名加工情報 / 匿名加工情報 / 統計情報&gt;</title>
+				<link>https://kithub.f5.si/post/data_governance_personal_data_taxonomy/</link>
+				<pubDate>Sun, 09 Aug 2026 16:29:55 +0900</pubDate>
+				<guid>https://kithub.f5.si/post/data_governance_personal_data_taxonomy/</guid>
+				<description>🔐 データ基盤で毎回迷う「このテーブル出していいの？」を、個人情報保護法の4つの箱で切り分ける。</description>
+			</item>
+			<item>
+				<title>[Freelance] Employment vs Sole Proprietorship &lt;制度比較差&gt;</title>
+				<link>https://kithub.f5.si/post/other/freelance_vs_employment_memorandum/</link>
+				<pubDate>Fri, 17 Jul 2026 10:30:00 +0900</pubDate>
+				<guid>https://kithub.f5.si/post/other/freelance_vs_employment_memorandum/</guid>
+				<description>⚖️  社会保険・税・労働法まわりが正社員と個人事業主でどう変わるかを表で並べた</description>
 			</item>
 			<item>
 				<title>[Mermaid] Capabilities Cheatsheet</title>
@@ -215,13 +229,6 @@
 				<pubDate>Tue, 24 Sep 2024 18:08:08 +0900</pubDate>
 				<guid>https://kithub.f5.si/post/github_branches_pruning/</guid>
 				<description>📍When developing on GitHub, I often switch branches, just like pruning.</description>
-			</item>
-			<item>
-				<title>[Vim] Building plugin</title>
-				<link>https://kithub.f5.si/post/vim_building_plugin/</link>
-				<pubDate>Wed, 11 Sep 2024 19:39:49 +0900</pubDate>
-				<guid>https://kithub.f5.si/post/vim_building_plugin/</guid>
-				<description>✅ Once I gain a deeper understanding, what may be able to develop general-purpose automated tools.</description>
 			</item>
 			<item>
 				<title>[Argo Workflows] Catchup</title>

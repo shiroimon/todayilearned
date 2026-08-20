@@ -10,9 +10,37 @@
 		
 		
 		
-			<lastBuildDate>Sun, 16 Aug 2026 01:39:46 +0900</lastBuildDate>
+			<lastBuildDate>Tue, 18 Aug 2026 17:05:30 +0900</lastBuildDate>
 		
 			<atom:link href="https://kithub.f5.si/tags/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Anthropic</title>
+				<link>https://kithub.f5.si/tags/anthropic/</link>
+				<pubDate>Wed, 19 Aug 2026 18:00:00 +0900</pubDate>
+				<guid>https://kithub.f5.si/tags/anthropic/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Claude Code</title>
+				<link>https://kithub.f5.si/tags/claude-code/</link>
+				<pubDate>Wed, 19 Aug 2026 18:00:00 +0900</pubDate>
+				<guid>https://kithub.f5.si/tags/claude-code/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>LLM</title>
+				<link>https://kithub.f5.si/tags/llm/</link>
+				<pubDate>Wed, 19 Aug 2026 18:00:00 +0900</pubDate>
+				<guid>https://kithub.f5.si/tags/llm/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Review</title>
+				<link>https://kithub.f5.si/tags/review/</link>
+				<pubDate>Wed, 19 Aug 2026 18:00:00 +0900</pubDate>
+				<guid>https://kithub.f5.si/tags/review/</guid>
+				<description></description>
+			</item>
 			<item>
 				<title>CLI</title>
 				<link>https://kithub.f5.si/tags/cli/</link>
@@ -32,6 +60,34 @@
 				<link>https://kithub.f5.si/tags/github/</link>
 				<pubDate>Sun, 09 Aug 2026 17:20:00 +0900</pubDate>
 				<guid>https://kithub.f5.si/tags/github/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>BigQuery</title>
+				<link>https://kithub.f5.si/tags/bigquery/</link>
+				<pubDate>Sun, 09 Aug 2026 16:29:55 +0900</pubDate>
+				<guid>https://kithub.f5.si/tags/bigquery/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Dataform</title>
+				<link>https://kithub.f5.si/tags/dataform/</link>
+				<pubDate>Sun, 09 Aug 2026 16:29:55 +0900</pubDate>
+				<guid>https://kithub.f5.si/tags/dataform/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Dbt</title>
+				<link>https://kithub.f5.si/tags/dbt/</link>
+				<pubDate>Sun, 09 Aug 2026 16:29:55 +0900</pubDate>
+				<guid>https://kithub.f5.si/tags/dbt/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Google Cloud</title>
+				<link>https://kithub.f5.si/tags/google-cloud/</link>
+				<pubDate>Sun, 09 Aug 2026 16:29:55 +0900</pubDate>
+				<guid>https://kithub.f5.si/tags/google-cloud/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -98,27 +154,6 @@
 				<description></description>
 			</item>
 			<item>
-				<title>Anthropic</title>
-				<link>https://kithub.f5.si/tags/anthropic/</link>
-				<pubDate>Wed, 07 Jan 2026 11:56:35 +0900</pubDate>
-				<guid>https://kithub.f5.si/tags/anthropic/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Claude Code</title>
-				<link>https://kithub.f5.si/tags/claude-code/</link>
-				<pubDate>Wed, 07 Jan 2026 11:56:35 +0900</pubDate>
-				<guid>https://kithub.f5.si/tags/claude-code/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>LLM</title>
-				<link>https://kithub.f5.si/tags/llm/</link>
-				<pubDate>Wed, 07 Jan 2026 11:56:35 +0900</pubDate>
-				<guid>https://kithub.f5.si/tags/llm/</guid>
-				<description></description>
-			</item>
-			<item>
 				<title>Looker</title>
 				<link>https://kithub.f5.si/tags/looker/</link>
 				<pubDate>Tue, 02 Dec 2025 16:39:00 +0900</pubDate>
@@ -168,20 +203,6 @@
 				<description></description>
 			</item>
 			<item>
-				<title>BigQuery</title>
-				<link>https://kithub.f5.si/tags/bigquery/</link>
-				<pubDate>Mon, 01 Sep 2025 21:43:34 +0900</pubDate>
-				<guid>https://kithub.f5.si/tags/bigquery/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Google Cloud</title>
-				<link>https://kithub.f5.si/tags/google-cloud/</link>
-				<pubDate>Mon, 01 Sep 2025 21:43:34 +0900</pubDate>
-				<guid>https://kithub.f5.si/tags/google-cloud/</guid>
-				<description></description>
-			</item>
-			<item>
 				<title>Tableau</title>
 				<link>https://kithub.f5.si/tags/tableau/</link>
 				<pubDate>Mon, 02 Jun 2025 14:46:08 +0900</pubDate>
@@ -193,13 +214,6 @@
 				<link>https://kithub.f5.si/tags/datalake/</link>
 				<pubDate>Thu, 03 Apr 2025 11:11:44 +0900</pubDate>
 				<guid>https://kithub.f5.si/tags/datalake/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Dbt</title>
-				<link>https://kithub.f5.si/tags/dbt/</link>
-				<pubDate>Thu, 03 Apr 2025 11:11:44 +0900</pubDate>
-				<guid>https://kithub.f5.si/tags/dbt/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -375,13 +389,6 @@
 				<link>https://kithub.f5.si/tags/unix/</link>
 				<pubDate>Mon, 30 Sep 2024 23:28:04 +0900</pubDate>
 				<guid>https://kithub.f5.si/tags/unix/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Vim Script</title>
-				<link>https://kithub.f5.si/tags/vim-script/</link>
-				<pubDate>Wed, 11 Sep 2024 19:39:49 +0900</pubDate>
-				<guid>https://kithub.f5.si/tags/vim-script/</guid>
 				<description></description>
 			</item>
 			<item>

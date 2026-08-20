@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Sun, 09 Aug 2026 23:38:32 +0900</lastBuildDate>
+			<lastBuildDate>Tue, 18 Aug 2026 17:05:30 +0900</lastBuildDate>
 		
 			<atom:link href="https://kithub.f5.si/categories/dev/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>[Claude Code] Code Review Boundary &lt;AIと人間の境界&gt;</title>
+				<link>https://kithub.f5.si/post/claudecode_code_review_boundary/</link>
+				<pubDate>Wed, 19 Aug 2026 18:00:00 +0900</pubDate>
+				<guid>https://kithub.f5.si/post/claudecode_code_review_boundary/</guid>
+				<description>💥 コードレビューをどこまでAIに任せてどこから人間が持つかを分解して線引き。「コードを読まないでどう責任を持つのか」への答えも。</description>
+			</item>
 			<item>
 				<title>[Mermaid] Capabilities Cheatsheet</title>
 				<link>https://kithub.f5.si/post/mermaid_capabilities/</link>
@@ -54,13 +61,6 @@
 				<pubDate>Thu, 24 Oct 2024 10:40:32 +0900</pubDate>
 				<guid>https://kithub.f5.si/post/wezterm_setup/</guid>
 				<description>🟣 Would like to use the most powerful terminal that rumored on the street.</description>
-			</item>
-			<item>
-				<title>[Vim] Building plugin</title>
-				<link>https://kithub.f5.si/post/vim_building_plugin/</link>
-				<pubDate>Wed, 11 Sep 2024 19:39:49 +0900</pubDate>
-				<guid>https://kithub.f5.si/post/vim_building_plugin/</guid>
-				<description>✅ Once I gain a deeper understanding, what may be able to develop general-purpose automated tools.</description>
 			</item>
 			<item>
 				<title>[Vim] Commands memorandum</title>
