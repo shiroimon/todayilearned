@@ -249,7 +249,7 @@ if ('serviceWorker' in navigator) {
                     <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list"></div>
                 </div>
             </details-menu>
-            2411 Words
+            4289 Words
             <span class="path-divider">|</span>
             2 min
             </div>
@@ -323,7 +323,15 @@ if ('serviceWorker' in navigator) {
 
 <img src="https://img.shields.io/badge/-ClaudeCode-D97757.svg?logo=claude&amp;style=flat&amp;color=F0F8FF&amp;logoColor=D97757" alt="ClaudeCode" loading="lazy" decoding="async">
 </p>
-<h2 id="why">Why<a class="anchor" aria-hidden="true" href="#why"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>こんな環境でのお話し。<code>/code-review</code> の引数は版でわりと変わるので、ここを固定しておく。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ sw_vers
+</span></span><span class="line"><span class="cl">ProductName:            macOS
+</span></span><span class="line"><span class="cl">ProductVersion:         26.6.2
+</span></span><span class="line"><span class="cl">BuildVersion:           25G83
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ claude --version
+</span></span><span class="line"><span class="cl">2.1.231 <span class="o">(</span>Claude Code<span class="o">)</span>
+</span></span></code></pre></div><h2 id="why">Why<a class="anchor" aria-hidden="true" href="#why"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
 <p><code>SSIA</code></p>
 <p>コードを書く速度が上がった結果、<strong>ボトルネックがレビューに移った</strong>。。</p>
 <p>そして、レビューにも AI を入れると今度は別の違和感が出てくる。<br>
@@ -457,9 +465,13 @@ if ('serviceWorker' in navigator) {
 </span></span><span class="line"><span class="cl">&gt; このPRをレビューして。指摘には必ず
 </span></span><span class="line"><span class="cl">&gt;   <span class="o">(</span>1<span class="o">)</span> 該当ファイル:行番号
 </span></span><span class="line"><span class="cl">&gt;   <span class="o">(</span>2<span class="o">)</span> その入力・状態だと何が壊れるかの具体的なシナリオ
+</span></span><span class="line"><span class="cl">&gt;   <span class="o">(</span>3<span class="o">)</span> blocker / nit のどちらか
 </span></span><span class="line"><span class="cl">&gt; を付けること。再現シナリオを書けない指摘は出さないでよい。
 </span></span></code></pre></div><p>「具体的な失敗シナリオを書け」という制約は、<strong>もっともらしいが誤りな指摘（plausible-but-wrong）を落とす</strong>のに効く。
 書けないということは、その指摘は成立していない。</p>
+<p>(3) を足しているのは、<strong>深刻度（直すべきか）と確度（本当に問題か）が別の軸</strong>だから。
+後述の <code>high</code> 以上は確度の低い指摘まで拾ってくるが、それは「軽い指摘」という意味ではない。
+分けて書かせないと、<strong>blocker が nit の山に埋まる</strong>。</p>
 <h4 id="価値の置き場所が変わる">価値の置き場所が変わる<a class="anchor" aria-hidden="true" href="#価値の置き場所が変わる"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
 <p>コードを書く力そのものの希少性は下がった。
 残る価値は、<strong>課題を分解し、検証可能な形に落とし、成果まで持っていく総合力</strong>の側にある。</p>
@@ -504,11 +516,89 @@ if ('serviceWorker' in navigator) {
 </table>
 <p>実装者本人と同じセッションでレビューさせると 1 が崩れる。
 <strong>書かせたセッションと、レビューさせるセッションは分ける</strong>。</p>
-<h3 id="3-自前レビュースキルは畳んだ">3. 自前レビュースキルは畳んだ<a class="anchor" aria-hidden="true" href="#3-自前レビュースキルは畳んだ"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<h3 id="3-自前レビュースキルは畳んで-code-review-に寄せた">3. 自前レビュースキルは畳んで <code>/code-review</code> に寄せた<a class="anchor" aria-hidden="true" href="#3-自前レビュースキルは畳んで-code-review-に寄せた"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<div class="zenn-embed-wrapper" style="margin: 1em 0;">
+  <iframe id="zenn-embedded__6d526f8aedecb"
+          class="zenn-embed"
+          src="https://embed.zenn.studio/card#zenn-embedded__6d526f8aedecb"
+          data-content="https%3A%2F%2Fzenn.dev%2Ftmasuyama1114%2Farticles%2Fclaude_code_code_review_guide"
+          title="Zenn: https://zenn.dev/tmasuyama1114/articles/claude_code_code_review_guide"
+          width="100%" height="180"
+          frameborder="0" scrolling="no"
+          loading="lazy"></iframe>
+</div>
 <p>一時期、レビュー用のスキルやコマンドを何本も自作していたが、<strong>ほとんどをアーカイブした</strong>。</p>
 <p>理由は単純で、ビルトインのレビュー機能が育ち、自前のものは
 「メンテしていない古いプロンプト」になっていたから。
 使われないルールが残っていると、<strong>生きているルールの相対的な重みが下がる</strong>（<code>CLAUDE.md</code> と同じ話）。</p>
+<h4 id="どこまで探すかがプロンプトから引数に移った">「どこまで探すか」がプロンプトから引数に移った<a class="anchor" aria-hidden="true" href="#どこまで探すかがプロンプトから引数に移った"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">/code-review <span class="o">[</span>low<span class="p">|</span>medium<span class="p">|</span>high<span class="p">|</span>xhigh<span class="p">|</span>max<span class="p">|</span>ultra<span class="o">]</span> <span class="o">[</span>--fix<span class="o">]</span> <span class="o">[</span>--comment<span class="o">]</span> <span class="o">[</span>&lt;pr#&gt;<span class="p">|</span>&lt;branch&gt;<span class="p">|</span>&lt;path&gt;<span class="o">]</span>
+</span></span></code></pre></div><table>
+	<thead>
+			<tr>
+					<th>引数</th>
+					<th>効くところ</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>low</code> / <code>medium</code></td>
+					<td>確度の高い指摘を少数だけ。日常の差分はこれで足りる</td>
+			</tr>
+			<tr>
+					<td><code>high</code> 〜 <code>max</code></td>
+					<td>網を広げる。<strong>不確実な指摘が混ざる前提</strong>で受け取る</td>
+			</tr>
+			<tr>
+					<td><code>ultra</code></td>
+					<td>クラウドでの多エージェントレビュー（claude.ai のアカウントが要る）</td>
+			</tr>
+			<tr>
+					<td></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td><code>--comment</code></td>
+					<td>指摘を PR のインラインコメントとして投稿</td>
+			</tr>
+			<tr>
+					<td><code>--fix</code></td>
+					<td>レビュー後、指摘を作業ツリーに適用</td>
+			</tr>
+			<tr>
+					<td><code>&lt;pr#&gt;</code> / <code>&lt;branch&gt;</code> / <code>&lt;path&gt;</code></td>
+					<td>対象の指定。無指定なら現在の diff</td>
+			</tr>
+	</tbody>
+</table>
+<p>自作スキルが勝てなくなったのはここ。<br>
+自然文で「重めに見て」「軽くでいい」と伝えている限り、<strong>同じ言葉が毎回同じ深さにならない</strong>。
+段階が引数になっていれば、少なくとも再現する。</p>
+
+<div class="markdown-alert markdown-alert-note">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>
+        Note
+        
+    </p>
+    <p>レベルを省略すると <strong>前回打ったレベルを再利用する</strong>。
+「low のつもりが max が走る」が起きるので、効きを比べたい時は毎回明示する。</p>
+</div>
+
+
+<div class="markdown-alert markdown-alert-warning">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>
+        Warning
+        
+    </p>
+    <p><code>--fix</code> は作業ツリーに直接当たる。<strong>コミット済みの状態から打つ</strong>こと。
+レビューの指摘と自分の未コミット編集が混ざると、どちらが誰の変更か diff から読めなくなる。</p>
+</div>
+
+<h4 id="それでも残したもの">それでも残したもの<a class="anchor" aria-hidden="true" href="#それでも残したもの"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
 <p>今残しているのは、<strong>ビルトインで代替できないもの</strong>だけ。</p>
 <table>
 	<thead>
@@ -519,12 +609,12 @@ if ('serviceWorker' in navigator) {
 	</thead>
 	<tbody>
 			<tr>
-					<td>ビルトインのレビュー</td>
+					<td><code>/code-review</code></td>
 					<td>通常の diff レビュー。デフォルトはこれ</td>
 			</tr>
 			<tr>
-					<td>ビルトインのセキュリティレビュー</td>
-					<td>脆弱性観点の専用パス</td>
+					<td><code>/security-review</code></td>
+					<td>現ブランチの未マージ変更に対する脆弱性観点の専用パス</td>
 			</tr>
 			<tr>
 					<td>自作の敵対的レビュー</td>
@@ -532,6 +622,9 @@ if ('serviceWorker' in navigator) {
 			</tr>
 	</tbody>
 </table>
+<p><code>/code-review</code> が探すのは <strong>バグと、再利用・簡素化・効率の改善余地</strong>。
+これは前節で言った「気になった点を挙げるモード」の、よく出来た版ではある。
+だが <strong>「この diff が暗黙に主張していることを壊しにいく」向きではない</strong>ので、敵対的レビューは別枠のまま置いている。</p>
 
 <div class="markdown-alert markdown-alert-warning">
     <p class="markdown-alert-title">
@@ -544,10 +637,66 @@ if ('serviceWorker' in navigator) {
 「自分のプロンプトの方が良い」は、大抵1〜2ヶ月で逆転する。</p>
 </div>
 
-<h3 id="4-レビューを受ける側の作法">4. レビューを受ける側の作法<a class="anchor" aria-hidden="true" href="#4-レビューを受ける側の作法"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<h3 id="4-昔書いたチェックリストはどこへ行ったか">4. 昔書いたチェックリストは、どこへ行ったか<a class="anchor" aria-hidden="true" href="#4-昔書いたチェックリストはどこへ行ったか"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p>以前、チーム用のレビューガイドを書いたことがある。
+観点をカテゴリ別に並べて全部チェックボックスにした、よくある形のやつ。<br>
+<strong>今はまったく使っていない</strong>ので、なぜ死んだのかを6段階に当て直してみた。</p>
+<p>項目の行き先は4つに分かれた。</p>
+<table>
+	<thead>
+			<tr>
+					<th>行き先</th>
+					<th>例</th>
+					<th>今の扱い</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>CI に落ちた</td>
+					<td>フォーマット、未使用変数、マジックナンバー</td>
+					<td>人間のレビューには出てこない</td>
+			</tr>
+			<tr>
+					<td>AI が引き受けた</td>
+					<td>命名・可読性、重複コード、エッジケース、N+1、SQLi</td>
+					<td><code>/code-review</code> の担当範囲</td>
+			</tr>
+			<tr>
+					<td>人間に残った</td>
+					<td>責務分離、将来の拡張性、依存の向き、アーキとの整合</td>
+					<td>6段階の 5〜6。ここだけ読む</td>
+			</tr>
+			<tr>
+					<td>前提が反転した</td>
+					<td>「批判ではなく協働」「良いコードは褒める」</td>
+					<td>相手が AI なら要らない</td>
+			</tr>
+	</tbody>
+</table>
+<p>死因は、<strong>この4つが同じチェックボックスで並んでいたこと</strong>だった。</p>
+<ul>
+<li>平坦なリストは項目を等価に見せる。「マジックナンバー」と「将来の拡張性」が同じ1行になる</li>
+<li>上から順に埋めると、<strong>機械に落とせる項目で集中力が尽きる</strong></li>
+<li>どの項目もチェックが付く形なので、<strong>埋まったのに何も検証していない</strong>状態が成立する</li>
+</ul>
+<p>要するにこのガイドは、この記事で言っている「1〜3 を人間から追い出す」の<strong>逆</strong>をやっていた。</p>
+<h4 id="反転したもの-作法は人間相手の前提だった">反転したもの: 作法は人間相手の前提だった<a class="anchor" aria-hidden="true" href="#反転したもの-作法は人間相手の前提だった"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<p>ガイドには「避けるべきコメント例」も書いてあった。
+「これは間違っている」「なぜこんな書き方をしたのか理解できない」「普通はこうしない」——
+これらは <strong>相手が人間だから避けるべき</strong>だった。書き手の心理的コストを下げる作法であって、指摘の正しさとは無関係。
+AI レビュアーには忖度が要らないので、ここは丸ごと落ちる。むしろ逆（懐疑者に徹しろ）を要求する。</p>
+<p>ただし <strong>完全には消えない</strong>。<code>--comment</code> で AI の指摘を PR に投稿すると、
+<strong>AI → 人間の経路に入った瞬間に作法が復活する</strong>。自動投稿の前に一度読んで、必要なら自分の言葉に直す。</p>
+<h4 id="生き残ったもの-ai-が知り得ない観点と接地の判断">生き残ったもの: AI が知り得ない観点と、接地の判断<a class="anchor" aria-hidden="true" href="#生き残ったもの-ai-が知り得ない観点と接地の判断"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<p>まだ効いているのは2箇所だけだった。</p>
+<ul>
+<li><strong>プロジェクト固有の観点</strong> — クエリのスキャン量（= 課金）、扱ってはいけないデータ、命名規約。この手のものは diff からは読めない。逆に汎用観点（命名・N+1・SQLi）を並べるのはビルトインと重複するだけで割に合わない。<strong>§3 の「ビルトインで代替できないものだけ残す」が、スキルではなく観点の側でも成立する</strong></li>
+<li><strong>「ローカルで確認すべきか」の基準</strong> — 複数ファイルに跨る / 動かさないと分からない / 差分だけでは影響範囲が読めない。この基準は<strong>宛先が人間から AI に変わっただけでそのまま使える</strong>。<code>&lt;pr#&gt;</code> を渡して確実に見えるのは差分そのものなので、テストを走らせたい・周辺コードまで当たらせたいなら、ブランチを手元に落としてから打つ</li>
+</ul>
+<h3 id="5-レビューを受ける側の作法">5. レビューを受ける側の作法<a class="anchor" aria-hidden="true" href="#5-レビューを受ける側の作法"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 <p>境界を引いても、<strong>diff が読めない形なら 4〜6 段階目は誰にもレビューできない</strong>。</p>
 <ul>
-<li><strong>差分を小さく保つ</strong> — 「AI が一気に書けるから」で1000行の PR を作らない</li>
+<li><strong>差分を小さく保つ</strong> — 「AI が一気に書けるから」で1000行の PR を作らない。昔のガイドで分割提案の目安にしていたのは 400行で、AI に書かせると<strong>生成側は行数を気にしないので軽く超える</strong></li>
 <li><strong>意図を PR 本文に書く</strong> — なぜこの実装にしたか、何を捨てたかは diff に映らない</li>
 <li><strong>機械的変更と設計変更を混ぜない</strong> — フォーマッタ一括適用とロジック変更を同じ PR に入れると、レビュー可能性がゼロになる</li>
 </ul>
@@ -557,6 +706,8 @@ if ('serviceWorker' in navigator) {
 <li><a href="https://note.com/naoyatakashima/n/n2d59ed6c36da">コードを読まないでどう責任を持つのか</a> note</li>
 <li><a href="https://zenn.dev/tmasuyama1114/articles/claude_code_code_review_guide">Claude Code でコードレビューをする</a> Zenn</li>
 <li><a href="https://zenn.dev/loglass/articles/6aa18c80496ec6">AIに「レビューして」はもう古い？「敵対的検証」のすすめ</a> Zenn</li>
+<li><a href="https://google.github.io/eng-practices/review/">Google Engineering Practices: Code Review</a> Google</li>
+<li><a href="https://conventionalcomments.org/">Conventional Comments</a></li>
 </ul>
 </article>
         </div>
