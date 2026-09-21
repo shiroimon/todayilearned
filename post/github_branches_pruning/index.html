@@ -48,7 +48,7 @@
   content="📍When developing on GitHub, I often switch branches, just like pruning." />
 <meta name="twitter:site" content="https://kithub.f5.si/" />
 <meta name="twitter:creator" content="shiro" />
-<meta name="twitter:image" content="https://kithub.f5.si/images/og-base_hu_88a8c3e1ce7ed901.png">
+<meta name="twitter:image" content="https://kithub.f5.si/images/og-base_hu_55d8fc13e138f93f.png">
 
 
 <meta property="og:type" content="article" />
@@ -57,7 +57,7 @@
   content="📍When developing on GitHub, I often switch branches, just like pruning." />
 <meta property="og:url" content="https://kithub.f5.si/post/github_branches_pruning/" />
 <meta property="og:site_name" content="Today I Learned | KitHub" />
-<meta property="og:image" content="https://kithub.f5.si/images/og-base_hu_88a8c3e1ce7ed901.png">
+<meta property="og:image" content="https://kithub.f5.si/images/og-base_hu_55d8fc13e138f93f.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 
@@ -211,7 +211,7 @@ if ('serviceWorker' in navigator) {
                 Created <relative-time datetime="Tue, 24 Sep 2024 18:08:08 &#43;0900" class="no-wrap">Tue, 24 Sep 2024 18:08:08 &#43;0900</relative-time>
                 
                 <span class="path-divider">|</span>
-                Modified <relative-time datetime="Tue, 18 Aug 2026 17:05:30 &#43;0900" class="no-wrap">Tue, 18 Aug 2026 17:05:30 &#43;0900</relative-time>
+                Modified <relative-time datetime="Sun, 06 Sep 2026 18:20:39 &#43;0900" class="no-wrap">Sun, 06 Sep 2026 18:20:39 &#43;0900</relative-time>
                 
             </div>
         </div>
@@ -245,9 +245,9 @@ if ('serviceWorker' in navigator) {
                     <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list"></div>
                 </div>
             </details-menu>
-            9693 Words
+            12258 Words
             <span class="path-divider">|</span>
-            12 min
+            14 min
             </div>
 
             
@@ -312,19 +312,20 @@ if ('serviceWorker' in navigator) {
 
 <img src="https://img.shields.io/badge/-GitHub-181717.svg?logo=github&amp;style=flat&amp;color=F0F8FF&amp;logoColor=181717" alt="GitHub" loading="lazy" decoding="async">
 </p>
-<!-- [![img](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/300px-Git-logo.svg.png)](https://ja.wikipedia.org/wiki/Git) -->
 <h2 id="why">Why<a class="anchor" aria-hidden="true" href="#why"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
 <pre tabindex="0"><code># OVERVIEW
 
-remote -[main] repository ----------------------------------------------------&gt;
-             | ❶/fork
-             ↓
-remote -[main] repository ----------------------------------------------------&gt;
-             | ❶/clone　                                   ↑ ⑤/push |
-             ↓                  ↑ ③/commit -- ↑ ④/commit -┘         ↓ ❻/pull
-local   [main] branch ----------|------------- |----------------------&gt;
-             | ❷/chackout　　 | /add | /add
-             └-&gt; Aさん[feature_A] branch ------┘
+upstream [main] ──●──────────────────────────────────────────────&gt;
+                  │
+                  ↓  ❶ fork
+origin   [main] ──●──────────────────────────●──────────────┬────&gt;
+                  │                          ↑              │
+                  ↓  ❷ clone                 │              ↓
+local    [main] ──●──────────────────────────┼──────────────●────&gt;
+                  │                          │  ❻ push      ❼ pull
+                  ↓  ❸ checkout -b           │
+                  ●─────●──────●─────────────┘  [feature_A]
+                        ❹      ❺  add → commit
 </code></pre><h2 id="ref">REF<a class="anchor" aria-hidden="true" href="#ref"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
 <ul>
 <li><a href="https://ja.wikipedia.org/wiki/Git">Git</a> Wikipedia</li>
@@ -337,9 +338,9 @@ local   [main] branch ----------|------------- |----------------------&gt;
 <!--------------------------------------------------------
 ###
 ```
--[main] branch ------------------------------------------
-      └> Aさん[faeture_A] branch ------------------------
-                        └> Bさん[feature_C] branch ------
+[main] ──●─────────────────────────────>
+         └──●──────────────────────────>  Aさん [feature_A]
+            └──●───────────────────────>  Bさん [feature_C]
 ```
 --------------------------------------------------------->
 
@@ -382,7 +383,7 @@ local   [main] branch ----------|------------- |----------------------&gt;
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 現在`master`ブランチに居ることを確認して</span>
 </span></span><span class="line"><span class="cl">$ git branch
 </span></span><span class="line"><span class="cl">* master
-</span></span><span class="line"><span class="cl">$ git cheackout -b feature/edit_hoge
+</span></span><span class="line"><span class="cl">$ git checkout -b feature/edit_hoge
 </span></span></code></pre></div></li>
 <li>
 <p>ie.</p>
@@ -402,13 +403,13 @@ local   [main] branch ----------|------------- |----------------------&gt;
 </li>
 </ul>
 <h3 id="手元に幹を植え込み">手元に幹を（植え込み🪴）<a class="anchor" aria-hidden="true" href="#手元に幹を植え込み"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
-<pre tabindex="0"><code>remote repository -[main] -------&gt;
-                   | /fork | /clone
-                   ↓         |
-remote repository  [main] ---|---&gt;
-                   | /clone |
-                   ↓         ↓
-local  repository  [main] -------&gt;
+<pre tabindex="0"><code>upstream [main] ──●───────────────┬──────────&gt;
+                  │               │
+                  ↓  ❶ fork       │  fork せず直接 clone するルート
+origin   [main] ──●───────────────┼──────────&gt;
+                  │               │
+                  ↓  ❷ clone      ↓
+local    [main] ──●───────────────●──────────&gt;
 </code></pre><ul>
 <li>cf.
 <ul>
@@ -419,25 +420,27 @@ local  repository  [main] -------&gt;
 </li>
 </ul>
 <h3 id="幹から枝を生やす">幹から枝を生やす<a class="anchor" aria-hidden="true" href="#幹から枝を生やす"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
-<pre tabindex="0"><code># main/master branch から新たにブランチを切り出したい。
+<pre tabindex="0"><code># main/master branch から新たにブランチを切り出したい
 
-local -[main] branch ------------------------&gt;
-            └├--&gt; Aさん[feature_A] branch ---&gt;
-             └--&gt; Bさん[feature_B] branch ---&gt;
+local [main] ──●──────────────────────────────&gt;
+               ├──●───────────────────────────&gt;  Aさん [feature_A]
+               └──●───────────────────────────&gt;  Bさん [feature_B]
 </code></pre><ol>
 <li>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ git checkout -b feature_B
 </span></span></code></pre></div></li>
 </ol>
 <h3 id="他の人の枝を手元にも">他の人の枝を手元にも<a class="anchor" aria-hidden="true" href="#他の人の枝を手元にも"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
-<pre tabindex="0"><code>#
-remote    -[main]-------------------------✨---------------------&gt;
-                                          |  | Aさんの[feature_A] branch
-[A] local -[main] branch -----------------|-&gt; |
-          └-&gt; Aさん[feature_A] branch -----┘   |
-                                              |
-[B] local -[main] branch ---------------------|------------------&gt;
-                                              └-&gt; Bさん[feature_A] branch
+<pre tabindex="0"><code># Aさんが push した [feature_A] を、Bさんが手元に取ってくる
+
+origin    [main] ──●──────────●───────┬──────────────────────&gt;
+                              ↑       │
+                      ❶ push  │       │ ❷ fetch
+[A] local [main] ──●──────────┼───────┼──────────────────────&gt;
+                   └──●───●───┘       │  Aさん [feature_A]
+                                      │
+[B] local [main] ──●──────────────────┼──────────────────────&gt;
+                                      └──●───●───────────────&gt;  Bさんの手元にも [feature_A]
 </code></pre><ol>
 <li>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 他の人のブランチの最新の変更を取得して、リモート上のブランチ名を一覧確認</span>
@@ -457,11 +460,12 @@ remote    -[main]-------------------------✨---------------------&gt;
 </span></span></code></pre></div></li>
 </ol>
 <h3 id="枝から枝を">枝から枝を<a class="anchor" aria-hidden="true" href="#枝から枝を"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
-<pre tabindex="0"><code># main/master branch に merge されていない 他の人の branch に対してプルリクエストを作成したい。
+<pre tabindex="0"><code># main に merge されていない、他の人の branch に対してPRを作成したい
 
-local -[main] branch ------------------------------------------&gt;
-            └-&gt; Aさん[faeture_A] branch -----------------------&gt;
-                               └-&gt; Bさん[feature_B] branch -┘
+local [main] ──●──────────────────────────────────────────&gt;
+               └──●──────●───────────────●────────────────&gt;  Aさん [feature_A]
+                         └──●───●────────┘  Bさん [feature_B]
+                                         ↑ PRの向き先は main ではなく feature_A
 </code></pre><ol>
 <li>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 他の人のブランチの最新の変更を取得するためにリモートリポジトリからフェッチ</span>
@@ -479,11 +483,13 @@ local -[main] branch ------------------------------------------&gt;
 </span></span></code></pre></div></li>
 </ol>
 <h3 id="枝から枝を名前変更">枝から枝を（名前変更）<a class="anchor" aria-hidden="true" href="#枝から枝を名前変更"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
-<pre tabindex="0"><code># branch名を[feature_B] → [feature_C] に変えたい
+<pre tabindex="0"><code># branch名を [feature_B] → [feature_C] に変えたい
 
-local -[main] branch -------------------------------------------------&gt;
-            └-&gt; Aさん[faeture_A] branch ------------------------------&gt;
-                └-&gt; Bさん[feature_B] branch -&gt; [feature_C] branch ----&gt;
+local [main] ──●────────────────────────────────────&gt;
+               └──●─────────────────────────────────&gt;  Aさん [feature_A]
+                  └──●───●───●──────────────────────&gt;  Bさん [feature_B]
+                             ↑
+                             └ branch -m feature_C（名札を付け替えるだけ、中身は同じ）
 </code></pre><ol>
 <li>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 現在ブランチ確認</span>
@@ -502,21 +508,71 @@ local -[main] branch -------------------------------------------------&gt;
 <li>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 古いブランチ名はリモートから削除（後片付け）</span>
 </span></span><span class="line"><span class="cl">$ git push origin --delete feature_B
-</span></span><span class="line"><span class="cl"><span class="c1"># 他の開発者への通知</span>
-</span></span><span class="line"><span class="cl">$ git fetch origin
+</span></span><span class="line"><span class="cl"><span class="c1"># 他の開発者は各自でこれを打つ（消えた feature_B の追跡を落とす）</span>
+</span></span><span class="line"><span class="cl">$ git fetch --prune
 </span></span></code></pre></div></li>
 </ol>
 <h3 id="大きく育った枝を剪定">大きく育った枝を剪定<a class="anchor" aria-hidden="true" href="#大きく育った枝を剪定"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 <pre tabindex="0"><code># [feature_A] の修正ファイル数が膨大になり分割して、切り出しor並び替えしたい
 
--[main] branch -------------------------------------------&gt;
-      └-&gt; Aさん[faeture_A] branch　                 | | |
-                        | /rebase |  |  |
-                        └-&gt; [new-branch-1] branch -┘ | |
-                        └-&gt; [new-branch-2] branch ---|-┘
-                        └-&gt; [new-branch-3] branch ---┘
-                        └-&gt; [new-branch-4] branch ------×
-</code></pre><ol>
+[main] ──●──────────────────────────────●───●───●───&gt;
+         └──●──●──●──●                  ↑   ↑   ↑
+            Aさん [feature_A]           │   │   │
+            │ rebase -i で仕分け        │   │   │
+            ├──●──●─────────────────────┘   │   │  [new-branch-1]
+            ├──●──●─────────────────────────┘   │  [new-branch-2]
+            ├──●──●─────────────────────────────┘  [new-branch-3]
+            └──●──●─────────────────────×          [new-branch-4]（PRにせず捨てる）
+</code></pre><p><strong><code>git rebase -i</code> のエディタで使う命令</strong></p>
+<p>インタラクティブリベースを打つとエディタが開き、対象のコミット1本ずつに命令を割り当てる形になる。<br>
+既定は全部 <code>pick</code>（そのまま）なので、変えたい行だけ書き換える。</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">命令</th>
+					<th style="text-align: left">短縮</th>
+					<th style="text-align: left">何をする</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">pick</td>
+					<td style="text-align: left">p</td>
+					<td style="text-align: left">そのまま残す（既定）</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">reword</td>
+					<td style="text-align: left">r</td>
+					<td style="text-align: left">変更はそのまま、メッセージだけ書き換える</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">edit</td>
+					<td style="text-align: left">e</td>
+					<td style="text-align: left">そこで止めて、変更を分割・修正する</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">squash</td>
+					<td style="text-align: left">s</td>
+					<td style="text-align: left">前のコミットに吸収し、メッセージは繋げて編集</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">fixup</td>
+					<td style="text-align: left">f</td>
+					<td style="text-align: left">前のコミットに吸収し、メッセージは捨てる</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">drop</td>
+					<td style="text-align: left">d</td>
+					<td style="text-align: left">コミットごと捨てる</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li>上から順に実行されるので、<strong>行を入れ替えればコミットの順序も変わる</strong></li>
+<li><code>squash</code> / <code>fixup</code> の書き換えを手でやらずに済ませる方法は、後述の <strong>小枝を親枝に吸わせる（fixup / autosquash）</strong> にある</li>
+<li>GitHubのWeb画面にある &ldquo;Squash and merge&rdquo;（→ <strong>幹に枝を反映の仕方</strong>）は名前は似ているが別物。あちらはPR全体を1本に潰すので、行き先を選べない</li>
+</ul>
+<ol>
 <li>コミット分割（※ 必要に応じて）
 <ol>
 <li>
@@ -674,12 +730,13 @@ main ─●───●(新)                 main ─●───●(新)
 </li>
 </ul>
 <h3 id="古くなった枝を最新に">古くなった枝を最新に<a class="anchor" aria-hidden="true" href="#古くなった枝を最新に"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
-<pre tabindex="0"><code>remote -[main] branch -----------------------------------------&gt;
-                                           | /pull | /pull
-local  -[main] branch ---------------------|------------|------&gt;
-             |                       |  |
-             | ↓/merge      ↓/rebase
-             └&gt; Aさん[faeture_A] branch ---✨-----------✨------&gt;
+<pre tabindex="0"><code>origin [main] ──●──────────●──────────────────●──────────────&gt;
+                           │                  │
+                           ↓ pull             ↓ pull
+local  [main] ──●──────────●──────────────────●──────────────&gt;
+                │          │                  │
+                │          ↓ merge            ↓ rebase
+                └──●───●───●──────────────────●──────────────&gt;  Aさん [feature_A]
 </code></pre><p><strong>[Merge] 簡単かつ安全（でも履歴汚ねぇ&hellip;）</strong></p>
 <ol>
 <li>最新のmain（またはdevelop）ブランチを取得
@@ -725,6 +782,105 @@ local  -[main] branch ---------------------|------------|------&gt;
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ git push --force-with-lease origin feature_A
 </span></span></code></pre></div></li>
 </ol>
+<h3 id="小枝を親枝に吸わせるfixup--autosquash">小枝を親枝に吸わせる（fixup / autosquash）<a class="anchor" aria-hidden="true" href="#小枝を親枝に吸わせるfixup--autosquash"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p>レビュー指摘の反映やtypo直しで「あの過去コミットに混ぜたいだけ」の小さなコミットが増えていく。<br>
+<code>git commit --fixup</code> は <strong>札を貼るだけ</strong>で、実際に吸収されるのは後の <code>git rebase --autosquash</code> のとき。この2段構えが分かっていないと「fixupしたのに履歴が変わらない」で詰まる。</p>
+<pre tabindex="0"><code># [feature_A] に「あのコミットの直し」だけの小枝が生えた状態
+
+[before]  ●───●───●───●───●
+          A   B   C   ↑   ↑
+                      └───┴─ fixup! の札を貼っただけ（履歴はまだ散らかったまま）
+
+                  $ git rebase --autosquash
+                             ↓
+
+[after]   ●───●───●
+          A&#39;  B   C&#39;   ← A&#39;, C&#39; に吸収されて、小枝そのものは消える
+</code></pre><ol>
+<li>札を貼る
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 直したい過去コミットのハッシュを探す</span>
+</span></span><span class="line"><span class="cl">$ git log --oneline
+</span></span><span class="line"><span class="cl">a1b2c3d Add user validation
+</span></span><span class="line"><span class="cl">e4f5g6h Fix typo in README
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ git add .
+</span></span><span class="line"><span class="cl">$ git commit --fixup<span class="o">=</span>a1b2c3d
+</span></span><span class="line"><span class="cl"><span class="o">[</span>feature_A 9z8y7x6<span class="o">]</span> fixup! Add user validation
+</span></span></code></pre></div><ul>
+<li>コミットメッセージが自動で <code>fixup! &lt;元コミットのタイトル&gt;</code> になる</li>
+<li><strong>この時点では履歴は畳まれない</strong>。札付きのコミットが1本増えるだけ</li>
+</ul>
+</li>
+<li>実際に吸収させる
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 吸収先の「1つ手前」を起点にする</span>
+</span></span><span class="line"><span class="cl">$ git rebase -i --autosquash a1b2c3d^
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl"># エディタは開くが、並べ替えと fixup 指定は済んでいる。保存して閉じるだけ
+</span></span><span class="line"><span class="cl">pick   a1b2c3d Add user validation
+</span></span><span class="line"><span class="cl">fixup  9z8y7x6 fixup! Add user validation
+</span></span><span class="line"><span class="cl">pick   e4f5g6h Fix typo in README
+</span></span></code></pre></div><ul>
+<li><code>--autosquash</code> 無しだと、この <strong>並べ替え</strong> と <strong><code>pick</code> → <code>fixup</code> の書き換え</strong> を毎回手作業でやることになる</li>
+<li><code>--autosquash</code> は内部で <code>--interactive</code> の仕組みを使うだけなので、<strong><code>-i</code> を省いても通る</strong>（エディタが開かず一気に畳まれる）</li>
+</ul>
+</li>
+<li>毎回打たなくていいように
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ git config --global rebase.autoSquash <span class="nb">true</span>
+</span></span></code></pre></div><ul>
+<li>以降 <code>git rebase -i</code> だけで autosquash が効く。切りたいときは <code>--no-autosquash</code></li>
+</ul>
+</li>
+</ol>
+<p><strong>fixup と squash の違い</strong></p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">コマンド</th>
+					<th style="text-align: left">変更</th>
+					<th style="text-align: left">コミットメッセージ</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><code>--fixup=&lt;hash&gt;</code></td>
+					<td style="text-align: left">吸収する</td>
+					<td style="text-align: left">捨てる（元コミットのまま）</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>--squash=&lt;hash&gt;</code></td>
+					<td style="text-align: left">吸収する</td>
+					<td style="text-align: left">元メッセージに追記してエディタが開く</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li>「typo直した」「指摘を反映した」のように履歴に残す価値がない変更は <code>--fixup</code></li>
+<li>この <code>squash</code> / <code>fixup</code> は <code>rebase -i</code> の命令名そのもの（→ <strong>大きく育った枝を剪定</strong> の命令一覧）。<code>--fixup</code> は「その命令をエディタで手打ちする手間」を先回りして省くためのもの</li>
+</ul>
+<p><strong>派生形</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 変更もメッセージも差し替える（元メッセージがエディタで開く）</span>
+</span></span><span class="line"><span class="cl">$ git commit --fixup<span class="o">=</span>amend:a1b2c3d
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># メッセージだけ差し替える（変更は無くてよい）</span>
+</span></span><span class="line"><span class="cl">$ git commit --fixup<span class="o">=</span>reword:a1b2c3d
+</span></span></code></pre></div><ul>
+<li>
+<p>どちらも <code>amend!</code> 札のコミットになり、<code>--autosquash</code> が同じように拾う</p>
+</li>
+<li>
+<p>注意</p>
+<ul>
+<li>push済みブランチで畳むと履歴が書き換わる → <code>git push --force-with-lease</code> が必要。<strong>共有ブランチではやらない</strong></li>
+<li>PR/MRのレビュー中は、<strong>あえてfixupコミットを積んだまま残す</strong>とレビュアーが「指摘に対する差分」だけ追える。approve後にautosquashで畳む</li>
+<li>Squash mergeで取り込むリポジトリなら、どのみち1本に潰れるので畳む作業自体が不要</li>
+</ul>
+</li>
+<li>
+<p>cf.</p>
+<ul>
+<li><a href="https://git-scm.com/docs/git-commit">git-commit <code>--fixup</code></a> Git Docs</li>
+<li><a href="https://git-scm.com/docs/git-rebase">git-rebase <code>--autosquash</code></a> Git Docs</li>
+</ul>
+</li>
+</ul>
 <h3 id="空コミットの要請">空コミットの要請<a class="anchor" aria-hidden="true" href="#空コミットの要請"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ git commit --allow-empty -m <span class="s2">&#34;メッセージ&#34;</span>
 </span></span></code></pre></div><ul>
@@ -737,9 +893,11 @@ local  -[main] branch ---------------------|------------|------&gt;
 </li>
 </ul>
 <h3 id="gpg-署名付きコミット">GPG (署名付きコミット)<a class="anchor" aria-hidden="true" href="#gpg-署名付きコミット"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
-<pre tabindex="0"><code>                                      　↑/commit :GPG 「わいやで」
--[main] branch　------------------------|----------------&gt;
-      └&gt; Aさん[faeture_A] branch -------┘
+<pre tabindex="0"><code>[main] ──●────────────────────●──────────&gt;
+         │                    ↑ merge
+         └──●───────●─────────┘  Aさん [feature_A]
+            │       │
+            └───────┴─ commit ごとに署名が付く :GPG「わいやで」🔏
 </code></pre><ul>
 <li>GitのGPGは、Gitにおいてコミットやタグなどの操作に署名を付けるための仕組み。</li>
 <li>GPG（GNU Privacy Guard）は、デジタル署名や暗号化を行うためのツール。</li>
@@ -811,8 +969,11 @@ local  -[main] branch ---------------------|------------|------&gt;
 </span></span><span class="line"><span class="cl">gpgconf --launch gpg-agent
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># 6) 署名が付いているか確認（直近のコミットを見る）</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 出力の中に default-cache-ttl が 86400 などに設定されていれば OK</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 出力に &#34;Good signature from ...&#34; が出れば OK</span>
 </span></span><span class="line"><span class="cl">git show --show-signature
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 7) キャッシュ設定の確認（default-cache-ttl / max-cache-ttl が 86400 になっていれば OK）</span>
+</span></span><span class="line"><span class="cl">gpgconf --list-options gpg-agent <span class="p">|</span> grep cache-ttl
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># 署名付きテスト</span>
 </span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;hello&#34;</span> <span class="p">|</span> gpg --clearsign
@@ -883,11 +1044,11 @@ local  -[main] branch ---------------------|------------|------&gt;
 </span></span></code></pre></div></li>
 <li>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 施錠しにGitHubへ</span>
-</span></span><span class="line"><span class="cl">$ ~/.ssh/id_ed25519.pub &gt; pbcopy
+</span></span><span class="line"><span class="cl">$ pbcopy &lt; ~/.ssh/id_ed25519.pub
 </span></span></code></pre></div><ul>
 <li>GitHub
 <ul>
-<li><a href="https://github.com/settings/keys">Settings &gt; SSH and GPG keys &gt; New GPG key</a></li>
+<li><a href="https://github.com/settings/keys">Settings &gt; SSH and GPG keys &gt; New SSH key</a></li>
 <li>title: お好みで key: ここにペースト</li>
 </ul>
 </li>
@@ -1055,10 +1216,11 @@ local  -[main] branch ---------------------|------------|------&gt;
 <li>
 <pre tabindex="0"><code># 機能Aの開発中に緊急バグ修正依頼が来た時の様子
 
-local -[main] branch ---------------------------*----------------&gt;
-            └--&gt; ①[feature_A/] branch ---------|--&gt; commit ③------&gt;
-            | 　 |
-            └--&gt; ②[feature_B/hotfix] branch ---┘
+local [main] ──●────────────────────────────────────────&gt;
+               ├──●───●                  ●───●──────────&gt;  ❶ [feature_A]
+               │      │ ❷ switch で中断  ↑ ❹ 戻って再開
+               │      ↓                  │
+               └──────●───●───●──────────┘  ❸ [feature_B/hotfix]
 </code></pre><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 機能Aの開発中...</span>
 </span></span><span class="line"><span class="cl">git add .
 </span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;WIP: 機能Aの途中&#34;</span>
@@ -1106,7 +1268,7 @@ local -[main] branch ---------------------------*----------------&gt;
 </ul>
 <p>主なコマンド</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># ワークツリーの追加</span>
-</span></span><span class="line"><span class="cl">git worktree add &lt;path&gt; &lt;branch&gt;%s/<span class="se">\s\+</span>$//g
+</span></span><span class="line"><span class="cl">git worktree add &lt;path&gt; &lt;branch&gt;
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># ワークツリーの一覧表示</span>
 </span></span><span class="line"><span class="cl">git worktree list
@@ -1263,7 +1425,12 @@ worktreeを並列で切っていると <strong>中身のディレクトリは消
 /private/tmp/pr-review   20d7111 (detached HEAD) prunable   ← ディレクトリが既に無い
 /private/tmp/hotfix      0d330d8 [hotfix]         prunable   ← 同上
 </code></pre><ul>
-<li><code>/tmp</code> に切ったworktreeは macOS の periodic daily（3日アクセスなしで削除）に掃除されるので、<strong>放置すると必ず <code>prunable</code> になる</strong></li>
+<li><code>/tmp</code> に切ったworktreeは macOS の tmp cleaner に掃除されるので、<strong>放置すると必ず <code>prunable</code> になる</strong>
+<ul>
+<li>実体は <code>/usr/libexec/tmp_cleaner</code>（launchd の <code>com.apple.tmp_cleaner</code> が毎日 0 時に実行）。<code>/tmp</code> 直下の <strong>atime / mtime / ctime がすべて3日超</strong>のファイルを <code>find -delete</code> する</li>
+<li>昔ながらの <code>/etc/periodic/daily/110.clean-tmps</code> は macOS 26 では <code>/etc/periodic</code> ごと無くなっている。ただし <code>daily_clean_tmps_days=&quot;3&quot;</code> の3日は据え置きなので、<strong>結論（放置すると3日で消える）は変わらない</strong></li>
+</ul>
+</li>
 <li>数日跨ぐ作業は <code>~/</code> 配下に置く</li>
 </ul>
 <p><strong>❶ 「消していい枝か」を3手で判定</strong></p>
@@ -1351,11 +1518,13 @@ worktreeを並列で切っていると <strong>中身のディレクトリは消
 </li>
 </ul>
 <h3 id="摘み食いしたいmergecherry-pick">摘み食いしたい(merge/cherry-pick)<a class="anchor" aria-hidden="true" href="#摘み食いしたいmergecherry-pick"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
-<pre tabindex="0"><code>main (本番)   : A --- B --- C
-                        ↑ 🐞ここにバグ発見
-develop       : A --- B --- C --- D --- E --- F(修正)
+<pre tabindex="0"><code>main (本番) ──●───●───●──────────────────────●───&gt;
+              A   B   C                      ↑
+                      🐞 ここにバグ発見      │ cherry-pick F
+develop     ──●───●───●───●───●───●──────────┘
+              A   B   C   D   E   F(修正)
 
-develop で修正コミット F を作ったけど、D や E はまだ本番に出したくない。
+# D や E はまだ本番に出したくないので、F だけ摘む
 </code></pre><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 修正の F だけ main に持ってくる</span>
 </span></span><span class="line"><span class="cl">git checkout main
 </span></span><span class="line"><span class="cl">git cherry-pick F
