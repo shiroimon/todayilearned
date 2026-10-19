@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>PostgreSQL on Today I Learned | KitHub</title>
+		<link>http://localhost:1313/tags/postgresql/</link>
+		<description>Recent content in PostgreSQL on Today I Learned | KitHub</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 03 Oct 2026 19:00:00 +0900</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>[Docker] Compose for Parallel Data Pipeline &lt;Compose でワーカーを増やす&gt;</title>
+				<link>http://localhost:1313/post/docker_compose_parallel_pipeline/</link>
+				<pubDate>Sat, 03 Oct 2026 19:00:00 +0900</pubDate>
+				<guid>http://localhost:1313/post/docker_compose_parallel_pipeline/</guid>
+				<description>🐳 Docker Compose でデータパイプラインのワーカーを増やすとき、YAML と CLI とアプリが何を受け持つか。</description>
+			</item>
+			<item>
+				<title>[Data Analytics] Miscellaneous</title>
+				<link>http://localhost:1313/post/data_analytics_miscellaneous/</link>
+				<pubDate>Tue, 18 Mar 2025 02:15:17 +0900</pubDate>
+				<guid>http://localhost:1313/post/data_analytics_miscellaneous/</guid>
+				<description>📊 An article summarizing various statistical data that can be viewed and used for free.</description>
+			</item>
+	</channel>
+</rss>

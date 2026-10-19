@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="application/javascript" src='https://kithub.f5.si/js/theme-mode.js'></script>
+    <link rel="stylesheet" href='https://kithub.f5.si/css/frameworks.min.css' />
+    <link rel="stylesheet" href='https://kithub.f5.si/css/github.min.css' />
+    <link rel="stylesheet" href='https://kithub.f5.si/css/github-style.css' />
+    <link rel="stylesheet" href='https://kithub.f5.si/css/light.css' />
+    <link rel="stylesheet" href='https://kithub.f5.si/css/dark.css' />
+    <link rel="stylesheet" href='https://kithub.f5.si/css/syntax.css' />
+    <title>[Data Management] Miscellaneous &lt;デジタル庁の研修資料で12領域を眺める&gt; - Today I Learned | KitHub</title>
+    
+    <link rel="icon" type="image/x-icon" href='../../images/github-mark.png'>
+    
+    <meta name="theme-color" content="#1e2327">
+
+    <link rel="stylesheet" href="https://kithub.f5.si/css/gist.css"><link rel="stylesheet" href="https://kithub.f5.si/css/markdown-alert.css"><link rel="stylesheet" href="https://kithub.f5.si/css/code-copy.css"><link rel="stylesheet" href="https://kithub.f5.si/css/link-card.css"><link rel="stylesheet" href="https://kithub.f5.si/css/post-title.css"><link rel="stylesheet" href="https://kithub.f5.si/css/code-diff.css">
+    <script type="text/javascript" src="https://kithub.f5.si/js/gist-dark-mode.js"></script><script type="text/javascript" src="https://kithub.f5.si/js/code-copy.js"></script>
+    
+
+    
+    <meta name="description"
+  content="📚 デジタル庁が公開したデータマネジメント研修資料（92枚）を読む。Aiken のピラミッド12領域、AI 時代に変わったこと、機械可読性30ルールと Harunobu まで。" />
+<meta name="keywords"
+  content='blog' />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://kithub.f5.si/post/data_management_miscellaneous/" />
+
+
+<link rel="manifest" href="../../manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Today I Learned | KitHub">
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/apple-touch-icon.png">
+
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="[Data Management] Miscellaneous &lt;デジタル庁の研修資料で12領域を眺める&gt; - Today I Learned | KitHub" />
+<meta name="twitter:description"
+  content="📚 デジタル庁が公開したデータマネジメント研修資料（92枚）を読む。Aiken のピラミッド12領域、AI 時代に変わったこと、機械可読性30ルールと Harunobu まで。" />
+<meta name="twitter:site" content="https://kithub.f5.si/" />
+<meta name="twitter:creator" content="shiro" />
+<meta name="twitter:image" content="https://kithub.f5.si/images/og-base_hu_87cdea7506c334cb.png">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="[Data Management] Miscellaneous &lt;デジタル庁の研修資料で12領域を眺める&gt; - Today I Learned | KitHub">
+<meta property="og:description"
+  content="📚 デジタル庁が公開したデータマネジメント研修資料（92枚）を読む。Aiken のピラミッド12領域、AI 時代に変わったこと、機械可読性30ルールと Harunobu まで。" />
+<meta property="og:url" content="https://kithub.f5.si/post/data_management_miscellaneous/" />
+<meta property="og:site_name" content="Today I Learned | KitHub" />
+<meta property="og:image" content="https://kithub.f5.si/images/og-base_hu_87cdea7506c334cb.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta property="article:published_time" content="2026-09-18 18:22:20 &#43;0900 JST" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('\/sw.js', { scope: '\/' })
+      .then((registration) => {
+        console.log('[PWA] Service Worker registered:', registration.scope);
+
+        
+        registration.addEventListener('updatefound', () => {
+          const newWorker = registration.installing;
+          console.log('[PWA] New Service Worker found, updating...');
+
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'activated') {
+              console.log('[PWA] New Service Worker activated');
+              
+              if (navigator.serviceWorker.controller) {
+                window.location.reload();
+              }
+            }
+          });
+        });
+
+        
+        setInterval(() => {
+          registration.update();
+        }, 60 * 60 * 1000);
+      })
+      .catch((error) => {
+        console.error('[PWA] Service Worker registration failed:', error);
+      });
+  });
+}
+</script>
+
+</head>
+
+
+<body>
+  <div style="position: relative">
+  <header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on">
+    <div class="Header-item mobile-none" style="margin-top: -4px; margin-bottom: -4px;">
+      <a class="Header-link" href="https://kithub.f5.si/">
+        <img class="octicon" height="32" width="32" src="../../images/github-mark-white.png">
+      </a>
+    </div>
+    <div class="Header-item d-md-none">
+      <button class="Header-link btn-link js-details-target" type="button"
+        onclick="document.querySelector('#header-search').style.display = document.querySelector('#header-search').style.display == 'none'? 'block': 'none'">
+        <svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" version="1.1" width="24">
+          <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div style="display: none;" id="header-search"
+      class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
+      <div
+        class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to">
+        <div class="position-relative">
+          
+          <form target="_blank" id="search-form" action="" accept-charset="UTF-8" method="get"
+            autocomplete="off">
+            <label
+              class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center">
+              <input type="text"
+                class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+                name="q" value="" placeholder="Search" autocomplete="off">
+            </label>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
+      <a class="Header-link " href="https://kithub.f5.si/">
+        <img class="octicon octicon-mark-github v-align-middle" height="32" width="32" src="../../images/github-mark-white.png">
+      </a>
+    </div>
+    <div class="Header-item" style="margin-right: 0;">
+      <a href="javascript:void(0)" class="Header-link no-select" onclick="switchTheme()">
+        <svg style="fill: var(--color-profile-color-modes-toggle-moon);" class="no-select" viewBox="0 0 16 16"
+          version="1.1" width="16" height="16">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M4.52208 7.71754C7.5782 7.71754 10.0557 5.24006 10.0557 2.18394C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961C9.95801 1.07727 10.3495 0.771159 10.6474 0.99992C12.1153 2.12716 13.0615 3.89999 13.0615 5.89383C13.0615 9.29958 10.3006 12.0605 6.89485 12.0605C3.95334 12.0605 1.49286 10.001 0.876728 7.24527C0.794841 6.87902 1.23668 6.65289 1.55321 6.85451C2.41106 7.40095 3.4296 7.71754 4.52208 7.71754Z">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </header>
+</div>
+
+  <div id="search-result" class="container-lg px-3 new-discussion-timeline" style="display: none;">
+</div>
+
+  
+<div class="application-main">
+  <div>
+<main>
+    
+    <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
+    <div class="px-0">
+    <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+    <div class="flex-auto min-width-0 width-fit mr-3">
+    <div class="d-flex">
+        
+        <div class="d-none d-md-block">
+            <a class="avatar mr-2 flex-shrink-0" href="https://kithub.f5.si/">
+                <img class=" avatar-user"
+                  src="../../images/avatar.png"
+                  width="32"
+                  height="32">
+            </a>
+        </div>
+        
+        <div class="d-flex flex-column">
+            
+            <h1 class="break-word f3 text-normal mb-md-0 mb-1">
+                <span class="author"><a href="https://kithub.f5.si/"></a></span>
+                <span class="path-divider">/</span>
+                <strong class="mr-1"><a href="https://kithub.f5.si/post/data_management_miscellaneous/">[Data Management] Miscellaneous &lt;デジタル庁の研修資料で12領域を眺める&gt;</a></strong>
+            </h1>
+            
+            <div class="note m-0">
+                Created <relative-time datetime="Fri, 18 Sep 2026 18:22:20 &#43;0900" class="no-wrap">Fri, 18 Sep 2026 18:22:20 &#43;0900</relative-time>
+                
+                <span class="path-divider">|</span>
+                Modified <relative-time datetime="Mon, 21 Sep 2026 18:36:12 &#43;0900" class="no-wrap">Mon, 21 Sep 2026 18:36:12 &#43;0900</relative-time>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    
+    <div class="container-lg px-3 new-discussion-timeline">
+    <div class="repository-content gist-content">
+    <div>
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+        <div id="file-pytest" class="file my-2">
+        
+        <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
+        <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+
+            
+            <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+            <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
+                <svg aria-hidden="true" viewBox="0 0 16 16" class="octicon octicon-list-unordered" height="16" width="16">
+                    <path fill-rule="evenodd"
+                        d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z">
+                    </path>
+                </svg>
+            </summary>
+            <details-menu class="SelectMenu" id="toc-details" style="display: none;">
+                <div class="SelectMenu-modal rounded-3 mt-1" style="max-height: 340px;">
+                    <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list"></div>
+                </div>
+            </details-menu>
+            5777 Words
+            <span class="path-divider">|</span>
+            3 min
+            </div>
+
+            
+            <div class="file-actions flex-order-2 pt-0">
+                
+                <div class="d-none d-md-flex">
+                    
+                    
+                    
+                    <a class="muted-link mr-3" href='../../tags/data-management'>
+                        <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                            </path>
+                        </svg>
+                        Data Management
+                    </a>
+                    
+                    
+                    
+                    <a class="muted-link mr-3" href='../../tags/dmbok'>
+                        <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                            </path>
+                        </svg>
+                        DMBOK
+                    </a>
+                    
+                    
+                    
+                    <a class="muted-link mr-3" href='../../tags/metadata'>
+                        <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                            </path>
+                        </svg>
+                        Metadata
+                    </a>
+                    
+                    
+                    
+                    <a class="muted-link mr-3" href='../../tags/data-quality'>
+                        <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                            </path>
+                        </svg>
+                        Data Quality
+                    </a>
+                    
+                    
+                    
+                    <a class="muted-link mr-3" href='../../tags/excel'>
+                        <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                            </path>
+                        </svg>
+                        Excel
+                    </a>
+                    
+                    
+                    
+                    <a class="muted-link mr-3" href='../../tags/csv'>
+                        <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                            </path>
+                        </svg>
+                        CSV
+                    </a>
+                    
+                    
+                    
+                </div>
+                
+            </div>
+        </div>
+        </div>
+
+        
+        
+        
+        
+
+        
+        <div class="Box-body px-5 pb-5" style="z-index: 1">
+            <article class="markdown-body entry-content container-lg"><!-- Icon Badge -->
+<p><img src="https://img.shields.io/badge/-CSV-000000.svg?logo=json&amp;style=flat&amp;color=F0F8FF&amp;logoColor=000000" alt="CSV" loading="lazy" decoding="async">
+</p>
+<h2 id="why">Why<a class="anchor" aria-hidden="true" href="#why"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<p>データエンジニアの職能境界が広がる昨今。
+データマネジメント（= 組織の目標を達成するためにヒト・モノ・カネ・<em>情報</em> などの経営資源を効果的に活用し、成果を最大化させる仕組みや営み。データで）の全体像を理解することは重要。DMBOK は 600 ページ超で、いきなり通読するものではない。デジタル庁の研修資料は 92 枚で、12 領域を Aiken のピラミッドに整理して解説している。AI 時代に変わったことや、機械可読性のルールと Harunobu まで含まれており、データマネジメントの全体像を把握するのに最適。</p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">デジタル庁のデータマネジメント研修資料。AI時代においてデータの活用や理解に対する重要性が高まっている中で、データマネジメントの観点で体系的にまとまっていてわかりやすい。何となくデータ活用を始めようとしている人にぜひ読んで理解して欲しい。<a href="https://t.co/7rIW4SpaC0">https://t.co/7rIW4SpaC0</a> <a href="https://t.co/iWa4mq4Xvg">pic.twitter.com/iWa4mq4Xvg</a></p>&mdash; 高橋光 | 著書『データ分析力を高める ビジネスパーソンのためのSQL入門』 (@light940) <a href="https://x.com/light940/status/2096744252994998638?ref_src=twsrc%5Etfw">September 6, 2026</a></blockquote>
+<script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
+
+
+
+<blockquote>
+    <p>デジタル庁のデータマネジメント研修資料。AI時代においてデータの活用や理解に対する重要性が高まっている中で、データマネジメントの観点で体系的にまとまっていてわかりやすい。何となくデータ活用を始めようとしている人にぜひ読んで理解して欲しい。</p>
+
+</blockquote>
+
+<h2 id="what">What<a class="anchor" aria-hidden="true" href="#what"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<h3 id="何の資料か">何の資料か<a class="anchor" aria-hidden="true" href="#何の資料か"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p>ポストで知った資料。デジタル庁 Fact &amp; Data Unit が 2026-08-28 に実施した <strong>庁内研修のスライドそのもの</strong> で、92 枚ある。</p>
+<iframe src="https://speakerdeck.com/player/0fafc4af3cdb4d3fbe701d7b05b0f434"
+        width="100%" height="480"
+        title="データマネジメント研修（デジタル庁）" loading="lazy"
+        frameborder="0"
+        sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-presentation"
+        allowfullscreen
+        style="border:0; max-width:100%;"></iframe>
+<p>構成は3部。</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">部</th>
+					<th style="text-align: left">テーマ</th>
+					<th style="text-align: left">時間</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">第一部</td>
+					<td style="text-align: left">データマネジメントという領域の全体概要</td>
+					<td style="text-align: left">45〜60分</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">第二部</td>
+					<td style="text-align: left">12 領域の個別解説</td>
+					<td style="text-align: left">50〜60分</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">第三部</td>
+					<td style="text-align: left">機械可読性の実習</td>
+					<td style="text-align: left">45〜60分</td>
+			</tr>
+	</tbody>
+</table>
+
+<div class="markdown-alert markdown-alert-note">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>
+        Note
+        
+    </p>
+    <p>想定聴講者は <strong>エンジニアリング知識を前提としない層</strong>（Excel・スプレッドシート中心で業務をしている人）。「厳密な正しさよりわかりやすさを優先する」「概念とセットでキーワードを持ち帰れるようにする」が資料内で明言されている。</p>
+</div>
+
+<p>講師は長谷川亮氏。メルカリでデータマネジメントチームを立ち上げ、そのとき書いた DMBOK の要約が『データマネジメントが30分でわかる本』の元になっている。2021 年にデジタル庁へ移り、現在は政策データダッシュボードの分析基盤 <strong>sukuna</strong> の企画開発・運用を担当。</p>
+
+<link rel="stylesheet" href="../../css/amazon.css"><div class="amazon-widget">
+  <a href="https://www.amazon.co.jp/gp/product/B085W4YSZJ/?tag=XXXXXX"></a>
+  <div class="amazon-widget-img">
+    <img src="http://images.amazon.com/images/P/B085W4YSZJ.09_SL110_.jpg" />
+  </div>
+
+  <div class="amazon-widget-info">
+    <span class="amazon-widget-title">
+      データマネジメントが30分でわかる本
+    </span>
+    <span class="amazon-widget-via">
+      <img src="https://www.amazon.co.jp/favicon.ico" />
+      amazon.co.jp
+    </span>
+  </div>
+</div>
+
+<h3 id="第一部--データを資産として扱う">第一部 : データを資産として扱う<a class="anchor" aria-hidden="true" href="#第一部--データを資産として扱う"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p>根っこにあるのは <strong>データを資産として考える</strong> という一点。ただし置いてあるだけの資産は価値を生まず、管理コストとリスクだけが増える。だから資産管理に必要なことをデータにもやる、という話になる。現実の資産と違うのは <strong>コピーが容易で、使っても減らない</strong> こと。</p>
+<h4 id="なぜ今なのか">なぜ今なのか<a class="anchor" aria-hidden="true" href="#なぜ今なのか"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<ul>
+<li>生成 AI が、これまで分析対象になりにくかった文書・画像・音声まで解釈対象にした</li>
+<li>品質やガバナンスの不足が「サイレントな悪影響」として効いてくる</li>
+<li>「AI-Ready データ」という概念が登場した</li>
+</ul>
+<p>資料の言い方だと「ぶっちゃけ大変な時代です」。制度面の動きも3つ挙がっている。</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">主体</th>
+					<th style="text-align: left">動き</th>
+					<th style="text-align: left">時期</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">デジタル庁</td>
+					<td style="text-align: left">データガバナンス・ガイドライン（越境データ / セキュリティ / 総合力 / AI 対応）</td>
+					<td style="text-align: left">2025-06-20</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">デジタル行財政改革会議</td>
+					<td style="text-align: left">データ利活用制度の在り方に関する基本方針</td>
+					<td style="text-align: left">2025-06-13</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">IPA</td>
+					<td style="text-align: left">データマネジメント試験（仮称）を新設。IT パスポートの次のステップという位置づけ</td>
+					<td style="text-align: left">2027 年度〜</td>
+			</tr>
+	</tbody>
+</table>
+<h4 id="推進の難しさ">推進の難しさ<a class="anchor" aria-hidden="true" href="#推進の難しさ"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<p>ボトムアップだけでは限界がある、として3つ。</p>
+<ol>
+<li>ビジネスサイドとの接続不足</li>
+<li>要件定義の乖離</li>
+<li>統率力の不足（ステークホルダーが多く、調整そのものが課題になる）</li>
+</ol>
+<p>かといって、トップダウンで「ガバナンス！ スチュワード！ マチュリティ！ オントロジ！」と唱えるだけの <strong>正論おじさん</strong> もダメで、現場には「結局どうしろと？」「仕事増えるだけじゃん」しか残らない。要るのは <strong>実現可能性を見極める力</strong> だとしている。</p>
+<p>進め方の王道（トップダウンで理想像を立てる → 各部門の現状を計測する → 小さく成功が見込める領域から横展開する）は全社 PoC と同じ流れで、一見よさそうに見える。が、資料は次のスライドで「数年後、あまり変わってないデータ環境がそこに！」とコケてみせる。</p>
+
+<div class="markdown-alert markdown-alert-warning">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>
+        Warning
+        
+    </p>
+    <p><strong>データマネジメントは放置しても勝手に広がらない。</strong> データに関わる全ステークホルダーに影響するため、一過性の盛り上がりでやり切るのは難しく、中長期でゴールまでの計画を描く必要がある。しかも完了は運用の始まりでしかない。全体図・パイプライン・ドキュメント・品質基準といった成果物は完成した瞬間から陳腐化が始まり、<strong>データは情報システム以上に変化が速い</strong>。</p>
+</div>
+
+<p>必要なのは組織を上下左右に繋ぐ役割。トップダウンの支援・ボトムアップの事例創出・横方向の協力者が揃わないと、中長期の計画は走り続けない。</p>
+<h4 id="物理インフラ事業との類似">物理インフラ事業との類似<a class="anchor" aria-hidden="true" href="#物理インフラ事業との類似"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<p>第一部で一番大きな枠組みがこれ。電気・ガス・水道・通信と同じ種類の難しさがある、という整理。</p>
+<ul>
+<li><strong>「動いて当たり前」を支える、終わりのない維持管理</strong> — 止まれば業務停止や意思決定のミスに直結する</li>
+<li><strong>初期投資の大きさと、見えにくい投資対効果</strong> — 基盤自体は価値を生まず、利活用されて初めて利益になる</li>
+<li><strong>レガシーからの段階的移行と、標準化への抵抗</strong> — 都市機能を維持しながら古い水道管を少しずつ替えるのに似ている</li>
+</ul>
+<p>裏返すと、<strong>データマネジメントが完璧に機能しているときは誰も注目しない</strong>。課題が見当たらないときは「完璧に利活用できている」か「誰も利活用していない」かのどちらか、という指摘が入る。</p>
+<h3 id="第二部--aiken-のピラミッドで12領域を眺める">第二部 : Aiken のピラミッドで12領域を眺める<a class="anchor" aria-hidden="true" href="#第二部--aiken-のピラミッドで12領域を眺める"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p>DMBOK は資料の紹介で 600 ページ超・13,200 円。いきなり通読するものではないので、<strong>Aiken&rsquo;s Pyramid framework</strong> を借りて 12 領域を 6 層に並べている。</p>
+
+<link rel="stylesheet" href="../../css/amazon.css"><div class="amazon-widget">
+  <a href="https://www.amazon.co.jp/gp/product/4296205552/?tag=XXXXXX"></a>
+  <div class="amazon-widget-img">
+    <img src="http://images.amazon.com/images/P/4296205552.09_SL110_.jpg" />
+  </div>
+
+  <div class="amazon-widget-info">
+    <span class="amazon-widget-title">
+      データマネジメント知識体系ガイド 第二版 改定新版
+    </span>
+    <span class="amazon-widget-via">
+      <img src="https://www.amazon.co.jp/favicon.ico" />
+      amazon.co.jp
+    </span>
+  </div>
+</div>
+
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">層</th>
+					<th style="text-align: left">領域</th>
+					<th style="text-align: left">順</th>
+					<th style="text-align: left">どういう話か</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">1</td>
+					<td style="text-align: left">データ分析</td>
+					<td style="text-align: left">4</td>
+					<td style="text-align: left">データから価値を取り出す。ここだけが価値を生む</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">2</td>
+					<td style="text-align: left">DWH &amp; BI</td>
+					<td style="text-align: left">3</td>
+					<td style="text-align: left">集約・加工・集計・可視化のためのシステム基盤</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">2</td>
+					<td style="text-align: left">マスターデータ &amp; コード</td>
+					<td style="text-align: left">3</td>
+					<td style="text-align: left">唯一の、一貫した、信頼できる情報源を保つ</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">2</td>
+					<td style="text-align: left">ドキュメント</td>
+					<td style="text-align: left">3</td>
+					<td style="text-align: left">文書・画像・音声の分類とラベリング</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">3</td>
+					<td style="text-align: left">データ統合と相互運用性</td>
+					<td style="text-align: left">1</td>
+					<td style="text-align: left">散らばったデータを集め、システム間で交換できる形に</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">4</td>
+					<td style="text-align: left">ストレージ &amp; データ運用</td>
+					<td style="text-align: left">1</td>
+					<td style="text-align: left">生成から破棄までのライフサイクルを回す</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">4</td>
+					<td style="text-align: left">セキュリティ</td>
+					<td style="text-align: left">1</td>
+					<td style="text-align: left">正当な権限を持つ人・システム・AI だけが使える状態</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">4</td>
+					<td style="text-align: left">モデリング &amp; デザイン</td>
+					<td style="text-align: left">1</td>
+					<td style="text-align: left">ビジネス対象をデータ上でどう表現するか</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">5</td>
+					<td style="text-align: left">アーキテクチャ</td>
+					<td style="text-align: left">2</td>
+					<td style="text-align: left">データの「流域」を書き出す。EA の枠組みを流用</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">5</td>
+					<td style="text-align: left">データ品質</td>
+					<td style="text-align: left">2</td>
+					<td style="text-align: left">利用者が求める水準を満たしているかを測る</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">5</td>
+					<td style="text-align: left">メタデータ</td>
+					<td style="text-align: left">2</td>
+					<td style="text-align: left">データを説明するデータ。図書館の分類目録</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">6</td>
+					<td style="text-align: left">データガバナンス</td>
+					<td style="text-align: left">3</td>
+					<td style="text-align: left">全領域の監督。ヒト・カネ・データの配置を決める</td>
+			</tr>
+	</tbody>
+</table>
+<p>「順」は資料の色分け（青 → オレンジ → 緑 → 赤）に対応した推奨の取り組み順で、流れとしてはこうなる。</p>
+<ol>
+<li>扱うデータを統合して構成を決め、置き場所とセキュリティを確保する</li>
+<li>全体図と説明書、品質基準などを定める</li>
+<li>基盤システムを用意してルール・ドキュメント・管理方法を定める</li>
+<li>データ分析を行なって価値を取り出す</li>
+</ol>
+
+<div class="markdown-alert markdown-alert-important">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>
+        Important
+        
+    </p>
+    <p><strong>価値を生むのは頂点のデータ分析だけ。</strong> 残り 11 領域は直接には利益を生まない。にもかかわらず、現場で課題が表に出てくる順番はこの逆で、頂点から降ってくる。</p>
+<p>「データが更新されてない！」「個人情報漏れてません？」「このデータ何のため？」「営業と製造のデータが紐付きません」「あのデータどこ？」「分析のコストがすごいことに！」</p>
+</div>
+
+<p>だから資料の解説も、取り組み順ではなく <strong>頂点から順に</strong> 降りていく構成をとっている。</p>
+<h4 id="ai-時代に何が変わったか">AI 時代に何が変わったか<a class="anchor" aria-hidden="true" href="#ai-時代に何が変わったか"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<p>12 領域それぞれに AI 時代の話が入っているのが、この資料の性格をよく表している。</p>
+<ul>
+<li><strong>データ分析</strong> — 技術的スキル（加工・集計・統計）の重要度が下がり、問いを立てる力・検証力・事業理解・ストーリーを語る力の重要度が上がった。「データがあること」と「使えること」は別問題</li>
+<li><strong>DWH &amp; BI</strong> — 非構造化データを溜めるベクトル DB の統合、自然言語で DWH を叩く AI、指標のブレを防ぐ <strong>意味層（セマンティックレイヤー）</strong>、集約しない分散型（データファブリック / データメッシュ）</li>
+<li><strong>マスターデータ &amp; コード</strong> — 「同じ実体を指すデータが複数あるとブレる」。<code>1:令和, 2:平成, 3:昭和</code> のようなコードは次の年号で詰む。マスターが信用できないと <strong>各自が自分専用マスターを作り始め、組織全体の唯一性が崩れる</strong></li>
+<li><strong>ドキュメント</strong> — 非構造化データは「AI の重要なインプット」「DWH の一部」になった。分類・ラベリングはただの裏方事務ではなくなった</li>
+<li><strong>データ統合と相互運用性</strong> — <strong>データは意識して設計しないと繋がらない</strong>。重ね合わせる “のりしろ”、つまり共通のキーが要る。AI とシステムの間の相互運用性も課題に</li>
+<li><strong>ストレージ &amp; データ運用</strong> — 忘れられがちなのは「破棄」。データは腐らずコピーできるので総量が際限なく増え、コストとリスクだけが積み上がる</li>
+<li><strong>セキュリティ</strong> — 「リスクは、それをリスクと認識していない時が一番大きなリスクとなる」。管理外での AI 利用（シャドー AI）による意図しない学習への対策も要る</li>
+<li><strong>モデリング &amp; デザイン</strong> — 5W1H で整理する。「顧客が（Who）ある製品を（What）先月に（When）EC サイトで（Where）注文して（Why）発注書を作成した（How）」</li>
+<li><strong>メタデータ</strong> — <strong>AI がメタデータの最大の消費者になる</strong>。メタデータがない状態は「分類も目録もない図書館」で、AI は棚の本を一冊ずつ読むはめになる。メタデータ自体を AI が生成・更新し続ける <strong>アクティブ・メタデータ</strong> も出てきた</li>
+<li><strong>データ品質</strong> — 評価軸は ISO 25012 などで定義されている。定義が「利用者の求める水準を満たしているか」なので、<strong>全部を高めればいいわけではない</strong>（セキュリティと似ている）</li>
+<li><strong>アーキテクチャ</strong> — AI 時代には <strong>文脈そのもの</strong> として AI に参照される</li>
+<li><strong>データガバナンス</strong> — 野球の監督に喩えられる。<strong>組織体制を築けるかが最大の課題</strong>で、ボトムアップでやるのは「一選手がフィールドに立ちながら監督を兼任しようとするようなもの」。経営企画やホールディングスなど意思決定者に近い位置に置くのが望ましい</li>
+</ul>
+<p>第二部の締めは、技術寄り / ビジネス寄り / 横断の領域があり、下部ほど全体視点が要る、だから <strong>一人で全部は担えない</strong> → 領域ごとに任せられるパートナーを見つけよう、という話。</p>
+<h3 id="第三部--機械可読性の実習">第三部 : 機械可読性の実習<a class="anchor" aria-hidden="true" href="#第三部--機械可読性の実習"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p>機械可読性とは <strong>事前のクリーニング無しに集計・分析ができる度合い</strong>。実習の目的は3つで、資料は3つめが重要だと明言している。</p>
+<ol>
+<li>機械可読性の基準を知る</li>
+<li>人力で直すコストを知る</li>
+<li>機械にとっての問題・根本原因・自部署への適用を考える</li>
+</ol>
+<p>題材は経産省の石油統計の Excel。<strong>苦行を経て、自ら解決策を考えるための実習</strong> という位置づけになっている。</p>
+<h4 id="30-のルール">30 のルール<a class="anchor" aria-hidden="true" href="#30-のルール"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<p>デジタル庁は「行政データにおける機械可読性に関するルール」を定めている（令和8年3月31日 各府省庁 DX 推進連絡会議・デジタル社会推進会議幹事会決定、4月から各府省で運用開始）。国の行政機関が今後作成するテーブルデータが対象で、水準は3段階。</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">レベル</th>
+					<th style="text-align: left">到達点</th>
+					<th style="text-align: left">前処理なしで何ができるか</th>
+					<th style="text-align: left">ルール数</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">レベル1</td>
+					<td style="text-align: left">閲覧・転記可能</td>
+					<td style="text-align: left">表形式データとして最低限の機械処理が可能</td>
+					<td style="text-align: left">15</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">レベル2</td>
+					<td style="text-align: left">集計・分析可能</td>
+					<td style="text-align: left">統計的な集計・分析作業が即座に実施可能</td>
+					<td style="text-align: left">6</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">レベル3</td>
+					<td style="text-align: left">連携・自動化可</td>
+					<td style="text-align: left">データセット間の結合・比較分析、プログラムによる自動処理が可能</td>
+					<td style="text-align: left">9</td>
+			</tr>
+	</tbody>
+</table>
+<p>中身は「セルの結合をしない」「1セル1データとする」「スペースや改行等で体裁を整えない」「データは縦持ち形式とする」といった、Excel で表を作るときに誰もがやりがちなことの禁止リスト。ルール本体は JSON でリポジトリに入っている。</p>
+
+
+<div>
+    <div class="github-card" data-github="digital-go-jp/machine_readability_rule" data-theme="default"></div>
+    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+</div>
+
+
+<h4 id="harunobu-で採点する">Harunobu で採点する<a class="anchor" aria-hidden="true" href="#harunobu-で採点する"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<p>リポジトリの <code>sample_app/</code> には <strong>Harunobu（春信）</strong> というチェッカーが同梱されている。Python / Streamlit 製で、CSV と Excel を判定する。特徴は <strong>AI を使わない純粋な機械判定</strong> であること（そのぶん、自動判定が難しいルールは未対応）。</p>
+<p>ファイルアップロード → データプレビュー → レイアウト検出 → チェック実行 → 採点結果、の5ステップ。資料に載っている実例（石油統計の <code>se202605kakji.xlsx</code>、82 行 × 22 列、結合セル 3 箇所）の結果がこれ。</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">レベル</th>
+					<th style="text-align: left">合格したセル</th>
+					<th style="text-align: left">点数</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">レベル1</td>
+					<td style="text-align: left">964 / 1128</td>
+					<td style="text-align: left">0 点</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">レベル2</td>
+					<td style="text-align: left">246 / 283</td>
+					<td style="text-align: left">0 点</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">レベル3</td>
+					<td style="text-align: left">350 / 470</td>
+					<td style="text-align: left">0 点</td>
+			</tr>
+	</tbody>
+</table>
+
+<div class="markdown-alert markdown-alert-caution">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M4.47.22A.749.749 0 0 1 5 0h6c.199 0 .389.079.53.22l4.25 4.25c.141.14.22.331.22.53v6a.749.749 0 0 1-.22.53l-4.25 4.25A.749.749 0 0 1 11 16H5a.749.749 0 0 1-.53-.22L.22 11.53A.749.749 0 0 1 0 11V5c0-.199.079-.389.22-.53Zm.84 1.28L1.5 5.31v5.38l3.81 3.81h5.38l3.81-3.81V5.31L10.69 1.5ZM8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4Zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>
+        Caution
+        
+    </p>
+    <p>セル単位では 7〜8 割通っているのに全レベル 0 点。重大度が「致命的」のルールに 1 つでも違反すると、そのレベルは <strong>強制的に 0 点</strong> になるため。違反していたのは <code>L1-02</code> / <code>L2-01</code> <code>L2-02</code> <code>L2-03</code> / <code>L3-01</code>。</p>
+</div>
+
+<p>レベル1で不合格になっていたのは以下。</p>
+<ul>
+<li><code>L1-02</code> シート <code>(1)〜(3)</code> に 17 個のテーブルを検出（致命的）</li>
+<li><code>L1-03</code> テーブル間の空白行が 8 件</li>
+<li><code>L1-04</code> テーブル外のセルが 13 件</li>
+<li><code>L1-06</code> 体裁用のスペース・改行が 5 件</li>
+<li><code>L1-07</code> 1 件のセルに複数データ</li>
+</ul>
+<p>CLI もあり、<code>--mode thorough --out-path 採点結果.json</code> を付けると、シート名・使用範囲・評価対象エリア・ヘッダー行と、ルールごとの合否・重大度・信頼度・違反箇所・メッセージが JSON で出る。</p>
+<h4 id="源内との合わせ技">源内との合わせ技<a class="anchor" aria-hidden="true" href="#源内との合わせ技"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<p>資料では、この JSON をガバメント AI「源内」に渡す流れが紹介されている。</p>
+<ol>
+<li>Harunobu を実行環境で動かす</li>
+<li><code>--mode thorough --out-path 採点結果.json</code> で判定する</li>
+<li>採点結果.json をもとに Excel を加工するスクリプトを書かせる</li>
+<li>実行して CSV を作る</li>
+</ol>
+
+<div class="markdown-alert markdown-alert-tip">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>
+        Tip
+        
+    </p>
+    <p>Harunobu の名前は浮世絵師の <strong>鈴木春信</strong> から。錦絵は複数の版を重ねて 1 枚の絵にする分業体制で、それを「複数のルールを適用して（機械にとって）美しいデータを作る」に掛けている。「紙を入れて版を刷る」と「神（Excel）を入れて綺麗なデータを作る」の駄洒落つき。ついでに春信の近所に住んでいた友人が <strong>平賀源内</strong> で、ガバメント AI「源内」に繋がる。</p>
+</div>
+
+<p>整備後のデータは縦持ちに直したうえで「種別 / 更新年月 / 指標レベル / 親指標」の列が足されている。資料はこれを「<strong>これもメタデータの一部</strong>」「データモデリングの要素も含まれる」と第二部に回収していて、実習が 12 領域の話に戻ってくる構成になっている。</p>
+<h3 id="全体のまとめ">全体のまとめ<a class="anchor" aria-hidden="true" href="#全体のまとめ"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p>資料の締めは3つ。</p>
+<ul>
+<li><strong>気合いと覚悟</strong></li>
+<li><strong>ピラミッドとキーワード</strong></li>
+<li><strong>楽する道を探すこと</strong></li>
+</ul>
+<h2 id="ref">Ref.<a class="anchor" aria-hidden="true" href="#ref"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<ul>
+<li><a href="https://speakerdeck.com/haseryo/datamanagementkenshu-digital-agency-japan">データマネジメント研修（デジタル庁）</a> Speaker Deck</li>
+<li><a href="https://github.com/digital-go-jp/machine_readability_rule">digital-go-jp/machine_readability_rule</a> GitHub</li>
+<li><a href="https://www.cas.go.jp/jp/seisaku/digital_gyozaikaikaku/pdf/gyouseidata_rule.pdf">行政データにおける機械可読性に関するルール</a> 各府省庁DX推進連絡会議・デジタル社会推進会議幹事会（PDF）</li>
+<li><a href="https://www.cas.go.jp/jp/seisaku/digital_gyozaikaikaku/pdf/data_houshin_honbun.pdf">データ利活用制度の在り方に関する基本方針</a> デジタル行財政改革会議（PDF）</li>
+<li><a href="https://www.digital.go.jp/news/71bf19c2-f804-488e-ab32-e7a044dcac58">「データガバナンス・ガイドライン」を策定しました</a> デジタル庁</li>
+<li><a href="https://www.ipa.go.jp/shiken/minaoshi/index.html">試験制度の見直しについて</a> IPA</li>
+<li><a href="https://www.ipa.go.jp/jinzai/skill-gakushu/data-management.html">データマネジメント人材の育成に関するタスクフォース</a> IPA</li>
+<li><a href="https://www.meti.go.jp/statistics/tyo/sekiyuka/index.html">石油統計</a> 経済産業省</li>
+</ul>
+</article>
+        </div>
+        </div>
+        </div>
+    </div>
+        
+        
+        
+        <div class="Box mt-3 position-relative">
+        <div class="Box-body px-5 pb-5">
+            <article class="markdown-body entry-content container-lg">
+                <h2>See Also</h2>
+                <ul class="mt-2">
+                    
+                    <li class="p-1">
+                        <div>
+                            <a href="../../post/vim_csv_control/">[Vim] CSV Control</a>
+                            <time datetime="2024-12-26 21:27" class="no-wrap text-small ml-1">(2024-12-26 21:27)</time>
+                        </div>
+                        <div class="text-small text-gray mb-1 mt-1">God&#39;s tool that lets you edit CSVs like Excel in Vim</div>
+                    </li>
+                    
+                </ul>
+            </article>
+        </div>
+        </div>
+        
+    </div>
+    </div>
+</main>
+</div>
+
+<script type="application/javascript" src='https://kithub.f5.si/js/toc.js'></script>
+<link rel="stylesheet" href='https://kithub.f5.si/css/toc.css' />
+
+
+<script
+    src='https://kithub.f5.si/js/syntax-highlight-title.js'
+    crossorigin="anonymous"
+    type="application/javascript">
+</script>
+<link rel="stylesheet" href="../../css/syntax-highlight-title.css">
+
+
+
+
+
+
+
+<script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js" crossorigin="anonymous"></script>
+<script>
+
+
+(function () {
+    function transformMermaidCodeBlocks() {
+        var codeBlocks = document.querySelectorAll('pre > code.language-mermaid, code.language-mermaid');
+        codeBlocks.forEach(function (code) {
+            var pre = code.parentElement && code.parentElement.tagName.toLowerCase() === 'pre' ? code.parentElement : code;
+            var container = document.createElement('div');
+            container.className = 'mermaid';
+            container.textContent = code.textContent;
+            pre.replaceWith(container);
+        });
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', transformMermaidCodeBlocks);
+    } else {
+        transformMermaidCodeBlocks();
+    }
+    
+    if (window.mermaid) {
+        window.mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+    }
+})();
+</script>
+
+
+
+
+  
+
+  
+  
+<link rel="stylesheet" href='https://kithub.f5.si/css/giscus.css'>
+<div class="giscus"></div>
+<script>
+  (function () {
+    var origin = 'https://giscus.app';
+
+    function colorMode() {
+      return document.documentElement.getAttribute('data-color-mode') === 'dark' ? 'dark' : 'light';
+    }
+
+    
+    
+    var attrs = {
+      'data-repo': 'shiroimon\/todayilearned',
+      'data-repo-id': 'R_kgDOMSwknw',
+      'data-category': 'Announcements',
+      'data-category-id': 'DIC_kwDOMSwkn84DDAKW',
+      'data-mapping': 'pathname',
+      'data-strict': '0',
+      'data-reactions-enabled': '1',
+      'data-emit-metadata': '0',
+      'data-input-position': 'bottom',
+      'data-lang': 'ja',
+      'data-loading': 'lazy',
+      'data-theme': colorMode()
+    };
+
+    var s = document.createElement('script');
+    s.src = origin + '/client.js';
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    Object.keys(attrs).forEach(function (k) { s.setAttribute(k, attrs[k]); });
+    
+    document.querySelector('.giscus').appendChild(s);
+
+    
+    new MutationObserver(function () {
+      var frame = document.querySelector('iframe.giscus-frame');
+      if (frame) {
+        frame.contentWindow.postMessage({ giscus: { setConfig: { theme: colorMode() } } }, origin);
+      }
+    }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-color-mode'] });
+  })();
+</script>
+  
+
+
+</div>
+
+  <div class="footer container-xl width-full p-responsive">
+  <div
+    class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between flex-sm-items-center pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mr-lg-4" href="https://kithub.f5.si/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24">
+        <path fill-rule="evenodd"
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+        </path>
+      </svg>
+    </a>
+    <ul class="list-style-none d-flex flex-wrap col-12 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+      
+      <li class="mr-3 mr-lg-0">Theme by <a href='https://github.com/MeiK2333/github-style'>github-style</a></li>
+      
+      <li class="mr-3 mr-lg-0">GitHub and the Invertocat logo are trademarks of <a href="https://github.com/">GitHub, Inc.</a></li>
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+
+
+</div>
+
+</body>
+
+<script type="application/javascript" src="https://kithub.f5.si/js/github-style.js"></script>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+<script type="application/javascript" src='https://kithub.f5.si/js/search.js'></script>
+
+
+
+</html>

@@ -1,0 +1,36 @@
+/*
+ * Codapi（layouts/shortcodes/codapi.html）の見た目をテーマに寄せる。
+ * 色はテーマの --color-btn-* を借りるのでライト/ダークに自動追随する。
+ */
+codapi-toolbar button {
+  padding: 3px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--color-btn-text);
+  background-color: var(--color-btn-bg);
+  border: 1px solid var(--color-btn-border);
+  border-radius: 6px;
+  box-shadow: var(--color-btn-shadow), var(--color-btn-inset-shadow);
+  cursor: pointer;
+}
+
+codapi-toolbar button:hover {
+  background-color: var(--color-btn-hover-bg);
+  border-color: var(--color-btn-hover-border);
+}
+
+codapi-toolbar button:disabled {
+  cursor: progress;
+  opacity: 0.6;
+}
+
+codapi-toolbar,
+codapi-status {
+  font-size: 13px;
+}
+
+/* sqlite の -box 出力は罫線文字を縦につなげたいので行間を詰める */
+codapi-output pre {
+  line-height: 1.2;
+}

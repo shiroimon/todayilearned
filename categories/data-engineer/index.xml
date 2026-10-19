@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Sun, 06 Sep 2026 18:20:39 +0900</lastBuildDate>
+			<lastBuildDate>Mon, 21 Sep 2026 18:36:12 +0900</lastBuildDate>
 		
 			<atom:link href="https://kithub.f5.si/categories/data-engineer/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>[Data Management] Miscellaneous &lt;デジタル庁の研修資料で12領域を眺める&gt;</title>
+				<link>https://kithub.f5.si/post/data_management_miscellaneous/</link>
+				<pubDate>Fri, 18 Sep 2026 18:22:20 +0900</pubDate>
+				<guid>https://kithub.f5.si/post/data_management_miscellaneous/</guid>
+				<description>📚 デジタル庁が公開したデータマネジメント研修資料（92枚）を読む。Aiken のピラミッド12領域、AI 時代に変わったこと、機械可読性30ルールと Harunobu まで。</description>
+			</item>
 			<item>
 				<title>[Data Engineer] Personal Data Taxonomy Governance</title>
 				<link>https://kithub.f5.si/post/data_engineer_personal_data_taxonomy_governance/</link>

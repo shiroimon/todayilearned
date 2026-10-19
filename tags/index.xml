@@ -10,9 +10,51 @@
 		
 		
 		
-			<lastBuildDate>Sun, 06 Sep 2026 18:20:39 +0900</lastBuildDate>
+			<lastBuildDate>Mon, 21 Sep 2026 18:36:12 +0900</lastBuildDate>
 		
 			<atom:link href="https://kithub.f5.si/tags/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>CSV</title>
+				<link>https://kithub.f5.si/tags/csv/</link>
+				<pubDate>Fri, 18 Sep 2026 18:22:20 +0900</pubDate>
+				<guid>https://kithub.f5.si/tags/csv/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Data Management</title>
+				<link>https://kithub.f5.si/tags/data-management/</link>
+				<pubDate>Fri, 18 Sep 2026 18:22:20 +0900</pubDate>
+				<guid>https://kithub.f5.si/tags/data-management/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Data Quality</title>
+				<link>https://kithub.f5.si/tags/data-quality/</link>
+				<pubDate>Fri, 18 Sep 2026 18:22:20 +0900</pubDate>
+				<guid>https://kithub.f5.si/tags/data-quality/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>DMBOK</title>
+				<link>https://kithub.f5.si/tags/dmbok/</link>
+				<pubDate>Fri, 18 Sep 2026 18:22:20 +0900</pubDate>
+				<guid>https://kithub.f5.si/tags/dmbok/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Excel</title>
+				<link>https://kithub.f5.si/tags/excel/</link>
+				<pubDate>Fri, 18 Sep 2026 18:22:20 +0900</pubDate>
+				<guid>https://kithub.f5.si/tags/excel/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Metadata</title>
+				<link>https://kithub.f5.si/tags/metadata/</link>
+				<pubDate>Fri, 18 Sep 2026 18:22:20 +0900</pubDate>
+				<guid>https://kithub.f5.si/tags/metadata/</guid>
+				<description></description>
+			</item>
 			<item>
 				<title>Anthropic</title>
 				<link>https://kithub.f5.si/tags/anthropic/</link>
@@ -256,13 +298,6 @@
 				<link>https://kithub.f5.si/tags/macos/</link>
 				<pubDate>Tue, 28 Jan 2025 00:50:32 +0900</pubDate>
 				<guid>https://kithub.f5.si/tags/macos/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>CSV</title>
-				<link>https://kithub.f5.si/tags/csv/</link>
-				<pubDate>Thu, 26 Dec 2024 21:27:07 +0900</pubDate>
-				<guid>https://kithub.f5.si/tags/csv/</guid>
 				<description></description>
 			</item>
 			<item>

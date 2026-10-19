@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="application/javascript" src='http://localhost:1313/js/theme-mode.js'></script>
+    <link rel="stylesheet" href='http://localhost:1313/css/frameworks.min.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/github.min.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/github-style.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/light.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/dark.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/syntax.css' />
+    <title>[Docker] Compose for Parallel Data Pipeline &lt;Compose でワーカーを増やす&gt; - Today I Learned | KitHub</title>
+    
+    <link rel="icon" type="image/x-icon" href='../../images/github-mark.png'>
+    
+    <meta name="theme-color" content="#1e2327">
+
+    <link rel="stylesheet" href="http://localhost:1313/css/gist.css"><link rel="stylesheet" href="http://localhost:1313/css/markdown-alert.css"><link rel="stylesheet" href="http://localhost:1313/css/code-copy.css"><link rel="stylesheet" href="http://localhost:1313/css/link-card.css"><link rel="stylesheet" href="http://localhost:1313/css/post-title.css">
+    <script type="text/javascript" src="http://localhost:1313/js/gist-dark-mode.js"></script><script type="text/javascript" src="http://localhost:1313/js/code-copy.js"></script>
+    
+
+    
+    <meta name="description"
+  content="🐳 Docker Compose でデータパイプラインのワーカーを増やすとき、YAML と CLI とアプリが何を受け持つか。" />
+<meta name="keywords"
+  content='blog' />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="http://localhost:1313/post/docker_compose_parallel_pipeline/" />
+
+
+<link rel="manifest" href="../../manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Today I Learned | KitHub">
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/apple-touch-icon.png">
+
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="[Docker] Compose for Parallel Data Pipeline &lt;Compose でワーカーを増やす&gt; - Today I Learned | KitHub" />
+<meta name="twitter:description"
+  content="🐳 Docker Compose でデータパイプラインのワーカーを増やすとき、YAML と CLI とアプリが何を受け持つか。" />
+<meta name="twitter:site" content="http://localhost:1313/" />
+<meta name="twitter:creator" content="shiroimon" />
+<meta name="twitter:image" content="http://localhost:1313/images/og-base_hu_1b7c65f1efed7356.png">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="[Docker] Compose for Parallel Data Pipeline &lt;Compose でワーカーを増やす&gt; - Today I Learned | KitHub">
+<meta property="og:description"
+  content="🐳 Docker Compose でデータパイプラインのワーカーを増やすとき、YAML と CLI とアプリが何を受け持つか。" />
+<meta property="og:url" content="http://localhost:1313/post/docker_compose_parallel_pipeline/" />
+<meta property="og:site_name" content="Today I Learned | KitHub" />
+<meta property="og:image" content="http://localhost:1313/images/og-base_hu_1b7c65f1efed7356.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta property="article:published_time" content="2026-10-03 19:00:00 &#43;0900 JST" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('\/sw.js', { scope: '\/' })
+      .then((registration) => {
+        console.log('[PWA] Service Worker registered:', registration.scope);
+
+        
+        registration.addEventListener('updatefound', () => {
+          const newWorker = registration.installing;
+          console.log('[PWA] New Service Worker found, updating...');
+
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'activated') {
+              console.log('[PWA] New Service Worker activated');
+              
+              if (navigator.serviceWorker.controller) {
+                window.location.reload();
+              }
+            }
+          });
+        });
+
+        
+        setInterval(() => {
+          registration.update();
+        }, 60 * 60 * 1000);
+      })
+      .catch((error) => {
+        console.error('[PWA] Service Worker registration failed:', error);
+      });
+  });
+}
+</script>
+
+</head>
+
+
+<body>
+  <div style="position: relative">
+  <header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on">
+    <div class="Header-item mobile-none" style="margin-top: -4px; margin-bottom: -4px;">
+      <a class="Header-link" href="http://localhost:1313/">
+        <img class="octicon" height="32" width="32" src="../../images/github-mark-white.png">
+      </a>
+    </div>
+    <div class="Header-item d-md-none">
+      <button class="Header-link btn-link js-details-target" type="button"
+        onclick="document.querySelector('#header-search').style.display = document.querySelector('#header-search').style.display == 'none'? 'block': 'none'">
+        <svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" version="1.1" width="24">
+          <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div style="display: none;" id="header-search"
+      class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
+      <div
+        class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to">
+        <div class="position-relative">
+          
+          <form target="_blank" id="search-form" action="" accept-charset="UTF-8" method="get"
+            autocomplete="off">
+            <label
+              class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center">
+              <input type="text"
+                class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+                name="q" value="" placeholder="Search" autocomplete="off">
+            </label>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
+      <a class="Header-link " href="http://localhost:1313/">
+        <img class="octicon octicon-mark-github v-align-middle" height="32" width="32" src="../../images/github-mark-white.png">
+      </a>
+    </div>
+    <div class="Header-item" style="margin-right: 0;">
+      <a href="javascript:void(0)" class="Header-link no-select" onclick="switchTheme()">
+        <svg style="fill: var(--color-profile-color-modes-toggle-moon);" class="no-select" viewBox="0 0 16 16"
+          version="1.1" width="16" height="16">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M4.52208 7.71754C7.5782 7.71754 10.0557 5.24006 10.0557 2.18394C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961C9.95801 1.07727 10.3495 0.771159 10.6474 0.99992C12.1153 2.12716 13.0615 3.89999 13.0615 5.89383C13.0615 9.29958 10.3006 12.0605 6.89485 12.0605C3.95334 12.0605 1.49286 10.001 0.876728 7.24527C0.794841 6.87902 1.23668 6.65289 1.55321 6.85451C2.41106 7.40095 3.4296 7.71754 4.52208 7.71754Z">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </header>
+</div>
+
+  <div id="search-result" class="container-lg px-3 new-discussion-timeline" style="display: none;">
+</div>
+
+  
+<div class="application-main">
+  <div>
+<main>
+    
+    <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
+    <div class="px-0">
+    <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+    <div class="flex-auto min-width-0 width-fit mr-3">
+    <div class="d-flex">
+        
+        <div class="d-none d-md-block">
+            <a class="avatar mr-2 flex-shrink-0" href="http://localhost:1313/">
+                <img class=" avatar-user"
+                  src="../../images/avatar.png"
+                  width="32"
+                  height="32">
+            </a>
+        </div>
+        
+        <div class="d-flex flex-column">
+            
+            <h1 class="break-word f3 text-normal mb-md-0 mb-1">
+                <span class="author"><a href="http://localhost:1313/"></a></span>
+                <span class="path-divider">/</span>
+                <strong class="mr-1"><a href="http://localhost:1313/post/docker_compose_parallel_pipeline/">[Docker] Compose for Parallel Data Pipeline &lt;Compose でワーカーを増やす&gt;</a></strong>
+            </h1>
+            
+            <div class="note m-0">
+                Created <relative-time datetime="Sat, 03 Oct 2026 19:00:00 &#43;0900" class="no-wrap">Sat, 03 Oct 2026 19:00:00 &#43;0900</relative-time>
+                
+                <span class="path-divider">|</span>
+                Modified <relative-time datetime="Sat, 03 Oct 2026 19:00:00 &#43;0900" class="no-wrap">Sat, 03 Oct 2026 19:00:00 &#43;0900</relative-time>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    
+    <div class="container-lg px-3 new-discussion-timeline">
+    <div class="repository-content gist-content">
+    <div>
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+        <div id="file-pytest" class="file my-2">
+        
+        <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
+        <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+
+            
+            <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+            <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
+                <svg aria-hidden="true" viewBox="0 0 16 16" class="octicon octicon-list-unordered" height="16" width="16">
+                    <path fill-rule="evenodd"
+                        d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z">
+                    </path>
+                </svg>
+            </summary>
+            <details-menu class="SelectMenu" id="toc-details" style="display: none;">
+                <div class="SelectMenu-modal rounded-3 mt-1" style="max-height: 340px;">
+                    <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list"></div>
+                </div>
+            </details-menu>
+            2601 Words
+            <span class="path-divider">|</span>
+            3 min
+            </div>
+
+            
+            <div class="file-actions flex-order-2 pt-0">
+                
+                <div class="d-none d-md-flex">
+                    
+                    
+                    
+                    <a class="muted-link mr-3" href='../../tags/docker'>
+                        <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                            </path>
+                        </svg>
+                        Docker
+                    </a>
+                    
+                    
+                    
+                    <a class="muted-link mr-3" href='../../tags/yaml'>
+                        <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                            </path>
+                        </svg>
+                        YAML
+                    </a>
+                    
+                    
+                    
+                    <a class="muted-link mr-3" href='../../tags/python'>
+                        <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                            </path>
+                        </svg>
+                        Python
+                    </a>
+                    
+                    
+                    
+                    <a class="muted-link mr-3" href='../../tags/postgresql'>
+                        <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                            </path>
+                        </svg>
+                        PostgreSQL
+                    </a>
+                    
+                    
+                    
+                </div>
+                
+            </div>
+        </div>
+        </div>
+
+        
+        
+        
+        
+
+        
+        <div class="Box-body px-5 pb-5" style="z-index: 1">
+            <article class="markdown-body entry-content container-lg"><!-- Icon Badge -->
+<h2 id="why">Why<a class="anchor" aria-hidden="true" href="#why"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<!-- TODO: 本人が書く（誰の話を聞いて、何が引っかかって調べたか） -->
+<h2 id="what">What<a class="anchor" aria-hidden="true" href="#what"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+
+<div class="markdown-alert markdown-alert-note">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>
+        Note
+        
+    </p>
+    <p>元ネタは Gemini との壁打ち（2025-08-14）。<br>
+回答のうち、今の Compose（v2）と食い違う点は補正して載せている。</p>
+</div>
+
+<h3 id="一言でいうと">一言でいうと<a class="anchor" aria-hidden="true" href="#一言でいうと"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p><strong>Compose で並列化するとは、同じワーカーコンテナを複数立てて、仕事（ファイル）を分け合わせること。</strong><br>
+ただし Compose がやってくれるのは「箱を増やす」まで。<strong>どの箱がどのファイルを処理するかはアプリ側の仕事</strong>。</p>
+<h3 id="役割分担">役割分担<a class="anchor" aria-hidden="true" href="#役割分担"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">担当</th>
+					<th style="text-align: left">受け持つこと</th>
+					<th style="text-align: left">変えたいときに触るもの</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><code>compose.yml</code></td>
+					<td style="text-align: left">構成（イメージ・環境変数・ボリューム・依存関係）</td>
+					<td style="text-align: left">YAML</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>docker compose</code> CLI</td>
+					<td style="text-align: left">何個立てるか、どの引数で立てるか</td>
+					<td style="text-align: left">コマンド</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">アプリ（<code>main.py</code>）</td>
+					<td style="text-align: left">取得 → 変換 → 書き込みの中身、仕事の取り合い</td>
+					<td style="text-align: left">Python</td>
+			</tr>
+	</tbody>
+</table>
+
+<div class="markdown-alert markdown-alert-important">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>
+        Important
+        
+    </p>
+    <p><strong>YAML を書いた時点ではまだ分散していない。</strong> 各サービスはデフォルトで 1 コンテナ。<br>
+増やすのは YAML の書き換えではなく CLI（<code>--scale</code> / <code>run</code>）。</p>
+</div>
+
+<h3 id="構成例">構成例<a class="anchor" aria-hidden="true" href="#構成例"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># compose.yml</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">worker</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">env_file</span><span class="p">:</span><span class="w"> </span><span class="l">.env         </span><span class="w"> </span><span class="c"># 接続情報は YAML に直書きしない</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">db</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">db</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">postgres:16</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">env_file</span><span class="p">:</span><span class="w"> </span><span class="l">.env</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">db-data:/var/lib/postgresql/data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">db-data</span><span class="p">:</span><span class="w">
+</span></span></span></code></pre></div>
+<div class="markdown-alert markdown-alert-warning">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>
+        Warning
+        
+    </p>
+    <p>Gemini の回答には <code>version: '3.8'</code> が付いていたが、Compose v2 では不要。書くと警告が出る。</p>
+<pre tabindex="0"><code>$ docker compose version
+Docker Compose version v2.40.3-desktop.1
+$ docker compose config -q
+level=warning msg=&#34;/tmp/cmp/compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion&#34;
+</code></pre><p>コマンドも <code>docker-compose</code>（v1, ハイフンあり）ではなく <code>docker compose</code>（v2, プラグイン）。</p>
+</div>
+
+<h3 id="ワーカーの増やし方は-2-通り">ワーカーの増やし方は 2 通り<a class="anchor" aria-hidden="true" href="#ワーカーの増やし方は-2-通り"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<h4 id="1-ファイルごとに-run-で-1-個ずつ立てる">(1) ファイルごとに <code>run</code> で 1 個ずつ立てる<a class="anchor" aria-hidden="true" href="#1-ファイルごとに-run-で-1-個ずつ立てる"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">docker compose run --rm -e <span class="nv">FILE_TO_PROCESS</span><span class="o">=</span>file1.csv worker
+</span></span><span class="line"><span class="cl">docker compose run --rm -e <span class="nv">FILE_TO_PROCESS</span><span class="o">=</span>file2.csv worker
+</span></span><span class="line"><span class="cl">docker compose run --rm -e <span class="nv">FILE_TO_PROCESS</span><span class="o">=</span>file3.csv worker
+</span></span></code></pre></div><ul>
+<li>処理対象を <strong>起動時に環境変数で渡す</strong>。処理が終わればコンテナは消える（<code>--rm</code>）</li>
+<li>割り振りを人間（かシェルスクリプト）がやるので、アプリは単純なまま</li>
+<li>ファイルが多いと手で叩いていられない → <code>xargs -P</code> などで並べることになる</li>
+</ul>
+<h4 id="2-up---scale-で同じワーカーを-n-個立てる">(2) <code>up --scale</code> で同じワーカーを N 個立てる<a class="anchor" aria-hidden="true" href="#2-up---scale-で同じワーカーを-n-個立てる"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">docker compose up -d --scale <span class="nv">worker</span><span class="o">=</span><span class="m">3</span>
+</span></span></code></pre></div><ul>
+<li>同じ設定のコンテナが 3 個立つ。<strong>3 個とも同じ環境変数を持つ</strong>ので、放っておくと同じファイルを 3 回処理する</li>
+<li>だから「次に処理するファイル」を取り合う仕組み（キュー）がアプリ側に要る</li>
+</ul>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart LR
+  Q[(キュー&lt;br&gt;file1..fileN)] --&gt; W1[worker_1]
+  Q --&gt; W2[worker_2]
+  Q --&gt; W3[worker_3]
+  W1 --&gt; DB[(PostgreSQL)]
+  W2 --&gt; DB
+  W3 --&gt; DB
+</code></pre><p>キューの実体は Redis / SQS / Pub/Sub、DB のテーブルに <code>SELECT ... FOR UPDATE SKIP LOCKED</code> で取り合わせる、など。</p>
+
+<div class="markdown-alert markdown-alert-caution">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M4.47.22A.749.749 0 0 1 5 0h6c.199 0 .389.079.53.22l4.25 4.25c.141.14.22.331.22.53v6a.749.749 0 0 1-.22.53l-4.25 4.25A.749.749 0 0 1 11 16H5a.749.749 0 0 1-.53-.22L.22 11.53A.749.749 0 0 1 0 11V5c0-.199.079-.389.22-.53Zm.84 1.28L1.5 5.31v5.38l3.81 3.81h5.38l3.81-3.81V5.31L10.69 1.5ZM8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4Zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>
+        Caution
+        
+    </p>
+    <p><code>--scale</code> を使うサービスに <code>container_name</code> や固定のホスト側 <code>ports</code> を書くと、名前・ポートが衝突して 2 個目以降が立たない。</p>
+</div>
+
+<h3 id="どこまで-compose-で引っ張るか">どこまで Compose で引っ張るか<a class="anchor" aria-hidden="true" href="#どこまで-compose-で引っ張るか"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">段階</th>
+					<th style="text-align: left">手段</th>
+					<th style="text-align: left">限界</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">1 台・ファイル数少</td>
+					<td style="text-align: left"><code>run</code> を並べる</td>
+					<td style="text-align: left">割り振りが手作業</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">1 台・ファイル数多</td>
+					<td style="text-align: left"><code>--scale</code> ＋ キュー</td>
+					<td style="text-align: left"><strong>1 台の CPU / メモリが天井</strong></td>
+			</tr>
+			<tr>
+					<td style="text-align: left">複数台</td>
+					<td style="text-align: left">Swarm / Kubernetes</td>
+					<td style="text-align: left">Compose 単体の守備範囲外</td>
+			</tr>
+	</tbody>
+</table>
+<p>Gemini は「複数の compose ファイルを別々のサーバーで動かす」も分散の手段に挙げていたが、それは<strong>マシンを分けて手で配っているだけ</strong>で Compose の機能ではない。<br>
+複数台にまたがって数を管理したいなら Kubernetes の <code>replicas</code> の話になる（cf. <a href="../../post/kubernetes_catchup/">Kubernetes Catchup</a>）。</p>
+<p>1 台の中での並列（プロセス / スレッド / async の使い分け）は <a href="../../post/data_engineering_fundamentals/#threads--async--%E5%87%A6%E7%90%86%E3%81%AE%E6%B5%81%E3%82%8C%E3%81%8C%E8%A6%8B%E3%81%88%E3%82%8B">Fundamentals &amp; System Design Roadmap</a> に書いた。<br>
+コンテナを増やすのは「プロセスを増やす」の延長で、<strong>DB 側の同時接続数</strong>が次のボトルネックになりやすい。</p>
+<h3 id="回答のコード例で直したいところ">回答のコード例で直したいところ<a class="anchor" aria-hidden="true" href="#回答のコード例で直したいところ"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<ul>
+<li><strong>1 行ずつ <code>INSERT</code> している</strong>（<code>df.iterrows()</code> ＋ <code>cursor.execute</code>）。ワーカーを増やす前にここが遅い。<code>executemany</code> / <code>COPY</code> / <code>df.to_sql(..., method=&quot;multi&quot;)</code> でまとめて書く</li>
+<li><strong>パスワードを YAML に直書き</strong>している。<code>.env</code> か secrets に逃がす</li>
+<li><strong>冪等でない</strong>。同じファイルを 2 回処理すると行が二重に入る。キューで取り合う設計なら、リトライで同じファイルが再配送される前提で、<code>ON CONFLICT</code> などで上書きにしておく</li>
+</ul>
+
+<div class="markdown-alert markdown-alert-note">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>
+        Note
+        
+    </p>
+    <p><code>--scale</code> の実際の挙動（コンテナ名の付き方・ログの混ざり方）はまだ手元で試していない。</p>
+</div>
+
+<h3 id="振り返り--実際は-compose今なら-sts">振り返り : 実際は Compose、今なら STS<a class="anchor" aria-hidden="true" href="#振り返り--実際は-compose今なら-sts"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h3>
+<p>ここまでは Compose の一般論。実際に相談したかったのは <strong>他社の S3 にある大量の Parquet を自社の BigQuery に移す</strong> 話だった。<br>
+<strong>実際の移行は Docker Compose でワーカーを増やしてやった。</strong> Storage Transfer Service（STS）の存在は後から知った。</p>
+<!-- TODO: 本人が書く（Compose でやってみて実際どうだったか。かかった時間・詰まったところ・再実行の有無） -->
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">条件</th>
+					<th style="text-align: left">値</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">移行の頻度</td>
+					<td style="text-align: left">1 回きり</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">対象</td>
+					<td style="text-align: left">全量</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">egress（転送料金）</td>
+					<td style="text-align: left">相手持ち</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">認証方式</td>
+					<td style="text-align: left">不明</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">S3 のリージョン</td>
+					<td style="text-align: left">US</td>
+			</tr>
+	</tbody>
+</table>
+<h4 id="今ならこうする--sts--gcs--bq-load">今ならこうする : STS → GCS → <code>bq load</code><a class="anchor" aria-hidden="true" href="#今ならこうする--sts--gcs--bq-load"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart LR
+  S3[(他社 S3&lt;br&gt;Parquet)] -- Storage Transfer Service --&gt; GCS[(自社 GCS&lt;br&gt;生ファイル退避)]
+  GCS -- bq load --&gt; BQ[(自社 BigQuery)]
+</code></pre><ul>
+<li><strong>1 回きり・全量</strong> なので、差分同期も「移さずに読む」（BigQuery Omni / BigLake）も要らない。丸ごとコピーが一番単純</li>
+<li><strong>egress が相手持ち</strong> なので、S3 に取りに行くのは 1 回で済ませたい
+<ul>
+<li>GCS に生ファイルを置いておけば、ロードや型の失敗はこちら側だけでやり直せる</li>
+<li>STS は途中再開でき、再実行しても転送済みのファイルは飛ばす</li>
+</ul>
+</li>
+<li><strong>GCS → BigQuery のロードジョブは無料</strong>。Python で 1 行ずつ書き込むより安くて速い</li>
+</ul>
+<p>Compose でワーカーを増やすやり方は、STS とロードジョブがやってくれることを手で作り直していたことになる。<br>
+しかも途中で失敗すると、S3 へ取りに行き直す（= 相手の egress が増える）作りになりやすい。<br>
+移しながらマスキングなどの加工が要る場合でも、いったん GCS に落としてから自社側で加工するほうが安全。</p>
+<h4 id="認証は-iam-ロールで頼む">認証は IAM ロールで頼む<a class="anchor" aria-hidden="true" href="#認証は-iam-ロールで頼む"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<ul>
+<li>アクセスキーを発行してもらう代わりに、STS のサービスアカウントが AWS の IAM ロールを借りる方式にする（STS の federated identity 認証）</li>
+<li>長く使えるキーを社外に渡さずに済むので、相手のセキュリティ審査を通しやすい</li>
+<li>相手に頼むこと
+<ul>
+<li>ロールを作り、Google 側からの引き受け（AssumeRole）を許可する</li>
+<li>そのロールに <code>s3:GetObject</code> / <code>s3:ListBucket</code> だけを付ける</li>
+<li>アカウントをまたぐのでバケットポリシー側の許可も要る（cf. <a href="../../post/google_cloud_iam_miscellaneous/">IAM Miscellaneous</a>）</li>
+<li>移行が終わったらロールを消す</li>
+</ul>
+</li>
+</ul>
+<h4 id="段取り">段取り<a class="anchor" aria-hidden="true" href="#段取り"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h4>
+<ol>
+<li>相手から <code>aws s3 ls --recursive --summarize</code> の結果（ファイル数・合計サイズ）とフォルダ構成をもらう</li>
+<li>GCS バケットを <strong>BigQuery のデータセットと同じロケーション</strong> に作る（同じ場所でないとロードできない）</li>
+<li>STS で S3 → GCS。転送ログで失敗 0 件を確認する</li>
+<li>数ファイルだけ試しにロードして、型のズレを見る（INT96 のタイムスタンプ、LIST 型、桁の大きい DECIMAL）</li>
+<li>フォルダ単位で <code>bq load --source_format=PARQUET</code>。パーティションもここで決める</li>
+<li>突き合わせ : ファイル数（S3 = GCS）、行数（Parquet のフッターに書かれた行数の合計 = BigQuery）</li>
+<li>後片付け : GCS のコピーは少し置いてから消すか安いストレージクラスへ移す。相手にはロールの削除を依頼する</li>
+</ol>
+
+<div class="markdown-alert markdown-alert-note">
+    <p class="markdown-alert-title">
+        
+        <svg class="octicon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>
+        Note
+        
+    </p>
+    <p>未確定 : 自社 BigQuery のロケーション（2 の置き場所が決まる）、移行時の加工の要否。</p>
+</div>
+
+<h2 id="ref">Ref.<a class="anchor" aria-hidden="true" href="#ref"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> </h2>
+<ul>
+<li><a href="https://docs.docker.com/reference/cli/docker/compose/up/">docker compose up | Docker Docs</a></li>
+<li><a href="https://docs.docker.com/reference/cli/docker/compose/run/">docker compose run | Docker Docs</a></li>
+<li><a href="https://docs.docker.com/reference/compose-file/version-and-name/">Version and name top-level elements | Docker Docs</a></li>
+<li><a href="https://cloud.google.com/storage-transfer/docs/source-amazon-s3">Configure access to a source: Amazon S3 | Storage Transfer Service</a></li>
+<li><a href="https://cloud.google.com/storage-transfer/docs/create-transfers/agentless/s3">Transfer from Amazon S3 to Cloud Storage | Storage Transfer Service</a></li>
+<li><a href="https://cloud.google.com/bigquery/docs/loading-data-cloud-storage-parquet">Loading Parquet data from Cloud Storage | BigQuery</a></li>
+<li><a href="https://gemini.google.com/share/1cb52db49475">Gemini との会話ログ</a></li>
+</ul>
+</article>
+        </div>
+        </div>
+        </div>
+    </div>
+        
+        
+        
+        <div class="Box mt-3 position-relative">
+        <div class="Box-body px-5 pb-5">
+            <article class="markdown-body entry-content container-lg">
+                <h2>See Also</h2>
+                <ul class="mt-2">
+                    
+                    <li class="p-1">
+                        <div>
+                            <a href="../../post/data_analytics_miscellaneous/">[Data Analytics] Miscellaneous</a>
+                            <time datetime="2025-03-18 02:15" class="no-wrap text-small ml-1">(2025-03-18 02:15)</time>
+                        </div>
+                        <div class="text-small text-gray mb-1 mt-1"> </div>
+                    </li>
+                    
+                    <li class="p-1">
+                        <div>
+                            <a href="../../post/kubernetes_catchup/">[Kubernetes] Catchup</a>
+                            <time datetime="2024-11-18 13:29" class="no-wrap text-small ml-1">(2024-11-18 13:29)</time>
+                        </div>
+                        <div class="text-small text-gray mb-1 mt-1">About container orchestration tecnology.</div>
+                    </li>
+                    
+                    <li class="p-1">
+                        <div>
+                            <a href="../../post/docker_commands_memorandum/">[Docker] Commands memorandum</a>
+                            <time datetime="2024-08-21 00:00" class="no-wrap text-small ml-1">(2024-08-21 00:00)</time>
+                        </div>
+                        <div class="text-small text-gray mb-1 mt-1">I want to deepen my understanding of Docker&#39;s basic commands and mechanisms.</div>
+                    </li>
+                    
+                    <li class="p-1">
+                        <div>
+                            <a href="../../post/dbt_seeking_basic_understanding/">[dbt] Seeking out basic understanding</a>
+                            <time datetime="2024-07-30 02:30" class="no-wrap text-small ml-1">(2024-07-30 02:30)</time>
+                        </div>
+                        <div class="text-small text-gray mb-1 mt-1">Wanna deepen my understanding by using my hands and referring to reference books.</div>
+                    </li>
+                    
+                    <li class="p-1">
+                        <div>
+                            <a href="../../post/looker_miscellaneous/">[Looker] Miscellaneous</a>
+                            <time datetime="2025-12-02 16:39" class="no-wrap text-small ml-1">(2025-12-02 16:39)</time>
+                        </div>
+                        <div class="text-small text-gray mb-1 mt-1">How to use Google&#39;s SaaS about BI.</div>
+                    </li>
+                    
+                </ul>
+            </article>
+        </div>
+        </div>
+        
+    </div>
+    </div>
+</main>
+</div>
+
+<script type="application/javascript" src='http://localhost:1313/js/toc.js'></script>
+<link rel="stylesheet" href='http://localhost:1313/css/toc.css' />
+
+
+<script
+    src='http://localhost:1313/js/syntax-highlight-title.js'
+    crossorigin="anonymous"
+    type="application/javascript">
+</script>
+<link rel="stylesheet" href="../../css/syntax-highlight-title.css">
+
+
+
+
+
+
+
+<script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js" crossorigin="anonymous"></script>
+<script>
+
+
+(function () {
+    function transformMermaidCodeBlocks() {
+        var codeBlocks = document.querySelectorAll('pre > code.language-mermaid, code.language-mermaid');
+        codeBlocks.forEach(function (code) {
+            var pre = code.parentElement && code.parentElement.tagName.toLowerCase() === 'pre' ? code.parentElement : code;
+            var container = document.createElement('div');
+            container.className = 'mermaid';
+            container.textContent = code.textContent;
+            pre.replaceWith(container);
+        });
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', transformMermaidCodeBlocks);
+    } else {
+        transformMermaidCodeBlocks();
+    }
+    
+    if (window.mermaid) {
+        window.mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+    }
+})();
+</script>
+
+
+
+
+  
+
+  
+  
+<link rel="stylesheet" href='http://localhost:1313/css/giscus.css'>
+<div class="giscus"></div>
+<script>
+  (function () {
+    var origin = 'https://giscus.app';
+
+    function colorMode() {
+      return document.documentElement.getAttribute('data-color-mode') === 'dark' ? 'dark' : 'light';
+    }
+
+    
+    
+    var attrs = {
+      'data-repo': 'shiroimon\/todayilearned',
+      'data-repo-id': 'R_kgDOMSwknw',
+      'data-category': 'Announcements',
+      'data-category-id': 'DIC_kwDOMSwkn84DDAKW',
+      'data-mapping': 'pathname',
+      'data-strict': '0',
+      'data-reactions-enabled': '1',
+      'data-emit-metadata': '0',
+      'data-input-position': 'bottom',
+      'data-lang': 'ja',
+      'data-loading': 'lazy',
+      'data-theme': colorMode()
+    };
+
+    var s = document.createElement('script');
+    s.src = origin + '/client.js';
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    Object.keys(attrs).forEach(function (k) { s.setAttribute(k, attrs[k]); });
+    
+    document.querySelector('.giscus').appendChild(s);
+
+    
+    new MutationObserver(function () {
+      var frame = document.querySelector('iframe.giscus-frame');
+      if (frame) {
+        frame.contentWindow.postMessage({ giscus: { setConfig: { theme: colorMode() } } }, origin);
+      }
+    }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-color-mode'] });
+  })();
+</script>
+  
+
+
+</div>
+
+  <div class="footer container-xl width-full p-responsive">
+  <div
+    class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between flex-sm-items-center pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mr-lg-4" href="http://localhost:1313/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24">
+        <path fill-rule="evenodd"
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+        </path>
+      </svg>
+    </a>
+    <ul class="list-style-none d-flex flex-wrap col-12 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+      
+      <li class="mr-3 mr-lg-0">Theme by <a href='https://github.com/MeiK2333/github-style'>github-style</a></li>
+      
+      <li class="mr-3 mr-lg-0">GitHub and the Invertocat logo are trademarks of <a href="https://github.com/">GitHub, Inc.</a></li>
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+
+
+</div>
+
+</body>
+
+<script type="application/javascript" src="http://localhost:1313/js/github-style.js"></script>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+<script type="application/javascript" src='http://localhost:1313/js/search.js'></script>
+
+
+
+</html>

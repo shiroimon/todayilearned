@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Gcloud on Today I Learned | KitHub</title>
+		<link>http://localhost:1313/tags/gcloud/</link>
+		<description>Recent content in Gcloud on Today I Learned | KitHub</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 21 Sep 2026 18:36:12 +0900</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/gcloud/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>[Google Cloud] IAM Miscellaneous &lt;雑記&gt;</title>
+				<link>http://localhost:1313/post/google_cloud_iam_miscellaneous/</link>
+				<pubDate>Fri, 18 Sep 2026 16:44:03 +0900</pubDate>
+				<guid>http://localhost:1313/post/google_cloud_iam_miscellaneous/</guid>
+				<description>🔑 AWS の「IAM ポリシー＋バケットポリシー」二段構えは Google Cloud だとどうなるか</description>
+			</item>
+			<item>
+				<title>[Google Cloud] VM instance demo</title>
+				<link>http://localhost:1313/post/google_cloud_vm_instance_demo/</link>
+				<pubDate>Mon, 15 Jun 2026 13:52:26 +0900</pubDate>
+				<guid>http://localhost:1313/post/google_cloud_vm_instance_demo/</guid>
+				<description>💻 Create a VM instance and connect to it via SSH.</description>
+			</item>
+	</channel>
+</rss>

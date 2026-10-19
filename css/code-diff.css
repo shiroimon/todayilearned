@@ -1,0 +1,51 @@
+/*
+ * ```diff {lang="..."} の差分行（layouts/_markup/render-codeblock-diff.html が付けるクラス）
+ * コードブロックの背景は light / dark とも暗色（rgb(39, 40, 34)）で固定なので、
+ * 色もモードに追随させず固定する。テーマの --color-diff-* を使うと light 側の
+ * 淡い背景に白文字が乗って読めなくなる。値は GitHub dark の diff 配色に合わせた。
+ */
+
+/* 背景の帯をブロックの左右端まで伸ばすため、余白を pre から各行へ移す */
+.markdown-body div.highlight.diff-block pre {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* 横スクロールが出る長さでも、帯を最長行の右端まで伸ばす */
+.markdown-body div.highlight.diff-block pre > code {
+    display: block;
+    width: max-content;
+    min-width: 100%;
+    /* syntax-highlight-title.css の上下余白は inline の code 前提。block だと効いて隙間になる */
+    margin: 0;
+    padding: 0;
+}
+
+/* block にすると innerText（Copy ボタン）の改行が二重になるので inline-block。
+ * .markdown-body を付けるのは syntax-highlight-title.css の .chroma .hl { display: block } に勝つため */
+.markdown-body .diff-block .line {
+    display: inline-block;
+    box-sizing: border-box;
+    min-width: 100%;
+    padding: 0 16px;
+}
+
+.diff-block .line.diff-add {
+    background-color: rgba(46, 160, 67, 0.25);
+}
+
+.diff-block .line.diff-del {
+    background-color: rgba(248, 81, 73, 0.25);
+}
+
+.diff-block .diff-prefix {
+    user-select: none;
+}
+
+.diff-block .diff-add .diff-prefix {
+    color: #3fb950;
+}
+
+.diff-block .diff-del .diff-prefix {
+    color: #f85149;
+}
